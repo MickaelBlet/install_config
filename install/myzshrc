@@ -1,0 +1,3 @@
+if [[ -f $HOME/\#_my_config/.zshrc ]]; then
+	source $HOME/\#_my_config/.zshrc
+fi
