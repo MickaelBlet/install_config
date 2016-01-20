@@ -1,8 +1,19 @@
 #!/bin/bash
 
+cols=`echo "$(tput cols)"`
+
 function install_zsh()
 {
 	cp -r install/config ~/.myconfig
+}
+
+function print_middle()
+{
+	local _str=`echo "$*"`
+	local _len="${#_str}"
+	local _cols=`echo "$(tput cols)/2-$_len/2"|bc`
+
+	printf "%*s" $_cols $_str
 }
 
 function print_menu()
@@ -15,35 +26,37 @@ function print_menu()
 	else
 		printf "\033[0m"
 	fi
-	printf "ZSH + PROMPT + VIM\n\r"
+	print_middle "ZSH + PROMPT + VIM\n\r"
 	if [[ $index == "1" ]]; then
 		printf "\033[7m"
 	else
 		printf "\033[0m"
 	fi
-	printf "ZSH + PROMPT\n\r"
+	print_middle "ZSH + PROMPT\n\r"
 	if [[ $index == "2" ]]; then
 		printf "\033[7m"
 	else
 		printf "\033[0m"
 	fi
-	printf "PROMPT\n\r"
+	print_middle "PROMPT\n\r"
 	if [[ $index == "3" ]]; then
 		printf "\033[7m"
 	else
 		printf "\033[0m"
 	fi
-	printf "VIM\n\r"
+	print_middle "VIM\n\r"
 }
 
+clear
 echo ""
-cols=`echo "$(tput cols)"`
 cols1=`echo "$(tput cols)/2+14/2"|bc`
 cols2=`echo "$(tput cols)/2-14/2"|bc`
 result=`echo "$cols1+$cols2"|bc`
+
 if [ $result != $cols ]; then
 	cols1=`echo "$cols1+1"|bc`
 fi
+
 printf "\033[48;5;244m\033[38;5;231m"
 printf "%*s%*s\n\r" $cols1 "MBLET CONFIGS" $cols2 ""
 printf "\033[38;5;226m\033[7m"
@@ -63,6 +76,8 @@ case $C in
 			case $E in
 				A) index=$(($index - 1));;
 				B) index=$(($index + 1));;
+				C) index=$(($index + 1));;
+				D) index=$(($index - 1));;
 			esac
 			if [[ $index > "3" ]]; then
 				index=3
