@@ -11,30 +11,30 @@ function print_menu()
 
 	printf "\n\r$index"
 	printf "\n\r"
+	if [[ $index == "0" ]]; then
+		printf "\033[7m"
+	else
+		printf "\033[0m"
+	fi
+	printf "ZSH + PROMPT + VIM\n\r"
 	if [[ $index == "1" ]]; then
 		printf "\033[7m"
 	else
 		printf "\033[0m"
 	fi
-	printf "1. ZSH + PROMPT + VIM\n\r"
+	printf "ZSH + PROMPT\n\r"
 	if [[ $index == "2" ]]; then
 		printf "\033[7m"
 	else
 		printf "\033[0m"
 	fi
-	printf "2. ZSH + PROMPT\n\r"
+	printf "PROMPT\n\r"
 	if [[ $index == "3" ]]; then
 		printf "\033[7m"
 	else
 		printf "\033[0m"
 	fi
-	printf "3. PROMPT\n\r"
-	if [[ $index == "4" ]]; then
-		printf "\033[7m"
-	else
-		printf "\033[0m"
-	fi
-	printf "4. VIM\n\r"
+	printf "VIM\n\r"
 }
 
 echo ""
