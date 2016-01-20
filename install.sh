@@ -5,6 +5,37 @@ function install_zsh()
 	cp -r install/config ~/.myconfig
 }
 
+function print_menu()
+{
+	local index=$1
+
+	printf "\n\r"
+	if [[ $index == "1" ]]; then
+		printf "\033[7m"
+	else
+		printf "\033[0m"
+	fi
+	printf "1. ZSH + PROMPT + VIM\n\r"
+	if [[ $index == "2" ]]; then
+		printf "\033[7m"
+	else
+		printf "\033[0m"
+	fi
+	printf "2. ZSH + PROMPT\n\r"
+	if [[ $index == "3" ]]; then
+		printf "\033[7m"
+	else
+		printf "\033[0m"
+	fi
+	printf "3. PROMPT\n\r"
+	if [[ $index == "4" ]]; then
+		printf "\033[7m"
+	else
+		printf "\033[0m"
+	fi
+	printf "4. VIM\n\r"
+}
+
 echo ""
 cols=`echo "$(tput cols)"`
 cols1=`echo "$(tput cols)/2+14/2"|bc`
@@ -30,12 +61,14 @@ case $C in
 		if [[ "$D" == "[" ]]; then
 			read -rsn1 -t 1 E
 			case $E in
-				A) printf "Up\n";;
+				A) print_menu 1;;
 				B) printf "Down\n";;
 				C) printf "Right\n";;
 				D) printf "Left\n";;
 			esac
 		fi;;
+	$'') echo enter;;
+	*) echo test;;
 esac
 #tput up
 #tput up
