@@ -1,5 +1,15 @@
 #!/bin/bash
 
+tput civis # hide cursor
+
+trap ctrl_c INT
+
+function ctrl_c() {
+	tput cnorm
+	exit
+}
+
+
 cols=`echo "$(tput cols)"`
 
 function install_zsh()
@@ -9,11 +19,14 @@ function install_zsh()
 
 function print_middle()
 {
-	local _str=`echo "$*"`
+	local _str=`echo "$1"`
 	local _len="${#_str}"
-	local _cols=`echo "$(tput cols)/2-$_len/2"|bc`
+	local _cols1=`echo "$(tput cols)/2-$_len/2"|bc`
+	local _cols2=`echo "$(tput cols)/2-$_len/2"|bc`
 
-	printf "%*s" $_cols $_str
+	printf "%*s" $_cols1 ""
+	printf "$_str"
+	printf "%*s\n\r" $_cols2 ""
 }
 
 function print_menu()
@@ -26,25 +39,25 @@ function print_menu()
 	else
 		printf "\033[0m"
 	fi
-	print_middle "ZSH + PROMPT + VIM\n\r"
+	print_middle "ZSH + PROMPT + VIM"
 	if [[ $index == "1" ]]; then
 		printf "\033[7m"
 	else
 		printf "\033[0m"
 	fi
-	print_middle "ZSH + PROMPT\n\r"
+	print_middle "ZSH + PROMPT"
 	if [[ $index == "2" ]]; then
 		printf "\033[7m"
 	else
 		printf "\033[0m"
 	fi
-	print_middle "PROMPT\n\r"
+	print_middle "PROMPT"
 	if [[ $index == "3" ]]; then
 		printf "\033[7m"
 	else
 		printf "\033[0m"
 	fi
-	print_middle "VIM\n\r"
+	print_middle "VIM "
 }
 
 clear
@@ -97,6 +110,8 @@ case $C in
 	*) break
 esac
 done
+
+tput cnorm
 #tput up
 #tput up
 #tput up
