@@ -1,0 +1,537 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"        ________ ++     ________                                "
+"       /VVVVVVVV\++++  /VVVVVVVV\                               "
+"       \VVVVVVVV/++++++\VVVVVVVV/                               "
+"        |VVVVVV|++++++++/VVVVV/'                                "
+"        |VVVVVV|++++++/VVVVV/'              :::      ::::::::   "
+"       +|VVVVVV|++++/VVVVV/'+             :+:      :+:    :+:   "
+"     +++|VVVVVV|++/VVVVV/'+++++         +:+ +:+         +:+     "
+"   +++++|VVVVVV|/VVVVV/'+++++++++     +#+  +:+       +#+        "
+"     +++|VVVVVVVVVVV/'+++++++++     +#+#+#+#+#+   +#+           "
+"       +|VVVVVVVVV/'+++++++++           #+#    #+#              "
+"        |VVVVVVV/'+++++++++            ###   ########.fr        "
+"        |VVVVV/'+++++++++                                       "
+"        |VVV/'+++++++++                                         "
+"        'V/'   ++++++                                           "
+"                 ++                                             "
+"                       <mblet@student.42.fr>                    "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" /!\ Warning = this config need add 'stty -ixon' in your .zshrc "
+"                                                                "
+" List Shortcut :                                                "
+"                                                                "
+" Ctrl + W      == save quit                                     "
+" Ctrl + Q      == force quit                                    "
+" Ctrl + S      == save                                          "
+" Ctrl + Z      == Undo                                          "
+" Ctrl + Y      == Redo                                          "
+" Ctrl + A      == Select All                                    "
+" Ctrl + X      == Cut (vim)                                     "
+" Ctrl + C      == Copy (vim)                                    "
+" Shift + C     == Copy To clipboard                             "
+" Ctrl + V      == Paste (vim)                                   "
+" Ctrl + F      == Duplicate                                     "
+" Ctrl + D      == Del Line                                      "
+" Shift + Up    == Speed move Up                                 "
+" Shift + Down  == Speed move Down                               "
+" Ctrl + Left   == Previous Tab                                  "
+" Ctrl + Right  == Next Tab                                      "
+" Ctrl + Home   == New Tab                                       "
+" Ctrl + I      == Auto indent file                              "
+" F6            == Toggle Paste                                  "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"Mode insert at open
+start
+
+"Dictionary
+set dictionary+=~/.vim/dict/c.dict
+
+"highlight syntax
+syntax on
+
+"One clipboard
+set clipboard=unnamed
+
+"Move speed
+set selectmode&
+
+"Set mouse
+set mouse=a
+
+"Set number line
+set number
+
+"No Backup files
+set nobackup
+set nowritebackup
+set noswapfile
+
+"Show all command
+set showcmd
+set showmode
+
+"Show Title
+set title
+set titleold=
+
+"AutoIndent
+set autoindent      "Keep indentation from previous line
+
+"Hightlight line cursor
+set cursorline
+
+set visualbell
+
+"Toggle Paste/NoPaste
+set pastetoggle=<F6>
+
+"Speed Redraw
+set lazyredraw
+set wildmenu					" Use wildmenu auto completion
+set wildmode=list:longest		" Set options for auto completion
+set complete=.,w,b,t,u,i,d,t,k	" Default, except that I remove the 'u' option
+
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+
+set tags+=~/.vim/tags/cpp
+
+au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
+
+" OmniCppComplete
+let OmniCpp_NamespaceSearch = 1
+let OmniCpp_GlobalScopeSearch = 1
+let OmniCpp_ShowAccess = 1
+let OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
+let OmniCpp_MayCompleteDot = 1 " autocomplete after .
+let OmniCpp_MayCompleteArrow = 1 " autocomplete after ->
+let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
+let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
+" automatically open and close the popup menu / preview window
+au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
+set completeopt=menuone,menu,longest,preview
+
+"AutoCompletMenu
+set completeopt=longest,menuone
+
+set splitright
+
+set ts=4
+set sw=4
+
+"When vi * open all
+tab all
+
+" Vim Color
+
+highlight Visual		term=bold ctermbg=236
+highlight CursorLine	term=bold cterm=bold ctermbg=234
+highlight Identifier	ctermfg=11
+highlight Statement		ctermfg=yellow
+highlight String		ctermfg=darkyellow
+highlight Comment		ctermfg=238
+highlight PreProc		ctermfg=9
+highlight Type			ctermfg=10
+highlight LineNr		ctermfg=242
+highlight Pmenu			term=reverse ctermbg=239 ctermfg=white
+highlight PmenuSel		term=reverse ctermbg=27 ctermfg=white
+highlight MatchParen	cterm=bold ctermbg=none ctermfg=160
+
+" Abreviation
+
+autocmd FileType c,cpp	iab _li #include <libft.h><c-r>=Eatchar('\s')<CR>
+autocmd FileType c,cpp	iab _un #include <unistd.h><c-r>=Eatchar('\s')<CR>
+autocmd FileType c,cpp	iab _st #include <stdlib.h><c-r>=Eatchar('\s')<CR>
+autocmd FileType c,cpp	iab _fc #include <fcntl.h><c-r>=Eatchar('\s')<CR>
+
+iab while while ()<Left><c-r>=Eatchar('\s')<CR>
+iab if if ()<Left><c-r>=Eatchar('\s')<CR>
+iab return return ();<Left><Left><c-r>=Eatchar('\s')<CR>
+iab { {<CR>}<Up>
+
+autocmd FileType cpp	iab std <c-r>=Autocomplete_std()<CR>
+autocmd FileType c,cpp	iab #i #include
+autocmd FileType c,cpp	iab #I #include
+autocmd FileType c,cpp	iab ##i # include
+autocmd FileType c,cpp	iab ##I # include
+autocmd FileType c,cpp	iab #d #define
+autocmd FileType c,cpp	iab #D #define
+autocmd FileType c,cpp	iab ##d # define
+autocmd FileType c,cpp	iab ##D # define
+
+autocmd FileType c,cpp	iab /* /*<CR><BS><BS><BS>*/<UP>
+
+autocmd FileType c,cpp	iab fmain int		main(int argc, char **argv)<CR>{<CR>return (0);<CR>}<Up><Up><CR>(void)argc;<CR>(void)argv;
+autocmd FileType c,cpp	iab fvmain int		main(void)<CR>{<CR>return (0);<CR>}<Up><Up>
+autocmd FileType c,cpp	iab tst <c-r>=Autostruct()<CR><Up><CR><c-r>=Eatchar('\s')<CR>
+autocmd FileType c,cpp	iab cls <c-r>=AutoClass()<CR><c-r>=Eatchar('\s')<CR>
+autocmd FileType c,cpp	iab cctr <c-r>=AutoConstruct()<CR><Up><CR><c-r>=Eatchar('\s')<CR>
+
+autocmd FileType c,cpp	iab cv <c-r>=Autocastvoid()<CR><c-r>=Eatchar('\s')<CR>
+
+autocmd FileType c,cpp	iab rrp <c-r>=ReplaceSpeed()<CR><c-r>=Eatchar('\s')<CR>
+
+autocmd Filetype php	iab fore <c-r>=PhpForeachSpeed()<CR><Up><Up><Up><Up><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><c-r>=Eatchar('\s')<CR>
+
+autocmd Filetype php	iab for <c-r>=PhpForSpeed()<CR><Up><Up><c-r>=Eatchar('\s')<CR>
+
+
+func! Eatchar(pat)
+	let c = nr2char(getchar(0))
+	return (c =~ a:pat) ? '' : c
+endfunc
+
+func! Deletefirstword()
+	s/^.*$//e
+endfunc
+
+func! Deletelastword()
+	s/\s*\w\+\s*$//
+endfunc
+
+func! Getfirstword()
+	let l:line = getline('.')
+	let l:cmd = "echo \"" . l:line . "\" | awk '{print $1;}' | tr -d '\n'"
+	let l:word = system(l:cmd)
+	return l:word
+endfunc
+
+func! Getsecondword()
+	let l:line = getline('.')
+	let l:cmd = "echo \"" . l:line . "\" | awk '{print $2;}' | tr -d '\n'"
+	let l:word = system(l:cmd)
+	return l:word
+endfunc
+
+func! Getlastword()
+	let l:line = getline('.')
+	let l:cmd = "echo \"" . l:line . "\" | awk '{print $NF;}' | tr -d '\n'"
+	let l:word = system(l:cmd)
+	return l:word
+endfunc
+
+func! Autostruct()
+	let l:word = Getfirstword()
+	let l:string = "typedef struct	s_" . l:word . "\n{\n}				t_" . l:word . ";"
+	call cursor(0, getline('.'))
+	call Deletefirstword()
+	return (l:string)
+endfunc
+
+func! AutoConstruct()
+	let l:word = Getfirstword()
+	let l:string = l:word . "::" . l:word . "(void)\n"
+	let l:string .= "{\n"
+	let l:string .= "return ;\n"
+	let l:string .= "}\n"
+	let l:string .= "\n"
+	let l:string .= l:word . "::" . l:word . "(" . l:word . " const & src)\n"
+	let l:string .= "{\n"
+	let l:string .= "*this = src;\n"
+	let l:string .= "return ;\n"
+	let l:string .= "}\n"
+	let l:string .= "\n"
+	let l:string .= l:word . "::~" . l:word . "(void)\n"
+	let l:string .= "{\n"
+	let l:string .= "return ;\n"
+	let l:string .= "}\n"
+	let l:string .= "\n"
+	let l:string .= l:word . "		&" . l:word . "::operator=(" . l:word . " const & rhs)\n"
+	let l:string .= "{\n"
+	let l:string .= "if (this != &rhs)\n"
+	let l:string .= "{\n"
+	let l:string .= "}\n"
+	let l:string .= "return (*this);\n"
+	let l:string .= "}"
+	call cursor(0, getline('.'))
+	call Deletefirstword()
+	return (l:string)
+endfunc
+
+func! AutoClass()
+	let l:word = Getfirstword()
+	let l:string = "class " . l:word . "\n"
+	let l:string .= "{\n\n"
+	let l:string .= "public:\n"
+	let l:string .= l:word . "(void);\n"
+	let l:string .= l:word . "(" . l:word . " const & src);\n"
+	let l:string .= "~" . l:word . "();\n"
+	let l:string .= "\n"
+	let l:string .= l:word . "& operator=(" . l:word . " const & rhs);\n\n"
+	let l:string .= "private:\n\n};"
+	call cursor(0, getline('.'))
+	call Deletefirstword()
+	return (l:string)
+endfunc
+
+func! Autocastvoid()
+	let l:word = Getfirstword()
+	let l:string = "	(void)" . l:word . ";"
+	call cursor(0, getline('.'))
+	call Deletefirstword()
+	return (l:string)
+endfunc
+
+func! ReplaceSpeed()
+	let l:word1 = Getfirstword()
+	let l:word2 = Getsecondword()
+	let save_cursor = getpos(".")
+	let l:string = "%s/" . l:word1 . "/" . l:word2 . "/eg"
+	execute l:string
+	call setpos('.', save_cursor)
+	call Deletefirstword()
+	return ("")
+endfunc
+
+func! PhpForeachSpeed()
+	let l:string = "foreach ($ as $k => $v)\n"
+	let l:string .= "{\n\n"
+	let l:string .= "}\n"
+	return (l:string)
+endfunc
+
+func! PhpForSpeed()
+	let l:word = Getfirstword()
+	let l:string = "for ($" . l:word . " = 0; $" . l:word . " < 1; $" . l:word ."++)\n"
+	let l:string .= "{\n\n"
+	let l:string .= "}\n"
+	call Deletefirstword()
+	return (l:string)
+endfunc
+
+" Auto Insert at clic
+
+map <LeftMouse>				i
+nmap <LeftMouse>			i
+smap <LeftMouse>			<Esc>i
+xmap <LeftMouse>			<Esc>i
+
+map <2-LeftMouse>			<Nop>
+imap <2-LeftMouse>			<Nop>
+
+" Ctrl + w == save quit && Ctrl + q == force quit
+
+map <silent> <C-w>			:wq<CR>
+imap <silent> <C-w>			<Esc>:wq<CR>
+vmap <silent> <C-w>			<Esc>:wq<CR>
+map <silent> <C-q>			:q!<CR>
+imap <silent> <C-q>			<Esc>:q!<CR>
+vmap <silent> <C-q>			<Esc>:q!<CR>
+
+" Ctrl + A == Select All
+
+map <silent> <c-a>			ggVG
+imap <silent> <c-a>			<Esc>ggVG
+vmap <silent> <c-a>			<Esc>ggVG
+
+" Ctrl + S == save
+
+map <silent> <c-s>			:w<CR>gi
+imap <silent> <c-s>			<Esc>:w<CR>gi
+vmap <silent> <c-s>			<Esc><Esc>:w<CR>
+
+" insert mode visual
+
+vmap <silent> i				<Esc>gi
+
+" Ctrl + Z == Undo && Ctrl + Y == Redo
+
+map <silent> <c-z>			:undo<CR>gi
+imap <silent> <c-z>			<Esc>:undo<CR>gi
+vmap <silent> <c-z>			<Esc>:undo<CR>gi
+map <silent> <c-y>			:redo<CR>gi
+imap <silent> <c-y>			<Esc>:redo<CR>gi
+vmap <silent> <c-y>			<Esc>:redo<CR>gi
+
+" Cut Copy Paste Fast
+
+vmap <silent> <C-x>			dgi
+imap <silent> <C-v>			<Esc>pi<Right>
+vmap <silent> <C-v>			v
+imap <silent> <C-c>			<Esc>yygi
+vmap <silent> <C-c>			ygi
+vmap <silent> <S-c>			:w !pbcopy<CR><CR>
+
+" Ctrl + D == Duplicate
+
+map <silent> <c-f>			yygi<Esc>pgi
+vmap <silent> <c-f>			ygi<CR><Esc>pgi
+imap <silent> <c-f>			<Esc>yygi<Esc>pgi
+
+" Ctrl + F == Del Line
+
+map <silent> <c-d>			ddgi
+imap <silent> <c-d>			<Esc>ddgi
+
+" Shift + Home == Select line
+
+imap <silent> <S-Home>		<Esc>v<Home>
+imap <silent> <S-End>		<Esc>v<End><Left>
+vmap <silent> <Delete>		<Del>gi
+vmap <silent> <BS>			<Del>
+
+" Ctrl + /
+
+imap <silent> /'			<Esc>:call Comment()<CR>gi
+vmap <silent> /'			:call Comment()<CR>gi
+
+" Ctrl Up (move line)
+
+imap <silent> <c-UP>		<Esc>:call MoveLineUp()<CR>gi
+imap <silent> <c-DOWN>		<Esc>:call MoveLineDown()<CR>gi
+
+function MoveLineUp()
+	let l = line(".")
+	if (l < 3)
+		call cursor(1, 0)
+		call MoveLineDown()
+	else
+		exe "normal dd"
+		call cursor(l - 2, 0)
+		exe "normal pgi"
+	endif
+endfunction
+
+function MoveLineDown()
+	let l = line(".")
+	exe "normal dd"
+	call cursor(l, 0)
+	exe "normal pgi"
+endfunction
+
+" NUM PAD
+
+map <Esc>Oq					<Nop>
+map <Esc>Or					<Nop>
+map <Esc>Os					<Nop>
+map <Esc>Ot					<Nop>
+map <Esc>Ou					<Nop>
+map <Esc>Ov					<Nop>
+map <Esc>Ow					<Nop>
+map <Esc>Ox					<Nop>
+map <Esc>Oy					<Nop>
+map <Esc>Op					<Nop>
+map <Esc>On					<Nop>
+map <Esc>OR					<Nop>
+map <Esc>OQ					<Nop>
+map <Esc>Ol					<Nop>
+map <Esc>OS					<Nop>
+map <Esc>OX					<Nop>
+
+imap <Esc>Oq				1
+imap <Esc>Or				2
+imap <Esc>Os				3
+imap <Esc>Ot				4
+imap <Esc>Ou				5
+imap <Esc>Ov				6
+imap <Esc>Ow				7
+imap <Esc>Ox				8
+imap <Esc>Oy				9
+imap <Esc>Op				0
+imap <Esc>On				.
+imap <Esc>OR				*
+imap <Esc>OQ				/
+imap <Esc>Ol				+
+imap <Esc>OS				-
+imap <Esc>OX				=
+
+imap -.						->
+imap FT_					ft_
+imap fT_					ft_
+
+" Ctrl + Up && Ctrl + Down
+
+map <expr> <silent> <s-Down>	pumvisible() ?  "\<Down>\<Down>\<Down>" : ":call SpeedDown()\<CR>"
+imap <expr> <silent> <s-Down>	pumvisible() ?  "\<Down>\<Down>\<Down>" : "\<c-r>=SpeedDown()\<CR>"
+vmap <silent> <s-Down>			<Down><Down><Down>
+map <expr> <silent> <s-Up>		pumvisible() ?  "\<Up>\<Up>\<Up>" : ":call SpeedUp()\<CR>"
+imap <expr> <silent> <s-Up>		pumvisible() ?  "\<Up>\<Up>\<Up>" : "\<c-r>=SpeedUp()\<CR>"
+vmap <silent> <s-Up>			<Up><Up><Up>
+
+" Ctrl + Right || Ctrl + Left = Change buffer && Ctrl + Home = NewTab
+
+map <C-right>				:tabnext<CR>i
+map <C-left>				:tabprevious<CR>i
+map <C-Home>				:tabnew ..<CR>
+imap <C-right>				<ESC>:tabnext<CR>i
+imap <C-left>				<ESC>:tabprevious<CR>i
+imap <C-Home>				<ESC>:tabnew ..<CR>
+
+" reset cursor position open file
+
+function! ResCur()
+	if line("'\"") <= line("$")
+		normal! g`"
+		return 1
+	endif
+endfunction
+
+augroup resCur
+	autocmd!
+	autocmd BufWinEnter * call ResCur()
+augroup END
+
+" Speed move
+
+function! SpeedUp()
+	let l = line(".")
+	if (l > 3)
+		call cursor(l - 3, 80)
+	else
+		call cursor(1, 80)
+	endif
+	return ""
+endfunction
+
+function! SpeedDown()
+	let l = line(".")
+	if (l < line("$") - 3)
+		call cursor(l + 3, 80)
+	else
+		call cursor(line("$"), 80)
+	endif
+	return ""
+endfunction
+
+imap <Tab>		<Tab><c-r>=Tabend()<CR>
+
+func! Tabend()
+	let l:line = line(".")
+	let l:column = col(".")
+	if !pumvisible()
+		while (getline(l:line)[l:column - 1] == "	")
+			let l:column  = l:column + 1
+		endwhile
+		call cursor(l:line, l:column)
+	endif
+	return ""
+endfunc
+
+func!	Comment()
+	if !empty(matchstr(getline("."), '^\t*\/\/'))
+		:s/^\t*\zs*\/\///
+	else
+		:s/^\t*\zs*/\/\//
+	endif
+endfunc
+
+" paste Function
+
+if &term =~ "xterm.*"
+	let &t_ti .= "\e[?6h\e[?69h"
+	let &t_te .= "\e7\e[?69l\e[?6l\e8"
+	let &t_CV = "\e[%i%p1%d;%p2%ds"
+	let &t_CS = "y"
+	let &t_ti .= "\e[?2004h"
+	let &t_te .= "\e[?2004l"
+	function! XTermPasteBegin(ret)
+		set pastetoggle=<Esc>[201~
+		set paste
+		return a:ret
+	endfunction
+	map <expr> <Esc>[200~ XTermPasteBegin("i")
+	imap <expr> <Esc>[200~ XTermPasteBegin("")
+	cmap <Esc>[200~ <nop>
+	cmap <Esc>[201~ <nop>
+endif
