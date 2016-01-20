@@ -9,7 +9,6 @@ function print_menu()
 {
 	local index=$1
 
-	printf "\n\r$index"
 	printf "\n\r"
 	if [[ $index == "0" ]]; then
 		printf "\033[7m"
@@ -65,15 +64,14 @@ case $C in
 				A) index=$(($index - 1));;
 				B) index=$(($index + 1));;
 			esac
-			if [[ $index > "4" ]]; then
-				index=4
+			if [[ $index > "3" ]]; then
+				index=3
 			fi
 			if [[ $index < "0" ]]; then
 				index=0
 			fi
 			printf "\r\033[K"
 
-			tput up
 			tput up
 			tput up
 			tput up
