@@ -112,20 +112,6 @@ function lss()
 	fi
 }
 
-function rmfast()
-{
-	if [ -d $* ]; then
-		rm -fr $* && ls -a -G
-	else
-		rm -i $* && ls -a -G
-	fi
-}
-
-function mycat()
-{
-	cat $* | expand -t4
-}
-
 function mkdircd()
 {
 	mkdir $*
@@ -134,8 +120,10 @@ function mkdircd()
 
 function ftgitp()
 {
+	local d=`date +%Y-%m-%d:%H:%M:%S`
+
 	if [ $# -eq 0 ]; then
-		git add --all && git commit -m "refresh git" && git push origin master && git ls-files
+		git add --all && git commit -m "$d refresh git" && git push origin master && git ls-files
 	else
 		git add --all && git commit -m "$*" && git push origin master && git ls-files
 	fi
@@ -222,17 +210,6 @@ function speedstart()
 	echo "" > .gitignore
 	echo "includes/libft.h" >> .gitignore
 	vi Makefile
-}
-
-function sqlf_file()
-{
-	if [ $# -eq 2 ]; then
-		~/mamp/mysql/bin/mysql -uroot -pyeueteyeieoeuei -t -vvv $1 < "$2" | more | expand -t4
-	elif [ $# -eq 1 ]; then
-		~/mamp/mysql/bin/mysql -uroot -pyeueteyeieoeuei -t -vvv < "$1" | more | expand -t4
-	else
-		echo "Hey gros con oublie pas le fichier."
-	fi
 }
 
 function clear_cache()
@@ -427,8 +404,5 @@ alias refresh='cpbitnami'
 # ╔════════════════╗
 # ║   CURENT TAFF  ║
 # ╚════════════════╝
-
-alias sql='~/mamp/mysql/bin/mysql -uroot -pyeueteyeieoeuei'
-alias sqlf='sqlf_file'
 
 alias chrome='open -n -a /Applications/Google\ Chrome.app --args --incognito'
