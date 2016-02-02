@@ -176,21 +176,6 @@ function norme()
 	fi
 }
 
-function mylockscreen()
-{
-	if [ $# -eq 0 ]; then
-		defaults -currentHost write com.apple.ScreenSaver.Basic MESSAGE ""
-	else
-		defaults -currentHost write com.apple.ScreenSaver.Basic MESSAGE "$1"
-	fi
-	open -a '/System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app'
-}
-
-function gcc3d()
-{
-	gcc -Wall -Werror -Wextra "$*" -L/usr/X11/lib -lmlx -lXext -lX11 && ./a.out
-}
-
 function cauteur()
 {
 	echo $USER > auteur && git add auteur && git commit -m "add auteur" && git push origin master
@@ -383,16 +368,6 @@ alias refreshmake='sh ~/program/MakeMakefile.zsh'
 alias red='chmod 777 '
 alias white='chmod 644 '
 alias chdir='chmod 777 '
-
-# ╔════════════════╗
-# ║   LOCKSCREEN   ║
-# ╚════════════════╝
-
-alias lockscreen='mylockscreen'
-alias eat='lockscreen "Je suis parti Manger"'
-alias dodo='lockscreen "Je vous emmerde et je rentre a ma maison"'
-alias coffee='lockscreen "Pause Coffee pour tenir toute la nuit"'
-alias pipi='lockscreen "PIPI \/ CACA \/ DOUCHE (ou pas)"'
 
 # ╔════════════════╗
 # ║   LOCKSCREEN   ║
