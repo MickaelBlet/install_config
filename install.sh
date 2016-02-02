@@ -112,6 +112,15 @@ esac
 done
 
 tput cnorm
+
+if [[ $index == "0" ]]; then
+	cp -r install/config/ ~/#_my_config
+	cp -r install/vim ~/.vim
+	cp -r install/myvimrc ~/.myvimrc
+	cp -r install/vimrc ~/.vimrc
+	cp -r install/myzshrc ~/.myzshrc
+	cp -r install/zshrc ~/.zshrc
+fi
 #tput up
 #tput up
 #tput up
