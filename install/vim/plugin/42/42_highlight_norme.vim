@@ -45,6 +45,8 @@ function Norme()
 
 	" Library
 	let s:errornorm += matchadd('MyLibrary', '<libft.h>', -1)
+	let s:errornorm += matchadd('MyLibrary', '<libxft.h>', -1)
+	let s:errornorm += matchadd('MyLibrary', '<libxmlft.h>', -1)
 
 	" C++ Comment
 	let s:errornorm += matchadd('NotAutorised', '\%(\*\*.*\)\@<!\/\/.*', -1)
@@ -149,7 +151,7 @@ function Norme()
 	" OTHER BEFORE '/'
 	syntax match myNorme '\(\S\)\@<=\/'
 	" * BEFORE '='
-	syntax match myNorme '\(\/\|\*\|%\|+\|-\|&\|>>\|<<\)\@!\(\S\)\@<=='
+	syntax match myNorme '\(\/\|\*\|%\|+\|-\|&\|>>\|<<\|!\|=\)\@!\(\S\)\@<=='
 	" OTHER BEFORE '%'
 	syntax match myNorme '\(\S\)\@<=%'
 	" OTHER BEFORE '*'
