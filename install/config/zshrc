@@ -50,9 +50,9 @@ function cdls()
 				localhome=`echo $1`
 				localhome=`echo $1 | sed 's/\(.*\)'${locallast}'/\1/'`
 				cd $localhome
-				vi $locallast
+				vim $locallast
 			else
-				vi $1
+				vim $1
 			fi
 		elif [[ $1 == *.h ]]; then
 			if [ `dirname $1 | wc -c` -gt '2' ]; then
@@ -60,9 +60,9 @@ function cdls()
 				localhome=`echo $1`
 				localhome=`echo $1 | sed 's/\(.*\)'${locallast}'/\1/'`
 				cd $localhome
-				vi $locallast
+				vim $locallast
 			else
-				vi $1
+				vim $1
 			fi
 		else
 			cd $*
@@ -90,9 +90,9 @@ function vicd()
 			localhome=`echo $1`
 			localhome=`echo $1 | sed 's/\(.*\)'${locallast}'/\1/'`
 			cd $localhome
-			vi $locallast
+			vim $locallast
 		else
-			vi $1
+			vim $1
 		fi
 	fi
 }
@@ -347,6 +347,7 @@ alias rb='~/program/ruby-2.1.0/bin/ruby'
 # ║       VI       ║
 # ╚════════════════╝
 
+alias v='vicd'
 alias vi='vicd'
 alias vu='vicd'
 alias vo='vicd'
@@ -381,4 +382,5 @@ alias refresh='cpbitnami'
 # ╚════════════════╝
 
 alias chrome='open -n -a /Applications/Google\ Chrome.app --args --incognito'
+
 alias lockscreen='/System/Library/CoreServices/Menu\ Extras/user.menu/Contents/Resources/CGSession -suspend'
