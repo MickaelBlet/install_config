@@ -381,3 +381,4 @@ alias refresh='cpbitnami'
 # ╚════════════════╝
 
 alias chrome='open -n -a /Applications/Google\ Chrome.app --args --incognito'
+alias lockscreen='/System/Library/CoreServices/Menu\ Extras/user.menu/Contents/Resources/CGSession -suspend'

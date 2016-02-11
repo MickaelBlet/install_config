@@ -6,7 +6,7 @@
 "    By: zaz <zaz@staff.42.fr>                      +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2013/06/15 12:45:34 by zaz               #+#    #+#              "
-"    Updated: 2014/05/26 23:58:43 by mblet            ###   ########.fr        "
+"    Updated: 2016/02/11 14:48:18 by mblet            ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -57,5 +57,5 @@ set hlsearch
 
 "Source user configuration
 if filereadable(expand("~/\#_my_config/.myvimrc"))
-    source ~/\#_my_config/.myvimrc
+    source ~/\#_my_config/vimrc
 endif
