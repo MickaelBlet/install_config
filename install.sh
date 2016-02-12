@@ -19,8 +19,12 @@ menulengthend=`echo "${menulength}-1"|bc`
 
 function menu0()
 {
-	printf "yolo0\n\r"
-	exit
+	rm -rf ~/#_my_config/
+	rm -rf ~/.vim/
+	rm ~/.myvimrc
+	rm ~/.vimrc
+	rm ~/.myzshrc
+	rm ~/.zshrc
 	cp -r .install/config/ ~/#_my_config
 	cp -r .install/vim ~/.vim
 	cp -r .install/myvimrc ~/.myvimrc
@@ -33,6 +37,7 @@ function menu0()
 	printf "*.a\n" >> ~/.gitignore_global
 	printf "*.out\n" >> ~/.gitignore_global
 	cp -r .install/pref/* ~/Library/Preferences/
+	printf "install complete !!!\n"
 }
 function menu1()
 {
