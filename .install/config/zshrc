@@ -246,19 +246,6 @@ alias mk='mkdircd'
 alias logout='logout_func'
 
 # ╔════════════════╗
-# ║       PHP      ║
-# ╚════════════════╝
-
-
-# alias php='~/mamp/php/bin/php'
-
-# ╔════════════════╗
-# ║      CAT       ║
-# ╚════════════════╝
-
-alias cat='mycat'
-
-# ╔════════════════╗
 # ║      CLR       ║
 # ╚════════════════╝
 
