@@ -1,5 +1,21 @@
 #!/bin/bash
 
+clear
+echo ""
+cols1=`echo "$(tput cols)/2+14/2"|bc`
+cols2=`echo "$(tput cols)/2-14/2"|bc`
+result=`echo "$cols1+$cols2"|bc`
+
+if [ $result != $(tput cols) ]; then
+	cols1=`echo "$cols1+1"|bc`
+fi
+
+printf "\033[48;5;244m\033[38;5;231m"
+printf "%*s%*s\n\r" $cols1 "MBLET CONFIGS" $cols2 ""
+printf "\033[38;5;226m\033[7m"
+printf "%*s%*s" $cols1 "INSTALL SPEED" $cols2 ""
+printf "\033[0m\n\r"
+
 tput civis # hide cursor
 
 trap ctrl_c INT
@@ -21,11 +37,14 @@ function print_middle()
 {
 	local _str=`echo "$1"`
 	local _len="${#_str}"
-	local _cols1=`echo "$(tput cols)/2-$_len/2"|bc`
+	local _cols1=`echo "$(tput cols)/2+$_len/2"|bc`
 	local _cols2=`echo "$(tput cols)/2-$_len/2"|bc`
 
-	printf "%*s" $_cols1 ""
-	printf "$_str"
+	if [ $result != $(tput cols) ]; then
+		cols1=`echo "$cols1+1"|bc`
+	fi
+
+	printf "%*s" $_cols1 "`echo $_str`"
 	printf "%*s\n\r" $_cols2 ""
 }
 
@@ -57,24 +76,14 @@ function print_menu()
 	else
 		printf "\033[0m"
 	fi
-	print_middle "VIM "
+	print_middle "VIM"
+	if [[ $index == "4" ]]; then
+		printf "\033[7m"
+	else
+		printf "\033[0m"
+	fi
+	print_middle "REINSTALL"
 }
-
-clear
-echo ""
-cols1=`echo "$(tput cols)/2+14/2"|bc`
-cols2=`echo "$(tput cols)/2-14/2"|bc`
-result=`echo "$cols1+$cols2"|bc`
-
-if [ $result != $cols ]; then
-	cols1=`echo "$cols1+1"|bc`
-fi
-
-printf "\033[48;5;244m\033[38;5;231m"
-printf "%*s%*s\n\r" $cols1 "MBLET CONFIGS" $cols2 ""
-printf "\033[38;5;226m\033[7m"
-printf "%*s%*s" $cols1 "INSTALL SPEED" $cols2 ""
-printf "\033[0m\n\r"
 
 index=0
 
@@ -92,14 +101,15 @@ case $C in
 				C) index=$(($index + 1));;
 				D) index=$(($index - 1));;
 			esac
-			if [[ $index > "3" ]]; then
-				index=3
+			if [[ $index > "4" ]]; then
+				index=4
 			fi
 			if [[ $index < "0" ]]; then
 				index=0
 			fi
 			printf "\r\033[K"
 
+			tput up
 			tput up
 			tput up
 			tput up
@@ -112,6 +122,8 @@ esac
 done
 
 tput cnorm
+
+exit
 
 if [[ $index == "0" ]]; then
 	cp -r install/config/ ~/#_my_config
