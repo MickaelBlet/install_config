@@ -44,8 +44,8 @@ function print_middle()
 		cols1=`echo "$cols1+1"|bc`
 	fi
 
-	printf "%*s" $_cols1 "`echo $_str`"
-	printf "%*s\n\r" $_cols2 ""
+	printf "%*s" $_cols1 "$_str"
+	printf "%*s\n\r" $_cols ""
 }
 
 function print_menu()
@@ -122,7 +122,7 @@ esac
 done
 
 tput cnorm
-
+clear
 exit
 
 if [[ $index == "0" ]]; then
