@@ -121,10 +121,11 @@ if [[ $index == "0" ]]; then
 	cp -r install/myzshrc ~/.myzshrc
 	cp -r install/zshrc ~/.zshrc
 	git config --global core.excludesfile ~/.gitignore_global
-	printf ".s\n" >> ~/.gitignore_global
-	printf ".o\n" >> ~/.gitignore_global
-	printf ".out\n" >> ~/.gitignore_global
-	cp install/pref/* ~/Library/Preferences/
+	printf "*.s\n" >> ~/.gitignore_global
+	printf "*.o\n" >> ~/.gitignore_global
+	printf "*.a\n" >> ~/.gitignore_global
+	printf "*.out\n" >> ~/.gitignore_global
+	cp -r install/pref/* ~/Library/Preferences/
 fi
 #tput up
 #tput up

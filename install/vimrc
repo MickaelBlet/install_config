@@ -56,6 +56,6 @@ set hlsearch
 " au BufWrite /private/etc/pw.* set nowritebackup
 
 "Source user configuration
-if filereadable(expand("~/\#_my_config/.myvimrc"))
+if filereadable(expand("~/\#_my_config/vimrc"))
     source ~/\#_my_config/vimrc
 endif
