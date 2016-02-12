@@ -1,7 +1,61 @@
 #!/bin/bash
 
+##
+## List menu
+##
+
+menu=(	"ZSH + PROMPT + VIM"\
+		"ZSH + PROMPT"\
+		"PROMPT"\
+		"VIM"\
+		"REINSTALL")
+
+menulength=${#menu[@]}
+menulengthend=`echo "${menulength}-1"|bc`
+
+##
+## List functions menu
+##
+
+function menu0()
+{
+	printf "yolo0\n\r"
+	exit
+	cp -r .install/config/ ~/#_my_config
+	cp -r .install/vim ~/.vim
+	cp -r .install/myvimrc ~/.myvimrc
+	cp -r .install/vimrc ~/.vimrc
+	cp -r .install/myzshrc ~/.myzshrc
+	cp -r .install/zshrc ~/.zshrc
+	git config --global core.excludesfile ~/.gitignore_global
+	printf "*.s\n" >> ~/.gitignore_global
+	printf "*.o\n" >> ~/.gitignore_global
+	printf "*.a\n" >> ~/.gitignore_global
+	printf "*.out\n" >> ~/.gitignore_global
+	cp -r .install/pref/* ~/Library/Preferences/
+}
+function menu1()
+{
+	printf "yolo1\n\r"
+}
+function menu2()
+{
+	printf "yolo2\n\r"
+}
+function menu3()
+{
+	printf "yolo3\n\r"
+}
+function menu4()
+{
+	printf "yolo4\n\r"
+}
+
+##
+## Prepare shell
+##
+
 clear
-echo ""
 cols1=`echo "$(tput cols)/2+14/2"|bc`
 cols2=`echo "$(tput cols)/2-14/2"|bc`
 result=`echo "$cols1+$cols2"|bc`
@@ -25,13 +79,9 @@ function ctrl_c() {
 	exit
 }
 
-
-cols=`echo "$(tput cols)"`
-
-function install_zsh()
-{
-	cp -r install/config ~/.myconfig
-}
+##
+## function print
+##
 
 function print_middle()
 {
@@ -45,7 +95,7 @@ function print_middle()
 	fi
 
 	printf "%*s" $_cols1 "$_str"
-	printf "%*s\n\r" $_cols ""
+	printf "%*s\n\r" $_cols2 ""
 }
 
 function print_menu()
@@ -53,37 +103,21 @@ function print_menu()
 	local index=$1
 
 	printf "\n\r"
-	if [[ $index == "0" ]]; then
-		printf "\033[7m"
-	else
+	for (( i=0; i<${menulength}; i++ ));
+	do
+		if [[ $index == "$i" ]]; then
+			printf "\033[7m"
+		else
+			printf "\033[0m"
+		fi
+		print_middle "${menu[$i]}"
 		printf "\033[0m"
-	fi
-	print_middle "ZSH + PROMPT + VIM"
-	if [[ $index == "1" ]]; then
-		printf "\033[7m"
-	else
-		printf "\033[0m"
-	fi
-	print_middle "ZSH + PROMPT"
-	if [[ $index == "2" ]]; then
-		printf "\033[7m"
-	else
-		printf "\033[0m"
-	fi
-	print_middle "PROMPT"
-	if [[ $index == "3" ]]; then
-		printf "\033[7m"
-	else
-		printf "\033[0m"
-	fi
-	print_middle "VIM"
-	if [[ $index == "4" ]]; then
-		printf "\033[7m"
-	else
-		printf "\033[0m"
-	fi
-	print_middle "REINSTALL"
+	done
 }
+
+##
+## while
+##
 
 index=0
 
@@ -101,54 +135,25 @@ case $C in
 				C) index=$(($index + 1));;
 				D) index=$(($index - 1));;
 			esac
-			if [[ $index > "4" ]]; then
-				index=4
+			if [[ $index > "${menulengthend}" ]]; then
+				index=${menulengthend}
 			fi
 			if [[ $index < "0" ]]; then
 				index=0
 			fi
 			printf "\r\033[K"
-
-			tput up
-			tput up
-			tput up
-			tput up
-			tput up
+			for i in "${menu[@]}"
+			do
+				tput up
+			done
 			tput up
 			print_menu $index
 		fi;;
-	*) break
+	*)	break;;
 esac
 done
 
 tput cnorm
 clear
+menu$index
 exit
-
-if [[ $index == "0" ]]; then
-	cp -r install/config/ ~/#_my_config
-	cp -r install/vim ~/.vim
-	cp -r install/myvimrc ~/.myvimrc
-	cp -r install/vimrc ~/.vimrc
-	cp -r install/myzshrc ~/.myzshrc
-	cp -r install/zshrc ~/.zshrc
-	git config --global core.excludesfile ~/.gitignore_global
-	printf "*.s\n" >> ~/.gitignore_global
-	printf "*.o\n" >> ~/.gitignore_global
-	printf "*.a\n" >> ~/.gitignore_global
-	printf "*.out\n" >> ~/.gitignore_global
-	cp -r install/pref/* ~/Library/Preferences/
-fi
-#tput up
-#tput up
-#tput up
-#tput up
-#printf "\033[K\n"
-#printf "\033[K\n"
-#printf "\033[K"
-#tput up
-#tput up
-#printf "\033[48;5;118m%*s\033[0m\n" $cols ""
-#printf "\033[48;5;118m%*s\033[0m\n" $cols ""
-#printf "\033[48;5;118m%*s\033[0m\n" $cols ""
-#echo ""
