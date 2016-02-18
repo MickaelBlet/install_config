@@ -287,7 +287,7 @@ alias speedstart='speedstart'
 # ║    VIM EDIT    ║
 # ╚════════════════╝
 
-alias vrc='vi ~/\#_my_config/.myvimrc;cd -'
+alias vrc='vi ~/\#_my_config/vimrc;cd -'
 alias syntax='vi ~/.vim/syntax/c.vim;cd -'
 
 alias -s c='vim'
@@ -326,7 +326,7 @@ alias lognorminator='perl ~/program/norminator.perl --auth'
 
 alias cplibft='cp -r ~/1_Semestre/algorithmie-I/libft ./libft'
 alias correction='correction'
-alias src='vi ~/\#_my_config/.zshrc;cd -'
+alias src='vi ~/\#_my_config/zshrc;cd -'
 alias github='open ~/program/GitHub.app'
 alias rb='~/program/ruby-2.1.0/bin/ruby'
 

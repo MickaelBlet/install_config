@@ -7,11 +7,13 @@ function! Go_to_header()
 	while !filereadable('./Makefile')
 				\ && !isdirectory(l:dir1)
 				\ && !isdirectory(l:dir2)
-		if isdirectory('./nfs')
-			exe ':cd'.l:pwd
-			break
-		endif
-		cd ..
+		
+		try
+			cd ..
+		catch
+			exe ':cd '.l:pwd
+			return
+		endtry
 	endwhile
 	if isdirectory(l:dir1)
 		cd ./includes

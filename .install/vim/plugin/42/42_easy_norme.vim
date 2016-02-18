@@ -18,5 +18,6 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 function! EasyNorme()
-
+	" space after common builtin
+	%s/\(\<if\>\|\<while\>\|\<return\>\|\<continue\>\|\<break\>\)\zs\S/ &/
 endfunction
