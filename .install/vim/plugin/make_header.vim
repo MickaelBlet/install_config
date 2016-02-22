@@ -18,15 +18,15 @@
 " along with this program.  If not, see <http://www.gnu.org/licenses/>.
 "
 
-autocmd	BufNewFile	*.c	call	Insert_header_42()
-autocmd	BufNewFile	*.s	call	Insert_header_42_asm()
-autocmd	BufWritePre	*.c	call	Update_header_42()
-autocmd	BufWritePre	*.s	call	Update_header_42_asm()
-autocmd	BufWritePre	*.h	call	Update_header_42()
+"autocmd	BufNewFile	*.c	call	Insert_header_42()
+"autocmd	BufNewFile	*.s	call	Insert_header_42_asm()
+"autocmd	BufWritePre	*.c	call	Update_header_42()
+"autocmd	BufWritePre	*.s	call	Update_header_42_asm()
+"autocmd	BufWritePre	*.h	call	Update_header_42()
 
-autocmd	BufNewFile	*.cpp	call	Insert_header_42()
-autocmd	BufWritePre	*.cpp	call	Update_header_42()
-autocmd	BufWritePre	*.hpp	call	Update_header_42()
+"autocmd	BufNewFile	*.cpp	call	Insert_header_42()
+"autocmd	BufWritePre	*.cpp	call	Update_header_42()
+"autocmd	BufWritePre	*.hpp	call	Update_header_42()
 
 function!	Insert_header_42_add_info(begin, end, nul_line, setline)
 	let l:line = "/*   " . a:begin . ": " . strftime("%Y/%m/%d %H:%M:%S") . " by " . s:author
