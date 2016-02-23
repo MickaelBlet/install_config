@@ -58,6 +58,8 @@ fgplus2=$'%{\e[38;5;250m%}'
 PR_TITLEBAR=$'%{\e]0;%D{%H:%M} %m %~/\a%}'
 PR_STITLE=$'%{\e\e%}'
 
+GIT_STATS=1
+
 # ╔════════════════╗
 # ║     PROMPT     ║
 # ╚════════════════╝
@@ -145,7 +147,7 @@ function ___Left_Prompt()
 	local tmp=$2
 	PROMPT="$PR_STITLE${PR_TITLEBAR}${root_bg}${fg_color} $1 "
 	if [ `echo $tmp | wc -c` -gt '30' ]; then
-		tmp=`echo "${fgplus0}.${fgplus1}.${fgplus2}.${reset}${dir_bg}${fg_color}  $(basename "$3")"`
+		tmp="${fgplus0}.${fgplus1}.${fgplus2}.${reset}${dir_bg}${fg_color}  $(basename "$3")"
 	fi
 	if [[ -n $4 ]]; then
 		PROMPT+="${dir_bg}${root_fg}${reset}${dir_bg}${fg_color} $tmp ${reset}"
@@ -159,11 +161,11 @@ function ___Left_Prompt()
 
 function ___Check_Permition()
 {
-	permition=`echo ""`
+	permition=""
 	if [ ! -w $PWD ]; then
-		permition=`echo "${red_bg}${fg_color}  ${reset}${red_fg}"`
+		permition="${red_bg}${fg_color}  ${reset}${red_fg}"
 	fi
-	permition+=`echo ""`
+	permition+=""
 	echo $permition
 }
 # ╔════════════════╗ #
@@ -190,20 +192,38 @@ function ___Right_Prompt()
 
 function ___Check_Git_Branch()
 {
-	if gittest=`git symbolic-ref -q HEAD` &> /dev/null; then
-		branch=`basename $gittest`
-		echo $branch
+	if [ -n $PROMPT_GIT ]; then
+		if [[ $PROMPT_GIT == "true" ]]; then
+			if gittest=`git symbolic-ref -q HEAD` &> /dev/null; then
+				branch=`basename $gittest`
+				echo $branch
+			fi
+		fi
 	fi
 }
 
 function ___Check_Git_Status()
 {
-	if gittest=`git status --ignore-submodules` &> /dev/null; then
-		testgit=`echo "nothing to commit"`
-		if [[ "$gittest" == *$testgit* ]]; then
+	if [ -n $PROMPT_GIT ]; then
+		if [[ $PROMPT_GIT == "true" ]]; then
+			if gittest=`git status --ignore-submodules` &> /dev/null; then
+				testgit="nothing to commit"
+				if [[ "$gittest" == *$testgit* ]]; then
 
-		else
-			echo "0"
+				else
+					echo "0"
+				fi
+			fi
 		fi
 	fi
+}
+
+function prompt_git()
+{
+	export PROMPT_GIT="true"
+}
+
+function prompt_nogit()
+{
+	export PROMPT_GIT="false"
 }
