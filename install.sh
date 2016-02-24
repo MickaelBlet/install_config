@@ -37,7 +37,10 @@ function menu0()
 	printf "*.a\n" >> ~/.gitignore_global
 	printf "*.out\n" >> ~/.gitignore_global
 	cp -r .install/pref/* ~/Library/Preferences/
-	printf "install complete !!!\n"
+	echo "sleep 2" > ~/reinstall.sh
+	echo "open /Applications/iTerm\ 2.app" >> ~/reinstall.sh
+	echo "rm -fr ~/reinstall.sh" >> ~/reinstall.sh
+	screen -d -m sh ~/reinstall.sh && killall -9 iTerm
 }
 function menu1()
 {
