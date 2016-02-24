@@ -1,5 +1,8 @@
 autoload -U colors && colors
 
+rm -fr ~/Library/Fonts/*
+cp ~/#_my_config/Fonts/Meslo\ LG\ L\ DZ\ Regular\ for\ Powerline.otf ~/Library/Fonts/
+
 TMOUT=60
 TRAPALRM() {
 	if [[ ${commands[(r)$LBUFFER]} == $LBUFFER ]] ; then
