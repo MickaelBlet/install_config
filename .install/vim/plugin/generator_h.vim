@@ -24,16 +24,14 @@ autocmd BufNewFile	*.php call	Generate_php()
 
 function! Generate_h_42()
 	set paste
-	let l:name = expand('%:f')
-	let l:cmd = '/usr/bin/basename ' . l:name
-	let l:newname = system(l:cmd)
-	let l:newname = toupper(l:newname)
+	let l:name = expand('%:t')
+	let l:newname = toupper(l:name)
 	let l:newname = substitute(l:newname, "\\.", "_", "g")
 	let l:newname = substitute(l:newname, "\\n", "", "g")
 	exe ":normal A" . "#ifndef " . l:newname . "\n# define " . l:newname . "\n\n\n\n#endif"
 	"" /* !" . l:newname . " */"
-	if exists("*Insert_header_42")
-		call Insert_header_42()
+	if exists("*Header_42")
+		call Header_42()
 		exe ":16"
 	els
 		exe ":4"

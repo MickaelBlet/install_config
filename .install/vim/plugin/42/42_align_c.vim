@@ -94,27 +94,48 @@ function! Get_len_speed_func(s)
 	return l:ret
 endfunction
 
+" [Align precmd]
+"
+" #ifndef
+" #ifndef
+" #define TEST
+" #endif
+" #endif
+"
+" to
+"
+" #ifndef
+" # ifndef
+" #  define TEST
+" # endif
+" #endif
+"
 function! AlignPrepros()
 	let l:pos = 0
 	let l:line = 0
+	" Check all line of file
 	while l:line <= line('$')
-		if !empty(matchstr(getline(l:line), '^\#\s*if'))
-					\ || !empty(matchstr(getline(l:line), '^\#\s*el'))
-					\ || !empty(matchstr(getline(l:line), '^\#\s*define'))
-					\ || !empty(matchstr(getline(l:line), '^\#\s*include'))
-			s/\#\zs\s*/\//e
-			s/\//\=repeat(" ", l:pos)/e
+		" Get string of line
+		let l:strline = getline(l:line)
+		" Check if in string of line find '#' and ('if' or 'el' or 'define' or 'include')
+		if !empty(matchstr(l:strline, '^\#\s*if'))
+					\ || !empty(matchstr(l:strline, '^\#\s*el'))
+					\ || !empty(matchstr(l:strline, '^\#\s*define'))
+					\ || !empty(matchstr(l:strline, '^\#\s*include'))
+					\ || !empty(matchstr(l:strline, '^\#\s*end'))
+			" replace with the real space
+			call setline(l:line, substitute(l:strline, '\#\zs\s*', repeat(' ', l:pos), ""))
 		endif
-		if !empty(matchstr(getline(l:line), '^\#\s*if'))
+		" inc position
+		if !empty(matchstr(l:strline, '^\#\s*if'))
 			let l:pos += 1
 		endif
-		if !empty(matchstr(getline(l:line), '^\#\s*end'))
+		" dec position
+		if !empty(matchstr(l:strline, '^\#\s*end'))
 			let l:pos -= 1
-			s/\#\zs\s*/\//e
-			s/\//\=repeat(" ", l:pos)/e
 		endif
+		" inc count line
 		let l:line += 1
-		call cursor(l:line, 1)
 	endwhile
 endfunction
 

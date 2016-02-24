@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ##
-## List menu
+#    install.sh                                         :+:      :+:    :+:    #
 ##
 
 menu=(	"ZSH + PROMPT + VIM"\

@@ -1,5 +1,5 @@
 autocmd BufNewFile	Makefile call	Creat_Makefile_42()
-autocmd BufRead		Makefile call	Refresh_files_list()
+autocmd BufRead		Makefile call	Makefile_refresh_files_list()
 
 function!	Insert_header_42_add_info_Makefile(begin, end, nul_line, setline)
 	let l:line = "#    " . a:begin . ": " . strftime("%Y/%m/%d %H:%M:%S") . " by " . s:author
@@ -75,10 +75,8 @@ function!	Creat_Makefile_42()
 	call Insert_line("LIBFT_LIB	=	libft/libft.a")
 	call Insert_line("")
 	call Insert_line("SRCBASE		=	\\")
-	call Get_files_list()
 	call Insert_line("")
 	call Insert_line("INCBASE		=	\\")
-	call Get_files_list_h()
 	call Insert_line("")
 	call Insert_line("SRCS		=	$(addprefix $(SRCDIR), $(SRCBASE))")
 	call Insert_line("")
@@ -138,174 +136,43 @@ function!	Creat_Makefile_42()
 	call setline(line("$"), ".PHONY:		fclean clean re debug")
 	unlet s:author
 	set nopaste
+	call Makefile_refresh_files_list()
 endfunction
 
-function! Get_len_file(s)
-	let l:cmd = "wc -c | awk '{print $1}' | tr -d '\n'"
-	let l:num = system(l:cmd)
-	let l:ret = col("$") - l:num - 5
-	return l:ret
-endfunction
-
-function!	Get_files_list()
-	let l:in_dir = 0
-	if isdirectory("srcs")
-		let l:in_dir = 1
-		cd srcs
-	endif
-	let filelist = glob('**/*.c')
-	let filelist .= glob('*.cpp')
-	if len(filelist)
-		let count_line = line(".")
-		for file in split(filelist, '\n')
-			exe 'normal A' . "\t\t\t\t" . file . "\n"
-			call cursor(line(".") - 1, 1)
-			let l:maxlen = 59
-			let l:tmplen = Get_len_file(getline(line(".")))
-			if l:maxlen > l:tmplen
-				let l:ntab = 0
-				let l:diff = l:maxlen - l:tmplen
-				if l:tmplen < &tabstop
-					let l:ntab += 1
-					let l:ntab += (l:diff - (&tabstop - l:tmplen)) / &tabstop
-				elseif (l:tmplen % &tabstop) > 0
-					let l:ntab += (l:diff + l:tmplen % &tabstop) / &tabstop
+function!	s:Append_files_list(line_index, pattern_type_file)
+	let in_dir = 0
+	let maxlen = 59
+	let filelist = ""
+	for filelist_value in split(a:pattern_type_file, ';')
+		let filelist .= glob(filelist_value)
+	endfor
+	let count_file = len(split(filelist, '\n'))
+	if count_file > 0
+		let count_line = a:line_index - 1
+		for file_name in split(filelist, '\n')
+			let len_file_name = strlen(file_name)
+			if maxlen > len_file_name
+				let ntab = 0
+				let diff = l:maxlen - len_file_name
+				if len_file_name < &tabstop
+					let ntab += 1
+					let ntab += (l:diff - (&tabstop - len_file_name)) / &tabstop
+				elseif (len_file_name % &tabstop) > 0
+					let ntab += (l:diff + len_file_name % &tabstop) / &tabstop
 				else
-					let l:ntab += (l:diff) / &tabstop
+					let ntab += (diff) / &tabstop
 				endif
-				let l:ntab += 1
-				s/$/\=repeat("\t", l:ntab)/e
-				s/$/\\/e
+				let ntab += 1
 			endif
-			call cursor(line(".") + 1, 1)
-		endfor
-		call cursor(line(".") - 1, 1)
-		s/\t\+\\$//e
-		call cursor(line(".") + 1, 1)
-	endif
-	if l:in_dir > 0
-		cd ..
-	endif
-endfunction
-
-function!	Get_files_list_h()
-	let l:in_dir = 0
-	if isdirectory("includes")
-		let l:in_dir = 1
-		cd includes
-	endif
-	let filelist = glob('*.h')
-	let filelist .= glob('*.hpp')
-	if len(filelist)
-		let count_line = line(".")
-		for file in split(filelist, '\n')
-			if empty(matchstr(file, "libft.h"))
-				exe 'normal A' . "\t\t\t\t" . file . "\n"
-				call cursor(line(".") - 1, 1)
-				let l:maxlen = 59
-				let l:tmplen = Get_len_file(getline(line(".")))
-				if l:maxlen > l:tmplen
-					let l:ntab = 0
-					let l:diff = l:maxlen - l:tmplen
-					if l:tmplen < &tabstop
-						let l:ntab += 1
-						let l:ntab += (l:diff - (&tabstop - l:tmplen)) / &tabstop
-					elseif (l:tmplen % &tabstop) > 0
-						let l:ntab += (l:diff + l:tmplen % &tabstop) / &tabstop
-					else
-						let l:ntab += (l:diff) / &tabstop
-					endif
-					let l:ntab += 1
-					s/$/\=repeat("\t", l:ntab)/e
-					s/$/\\/e
-				endif
-				call cursor(line(".") + 1, 1)
+			if count_file == 1
+				call append(count_line, "\t\t\t\t" . file_name)
+			else
+				call append(count_line, "\t\t\t\t" . file_name . repeat("\t", ntab) . "\\")
 			endif
-		endfor
-		call cursor(line(".") - 1, 1)
-		s/\t\+\\$//e
-		call cursor(line(".") + 1, 1)
-	endif
-	if l:in_dir > 0
-		cd ..
-	endif
-endfunction
-
-function!	Get_files_list_class_cpp()
-	let l:in_dir = 0
-	if isdirectory("class")
-		let l:in_dir = 1
-		cd class
-	endif
-	let filelist = glob('*.cpp')
-	if len(filelist)
-		let count_line = line(".")
-		for file in split(filelist, '\n')
-			exe 'normal A' . "\t\t\t\t" . file . "\n"
-			call cursor(line(".") - 1, 1)
-			let l:maxlen = 59
-			let l:tmplen = Get_len_file(getline(line(".")))
-			if l:maxlen > l:tmplen
-				let l:ntab = 0
-				let l:diff = l:maxlen - l:tmplen
-				if l:tmplen < &tabstop
-					let l:ntab += 1
-					let l:ntab += (l:diff - (&tabstop - l:tmplen)) / &tabstop
-				elseif (l:tmplen % &tabstop) > 0
-					let l:ntab += (l:diff + l:tmplen % &tabstop) / &tabstop
-				else
-					let l:ntab += (l:diff) / &tabstop
-				endif
-				let l:ntab += 1
-				s/$/\=repeat("\t", l:ntab)/e
-				s/$/\\/e
-			endif
-			call cursor(line(".") + 1, 1)
+			let count_line += 1
+			let count_file -= 1
 		endfor
 	endif
-	call cursor(line(".") - 1, 1)
-	s/\t\+\\$//e
-	call cursor(line(".") + 1, 1)
-	if l:in_dir > 0
-		cd ..
-	endif
-endfunction
-
-function!	Get_files_list_class_hpp()
-	let l:in_dir = 0
-	if isdirectory("class")
-		let l:in_dir = 1
-		cd class
-	endif
-	let filelist = glob('*.hpp')
-	if len(filelist)
-		let count_line = line(".")
-		for file in split(filelist, '\n')
-			exe 'normal A' . "\t\t\t\t" . file . "\n"
-			call cursor(line(".") - 1, 1)
-			let l:maxlen = 59
-			let l:tmplen = Get_len_file(getline(line(".")))
-			if l:maxlen > l:tmplen
-				let l:ntab = 0
-				let l:diff = l:maxlen - l:tmplen
-				if l:tmplen < &tabstop
-					let l:ntab += 1
-					let l:ntab += (l:diff - (&tabstop - l:tmplen)) / &tabstop
-				elseif (l:tmplen % &tabstop) > 0
-					let l:ntab += (l:diff + l:tmplen % &tabstop) / &tabstop
-				else
-					let l:ntab += (l:diff) / &tabstop
-				endif
-				let l:ntab += 1
-				s/$/\=repeat("\t", l:ntab)/e
-				s/$/\\/e
-			endif
-			call cursor(line(".") + 1, 1)
-		endfor
-	endif
-	call cursor(line(".") - 1, 1)
-	s/\t\+\\$//e
-	call cursor(line(".") + 1, 1)
 	if l:in_dir > 0
 		cd ..
 	endif
@@ -315,24 +182,73 @@ function!	Insert_line(s)
 	exe 'normal A' . a:s . "\n"
 endfunction
 
-function!	Refresh_files_list()
-	let l:line = 0
-	while l:line < line('$')
-		if !empty(matchstr(getline(l:line), '^SRCBASE'))
-			let l:line += 1
-			call cursor(l:line, 1)
-			break
+function!	Makefile_refresh_files_list()
+	let index_line = 0
+	while index_line < line('$')
+		if !empty(matchstr(getline(index_line), '^SRCBASE'))
+			let index_line += 1
+			let start_line_element = index_line
+			let end_line_element = index_line
+			while !empty(matchstr(getline(end_line_element), '^\t'))
+						\ && end_line_element < line('$')
+				let end_line_element += 1
+			endwhile
+			if start_line_element != end_line_element
+				exe start_line_element . ',' . (end_line_element-1) .  'd'
+			endif
+			let in_dir = 0
+			if isdirectory("srcs")
+				cd srcs
+				let in_dir = 1
+			endif
+			call s:Append_files_list(start_line_element, "**/*.c;**/*.cpp")
+			if in_dir == 1
+				cd ..
+			endif
+		elseif !empty(matchstr(getline(index_line), '^INCBASE'))
+			let index_line += 1
+			let start_line_element = index_line
+			let end_line_element = index_line
+			while !empty(matchstr(getline(end_line_element), '^\t'))
+						\ && end_line_element < line('$')
+				let end_line_element += 1
+			endwhile
+			if start_line_element != end_line_element
+				exe start_line_element . ',' . (end_line_element-1) .  'd'
+			endif
+			let in_dir = 0
+			if isdirectory("includes")
+				cd includes
+				let in_dir = 1
+			endif
+			call s:Append_files_list(start_line_element, "**/*.h;**/*.hpp")
+			if in_dir == 1
+				cd ..
+			endif
+		elseif !empty(matchstr(getline(index_line), '^CLSBASE'))
+			let index_line += 1
+			let start_line_element = index_line
+			let end_line_element = index_line
+			while !empty(matchstr(getline(end_line_element), '^\t'))
+						\ && end_line_element < line('$')
+				let end_line_element += 1
+			endwhile
+			if start_line_element != end_line_element
+				exe start_line_element . ',' . (end_line_element-1) .  'd'
+			endif
+			let in_dir = 0
+			if isdirectory("class")
+				cd class
+				let in_dir = 1
+			endif
+			call s:Append_files_list(start_line_element, "**/*.hpp;**/*.cpp")
+			if in_dir == 1
+				cd ..
+			endif
 		endif
-		let l:line += 1
+		let index_line += 1
 	endwhile
-	if l:line < line('$')
-		while !empty(matchstr(getline(line('.')), '^\t')) && line('.') < line('$')
-			exe 'normal dd'
-		endwhile
-		call Get_files_list()
-	endif
-	call Refresh_files_list_2()
-endfunct
+endfunction
 
 function!	Refresh_files_list_2()
 	let l:line = 0
@@ -350,7 +266,7 @@ function!	Refresh_files_list_2()
 		endwhile
 		call Get_files_list_h()
 	endif
-	call Refresh_files_list_3()
+	"call Refresh_files_list_3()
 endfunction
 
 function!	Refresh_files_list_3()
@@ -369,7 +285,7 @@ function!	Refresh_files_list_3()
 		endwhile
 		call Get_files_list_class_cpp()
 	endif
-	call Refresh_files_list_4()
+	"call Refresh_files_list_4()
 endfunction
 
 function!	Refresh_files_list_4()

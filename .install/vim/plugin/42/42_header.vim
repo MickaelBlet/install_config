@@ -14,13 +14,13 @@ autocmd BufRead *.s					call s:Header_42_s()
 autocmd BufRead *.sh				call s:Header_42_bash()
 autocmd BufRead Makefile			call s:Header_42_bash()
 
-autocmd BufWritePre *.c				call Header_42_Updated()
-autocmd BufWritePre *.cpp			call Header_42_Updated()
-autocmd BufWritePre *.h				call Header_42_Updated()
-autocmd BufWritePre *.hpp			call Header_42_Updated()
-autocmd BufWritePre *.s				call Header_42_Updated()
-autocmd BufWritePre *.sh			call Header_42_Updated()
-autocmd BufWritePre Makefile		call Header_42_Updated()
+autocmd BufWritePre *.c				call s:Header_42_Updated()
+autocmd BufWritePre *.cpp			call s:Header_42_Updated()
+autocmd BufWritePre *.h				call s:Header_42_Updated()
+autocmd BufWritePre *.hpp			call s:Header_42_Updated()
+autocmd BufWritePre *.s				call s:Header_42_Updated()
+autocmd BufWritePre *.sh			call s:Header_42_Updated()
+autocmd BufWritePre Makefile		call s:Header_42_Updated()
 
 function! s:Header_42_s()
 	let s:comment_start	= "; "
@@ -50,28 +50,28 @@ function! s:New_Header_42_s()
 	call s:Header_42_s()
 	call Header_42()
 	call append(12, "")
-	call cursor(13, 0)
+	exe ":13"
 endfunction
 
 function! s:New_Header_42_c()
 	call s:Header_42_c()
 	call Header_42()
 	call append(12, "")
-	call cursor(12, 0)
+	exe ":13"
 endfunction
 
 function! s:New_Header_42_cpp()
 	call s:Header_42_cpp()
 	call Header_42()
 	call append(12, "")
-	call cursor(13, 0)
+	exe ":13"
 endfunction
 
 function! s:New_Header_42_bash()
 	call s:Header_42_bash()
 	call Header_42()
 	call append(12, "")
-	call cursor(13, 0)
+	exe ":13"
 endfunction
 
 function! s:Header_Map_Keys()
@@ -203,9 +203,12 @@ function! s:Header_42_Info(info, author, index)
 	return s:Add_Comment(l:line)
 endfunction
 
-function! Header_42_Updated()
-	if &mod == 0
-		return
+function! s:Header_42_Updated()
+	"if &mod == 0
+	"	return
+	"endif
+	if getline(4) != s:Header_42_File()
+		call setline(4, s:Header_42_File())
 	endif
 	if match(getline(9), s:comment_start . "  " . "Updated:") == -1
 		return
