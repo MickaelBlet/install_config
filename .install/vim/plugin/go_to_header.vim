@@ -7,7 +7,6 @@ function! Go_to_header()
 	while !filereadable('./Makefile')
 				\ && !isdirectory(l:dir1)
 				\ && !isdirectory(l:dir2)
-		
 		try
 			cd ..
 		catch

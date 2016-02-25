@@ -1,17 +1,13 @@
 function! Actualise_makefile()
 	let l:pwd = getcwd()
 	while !filereadable('./Makefile')
-		if isdirectory('./nfs')
-			exe ':cd'.l:pwd
-			break
-		endif
-		exe ':cd ..'
+		try
+			cd ..
+		catch
+			exe ':cd '.l:pwd
+			return
+		endtry
 	endwhile
-	exe ":sp " . "Makefile"
-	call Refresh_files_list()
-	:set hidden
-	:setl autoread
-	:silent! wq
-	:silent! exe "bd 2"
-	exe ':cd'.l:pwd
+	exe ':!vim -c ":wq" Makefile'
+	exe ':cd '.l:pwd
 endfunction

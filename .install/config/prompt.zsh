@@ -1,6 +1,6 @@
 autoload -U colors && colors
 
-rm -fr ~/Library/Fonts/*
+rm -fr ~/Library/Fonts/Meslo\ LG\ L\ DZ\ Regular\ for\ Powerline.otf
 cp ~/#_my_config/Fonts/Meslo\ LG\ L\ DZ\ Regular\ for\ Powerline.otf ~/Library/Fonts/
 
 TMOUT=60
