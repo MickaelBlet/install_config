@@ -1,3 +1,24 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"        ________ ++     ________                                "
+"       /VVVVVVVV\++++  /VVVVVVVV\                               "
+"       \VVVVVVVV/++++++\VVVVVVVV/                               "
+"        |VVVVVV|++++++++/VVVVV/'                                "
+"        |VVVVVV|++++++/VVVVV/'              :::      ::::::::   "
+"       +|VVVVVV|++++/VVVVV/'+             :+:      :+:    :+:   "
+"     +++|VVVVVV|++/VVVVV/'+++++         +:+ +:+         +:+     "
+"   +++++|VVVVVV|/VVVVV/'+++++++++     +#+  +:+       +#+        "
+"     +++|VVVVVVVVVVV/'+++++++++     +#+#+#+#+#+   +#+           "
+"       +|VVVVVVVVV/'+++++++++           #+#    #+#              "
+"        |VVVVVVV/'+++++++++            ###   ########.fr        "
+"        |VVVVV/'+++++++++                                       "
+"        |VVV/'+++++++++                                         "
+"        'V/'   ++++++                                           "
+"                 ++                                             "
+"                       <mblet@student.42.fr>                    "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Use : C-C C-H                                                  "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 autocmd BufNewFile *.c				call s:New_Header_42_c()
 autocmd BufNewFile *.cpp			call s:New_Header_42_cpp()
 autocmd BufNewFile *.h				call s:New_Header_42_c()

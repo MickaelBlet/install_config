@@ -1,8 +1,27 @@
-autocmd BufNewFile	Makefile call	Creat_Makefile_42()
-autocmd BufRead		Makefile call	Makefile_refresh_files_list()
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"        ________ ++     ________                                "
+"       /VVVVVVVV\++++  /VVVVVVVV\                               "
+"       \VVVVVVVV/++++++\VVVVVVVV/                               "
+"        |VVVVVV|++++++++/VVVVV/'                                "
+"        |VVVVVV|++++++/VVVVV/'              :::      ::::::::   "
+"       +|VVVVVV|++++/VVVVV/'+             :+:      :+:    :+:   "
+"     +++|VVVVVV|++/VVVVV/'+++++         +:+ +:+         +:+     "
+"   +++++|VVVVVV|/VVVVV/'+++++++++     +#+  +:+       +#+        "
+"     +++|VVVVVVVVVVV/'+++++++++     +#+#+#+#+#+   +#+           "
+"       +|VVVVVVVVV/'+++++++++           #+#    #+#              "
+"        |VVVVVVV/'+++++++++            ###   ########.fr        "
+"        |VVVVV/'+++++++++                                       "
+"        |VVV/'+++++++++                                         "
+"        'V/'   ++++++                                           "
+"                 ++                                             "
+"                       <mblet@student.42.fr>                    "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-autocmd BufWritePre *.c	call Actualise_makefile()
-autocmd BufWritePre *.h	call Actualise_makefile()
+autocmd BufNewFile	Makefile	call Creat_Makefile_42()
+autocmd BufRead		Makefile	call Makefile_refresh_files_list()
+
+autocmd BufWritePost *.c		call Actualise_makefile()
+autocmd BufWritePost *.h		call Actualise_makefile()
 
 function! Actualise_makefile()
 	let l:pwd = getcwd()
@@ -14,11 +33,11 @@ function! Actualise_makefile()
 			return
 		endtry
 	endwhile
-	exe ':!vim -c ":wq" Makefile'
+	silent! exe ':!vim -c "redraw!|wq" Makefile&'
 	exe ':cd '.l:pwd
 endfunction
 
-s:makefile = [
+let s:makefile = [
 			\'NAME		=	' . expand('%:p:h:t'),
 			\'NAMEBASE    =   $(shell basename $(NAME))',
 			\'LENGTHNAME	=	`printf "%s" $(NAMEBASE) | wc -c`',
@@ -71,7 +90,7 @@ s:makefile = [
 			\'	if [[ `rm -R $(OBJDIR) &> /dev/null 2>&1; echo $$?` == "0" ]]; then		\',
 			\'		echo "\r\033[38;5;124m📕  CLEAN  $(NAMEBASE)\033[0m\033[K";			\',
 			\'	else																	\',
-			\'		printf "\r";														',
+			\'		printf "\r";														\',
 			\'	fi',
 			\'',
 			\'fclean:		clean',
