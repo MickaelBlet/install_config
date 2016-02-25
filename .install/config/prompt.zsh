@@ -1,3 +1,5 @@
+stty -ixon
+
 autoload -U colors && colors
 
 rm -fr ~/Library/Fonts/Meslo\ LG\ L\ DZ\ Regular\ for\ Powerline.otf
