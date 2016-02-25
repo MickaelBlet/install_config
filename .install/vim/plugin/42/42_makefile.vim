@@ -33,8 +33,8 @@ function! Actualise_makefile()
 			return
 		endtry
 	endwhile
-	silent! exe ':!vim -c "redraw!|wq" Makefile&'
-	exe ':cd '.l:pwd
+	silent! exe ':!screen -d -m vim -c "w|q" Makefile'
+	exe ':cd '.l:pwd . '|redraw!'
 endfunction
 
 let s:makefile = [
