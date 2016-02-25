@@ -132,7 +132,11 @@ function ftgitp()
 function ftgitc()
 {
 	local filename
-	filename=`echo $1 | rev | cut -d/ -f2 | rev`
+	if [[ $1 == *"github.com"* ]]; then
+		filename=`echo $1 | rev | cut -d/ -f1 | rev`
+	else
+		filename=`echo $1 | rev | cut -d/ -f2 | rev`
+	fi
 	if [ -d $filename ]; then
 		filename+=`echo 2`
 	fi
@@ -208,6 +212,7 @@ function clear_cache()
 function logout_func()
 {
 	clear_cache
+/* ************************************************************************** */
 	echo "test"
 	/Applications/helper.app/Contents/MacOS/helper logout
 }
@@ -324,9 +329,9 @@ alias lognorminator='perl ~/program/norminator.perl --auth'
 # ║     SPEED      ║
 # ╚════════════════╝
 
+alias src='vi ~/\#_my_config/zshrc;cd -'
 alias cplibft='cp -r ~/1_Semestre/algorithmie-I/libft ./libft'
 alias correction='correction'
-alias src='vi ~/\#_my_config/zshrc;cd -'
 alias github='open ~/program/GitHub.app'
 alias rb='~/program/ruby-2.1.0/bin/ruby'
 
