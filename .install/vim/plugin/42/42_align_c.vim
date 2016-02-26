@@ -19,10 +19,12 @@
 " Use : Shift + TAB                                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Init default map key
 map  <silent> <S-Tab>	:call Preserve("normal gg=G")<CR>gi
 imap <silent> <S-Tab>	<Esc>:call Preserve("normal gg=G")<CR>gi
 vmap <silent> <S-Tab>	<Esc>:call Preserve("normal gg=G")<CR>gi
 
+" specifique c files map
 autocmd BufNewFile,BufRead *.c	call Align_Map()
 autocmd BufNewFile,BufRead *.h	call Align_Map()
 
@@ -47,17 +49,17 @@ endfunction
 
 function! Align_42()
 	call Preserve("normal gg=G")
-	let l:winview = winsaveview()
+	let winview = winsaveview()
 	call SortInclude()
 	%s/\s\+$//e
 	%s/\"/?????/eg
 	%s/\//|||||/eg
 	silent g/^\_$\n\_^$/d
-	call Align_All()
+	call AlignAll()
 	call AlignPrepros()
 	%s/?????/\"/eg
 	%s/|||||/\//eg
-	call winrestview(l:winview)
+	call winrestview(winview)
 	call system("rm -fr ~/.vim/view")
 endfunction
 
@@ -65,33 +67,9 @@ function! Align_speed_42()
 	%s/\s\+$//e
 	%s/\"/?????/eg
 	%s/\//|||||/eg
-	call Speed_Align_Func()
+	call AlignSpeedFunc()
 	%s/?????/\"/eg
 	%s/|||||/\//eg
-endfunction
-
-function! Get_len_var(s)
-	let l:cmd = "basename \"" . a:s . "\" | wc -c | awk '{print $1}' | tr -d '\n'"
-	let l:num = system(l:cmd)
-	let l:ret = col("$") - l:num - 2
-	return l:ret
-endfunction
-
-function! Get_len_func(s)
-	let l:cmd = "basename \"" . a:s . "\" | wc -c | awk '{print $1}' | tr -d '\n'"
-	let l:num = system(l:cmd)
-	let l:ret = col("$") - l:num - 1
-	return l:ret
-endfunction
-
-function! Get_len_speed_func(s)
-	let l:cmd = "basename \"" . a:s . "\" | wc -c | awk '{print $1}' | tr -d '\n'"
-	let l:num1 = system(l:cmd)
-	let l:num1 = col("$") - l:num1 - 2
-	let l:cmd = "dirname \"" . a:s . "\" | tr -dc '\\t' | wc -c | awk '{print $1}' | tr -d '\n'"
-	let l:num2 = system(l:cmd)
-	let l:ret = l:num1 + ((l:num2 - 1) * (&tabstop - 1))
-	return l:ret
 endfunction
 
 " [Align precmd]
@@ -111,386 +89,315 @@ endfunction
 " #endif
 "
 function! AlignPrepros()
-	let l:pos = 0
-	let l:line = 0
+	let pos = 0
+	let line = 0
+	let strline = getline(line)
 	" Check all line of file
-	while l:line <= line('$')
-		" Get string of line
-		let l:strline = getline(l:line)
+	while line <= line('$')
 		" Check if in string of line find '#' and ('if' or 'el' or 'define' or 'include')
-		if !empty(matchstr(l:strline, '^\#\s*if'))
-					\ || !empty(matchstr(l:strline, '^\#\s*el'))
-					\ || !empty(matchstr(l:strline, '^\#\s*define'))
-					\ || !empty(matchstr(l:strline, '^\#\s*include'))
-					\ || !empty(matchstr(l:strline, '^\#\s*end'))
+		if !empty(matchstr(strline, '^\#\s*if'))
+					\ || !empty(matchstr(strline, '^\#\s*el'))
+					\ || !empty(matchstr(strline, '^\#\s*define'))
+					\ || !empty(matchstr(strline, '^\#\s*include'))
+					\ || !empty(matchstr(strline, '^\#\s*end'))
 			" replace with the real space
-			call setline(l:line, substitute(l:strline, '\#\zs\s*', repeat(' ', l:pos), ""))
+			call setline(line, substitute(strline, '\#\zs\s*', repeat(' ', pos), ""))
 		endif
 		" inc position
-		if !empty(matchstr(l:strline, '^\#\s*if'))
-			let l:pos += 1
+		if !empty(matchstr(strline, '^\#\s*if'))
+			let pos += 1
 		endif
+		let line += 1
+		" Get string of line
+		let strline = getline(line)
 		" dec position
-		if !empty(matchstr(l:strline, '^\#\s*end'))
-			let l:pos -= 1
+		if !empty(matchstr(strline, '^\#\s*end'))
+			let pos -= 1
 		endif
 		" inc count line
-		let l:line += 1
 	endwhile
 endfunction
 
-function! Speed_Align_Func()
-	let l:maxlen_struct = 0
-	let l:maxlen_func = 0
-	let l:lenlignes = 0
-	let l:tmplen = 0
-	let l:line = 0
-	while l:line <= line('$')
-		if !empty(matchstr(getline(l:line), '^\i.*(.*'))
-			"""""Align Function"""""
-			call cursor(l:line, 1)
-			let save = getline(l:line)
-			s/\s\+\ze\**\i*(.*\(^\t\)\@<!/\//e
-			let l:tmplen = Get_len_func(getline(l:line))
-			let l:maxlen_func = (l:tmplen > l:maxlen_func) ? l:tmplen : l:maxlen_func
-			exe "normal cc"
-			exe "normal A" . save
-		elseif !empty(matchstr(getline(l:line), '^\i.*'))
-			"""""Align Structur"""""
-			call cursor(l:line, 1)
-			let save = getline(l:line)
-			s/\s\+\ze\**\i\+;*$/\//e
-			let l:tmplen = Get_len_func(getline(l:line))
-			let l:maxlen_struct = (l:tmplen > l:maxlen_struct) ? l:tmplen : l:maxlen_struct
-			exe "normal cc"
-			exe "normal A" . save
-		elseif !empty(matchstr(getline(l:line), '^{$'))
-			let l:line += 1
-			while !empty(matchstr(getline(l:line), '^\t.*')) && l:line <= line('$')
-				call cursor(l:line, 1)
-				let save = getline(l:line)
-				s/\s\+\ze\(\(\**\S\+\( [\+\-\*\/\=\%\&\|]\+ \S\+\)*\)\|\(\**(.*)\)\);\(^\t\)\@<!/\//e
-				let l:tmplen = Get_len_var(getline(l:line)) + 4
-				let l:maxlen_struct = (l:tmplen > l:maxlen_struct) ? l:tmplen : l:maxlen_struct
-				exe "normal cc"
-				exe "normal A" . save
-				let l:line += 1
+function! AlignSpeedFunc()
+	let maxlen_struct = 0
+	let maxlen_func = 0
+	let line = 0
+	" Check all line of file
+	while line <= line('$')
+		" Get string of line
+		let strline = getline(line)
+		if !empty(matchstr(strline, '^\i.*(.*'))
+			let tmplen = strlen(matchstr(strline, '^\i\(^(\)*\S.\{-}\ze\s\+\**\i*('))
+			let maxlen_func = (tmplen > maxlen_func) ? tmplen : maxlen_func
+		elseif !empty(matchstr(strline, '^\i.*'))
+			let tmplen = strlen(matchstr(strline, '^\i.*\S\+\ze\s\+\**\i\+;*$'))
+			let maxlen_struct = (tmplen > maxlen_struct) ? tmplen : maxlen_struct
+		elseif !empty(matchstr(strline, '^{$'))
+			let line += 1
+			let strline = getline(line)
+			while !empty(matchstr(strline, '^\t.*')) && line <= line('$')
+				let tmplen = strlen(matchstr(strline, '^\t\+\zs\i.*\S\+\ze\s\+\(\(\**\S\+\( [\+\-\*\/\=\%\&\|]\+ \S\+\)*\)\|\(\**(.*)\)\);\(^\t\)\@<!')) + 4
+				let maxlen_struct = (tmplen > maxlen_struct) ? tmplen : maxlen_struct
+				let line += 1
+				let strline = getline(line)
 			endwhile
 		endif
-		let l:line += 1
+		let line += 1
 	endwhile
-	let l:line = 0
-	while l:line <= line('$')
-		let l:lenlignes = 0
-		let l:tmplen = 0
-		if !empty(matchstr(getline(l:line), '^\i.*(.*'))
-			call cursor(l:line, 1)
-			s/\s\+\ze\**\i*(.*\(^\t\)\@<!/\//e
-		endif
-		let l:line += 1
-	endwhile
-	let l:line = 0
-	if (l:maxlen_struct % &tabstop) > 2
-		let l:maxlen_struct += &tabstop
-	endif
-	if (l:maxlen_func % &tabstop) > 2
-		let l:maxlen_func += &tabstop
-	endif
-	if (l:maxlen_struct < l:maxlen_func)
-		let l:maxlen_struct = l:maxlen_func
-	endif
-	while l:line <= line('$')
-		if !empty(matchstr(getline(l:line), '^\i.*(.*'))
-			"""""Align Function"""""
-			call cursor(l:line, 1)
-			let l:tmplen = Get_len_func(getline(l:line))
-			if l:maxlen_struct > l:tmplen
-				let l:ntab = 0
-				let l:diff = l:maxlen_struct - l:tmplen
-				if l:tmplen < &tabstop
-					let l:ntab += 1
-					let l:ntab += (l:diff - (&tabstop - l:tmplen)) / &tabstop
-				elseif (l:tmplen % &tabstop) > 0
-					let l:ntab += (l:diff + l:tmplen % &tabstop) / &tabstop
+	let maxlen_struct = ((maxlen_struct % &tabstop) > 2) ? (maxlen_struct + &tabstop) : maxlen_struct
+	let maxlen_func = ((maxlen_func % &tabstop) > 2) ? (maxlen_func + &tabstop) : maxlen_func
+	let maxlen = (maxlen_struct > maxlen_func) ? maxlen_struct : maxlen_func
+	let line = 0
+	while line <= line('$')
+		let strline = getline(line)
+		if !empty(matchstr(strline, '^\i.*(.*'))
+			let tmplen = strlen(matchstr(strline, '^\i\(^(\)*\S.\{-}\ze\s\+\**\i*('))
+			if maxlen > tmplen
+				let number_tab = 0
+				let diff = maxlen - tmplen
+				if tmplen < &tabstop
+					let number_tab += 1
+					let number_tab += (diff - (&tabstop - tmplen)) / &tabstop
+				elseif (tmplen % &tabstop) > 0
+					let number_tab += (diff + tmplen % &tabstop) / &tabstop
 				else
-					let l:ntab += (l:diff) / &tabstop
+					let number_tab += diff / &tabstop
 				endif
-				let l:ntab += 1
-				s/\//\=repeat("\t", l:ntab)/e
+				let number_tab += 1
+				call setline(line, substitute(strline, '\s\+\ze\**\i*(.*\(^\t\)\@<!', repeat('\t', number_tab), ""))
 			else
-				s/\//\t/e
+				call setline(line, substitute(strline, '\s\+\ze\**\i*(.*\(^\t\)\@<!', '\t', ""))
 			endif
 		endif
-		let l:line += 1
+		let line += 1
 	endwhile
 endfunction
 
-function!	Align_All()
-	"""""Align Variable"""""
-	let l:maxlen_var = 0
-	"""""Align Function"""""
-	let l:maxlen_func = 0
-	"""""Align Structur"""""
-	let l:maxlen_struct = 0
-	let l:line = 0
-	while l:line <= line('$')
-		let l:lenlignes = 0
-		let l:tmplen = 0
-		if !empty(matchstr(getline(l:line), '^\i.*(.*'))
-			"""""Align Function"""""
-			call cursor(l:line, 1)
-			s/\s\+\ze\**\i*(.*\(^\t\)\@<!/\//e
-			let l:tmplen = Get_len_func(getline(l:line))
-			if l:tmplen > l:maxlen_func
-				let l:maxlen_func = l:tmplen
-			endif
-		elseif !empty(matchstr(getline(l:line), '^\i.*'))
-			"""""Align Structur"""""
-			call cursor(l:line, 1)
-			s/\s\+\ze\**\i\+;*$/\//e
-			let l:tmplen = Get_len_func(getline(l:line))
-			if l:tmplen > l:maxlen_struct
-				let l:maxlen_struct = l:tmplen
-			endif
-		elseif !empty(matchstr(getline(l:line), '^}.*;$'))
-			"""""Align Structur"""""
-			call cursor(l:line, 1)
-			s/\s\+\ze\**\i\+;$/\//e
-			let l:tmplen = l:maxlen_var + &tabstop - 1
-			if l:tmplen > l:maxlen_struct
-				let l:maxlen_struct = l:tmplen
-			endif
-		elseif !empty(matchstr(getline(l:line), '^{$'))
-			"""""Align Variable"""""
-			let l:line += 1
-			let l:lenlines = 0
-			let l:maxlen_var = 0
-			while !empty(matchstr(getline(l:line), '^\t.*')) && l:line <= line('$')
-				let l:line += 1
-				let l:lenlines += 1
+function!	AlignAll()
+	let maxlen_struct = 0
+	let maxlen_func = 0
+	let maxlen_var = 0
+	let maxlen = 0
+	let line = 0
+	while line <= line('$')
+		let strline = getline(line)
+		if !empty(matchstr(strline, '^\i.*(.*'))
+			let tmplen = strlen(matchstr(strline, '^\i\(^(\)*\S.\{-}\ze\s\+\**\i*('))
+			let maxlen_func = (tmplen > maxlen_func) ? tmplen : maxlen_func
+		elseif !empty(matchstr(strline, '^\i.*'))
+			let tmplen = strlen(matchstr(strline, '^\i.*\S\+\ze\s\+\**\i\+;*$'))
+			let maxlen_struct = (tmplen > maxlen_struct) ? tmplen : maxlen_struct
+		elseif !empty(matchstr(strline, '^}.*;$'))
+			let tmplen = maxlen_var + &tabstop - 1
+			let maxlen_struct = (tmplen > maxlen_struct) ? tmplen : maxlen_struct
+		elseif !empty(matchstr(strline, '^{$'))
+			let lenlines = 0
+			let maxlen_var = 0
+			let line += 1
+			let strline = getline(line)
+			while !empty(matchstr(strline, '^\t.*')) && line <= line('$')
+				let lenlines += 1
+				let line += 1
+				let strline = getline(line)
 			endwhile
-			if empty(matchstr(getline(l:line), '^}$'))
-				let l:line = l:line - l:lenlines
-				while !empty(matchstr(getline(l:line), '^\t.*')) && l:line <= line('$')
-					call cursor(l:line, 1)
-					s/\s\+\ze\(\(\**\S\+\( [\+\-\*\/\=\%\&\|]\+ \S\+\)*\)\|\(\**(.*)\)\);\(^\t\)\@<!/\//e
-					let l:tmplen = Get_len_var(getline(l:line))
-					if l:tmplen > l:maxlen_var
-						let l:maxlen_var = l:tmplen
-					endif
-					let l:line += 1
+			if empty(matchstr(strline, '^}$'))
+				let line = line - lenlines
+				let strline = getline(line)
+				while !empty(matchstr(strline, '^\t.*')) && line <= line('$')
+					let tmplen = strlen(matchstr(strline, '^\t\+\zs\i.\{-}\S\+\ze\s\+\(\(\**\S\+\( [\+\-\*\/\=\%\&\|]\+ \S\+\)*\)\|\(\**(.*)\)\);\(^\t\)\@<!'))
+					let maxlen_var = (tmplen > maxlen_var) ? tmplen : maxlen_var
+					let line += 1
+					let strline = getline(line)
 				endwhile
-				if (l:maxlen_var % &tabstop) > 2
-					let l:maxlen_var += &tabstop
-				endif
-				let l:line = l:line - l:lenlines
-				while !empty(matchstr(getline(l:line), '^\t.*')) && l:line <= line('$')
-					call cursor(l:line, 1)
-					let l:tmplen = Get_len_var(getline(l:line))
-					if l:maxlen_var > l:tmplen
-						let l:ntab = 0
-						let l:diff = l:maxlen_var - l:tmplen
-						if l:tmplen < &tabstop
-							let l:ntab += 1
-							let l:ntab += (l:diff - (&tabstop - l:tmplen)) / &tabstop
-						elseif (l:tmplen % &tabstop) > 0
-							let l:ntab += (l:diff + l:tmplen % &tabstop) / &tabstop
+				let maxlen_var = ((maxlen_var % &tabstop) > 2) ? (maxlen_var + &tabstop) : maxlen_var
+				let line = line - lenlines
+				let strline = getline(line)
+				while !empty(matchstr(strline, '^\t.*')) && line <= line('$')
+					let tmplen = strlen(matchstr(strline, '^\t\+\zs\i.\{-}\S\+\ze\s\+\(\(\**\S\+\( [\+\-\*\/\=\%\&\|]\+ \S\+\)*\)\|\(\**(.*)\)\);\(^\t\)\@<!'))
+					if maxlen_var > tmplen
+						let number_tab = 0
+						let diff = maxlen_var - tmplen
+						if tmplen < &tabstop
+							let number_tab += 1
+							let number_tab += (diff - (&tabstop - tmplen)) / &tabstop
+						elseif (tmplen % &tabstop) > 0
+							let number_tab += (diff + tmplen % &tabstop) / &tabstop
 						else
-							let l:ntab += (l:diff) / &tabstop
+							let number_tab += diff / &tabstop
 						endif
-						let l:ntab += 1
-						s/\//\=repeat("\t", l:ntab)/e
+						let number_tab += 1
+						call setline(line, substitute(strline, '^\t\+\i.\{-}\S\+\zs\s\+\ze\(\(\**\S\+\( [\+\-\*\/\=\%\&\|]\+ \S\+\)*\)\|\(\**(.*)\)\);\(^\t\)\@<!', repeat('\t', number_tab), ""))
 					else
-						s/\//\t/e
+						call setline(line, substitute(strline, '^\t\+\i.\{-}\S\+\zs\s\+\ze\(\(\**\S\+\( [\+\-\*\/\=\%\&\|]\+ \S\+\)*\)\|\(\**(.*)\)\);\(^\t\)\@<!', '\t', ""))
 					endif
-					let l:line += 1
+					let line += 1
+					let strline = getline(line)
 				endwhile
-				let l:line -= 1
+				let line -= 1
+				let strline = getline(line)
 			endif
 		endif
-		let l:line += 1
+		let line += 1
 	endwhile
-	let l:line = 0
-	if (l:maxlen_struct % &tabstop) > 2
-		let l:maxlen_struct += &tabstop
-	endif
-	if (l:maxlen_func % &tabstop) > 2
-		let l:maxlen_func += &tabstop
-	endif
-	if (l:maxlen_struct > l:maxlen_func)
-		let l:maxlen_func = l:maxlen_struct
-	elseif (l:maxlen_struct < l:maxlen_func)
-		let l:maxlen_struct = l:maxlen_func
-	endif
-	while l:line <= line('$')
-		if !empty(matchstr(getline(l:line), '\t\+||')) || !empty(matchstr(getline(l:line), '\t\+&&'))
-			call cursor(l:line, 1)
-			s/^\t//e
-		elseif !empty(matchstr(getline(l:line), '^\i.*(.*'))
-			"""""Align Function"""""
-			call cursor(l:line, 1)
-			let l:tmplen = Get_len_func(getline(l:line))
-			if l:maxlen_func > l:tmplen
-				let l:ntab = 0
-				let l:diff = l:maxlen_func - l:tmplen
-				if l:tmplen < &tabstop
-					let l:ntab += 1
-					let l:ntab += (l:diff - (&tabstop - l:tmplen)) / &tabstop
-				elseif (l:tmplen % &tabstop) > 0
-					let l:ntab += (l:diff + l:tmplen % &tabstop) / &tabstop
+	let maxlen_struct = ((maxlen_struct % &tabstop) > 2) ? (maxlen_struct + &tabstop) : maxlen_struct
+	let maxlen_func = ((maxlen_func % &tabstop) > 2) ? (maxlen_func + &tabstop) : maxlen_func
+	let maxlen = (maxlen_struct > maxlen_func) ? maxlen_struct : maxlen_func
+	let line = 0
+	while line <= line('$')
+		let strline = getline(line)
+		if !empty(matchstr(strline, '\t\+||')) || !empty(matchstr(strline, '\t\+&&'))
+			call setline(line, substitute(strline, '^\t\ze\t\+', '', ""))
+		elseif !empty(matchstr(strline, '^\i.*(.*'))
+			let tmplen = strlen(matchstr(strline, '^\i\(^(\)*\S.\{-}\ze\s\+\**\i*('))
+			if maxlen > tmplen
+				let number_tab = 0
+				let diff = maxlen - tmplen
+				if tmplen < &tabstop
+					let number_tab += 1
+					let number_tab += (diff - (&tabstop - tmplen)) / &tabstop
+				elseif (tmplen % &tabstop) > 0
+					let number_tab += (diff + tmplen % &tabstop) / &tabstop
 				else
-					let l:ntab += (l:diff) / &tabstop
+					let number_tab += diff / &tabstop
 				endif
-				let l:ntab += 1
-				s/\//\=repeat("\t", l:ntab)/e
+				let number_tab += 1
+				call setline(line, substitute(strline, '\s\+\ze\**\i*(\(^\t\)*', repeat('\t', number_tab), ""))
 			else
-				s/\//\t/e
+				call setline(line, substitute(strline, '\s\+\ze\**\i*(\(^\t\)*', '\t', ""))
 			endif
-		elseif !empty(matchstr(getline(l:line), '^\i.*'))
-			"""""Align Structur"""""
-			call cursor(l:line, 1)
-			let l:tmplen = Get_len_func(getline(l:line))
-			if l:maxlen_struct > l:tmplen
-				let l:ntab = 0
-				let l:diff = l:maxlen_struct - l:tmplen
-				if l:tmplen < &tabstop
-					let l:ntab += 1
-					let l:ntab += (l:diff - (&tabstop - l:tmplen)) / &tabstop
-				elseif (l:tmplen % &tabstop) > 0
-					let l:ntab += (l:diff + l:tmplen % &tabstop) / &tabstop
+		elseif !empty(matchstr(strline, '^\i.*'))
+			let tmplen = strlen(matchstr(strline, '^\i.*\S\+\ze\s\+\**\i\+;*$'))
+			if maxlen > tmplen
+				let number_tab = 0
+				let diff = maxlen - tmplen
+				if tmplen < &tabstop
+					let number_tab += 1
+					let number_tab += (diff - (&tabstop - tmplen)) / &tabstop
+				elseif (tmplen % &tabstop) > 0
+					let number_tab += (diff + tmplen % &tabstop) / &tabstop
 				else
-					let l:ntab += (l:diff) / &tabstop
+					let number_tab += diff / &tabstop
 				endif
-				let l:ntab += 1
-				s/\//\=repeat("\t", l:ntab)/e
+				let number_tab += 1
+				call setline(line, substitute(strline, '\s\+\ze\**\i\+;*$', repeat('\t', number_tab), ""))
 			else
-				s/\//\t/e
+				call setline(line, substitute(strline, '\s\+\ze\**\i\+;*$', '\t', ""))
 			endif
-		elseif !empty(matchstr(getline(l:line), '^{$'))
-			"""""Align Structur"""""
-			let l:line += 1
-			let l:lenlines = 0
-			while !empty(matchstr(getline(l:line), '^\t.*')) && l:line <= line('$')
-				if !empty(matchstr(getline(l:line), '\t\+||')) || !empty(matchstr(getline(l:line), '\t\+&&'))
-					call cursor(l:line, 1)
-					s/^\t//e
-				endif
-				let l:line += 1
-				let l:lenlines += 1
+		elseif !empty(matchstr(strline, '^{$'))
+			let lenlines = 0
+			let line += 1
+			let strline = getline(line)
+			while !empty(matchstr(strline, '^\t.*')) && line <= line('$')
+				let lenlines += 1
+				let line += 1
+				let strline = getline(line)
 			endwhile
-			if !empty(matchstr(getline(l:line), '^}.*;$'))
-				let l:line = l:line - l:lenlines
-				while !empty(matchstr(getline(l:line), '^\t.*')) && l:line <= line('$')
-					call cursor(l:line, 1)
-					s/\s\+\ze\(\(\**\S\+\( [\+\-\*\/\=\%\&\|]\+ \S\+\)*\)\|\(\**(.*)\)\);\(^\t\)\@<!/\//e
-					let l:line += 1
-				endwhile
-				let l:line = l:line - l:lenlines
-				while !empty(matchstr(getline(l:line), '^\t.*')) && l:line <= line('$')
-					call cursor(l:line, 1)
-					let l:tmplen = Get_len_var(getline(l:line))
-					if (l:maxlen_struct - &tabstop) > l:tmplen
-						let l:ntab = 0
-						let l:diff = (l:maxlen_struct - &tabstop) - l:tmplen
-						if l:tmplen < &tabstop
-							let l:ntab += 1
-							let l:ntab += (l:diff - (&tabstop - l:tmplen)) / &tabstop
-						elseif (l:tmplen % &tabstop) > 0
-							let l:ntab += (l:diff + l:tmplen % &tabstop) / &tabstop
+			if !empty(matchstr(strline, '^}.*;$'))
+				let line = line - lenlines
+				let strline = getline(line)
+				while !empty(matchstr(strline, '^\t.*')) && line <= line('$')
+					let tmplen = strlen(matchstr(strline, '^\t\+\zs\i.\{-}\S\+\ze\s\+\(\(\**\S\+\( [\+\-\*\/\=\%\&\|]\+ \S\+\)*\)\|\(\**(.*)\)\);\(^\t\)\@<!'))
+					if maxlen > tmplen
+						let number_tab = 0
+						let diff = (maxlen - &tabstop) - tmplen
+						if tmplen < &tabstop
+							let number_tab += 1
+							let number_tab += (diff - (&tabstop - tmplen)) / &tabstop
+						elseif (tmplen % &tabstop) > 0
+							let number_tab += (diff + tmplen % &tabstop) / &tabstop
 						else
-							let l:ntab += (l:diff) / &tabstop
+							let number_tab += diff / &tabstop
 						endif
-						let l:ntab += 1
-						s/\//\=repeat("\t", l:ntab)/e
+						let number_tab += 1
+						call setline(line, substitute(strline, '\s\+\ze\(\(\**\S\+\( [\+\-\*\/\=\%\&\|]\+ \S\+\)*\)\|\(\**(.*)\)\);\(^\t\)\@<!', repeat('\t', number_tab), ""))
 					else
-						s/\//\t/e
+						call setline(line, substitute(strline, '\s\+\ze\(\(\**\S\+\( [\+\-\*\/\=\%\&\|]\+ \S\+\)*\)\|\(\**(.*)\)\);\(^\t\)\@<!', '\t', ""))
 					endif
-					let l:line += 1
+					let line += 1
+					let strline = getline(line)
 				endwhile
-				let l:line -= 1
+				let line -= 1
 			endif
-		elseif !empty(matchstr(getline(l:line), '^}.*;$'))
-			"""""Align Structur"""""
-			call cursor(l:line, 1)
-			let l:tmplen = 1
-			if l:maxlen_struct > l:tmplen
-				let l:ntab = 0
-				let l:diff = l:maxlen_struct - l:tmplen
-				if l:tmplen < &tabstop
-					let l:ntab += 1
-					let l:ntab += (l:diff - (&tabstop - l:tmplen)) / &tabstop
-				elseif (l:tmplen % &tabstop) > 0
-					let l:ntab += (l:diff + l:tmplen % &tabstop) / &tabstop
+		elseif !empty(matchstr(strline, '^}.*;$'))
+			let tmplen = 1
+			if maxlen > tmplen
+				let number_tab = 0
+				let diff = maxlen - tmplen
+				if tmplen < &tabstop
+					let number_tab += 1
+					let number_tab += (diff - (&tabstop - tmplen)) / &tabstop
+				elseif (tmplen % &tabstop) > 0
+					let number_tab += (diff + tmplen % &tabstop) / &tabstop
 				else
-					let l:ntab += (l:diff) / &tabstop
+					let number_tab += diff / &tabstop
 				endif
-				let l:ntab += 1
-				s/\//\=repeat("\t", l:ntab)/e
+				let number_tab += 1
+				call setline(line, substitute(strline, '^}\zs\s\+\ze.*;$', repeat('\t', number_tab), ""))
 			else
-				s/\//\t/e
+				call setline(line, substitute(strline, '^}\zs\s\+\ze.*;$', '\t', ""))
 			endif
 		endif
-		let l:line += 1
+		let line += 1
 	endwhile
 endfunction
 
 function!	SortInclude()
-	let l:line = 0
-	while l:line <= line('$')
-		if !empty(matchstr(getline(l:line), '^#\s*include'))
-			let l:select = l:line
-			while l:select <= line('$') && (empty(getline(l:select)) || !empty(matchstr(getline(l:select), '^#\s*include')))
-				let l:select += 1
+	let line = 0
+	while line <= line('$')
+		if !empty(matchstr(getline(line), '^#\s*include'))
+			let select = line
+			while select <= line('$') && (empty(getline(select)) || !empty(matchstr(getline(select), '^#\s*include')))
+				let select += 1
 			endwhile
-			if (l:select >= line('$'))
+			if (select >= line('$'))
 				return
 			endif
-			let l:select -= 1
-			exe ":" . l:line . "," . l:select . " sort"
+			let select -= 1
+			exe ":" . line . "," . select . " sort"
 			break
 		endif
-		let l:line += 1
+		let line += 1
 	endwhile
-	if (l:line >= line('$'))
+	if (line >= line('$'))
 		return
 	endif
-	call cursor(l:select, 1)
+	call cursor(select, 1)
 	s/$/\r\r/e
-	let l:line = 0
-	while l:line <= line('$')
-		if !empty(matchstr(getline(l:line), '^#\s*include "'))
-			let l:select = l:line
-			while l:select <= line('$') && (!empty(matchstr(getline(l:select), '^$')) || !empty(matchstr(getline(l:select), '^#\s*include "')))
-				let l:select += 1
+	let line = 0
+	while line <= line('$')
+		if !empty(matchstr(getline(line), '^#\s*include "'))
+			let select = line
+			while select <= line('$') && (!empty(matchstr(getline(select), '^$')) || !empty(matchstr(getline(select), '^#\s*include "')))
+				let select += 1
 			endwhile
-			if (l:select == line('$'))
+			if (select == line('$'))
 				return
 			endif
-			let l:select -= 1
-			exe ":" . l:line . "," . l:select . " sort"
+			let select -= 1
+			exe ":" . line . "," . select . " sort"
 			break
 		endif
-		let l:line += 1
+		let line += 1
 	endwhile
-	if (l:line >= line('$'))
+	if (line >= line('$'))
 		return
 	endif
-	call cursor(l:select, 1)
+	call cursor(select, 1)
 	s/$/\r\r/e
-	let l:line = 0
-	while l:line <= line('$')
-		if !empty(matchstr(getline(l:line), '^#\s*include <'))
-			let l:select = l:line
-			while l:select <= line('$') && (!empty(matchstr(getline(l:select), '^$')) || !empty(matchstr(getline(l:select), '^#\s*include <')))
-				let l:select += 1
+	let line = 0
+	while line <= line('$')
+		if !empty(matchstr(getline(line), '^#\s*include <'))
+			let select = line
+			while select <= line('$') && (!empty(matchstr(getline(select), '^$')) || !empty(matchstr(getline(select), '^#\s*include <')))
+				let select += 1
 			endwhile
-			if (l:select >= line('$'))
+			if (select >= line('$'))
 				return
 			endif
-			let l:select -= 1
-			exe ":" . l:line . "," . l:select . " sort"
+			let select -= 1
+			exe ":" . line . "," . select . " sort"
 			break
 		endif
-		let l:line += 1
+		let line += 1
 	endwhile
 endfunction

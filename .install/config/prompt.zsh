@@ -223,12 +223,12 @@ function ___Check_Git_Status()
 	fi
 }
 
-function prompt_git()
+function Prompt_git()
 {
 	export PROMPT_GIT="true"
 }
 
-function prompt_nogit()
+function Prompt_nogit()
 {
 	export PROMPT_GIT="false"
 }

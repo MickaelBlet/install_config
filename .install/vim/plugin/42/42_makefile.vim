@@ -25,7 +25,7 @@ autocmd BufWritePost *.h		call Actualise_makefile()
 
 function! Actualise_makefile()
 	let l:pwd = getcwd()
-	while !filereadable('./Makefile')
+	while !filereadable('./Makefile') || !filereadable('./auteur')
 		try
 			cd ..
 		catch
@@ -33,7 +33,7 @@ function! Actualise_makefile()
 			return
 		endtry
 	endwhile
-	silent! exe ':!screen -d -m vim -c "w|q" Makefile'
+	silent! exe ':!screen -d -m vim -c "wq" Makefile'
 	exe ':cd '.l:pwd . '|redraw!'
 endfunction
 
