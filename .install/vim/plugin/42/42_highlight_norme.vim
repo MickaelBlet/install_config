@@ -112,6 +112,9 @@ function Norme()
 	" Double Space
 	syntax match myNorme '\(# *\)\@<!  \+'
 
+	" Triple Tab
+	syntax match myNorme '\(\t\+[^\t]\+\)\@<=\t\+\ze[^\t]\+\t\+'
+
 	" ' ' || '\t' before ','
 	syntax match myNorme '\s\ze,'
 

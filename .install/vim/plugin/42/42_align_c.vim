@@ -136,7 +136,7 @@ function! AlignSpeedFunc()
 			let line += 1
 			let strline = getline(line)
 			while !empty(matchstr(strline, '^\t.*')) && line <= line('$')
-				let tmplen = strlen(matchstr(strline, '^\t\+\zs\i.*\S\+\ze\s\+\(\(\**\S\+\( [\+\-\*\/\=\%\&\|]\+ \S\+\)*\)\|\(\**(.*)\)\);\(^\t\)\@<!')) + 4
+				let tmplen = strlen(matchstr(strline, '^\t\+\zs\i.*\S\+\ze\s\+\(\(\**\S\+\( [\+\-\*\/\=\%\&\|]\+ .*\)*\)\|\(\**(.*)\)\);\(^\t\)\@<!')) + 4
 				let maxlen_struct = (tmplen > maxlen_struct) ? tmplen : maxlen_struct
 				let line += 1
 				let strline = getline(line)
@@ -204,7 +204,7 @@ function!	AlignAll()
 				let line = line - lenlines
 				let strline = getline(line)
 				while !empty(matchstr(strline, '^\t.*')) && line <= line('$')
-					let tmplen = strlen(matchstr(strline, '^\t\+\zs\i.\{-}\S\+\ze\s\+\(\(\**\S\+\( [\+\-\*\/\=\%\&\|]\+ \S\+\)*\)\|\(\**(.*)\)\);\(^\t\)\@<!'))
+					let tmplen = strlen(matchstr(strline, '^\t\+\zs\i.\{-}\S\+\ze\s\+\(\(\**\S\+\( [\+\-\*\/\=\%\&\|]\+ .*\)*\)\|\(\**(.*)\)\);\(^\t\)\@<!'))
 					let maxlen_var = (tmplen > maxlen_var) ? tmplen : maxlen_var
 					let line += 1
 					let strline = getline(line)
@@ -213,7 +213,7 @@ function!	AlignAll()
 				let line = line - lenlines
 				let strline = getline(line)
 				while !empty(matchstr(strline, '^\t.*')) && line <= line('$')
-					let tmplen = strlen(matchstr(strline, '^\t\+\zs\i.\{-}\S\+\ze\s\+\(\(\**\S\+\( [\+\-\*\/\=\%\&\|]\+ \S\+\)*\)\|\(\**(.*)\)\);\(^\t\)\@<!'))
+					let tmplen = strlen(matchstr(strline, '^\t\+\zs\i.\{-}\S\+\ze\s\+\(\(\**\S\+\( [\+\-\*\/\=\%\&\|]\+ .*\)*\)\|\(\**(.*)\)\);\(^\t\)\@<!'))
 					if maxlen_var > tmplen
 						let number_tab = 0
 						let diff = maxlen_var - tmplen
@@ -226,9 +226,9 @@ function!	AlignAll()
 							let number_tab += diff / &tabstop
 						endif
 						let number_tab += 1
-						call setline(line, substitute(strline, '^\t\+\i.\{-}\S\+\zs\s\+\ze\(\(\**\S\+\( [\+\-\*\/\=\%\&\|]\+ \S\+\)*\)\|\(\**(.*)\)\);\(^\t\)\@<!', repeat('\t', number_tab), ""))
+						call setline(line, substitute(strline, '^\t\+\i.\{-}\S\+\zs\s\+\ze\(\(\**\S\+\( [\+\-\*\/\=\%\&\|]\+ .*\)*\)\|\(\**(.*)\)\);\(^\t\)\@<!', repeat('\t', number_tab), ""))
 					else
-						call setline(line, substitute(strline, '^\t\+\i.\{-}\S\+\zs\s\+\ze\(\(\**\S\+\( [\+\-\*\/\=\%\&\|]\+ \S\+\)*\)\|\(\**(.*)\)\);\(^\t\)\@<!', '\t', ""))
+						call setline(line, substitute(strline, '^\t\+\i.\{-}\S\+\zs\s\+\ze\(\(\**\S\+\( [\+\-\*\/\=\%\&\|]\+ .*\)*\)\|\(\**(.*)\)\);\(^\t\)\@<!', '\t', ""))
 					endif
 					let line += 1
 					let strline = getline(line)
@@ -296,7 +296,7 @@ function!	AlignAll()
 				let line = line - lenlines
 				let strline = getline(line)
 				while !empty(matchstr(strline, '^\t.*')) && line <= line('$')
-					let tmplen = strlen(matchstr(strline, '^\t\+\zs\i.\{-}\S\+\ze\s\+\(\(\**\S\+\( [\+\-\*\/\=\%\&\|]\+ \S\+\)*\)\|\(\**(.*)\)\);\(^\t\)\@<!'))
+					let tmplen = strlen(matchstr(strline, '^\t\+\zs\i.\{-}\S\+\ze\s\+\(\(\**\S\+\( [\+\-\*\/\=\%\&\|]\+ .*\)*\)\|\(\**(.*)\)\);\(^\t\)\@<!'))
 					if maxlen > tmplen
 						let number_tab = 0
 						let diff = (maxlen - &tabstop) - tmplen
@@ -309,9 +309,9 @@ function!	AlignAll()
 							let number_tab += diff / &tabstop
 						endif
 						let number_tab += 1
-						call setline(line, substitute(strline, '\s\+\ze\(\(\**\S\+\( [\+\-\*\/\=\%\&\|]\+ \S\+\)*\)\|\(\**(.*)\)\);\(^\t\)\@<!', repeat('\t', number_tab), ""))
+						call setline(line, substitute(strline, '\s\+\ze\(\(\**\S\+\( [\+\-\*\/\=\%\&\|]\+ .*\)*\)\|\(\**(.*)\)\);\(^\t\)\@<!', repeat('\t', number_tab), ""))
 					else
-						call setline(line, substitute(strline, '\s\+\ze\(\(\**\S\+\( [\+\-\*\/\=\%\&\|]\+ \S\+\)*\)\|\(\**(.*)\)\);\(^\t\)\@<!', '\t', ""))
+						call setline(line, substitute(strline, '\s\+\ze\(\(\**\S\+\( [\+\-\*\/\=\%\&\|]\+ .*\)*\)\|\(\**(.*)\)\);\(^\t\)\@<!', '\t', ""))
 					endif
 					let line += 1
 					let strline = getline(line)
