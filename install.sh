@@ -40,7 +40,7 @@ function menu0()
 	echo "sleep 2" > ~/reinstall.sh
 	echo "open /Applications/iTerm\ 2.app" >> ~/reinstall.sh
 	echo "rm -fr ~/reinstall.sh" >> ~/reinstall.sh
-	screen -d -m sh ~/reinstall.sh && killall -9 iTerm
+	screen -d -m sh ~/reinstall.sh && killall -9 Finder && killall -9 Dock && killall -9 iTerm
 }
 function menu1()
 {
