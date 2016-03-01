@@ -20,10 +20,61 @@ function! GetReturnVar()
 	endif
 endfunction
 
-autocmd FileType c,cpp		call Abbr_c()
+function! BracetteCharDetect()
+	let c = nr2char(getchar(0))
+	if c =~ '}'
+		return "}\<Left>"
+	else
+		return "\<CR>}\<Up>\<CR>"
+	endif
+endfunction
 
+func! CustomComplete()
+	echom 'move to start of last word'
+	normal b
+	echom 'select word under cursor'
+	let b:word = expand('<cword>')
+	echom '->'.b:word.'<-'
+	echom 'save position'
+	let b:position = col('.')
+	echom '->'.b:position.'<-'
+	normal e
+	normal l
+	echom 'move to end of word'
+
+	let b:list = ["spoogle test
+				\\<CR>test","spangle","frizzle"]
+	let b:matches = []
+
+	echom 'begin checking for completion'
+	for item in b:list
+		echom 'checking '
+		echom '->'.item.'<-'
+		if(match(item,'^'.b:word)==0)
+			echom 'adding to matches'
+			echom '->'.item.'<-'
+			call add(b:matches,item)
+		endif
+	endfor
+	call complete(b:position, b:matches)
+	return ''
+endfunc
+
+iab { {<c-r>=BracetteCharDetect()<CR>
+inoremap <F8> <c-r>=CustomComplete()<CR>
+
+autocmd FileType c,cpp		call Abbr_c()
 function! Abbr_c()
 	" #include
+	iab #i #include
+	iab #I #include
+	iab ##i # include
+	iab ##I # include
+	iab #d #define
+	iab #D #define
+	iab ##d # define
+	iab ##D # define
+
 	iab _li #include <libft.h><c-r>=Eatchar('\s')<CR>
 	iab _un #include <unistd.h><c-r>=Eatchar('\s')<CR>
 	iab _st #include <stdlib.h><c-r>=Eatchar('\s')<CR>
