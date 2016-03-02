@@ -1,10 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/Volumes/Data/nfs/zfs-student-3/users/2013/mblet/exam-basedir/rendu/sort_int_tab.c'
-let g:netrw_dirhist_2='/Volumes/Data/nfs/zfs-student-4/users/2013/mblet/#_my_config'
-let g:netrw_dirhist_3='/Volumes/Data/nfs/zfs-student-4/users/2013/mblet/1T/printf'
-let g:netrw_dirhist_4='/Volumes/Data/nfs/zfs-student-4/users/2013/mblet/1T/printf/includes'
-let g:netrw_dirhist_5='/Volumes/Data/nfs/zfs-student-4/users/2013/mblet/1T/printf'
-let g:netrw_dirhist_6='/nfs/zfs-student-4/users/mblet/2T/rtv1/libxft/includes'
-let g:netrw_dirhist_7='/nfs/2013/m/mblet/.vim'
-let g:netrw_dirhist_8='/nfs/2013/m/mblet/.vim/plugin'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/mblet/2T/nm.git/libft/includes'
+let g:netrw_dirhist_2='/Users/mblet/2T/nm.git/libft'
+let g:netrw_dirhist_3='/Users/mblet/2T/nm.git/libft/srcs'

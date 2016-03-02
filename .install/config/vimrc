@@ -37,7 +37,6 @@
 " Ctrl + Left   == Previous Tab                                  "
 " Ctrl + Right  == Next Tab                                      "
 " Ctrl + Home   == New Tab                                       "
-" Ctrl + I      == Auto indent file                              "
 " F6            == Toggle Paste                                  "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -172,14 +171,12 @@ endfunc
 
 func! Getfirstword()
 	let l:line = getline('.')
-	return matchstr(l:line, '\<i\+\>\ze.*')
+	return matchstr(l:line, '^\s*\<\i\+\>\ze.*')
 endfunc
 
 func! Getsecondword()
 	let l:line = getline('.')
-	let l:cmd = "echo \"" . l:line . "\" | awk '{print $2;}' | tr -d '\n'"
-	let l:word = system(l:cmd)
-	return l:word
+	return matchstr(l:line, '^\s*\<\i\+\>\s*\zs\<\i\+\>\ze.*')
 endfunc
 
 func! Getlastword()

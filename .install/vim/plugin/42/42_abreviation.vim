@@ -30,33 +30,32 @@ function! BracetteCharDetect()
 endfunction
 
 func! CustomComplete()
-	echom 'move to start of last word'
-	normal b
-	echom 'select word under cursor'
-	let b:word = expand('<cword>')
-	echom '->'.b:word.'<-'
-	echom 'save position'
-	let b:position = col('.')
-	echom '->'.b:position.'<-'
-	normal e
-	normal l
-	echom 'move to end of word'
+	"echom 'move to start of last word'
+	"normal b
+	"echom 'select word under cursor'
+	"let b:word = expand('<cword>')
+	"echom '->'.b:word.'<-'
+	"echom 'save position'
+	"let b:position = col('.')
+	"echom '->'.b:position.'<-'
+	"normal e
+	"normal l
+	"echom 'move to end of word'
 
-	let b:list = ["spoogle test
-				\\<CR>test","spangle","frizzle"]
+	let b:list = glob("**/*.h")
 	let b:matches = []
 
-	echom 'begin checking for completion'
-	for item in b:list
-		echom 'checking '
-		echom '->'.item.'<-'
-		if(match(item,'^'.b:word)==0)
-			echom 'adding to matches'
-			echom '->'.item.'<-'
+	"echom 'begin checking for completion'
+	for item in split(b:list, '\n')
+		"echom 'checking '
+		"echom '->'.item.'<-'
+		"if(match(item,'^'.b:word)==0)
+		"	echom 'adding to matches'
+		"	echom '->'.item.'<-'
 			call add(b:matches,item)
-		endif
+		"endif
 	endfor
-	call complete(b:position, b:matches)
+	call complete(col('.'), b:matches)
 	return ''
 endfunc
 
