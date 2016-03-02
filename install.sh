@@ -8,7 +8,7 @@ menu=(	"ZSH + PROMPT + VIM"\
 		"ZSH + PROMPT"\
 		"PROMPT"\
 		"VIM"\
-		"REINSTALL")
+		"SAVE CURRENT CONFIG")
 
 menulength=${#menu[@]}
 menulengthend=`echo "${menulength}-1"|bc`
@@ -56,7 +56,18 @@ function menu3()
 }
 function menu4()
 {
-	printf "yolo4\n\r"
+	rm -rf .install/config
+	rm -rf .install/vim
+	rm .install/myvimrc
+	rm .install/vimrc
+	rm .install/myzshrc
+	rm .install/zshrc
+	cp -r ~/#_my_config .install/config
+	cp -r ~/.vim .install/vim
+	cp -r ~/.myvimrc .install/myvimrc
+	cp -r ~/.vimrc .install/vimrc
+	cp -r ~/.myzshrc .install/myzshrc
+	cp -r ~/.zshrc .install/zshrc
 }
 
 ##

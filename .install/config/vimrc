@@ -139,26 +139,7 @@ highlight PmenuSel		term=reverse ctermbg=27 ctermfg=white
 highlight MatchParen	cterm=bold ctermbg=none ctermfg=160
 
 " Abreviation
-
-autocmd FileType c,cpp	iab _li #include <libft.h><c-r>=Eatchar('\s')<CR>
-autocmd FileType c,cpp	iab _un #include <unistd.h><c-r>=Eatchar('\s')<CR>
-autocmd FileType c,cpp	iab _st #include <stdlib.h><c-r>=Eatchar('\s')<CR>
-autocmd FileType c,cpp	iab _fc #include <fcntl.h><c-r>=Eatchar('\s')<CR>
-
-iab while while ()<Left><c-r>=Eatchar('\s')<CR>
-iab if if ()<Left><c-r>=Eatchar('\s')<CR>
-iab return return ();<Left><Left><c-r>=Eatchar('\s')<CR>
-iab { {<CR>}<Up>
-
 autocmd FileType cpp	iab std <c-r>=Autocomplete_std()<CR>
-autocmd FileType c,cpp	iab #i #include
-autocmd FileType c,cpp	iab #I #include
-autocmd FileType c,cpp	iab ##i # include
-autocmd FileType c,cpp	iab ##I # include
-autocmd FileType c,cpp	iab #d #define
-autocmd FileType c,cpp	iab #D #define
-autocmd FileType c,cpp	iab ##d # define
-autocmd FileType c,cpp	iab ##D # define
 
 autocmd FileType c,cpp	iab /* /*<CR><BS><BS><BS>*/<UP>
 
@@ -176,7 +157,6 @@ autocmd Filetype php	iab fore <c-r>=PhpForeachSpeed()<CR><Up><Up><Up><Up><Right>
 
 autocmd Filetype php	iab for <c-r>=PhpForSpeed()<CR><Up><Up><c-r>=Eatchar('\s')<CR>
 
-
 func! Eatchar(pat)
 	let c = nr2char(getchar(0))
 	return (c =~ a:pat) ? '' : c
@@ -192,9 +172,7 @@ endfunc
 
 func! Getfirstword()
 	let l:line = getline('.')
-	let l:cmd = "echo \"" . l:line . "\" | awk '{print $1;}' | tr -d '\n'"
-	let l:word = system(l:cmd)
-	return l:word
+	return matchstr(l:line, '\<i\+\>\ze.*')
 endfunc
 
 func! Getsecondword()
