@@ -124,16 +124,16 @@
 " if html, don't close certain tags.  Works best if ignorecase is set.
 " otherwise, capitalize these elements according to your html editing style
 if !exists("b:unaryTagsStack") || exists("b:closetag_html_style")
-    if &filetype == "html" || exists("b:closetag_html_style")
-	let b:unaryTagsStack="area base br dd dt hr img input link meta param"
-    else " for xsl and xsl
-	let b:unaryTagsStack=""
-    endif
+	if &filetype == "html" || exists("b:closetag_html_style")
+		let b:unaryTagsStack="area base br dd dt hr img input link meta param"
+	else " for xsl and xsl
+		let b:unaryTagsStack=""
+	endif
 endif
 
 " Has this already been loaded?
 if exists("loaded_closetag")
-    finish
+	finish
 endif
 let loaded_closetag=1
 
@@ -151,101 +151,101 @@ endfunction
 " Returns the most recent unclosed tag-name
 " (ignores tags in the variable referenced by a:unaryTagsStack)
 function! GetLastOpenTag(unaryTagsStack)
-    " Search backwards through the file line by line using getline()
-    " Overall strategy (moving backwards through the file from the cursor):
-    "  Push closing tags onto a stack.
-    "  On an opening tag, if the tag matches the stack top, discard both.
-    "   -- if the tag doesn't match, signal an error.
-    "   -- if the stack is empty, use this tag
-    let linenum=line(".")
-    let lineend=col(".") - 1 " start: cursor position
-    let first=1              " flag for first line searched
-    let b:TagStack=""        " main stack of tags
-    let startInComment=s:InComment()
+	" Search backwards through the file line by line using getline()
+	" Overall strategy (moving backwards through the file from the cursor):
+	"  Push closing tags onto a stack.
+	"  On an opening tag, if the tag matches the stack top, discard both.
+	"   -- if the tag doesn't match, signal an error.
+	"   -- if the stack is empty, use this tag
+	let linenum=line(".")
+	let lineend=col(".") - 1 " start: cursor position
+	let first=1              " flag for first line searched
+	let b:TagStack=""        " main stack of tags
+	let startInComment=s:InComment()
 
-    let tagpat='</\=\(\k\|[-:]\)\+\|/>'
-    " Search for: closing tags </tag, opening tags <tag, and unary tag ends />
-    while (linenum>0)
-	" Every time we see an end-tag, we push it on the stack.  When we see an
-	" open tag, if the stack isn't empty, we pop it and see if they match.
-	" If no, signal an error.
-	" If yes, continue searching backwards.
-	" If stack is empty, return this open tag as the one that needs closing.
-	let line=getline(linenum)
-	if first
-	    let line=strpart(line,0,lineend)
-	else
-	    let lineend=strlen(line)
-	endif
-	let b:lineTagStack=""
-	let mpos=0
-	let b:TagCol=0
-	" Search the current line in the forward direction, pushing any tags
-	" onto a special stack for the current line
-	while (mpos > -1)
-	    let mpos=matchend(line,tagpat)
-	    if mpos > -1
-		let b:TagCol=b:TagCol+mpos
-		let tag=matchstr(line,tagpat)
-		
-		if exists("b:closetag_disable_synID") || startInComment==s:InCommentAt(linenum, b:TagCol)
-		  let b:TagLine=linenum
-		  call s:Push(matchstr(tag,'[^<>]\+'),"b:lineTagStack")
+	let tagpat='</\=\(\k\|[-:]\)\+\|/>'
+	" Search for: closing tags </tag, opening tags <tag, and unary tag ends />
+	while (linenum>0)
+		" Every time we see an end-tag, we push it on the stack.  When we see an
+		" open tag, if the stack isn't empty, we pop it and see if they match.
+		" If no, signal an error.
+		" If yes, continue searching backwards.
+		" If stack is empty, return this open tag as the one that needs closing.
+		let line=getline(linenum)
+		if first
+			let line=strpart(line,0,lineend)
+		else
+			let lineend=strlen(line)
 		endif
-		"echo "Tag: ".tag." ending at position ".mpos." in '".line."'."
-		let lineend=lineend-mpos
-		let line=strpart(line,mpos,lineend)
-	    endif
-	endwhile
-	" Process the current line stack
-	while (!s:EmptystackP("b:lineTagStack"))
-	    let tag=s:Pop("b:lineTagStack")
-	    if match(tag, "^/") == 0		"found end tag
-		call s:Push(tag,"b:TagStack")
-		"echo linenum." ".b:TagStack
-	    elseif s:EmptystackP("b:TagStack") && !s:Instack(tag, a:unaryTagsStack)	"found unclosed tag
-		return tag
-	    else
-		let endtag=s:Peekstack("b:TagStack")
-		if endtag == "/".tag || endtag == "/"
-		    call s:Pop("b:TagStack")	"found a open/close tag pair
-		    "echo linenum." ".b:TagStack
-		elseif !s:Instack(tag, a:unaryTagsStack) "we have a mismatch error
-		    echohl Error
-		    echon "\rError:"
-		    echohl None
-		    echo " tag mismatch: <".tag."> doesn't match <".endtag.">.  (Line ".linenum." Tagstack: ".b:TagStack.")"
-		    return ""
+		let b:lineTagStack=""
+		let mpos=0
+		let b:TagCol=0
+		" Search the current line in the forward direction, pushing any tags
+		" onto a special stack for the current line
+		while (mpos > -1)
+			let mpos=matchend(line,tagpat)
+			if mpos > -1
+				let b:TagCol=b:TagCol+mpos
+				let tag=matchstr(line,tagpat)
+
+				if exists("b:closetag_disable_synID") || startInComment==s:InCommentAt(linenum, b:TagCol)
+					let b:TagLine=linenum
+					call s:Push(matchstr(tag,'[^<>]\+'),"b:lineTagStack")
+				endif
+				"echo "Tag: ".tag." ending at position ".mpos." in '".line."'."
+				let lineend=lineend-mpos
+				let line=strpart(line,mpos,lineend)
+			endif
+		endwhile
+		" Process the current line stack
+		while (!s:EmptystackP("b:lineTagStack"))
+			let tag=s:Pop("b:lineTagStack")
+			if match(tag, "^/") == 0		"found end tag
+				call s:Push(tag,"b:TagStack")
+				"echo linenum." ".b:TagStack
+			elseif s:EmptystackP("b:TagStack") && !s:Instack(tag, a:unaryTagsStack)	"found unclosed tag
+				return tag
+			else
+				let endtag=s:Peekstack("b:TagStack")
+				if endtag == "/".tag || endtag == "/"
+				call s:Pop("b:TagStack")	"found a open/close tag pair
+				"echo linenum." ".b:TagStack
+			elseif !s:Instack(tag, a:unaryTagsStack) "we have a mismatch error
+				echohl Error
+				echon "\rError:"
+				echohl None
+				echo " tag mismatch: <".tag."> doesn't match <".endtag.">.  (Line ".linenum." Tagstack: ".b:TagStack.")"
+				return ""
+			endif
 		endif
-	    endif
 	endwhile
 	let linenum=linenum-1 | let first=0
-    endwhile
-    " At this point, we have exhausted the file and not found any opening tag
-    echo "No opening tags."
-    return ""
+endwhile
+" At this point, we have exhausted the file and not found any opening tag
+echo "No opening tags."
+return ""
 endfunction
 
 " Returns closing tag for most recent unclosed tag, respecting the
 " current setting of b:unaryTagsStack for tags that should not be closed
 function! GetCloseTag()
-    let tag=GetLastOpenTag("b:unaryTagsStack")
-    if tag == ""
-	return ""
-    else
-	return "</".tag.">"
-    endif
+	let tag=GetLastOpenTag("b:unaryTagsStack")
+	if tag == ""
+		return ""
+	else
+		return "</".tag.">"
+	endif
 endfunction
 
 " return 1 if the cursor is in a syntactically identified comment field
 " (fails for empty lines: always returns not-in-comment)
 function! s:InComment()
-    return synIDattr(synID(line("."), col("."), 0), "name") =~ 'Comment'
+	return synIDattr(synID(line("."), col("."), 0), "name") =~ 'Comment'
 endfunction
 
 " return 1 if the position specified is in a syntactically identified comment field
 function! s:InCommentAt(line, col)
-    return synIDattr(synID(a:line, a:col, 0), "name") =~ 'Comment'
+	return synIDattr(synID(a:line, a:col, 0), "name") =~ 'Comment'
 endfunction
 
 "------------------------------------------------------------------------------
@@ -260,71 +260,71 @@ endfunction
 
 " Helper functions
 function! s:SetKeywords()
-    let g:IsKeywordBak=&iskeyword
-    let &iskeyword="33-255"
+	let g:IsKeywordBak=&iskeyword
+	let &iskeyword="33-255"
 endfunction
 
 function! s:RestoreKeywords()
-    let &iskeyword=g:IsKeywordBak
+	let &iskeyword=g:IsKeywordBak
 endfunction
 
 " Push el onto the stack referenced by sname
 function! s:Push(el, sname)
-    if !s:EmptystackP(a:sname)
-	exe "let ".a:sname."=a:el.' '.".a:sname
-    else
-	exe "let ".a:sname."=a:el"
-    endif
+	if !s:EmptystackP(a:sname)
+		exe "let ".a:sname."=a:el.' '.".a:sname
+	else
+		exe "let ".a:sname."=a:el"
+	endif
 endfunction
 
 " Check whether the stack is empty
 function! s:EmptystackP(sname)
-    exe "let stack=".a:sname
-    if match(stack,"^ *$") == 0
-	return 1
-    else
-	return 0
-    endif
+	exe "let stack=".a:sname
+	if match(stack,"^ *$") == 0
+		return 1
+	else
+		return 0
+	endif
 endfunction
 
 " Return 1 if el is in stack sname, else 0.
 function! s:Instack(el, sname)
-    exe "let stack=".a:sname
-    call s:SetKeywords()
-    let m=match(stack, "\\<".a:el."\\>")
-    call s:RestoreKeywords()
-    if m < 0
-	return 0
-    else
-	return 1
-    endif
+	exe "let stack=".a:sname
+	call s:SetKeywords()
+	let m=match(stack, "\\<".a:el."\\>")
+	call s:RestoreKeywords()
+	if m < 0
+		return 0
+	else
+		return 1
+	endif
 endfunction
 
 " Return the first element in the stack
 function! s:Peekstack(sname)
-    call s:SetKeywords()
-    exe "let stack=".a:sname
-    let top=matchstr(stack, "\\<.\\{-1,}\\>")
-    call s:RestoreKeywords()
-    return top
+	call s:SetKeywords()
+	exe "let stack=".a:sname
+	let top=matchstr(stack, "\\<.\\{-1,}\\>")
+	call s:RestoreKeywords()
+	return top
 endfunction
 
 " Remove and return the first element in the stack
 function! s:Pop(sname)
-    if s:EmptystackP(a:sname)
-	echo "Error!  Stack ".a:sname." is empty and can't be popped."
-	return ""
-    endif
-    exe "let stack=".a:sname
-    " Find the first space, loc is 0-based.  Marks the end of 1st elt in stack.
-    call s:SetKeywords()
-    let loc=matchend(stack,"\\<.\\{-1,}\\>")
-    exe "let ".a:sname."=strpart(stack, loc+1, strlen(stack))"
-    let top=strpart(stack, match(stack, "\\<"), loc)
-    call s:RestoreKeywords()
-    return top
+	if s:EmptystackP(a:sname)
+		echo "Error!  Stack ".a:sname." is empty and can't be popped."
+		return ""
+	endif
+	exe "let stack=".a:sname
+	" Find the first space, loc is 0-based.  Marks the end of 1st elt in stack.
+	call s:SetKeywords()
+	let loc=matchend(stack,"\\<.\\{-1,}\\>")
+	exe "let ".a:sname."=strpart(stack, loc+1, strlen(stack))"
+	let top=strpart(stack, match(stack, "\\<"), loc)
+	call s:RestoreKeywords()
+	return top
 endfunction
 
 function! s:Clearstack(sname)
-    exe "let ".a:sname."=''"
+	exe "let ".a:sname."=''"
 endfunction

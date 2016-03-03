@@ -104,7 +104,7 @@ let s:makefile = [
 			\'',
 			\'re:			fclean all',
 			\'',
-			\'.PHONY:		fclean clean re debug'
+			\'.PHONY:		fclean clean re'
 			\]
 
 function!	Creat_Makefile_42()

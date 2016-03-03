@@ -120,7 +120,7 @@ function mkdircd()
 
 function ftgitp()
 {
-	local d=`date +%Y-%m-%d:%H:%M:%S`
+	local d=`date +%Y-%m-%d %H:%M:%S`
 
 	if [ $# -eq 0 ]; then
 		git add --all && git commit -m "$d refresh git" && git push origin master && git ls-files
@@ -376,3 +376,4 @@ alias refresh='cpbitnami'
 alias chrome='open -n -a /Applications/Google\ Chrome.app --args --incognito'
 
 alias lockscreen='/System/Library/CoreServices/Menu\ Extras/user.menu/Contents/Resources/CGSession -suspend'
+alias sb='~/#_my_config/stop_bruit.sh&'

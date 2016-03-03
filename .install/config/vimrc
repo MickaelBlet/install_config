@@ -43,6 +43,9 @@
 "Mode insert at open
 start
 
+"refresh auto
+"set autoread
+
 "Dictionary
 set dictionary+=~/.vim/dict/c.dict
 
@@ -436,15 +439,21 @@ imap <C-Home>				<ESC>:tabnew ..<CR>
 " reset cursor position open file
 
 function! ResCur()
-	if line("'\"") <= line("$")
-		normal! g`"
-		return 1
-	endif
+	try
+		if line("'\"") <= line("$")
+			normal! g`"
+			return 1
+		endif
+	catch
+	endtry
 endfunction
 
 augroup resCur
-	autocmd!
-	autocmd BufWinEnter * call ResCur()
+	try
+		autocmd!
+		autocmd BufWinEnter * call ResCur()
+	catch
+	endtry
 augroup END
 
 " Speed move

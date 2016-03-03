@@ -138,6 +138,7 @@ function! Extern_Check_H_42(bool)
 			call Creat_H_42(filepath)
 		endif
 	endif
+	exit
 endfunction
 
 function! Refresh_H_42()
