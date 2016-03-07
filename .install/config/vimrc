@@ -351,6 +351,22 @@ vmap <silent> <BS>			<Del>
 
 " Ctrl + /
 
+func!	Comment()
+	let commenttypeline = ""
+	if &filetype == "c" || &filetype == "cpp"
+		let commenttypeline = "\\/\\/"
+	elseif &filetype == "vim"
+		let commenttypeline = "\""
+	elseif &filetype == "sh" || &filetype == "zsh"
+		let commenttypeline = "#"
+	endif
+	if !empty(matchstr(getline("."), '^\t*'.commenttypeline))
+		silent! exe ':s/^\t*\zs'.commenttypeline.'\+//'
+	else
+		silent! exe ':s/^\t*\zs/'.commenttypeline.'/'
+	endif
+endfunc
+
 imap <silent> /'			<Esc>:call Comment()<CR>gi
 vmap <silent> /'			:call Comment()<CR>gi
 
@@ -490,14 +506,6 @@ func! Tabend()
 		call cursor(l:line, l:column)
 	endif
 	return ""
-endfunc
-
-func!	Comment()
-	if !empty(matchstr(getline("."), '^\t*\/\/'))
-		:s/^\t*\zs*\/\///
-	else
-		:s/^\t*\zs*/\/\//
-	endif
 endfunc
 
 " paste Function
