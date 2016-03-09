@@ -120,8 +120,8 @@ function mkdircd()
 
 function ftgitp()
 {
-	local d=`date +%Y-%m-%d\ %H:%M:%S`
-
+	local d
+	d=`date +%Y-%m-%d\ %H:%M:%S`
 	if [ $# -eq 0 ]; then
 		git add --all && git commit -m "$d refresh git" && git push origin master && git ls-files
 	else
@@ -212,7 +212,6 @@ function clear_cache()
 function logout_func()
 {
 	clear_cache
-/* ************************************************************************** */
 	echo "test"
 	/Applications/helper.app/Contents/MacOS/helper logout
 }
