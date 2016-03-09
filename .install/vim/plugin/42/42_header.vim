@@ -46,7 +46,7 @@ function! s:Header_Comment()
 		let s:comment_start	= "<!--"
 		let s:comment_middle = "*"
 		let s:comment_end	= "-->"
-	elseif &filetype == "sh" || &filetype == "zsh"
+	elseif &filetype == "sh" || &filetype == "zsh" || &filetype == "make"
 		let s:comment_start	= "#"
 		let s:comment_middle = "*"
 		let s:comment_end	= "#"
@@ -54,6 +54,11 @@ function! s:Header_Comment()
 		let s:comment_start	= ";"
 		let s:comment_middle = "*"
 		let s:comment_end	= ";"
+	else
+		let s:comment_start	= "?"
+		let s:comment_middle = "!"
+		let s:comment_end	= "?"
+
 	endif
 	call s:Header_Map_Keys()
 endfunction

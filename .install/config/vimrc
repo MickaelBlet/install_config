@@ -291,6 +291,7 @@ imap <2-LeftMouse>			<Nop>
 " Ctrl + w == save quit && Ctrl + q == force quit
 
 map <silent> <C-w>			:wq<CR>
+imap <silent> <C-w>			<C-r>=:wq<CR>
 imap <silent> <C-w>			<Esc>:wq<CR>
 vmap <silent> <C-w>			<Esc>:wq<CR>
 map <silent> <C-q>			:q!<CR>
@@ -331,13 +332,13 @@ imap <silent> <C-c>			<Esc>yygi
 vmap <silent> <C-c>			ygi
 vmap <silent> <S-c>			:w !pbcopy<CR><CR>
 
-" Ctrl + D == Duplicate
+" Ctrl + F == Duplicate
 
 map <silent> <c-f>			yygi<Esc>pgi
 vmap <silent> <c-f>			ygi<CR><Esc>pgi
 imap <silent> <c-f>			<Esc>yygi<Esc>pgi
 
-" Ctrl + F == Del Line
+" Ctrl + D == Del Line
 
 map <silent> <c-d>			ddgi
 imap <silent> <c-d>			<Esc>ddgi
@@ -367,8 +368,8 @@ func!	Comment()
 	endif
 endfunc
 
-imap <silent> /'			<Esc>:call Comment()<CR>gi
-vmap <silent> /'			:call Comment()<CR>gi
+imap <silent> /'	<Esc>:call Comment()<CR>gi
+vmap <silent> /'	:call Comment()<CR>gi
 
 " Ctrl Up (move line)
 
