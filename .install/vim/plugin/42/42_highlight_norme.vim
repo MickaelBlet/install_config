@@ -17,8 +17,8 @@
 "                       <mblet@student.42.fr>                    "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-highlight Parenthesissss	ctermfg=160 term=bold cterm=bold
-highlight NotAutorised		ctermbg=52
+highlight Parenthesis		ctermfg=160 term=bold cterm=bold
+highlight NotAutorised		ctermbg=88
 highlight MyError			ctermbg=darkred
 highlight MyWarning			ctermbg=166
 highlight MyLibrary			ctermfg=215

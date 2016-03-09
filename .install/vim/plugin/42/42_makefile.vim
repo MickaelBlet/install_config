@@ -25,7 +25,7 @@ autocmd BufWritePost *.h		call Actualise_makefile()
 
 function! Actualise_makefile()
 	let l:pwd = getcwd()
-	while !filereadable('./Makefile') || !filereadable('./auteur')
+	while !filereadable('./Makefile') && !filereadable('./auteur')
 		try
 			cd ..
 		catch

@@ -112,9 +112,9 @@ let s:ascii_42 = [
 function! s:Add_Comment(line)
 	let l:line = s:comment_start
 	let l:line .= " "
-	let l:line .= repeat(" ", 5 - strlen(s:comment_start))
+	let l:line .= repeat(" ", 4 - strlen(s:comment_start))
 	let l:line .= a:line
-	let l:line .= repeat(" ", 5 - strlen(s:comment_end))
+	let l:line .= repeat(" ", 4 - strlen(s:comment_end))
 	let l:line .= " "
 	let l:line .= s:comment_end
 	return l:line
@@ -123,26 +123,26 @@ endfunction
 function! s:Add_Comment_Start_End(line)
 	let l:line = s:comment_start
 	let l:line .= " "
-	let l:line .= repeat(s:comment_middle, 5 - strlen(s:comment_start))
+	let l:line .= repeat(s:comment_middle, 4 - strlen(s:comment_start))
 	let l:line .= a:line
-	let l:line .= repeat(s:comment_middle, 5 - strlen(s:comment_end))
+	let l:line .= repeat(s:comment_middle, 4 - strlen(s:comment_end))
 	let l:line .= " "
 	let l:line .= s:comment_end
 	return l:line
 endfunction
 
 function! s:Header_42_Line_start_end()
-	let l:line = repeat(s:comment_middle, 68)
+	let l:line = repeat(s:comment_middle, 70)
 	return s:Add_Comment_Start_End(l:line)
 endfunction
 
 function! s:Header_42_Line_empty()
-	let l:line = repeat(" ", 68)
+	let l:line = repeat(" ", 70)
 	return s:Add_Comment(l:line)
 endfunction
 
 function! s:Header_42_Line42(index)
-	let l:line = repeat(" ", 43)
+	let l:line = repeat(" ", 45)
 	let l:line .= s:ascii_42[a:index]
 	return s:Add_Comment(l:line)
 endfunction
@@ -150,7 +150,7 @@ endfunction
 function! s:Header_42_File()
 	let l:filename = expand('%:t')
 	let l:line = l:filename
-	let l:space = 43 - strlen(l:filename)
+	let l:space = 45 - strlen(l:filename)
 	let l:line .= repeat(" ", l:space)
 	let l:line .= s:ascii_42[1]
 	return s:Add_Comment(l:line)
@@ -158,7 +158,7 @@ endfunction
 
 function! s:Header_42_By(author, mail)
 	let l:line = "By: " . a:author . " <" . a:mail . ">"
-	let l:space = 36 - strlen(a:author . a:mail)
+	let l:space = 38 - strlen(a:author . a:mail)
 	let l:line .= repeat(" ", l:space)
 	let l:line .= s:ascii_42[3]
 	return s:Add_Comment(l:line)
@@ -166,7 +166,7 @@ endfunction
 
 function! s:Header_42_Info(info, author, index)
 	let l:line = a:info . ": " . strftime("%Y/%m/%d %H:%M:%S") . " by " . a:author
-	let l:space = 11 - strlen(a:author)
+	let l:space = 13 - strlen(a:author)
 	let l:line .= repeat(" ", l:space)
 	let l:line .= s:ascii_42[a:index]
 	return s:Add_Comment(l:line)
