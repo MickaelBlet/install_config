@@ -272,6 +272,7 @@ alias clr='clear_cache'
 
 alias ls='lss'
 alias ll='ls -lhaG'
+alias l='lss'
 
 # ╔════════════════╗
 # ║      GCC       ║

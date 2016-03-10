@@ -228,12 +228,18 @@ endfunction
 function! Input()
 	let mode = mode()
 	let string = "[" . mode() . "]"
-	if mode == 'v' || mode == 'V' || mode == visualmode()
+	if mode == 'v' || mode == 'V'
 		let string = "VISUAL"
 	elseif mode == 'i'
 		let string = "INSERT"
+	elseif mode == 'R' || mode == 'Rv'
+		let string = "REPLAC"
+	elseif mode == 'c'
+		let string = "CMDLIN"
 	elseif mode == 'n'
 		let string = "NORMAL"
+	elseif mode == 's' || mode == 'S'
+		let string = "SELECT"
 	endif
 	if (g:ismodifed != &modified)
 				\ || (mode != g:last_state)
