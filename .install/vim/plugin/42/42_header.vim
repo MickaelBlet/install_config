@@ -30,14 +30,10 @@ function! s:Header_Map_Keys()
 endfunction
 
 function! s:Header_Comment()
-	if expand('%:e') ==? "c" || expand('%:e') ==? "h"
+	if expand('%:e') == "c" || expand('%:e') == "h" || &filetype == "cpp"
 		let s:comment_start	= "/*"
 		let s:comment_middle = "*"
 		let s:comment_end	= "*/"
-	elseif &filetype == "cpp"
-		let s:comment_start	= "//"
-		let s:comment_middle = "*"
-		let s:comment_end	= "//"
 	elseif &filetype == "vim"
 		let s:comment_start	= "\""
 		let s:comment_middle = "*"
@@ -58,7 +54,6 @@ function! s:Header_Comment()
 		let s:comment_start	= "?"
 		let s:comment_middle = "!"
 		let s:comment_end	= "?"
-
 	endif
 	call s:Header_Map_Keys()
 endfunction

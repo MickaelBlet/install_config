@@ -129,6 +129,17 @@ function ftgitp()
 	fi
 }
 
+function fftgitp()
+{
+	local d
+	d=`date +%Y-%m-%d\ %H:%M:%S`
+	if [ $# -eq 0 ]; then
+		git add --all && git commit -m "$d force git" && git push origin master --force && git ls-files
+	else
+		git add --all && git commit -m "$*" && git push origin master --force && git ls-files
+	fi
+}
+
 function ftgitc()
 {
 	local filename
@@ -278,6 +289,7 @@ alias gci='gcc -I .'
 
 alias gti='git'
 alias fgit='ftgitp'
+alias ffgit='fftgitp'
 alias cgit='ftgitc'
 alias gll='git ls-files'
 

@@ -227,8 +227,8 @@ endfunction
 
 function! Input()
 	let mode = mode()
-	let string = '??????'
-	if mode == 'v' || mode == 'V'
+	let string = "[" . mode() . "]"
+	if mode == 'v' || mode == 'V' || mode == visualmode()
 		let string = "VISUAL"
 	elseif mode == 'i'
 		let string = "INSERT"

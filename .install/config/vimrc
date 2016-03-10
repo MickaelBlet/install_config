@@ -358,7 +358,7 @@ func!	Comment()
 		let commenttypeline = "\\/\\/"
 	elseif &filetype == "vim"
 		let commenttypeline = "\""
-	elseif &filetype == "sh" || &filetype == "zsh"
+	elseif &filetype == "sh" || &filetype == "zsh" || &filetype == "make"
 		let commenttypeline = "#"
 	endif
 	if !empty(matchstr(getline("."), '^\t*'.commenttypeline))

@@ -36,6 +36,12 @@ highlight MyGlobal								ctermfg=169
 syntax match myGlobal '\<g_\i\+\>'
 highlight link myGlobal MyGlobal
 
+highlight MyPrivateVar							ctermfg=202
+
+" highlight >> 'g_exemple'
+syntax match myPrivateVar '\<_\ze\i\+\>'
+highlight link myPrivateVar MyPrivateVar
+
 "__________________________________________________________
 
 " highlight all operators
@@ -59,6 +65,12 @@ syntax match myStatement '\~'
 
 highlight MyClass							ctermfg=159
 
-" highlight >> 'ft_exemple'
+" highlight >> 'std::'
 syntax match myFunctionFT '\<\i\+\>\ze::'
 highlight link myFunctionFT MyFunctionFT
+
+"__________________________________________________________
+
+" highlight >> ''
+syntax match myType '\<\i\+\>\ze&\?\s\+&\?\**\<\i\+\>\(\(^#.*\)\|\(//.*\)\)\@<!'
+highlight link myType Type
