@@ -25,6 +25,7 @@ function menu0()
 	rm ~/.vimrc
 	rm ~/.myzshrc
 	rm ~/.zshrc
+	rm ~/.gitignore_global
 	cp -r .install/config/ ~/#_my_config
 	cp -r .install/vim ~/.vim
 	cp -r .install/myvimrc ~/.myvimrc
@@ -34,6 +35,7 @@ function menu0()
 	git config --global core.excludesfile ~/.gitignore_global
 	printf "*.s\n" >> ~/.gitignore_global
 	printf "*.o\n" >> ~/.gitignore_global
+	printf "*.d\n" >> ~/.gitignore_global
 	printf "*.a\n" >> ~/.gitignore_global
 	printf "*.out\n" >> ~/.gitignore_global
 	cp -r .install/pref/* ~/Library/Preferences/
