@@ -118,14 +118,53 @@ function mkdircd()
 	cdls $*
 }
 
-function ftgitp()
+function fast_git_push()
+{
+	local d
+	d=`date +%Y-%m-%d\ %H:%M:%S`
+	if gittest=`git status --ignore-submodules` &> /dev/null; then
+		testgit="nothing to commit"
+		if [[ "$gittest" == *$testgit* ]]; then
+			echo "Git Status : \"nothing to commit\" !!!"
+			return
+		else
+			echo "Git Status GOOD !!!"
+		fi
+	fi
+	if [ $# -eq 0 ]; then
+		git add --all
+		printf "Please commit : "
+		read R
+		if [ -n $R]; then
+			return
+		fi
+		git commit -m "$d $R"
+		git push origin master
+		git ls-files
+	else
+		git add --all
+		git commit -m "$d $*"
+		git push origin master
+		git ls-files
+	fi
+}
+
+function force_git_push()
 {
 	local d
 	d=`date +%Y-%m-%d\ %H:%M:%S`
 	if [ $# -eq 0 ]; then
-		git add --all && git commit -m "$d refresh git" && git push origin master && git ls-files
+		git add --all
+		printf "Please commit : "
+		read R
+		git commit -m "$d $R"
+		git push origin master
+		git ls-files
 	else
-		git add --all && git commit -m "$*" && git push origin master && git ls-files
+		git add --all
+		git commit -m "$d --force $*"
+		git push origin master --force
+		git ls-files
 	fi
 }
 
@@ -180,36 +219,11 @@ function correction()
 	fi
 }
 
-function norme()
-{
-	if [ $# -eq 0 ]; then
-		dot_c=`find . -iname "*.c"`
-		dot_h=`find . -iname "*.h"`
-		norminette $dot_c $dot_h
-	else
-		norminette $*
-	fi
-}
-
-function cauteur()
-{
-	echo $USER > auteur && git add auteur && git commit -m "add auteur" && git push origin master
-}
-
-function libft_cp()
-{
-	cp -r ~/libc/libft ./libft
-}
-
 function speedstart()
 {
 	mkdir includes
 	mkdir srcs
-	libft_cp
-	cp libft/includes/libft.h includes/libft.h
-	echo "" > .gitignore
-	echo "includes/libft.h" >> .gitignore
-	vi Makefile
+	echo "mblet" > auteur
 }
 
 function clear_cache()
@@ -218,13 +232,6 @@ function clear_cache()
 	find ~ -name ".DS_Store" -exec rm {} \;
 	rm -rf ~/Library/Caches
 	mkdir ~/Library/Caches
-}
-
-function logout_func()
-{
-	clear_cache
-	echo "test"
-	/Applications/helper.app/Contents/MacOS/helper logout
 }
 
 function pwdsave()
@@ -255,12 +262,6 @@ alias xs='cd'
 alias mk='mkdircd'
 
 # ╔════════════════╗
-# ║     LOGOUT     ║
-# ╚════════════════╝
-
-alias logout='logout_func'
-
-# ╔════════════════╗
 # ║      CLR       ║
 # ╚════════════════╝
 
@@ -281,7 +282,6 @@ alias l='lss'
 alias gcw='gcc -Wall -Werror -Wextra'
 alias g+w='g++ -Wall -Werror -Wextra'
 alias gall='g++ -Wall -Werror -Wextra *.cpp'
-alias gcc3d='gcc3d'
 alias gci='gcc -I .'
 
 # ╔════════════════╗
@@ -289,7 +289,7 @@ alias gci='gcc -I .'
 # ╚════════════════╝
 
 alias gti='git'
-alias fgit='ftgitp'
+alias fgit='fast_git_push'
 alias ffgit='fftgitp'
 alias cgit='ftgitc'
 alias gll='git ls-files'
@@ -309,42 +309,18 @@ alias syntax='vi ~/.vim/syntax/c.vim;cd -'
 
 alias -s c='vim'
 alias -s h='vim'
+alias -s cpp='vim'
+alias -s hpp='vim'
 alias -s vim='vim'
-
-# ╔════════════════╗
-# ║   GIT AUTEUR   ║
-# ╚════════════════╝
-
-alias autor='cauteur'
-
-# ╔════════════════╗
-# ║      PDF       ║
-# ╚════════════════╝
-
-alias pdf='open ~/pdf'
-
-# ╔════════════════╗
-# ║     NORME      ║
-# ╚════════════════╝
-
-alias save_pwd='pwdsave'
-alias /='cdsave'
-
-# ╔════════════════╗
-# ║     NORME      ║
-# ╚════════════════╝
-
-alias vinorme='vi ~/program/norme-checker.py'
-alias lognorminator='perl ~/program/norminator.perl --auth'
 
 # ╔════════════════╗
 # ║     SPEED      ║
 # ╚════════════════╝
 
+alias save_pwd='pwdsave'
+alias /='cdsave'
 alias src='vi ~/\#_my_config/zshrc;cd -'
-alias cplibft='cp -r ~/1_Semestre/algorithmie-I/libft ./libft'
 alias correction='correction'
-alias github='open ~/program/GitHub.app'
 alias rb='~/program/ruby-2.1.0/bin/ruby'
 
 # ╔════════════════╗
@@ -358,13 +334,6 @@ alias vo='vicd'
 alias ci='vicd'
 alias cu='vicd'
 alias co='vicd'
-
-# ╔════════════════╗
-# ║      MAKE      ║
-# ╚════════════════╝
-
-alias creatmake='sh ~/program/MakeMakefile.zsh'
-alias refreshmake='sh ~/program/MakeMakefile.zsh'
 
 # ╔════════════════╗
 # ║     CHMOD      ║
