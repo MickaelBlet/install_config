@@ -140,7 +140,7 @@ function print_menu()
 ## while
 ##
 
-index=0
+ index=0
 
 print_menu $index
 
