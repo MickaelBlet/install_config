@@ -65,8 +65,6 @@ fgplus2=$'%{\e[38;5;250m%}'
 PR_TITLEBAR=$'%{\e]0;%D{%H:%M} %m %~/\a%}'
 PR_STITLE=$'%{\e\e%}'
 
-GIT_STATS=1
-
 # ╔════════════════╗
 # ║     PROMPT     ║
 # ╚════════════════╝
@@ -234,3 +232,5 @@ function Prompt_nogit()
 {
 	export PROMPT_GIT="false"
 }
+
+alias ng='Prompt_nogit'
