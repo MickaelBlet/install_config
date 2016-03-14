@@ -104,7 +104,8 @@ let s:makefile = [
 			\'re:			fclean all',
 			\'',
 			\'.PHONY:		fclean clean re'
-			\]
+			\'',
+			\'-include $(OBJS:.o=.d)']
 
 function!	Creat_Makefile_42()
 	set paste
