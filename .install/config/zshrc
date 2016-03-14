@@ -136,6 +136,7 @@ function fast_git_push()
 		printf "Please commit : "
 		read R
 		if [ -n $R]; then
+			echo "Action Abort !"
 			return
 		fi
 		git commit -m "$d $R"
@@ -157,6 +158,10 @@ function force_git_push()
 		git add --all
 		printf "Please commit : "
 		read R
+		if [ -n $R]; then
+			echo "Action Abort !"
+			return
+		fi
 		git commit -m "$d $R"
 		git push origin master
 		git ls-files
@@ -168,15 +173,25 @@ function force_git_push()
 	fi
 }
 
-function fftgitp()
+function fast_git_pull()
 {
-	local d
-	d=`date +%Y-%m-%d\ %H:%M:%S`
 	if [ $# -eq 0 ]; then
-		git add --all && git commit -m "$d force git" && git push origin master --force && git ls-files
+		git pull
 	else
-		git add --all && git commit -m "$*" && git push origin master --force && git ls-files
+		git pull $*
 	fi
+}
+
+function force_git_pull()
+{
+	printf "Git Pull Force Sure ? "
+	read R
+	if [ -n $R]; then
+		echo "Action Abort !"
+		return
+	fi
+	git fetch --all
+	git reset --hard origin/master
 }
 
 function ftgitc()
@@ -290,7 +305,9 @@ alias gci='gcc -I .'
 
 alias gti='git'
 alias fgit='fast_git_push'
-alias ffgit='fftgitp'
+alias ffgit='force_git_push'
+alias pgit='fast_git_pull'
+alias ppgit='force_git_pull'
 alias cgit='ftgitc'
 alias gll='git ls-files'
 

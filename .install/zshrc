@@ -1,4 +1,9 @@
 PATH=$HOME/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin
+
+if [[ -d ~/Qt ]]; then
+	PATH+=:$HOME/Qt/5.5/clang_64/bin
+fi
+
 HISTFILE=~/.zshrc_history
 SAVEHIST=1000
 HISTSIZE=1000
