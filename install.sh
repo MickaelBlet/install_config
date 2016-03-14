@@ -3,7 +3,7 @@
 ##
 #    install.sh                                         :+:      :+:    :+:    #
 ##
- 
+
 menu=(	"ZSH + PROMPT + VIM"\
 		"ZSH + PROMPT"\
 		"PROMPT"\
