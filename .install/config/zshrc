@@ -122,20 +122,19 @@ function fast_git_push()
 {
 	local d
 	d=`date +%Y-%m-%d\ %H:%M:%S`
-	if gittest=`git status --ignore-submodules` &> /dev/null; then
-		testgit="nothing to commit"
-		if [[ "$gittest" == *$testgit* ]]; then
-			echo "Git Status : \"nothing to commit\" !!!"
-			return
-		else
-			echo "Git Status GOOD !!!"
-		fi
+	gittest=`git status --ignore-submodules`
+	testgit="nothing to commit"
+	if [[ "$gittest" == *$testgit* ]]; then
+		echo "Git Status : \"nothing to commit\" !!!"
+		return
+	else
+		echo "Git Status GOOD !!!"
 	fi
 	if [ $# -eq 0 ]; then
 		git add --all
 		printf "Please commit : "
 		read R
-		if [ -n $R]; then
+		if [[ $R == "" ]]; then
 			echo "Action Abort !"
 			return
 		fi
