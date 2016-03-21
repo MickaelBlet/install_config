@@ -32,6 +32,8 @@ highlight Type									ctermfg=10
 highlight LineNr								ctermfg=242
 highlight Pmenu			term=reverse			ctermbg=239	ctermfg=white
 highlight PmenuSel		term=reverse			ctermbg=27	ctermfg=white
+highlight Number								ctermfg=magenta
+highlight Character		term=bold				ctermfg=white
 
 highlight MyTable								ctermfg=28
 " highlight >> 's_exemple' && 't_exemple' && 'u_exemple' && 'e_exemple'

@@ -139,6 +139,9 @@ highlight LineNr		ctermfg=242
 highlight Pmenu			term=reverse ctermbg=239 ctermfg=white
 highlight PmenuSel		term=reverse ctermbg=27 ctermfg=white
 highlight MatchParen	cterm=bold ctermbg=none ctermfg=160
+highlight Number								ctermfg=magenta
+highlight Character		term=bold				ctermfg=white
+highlight Special		term=bold				ctermfg=white
 
 " Abreviation
 autocmd FileType cpp	iab std <c-r>=Autocomplete_std()<CR>
