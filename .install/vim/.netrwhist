@@ -1,6 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/nfs/2013/m/mblet/2T/rtv1/includes'
 let g:netrw_dirhist_2='/nfs/2013/m/mblet/2T/rtv1/includes/forms'
 let g:netrw_dirhist_3='/nfs/2013/m/mblet/2T/rtv1'
 let g:netrw_dirhist_4='/nfs/2013/m/mblet/2T/rtv1/srcs'
+let g:netrw_dirhist_5='/nfs/2013/m/mblet/2T/42_RT.git/srcs/mouse/mouse_left_click.c'
