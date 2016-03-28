@@ -346,12 +346,20 @@ imap <silent> <c-f>			<Esc>yygi<Esc>pgi
 map <silent> <c-d>			ddgi
 imap <silent> <c-d>			<Esc>ddgi
 
-" Shift + Home == Select line
+" Delete Word
+map <silent> <C-S-Left>		v<S-Left>
+map <silent> <C-S-Right>	v<S-Right>
+vmap <silent> <C-S-Left>	<S-Left>
+vmap <silent> <C-S-Right>	<S-Right>
+imap <silent> <C-S-Left>	<Esc>v<S-Left>
+imap <silent> <C-S-Right>	<Esc><Right>v<S-Right>
 
+" Shift + Home == Select line
 imap <silent> <S-Home>		<Esc>v<Home>
 imap <silent> <S-End>		<Esc>v<End><Left>
 vmap <silent> <Delete>		<Del>gi
 vmap <silent> <BS>			<Del>
+
 
 " Ctrl + /
 
