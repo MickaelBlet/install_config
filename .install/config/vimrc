@@ -177,7 +177,7 @@ endfunc
 
 func! Getfirstword()
 	let l:line = getline('.')
-	return matchstr(l:line, '^\s*\<\i\+\>\ze.*')
+	return matchstr(l:line, '^\s*\zs\<\i\+\>\ze.*')
 endfunc
 
 func! Getsecondword()
