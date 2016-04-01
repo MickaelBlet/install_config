@@ -135,3 +135,7 @@ highlight MyFunctionST2				cterm=bold	ctermfg=lightblue
 " highlight >> 's_exemple'
 syntax match myFunctionST2 '\<\zss_\ze\i\+\>('
 highlight link myFunctionST2 MyFunctionST2
+
+highlight MyLibrary					cterm=bold	ctermfg=215
+syntax match myLibrary '<lib.*ft.h>' containedin=ALL
+highlight link myLibrary MyLibrary
