@@ -78,8 +78,9 @@ let s:makefile = [
 			\'	$(CC) $(FLAGS) -MMD -c $< -o $@											\',
 			\'		-I $(LIBFT_DIR)$(INCDIR)											\',
 			\'		-I $(INCDIR)',
-			\'	printf "\r\033[38;5;11m⌛  MAKE   %s plz wait ...%*s\033[0m\033[K"		\',
-			\'		$(NAMEBASE) $(MAX_COLS) "($@)"',
+			\'	printf "\r\033[38;5;11m%s%*.*s\033[0m\033[K"							\',
+			\'		"⌛  MAKE   "$(NAMEBASE)" plz wait ..."								\',
+			\'		$(MAX_COLS) $(MAX_COLS) "($(@))"',
 			\'',
 			\'clean:',
 			\'	printf "\r\033[38;5;11m⌛  CLEAN  $(NAMEBASE) plz wait ...\033[0m\033[K"',
@@ -122,6 +123,9 @@ function!	s:Append_files_list(line_index, pattern_type_file)
 	let maxlen = 59
 	let filelist = ""
 	for filelist_value in split(a:pattern_type_file, ';')
+		if filelist != ""
+			let filelist .= "\n"
+		endif
 		let filelist .= glob(filelist_value)
 	endfor
 	let count_file = len(split(filelist, '\n'))
@@ -215,7 +219,7 @@ function!	Makefile_refresh_files_list()
 				cd class
 				let in_dir = 1
 			endif
-			call s:Append_files_list(start_line_element, "**/*.hpp;**/*.cpp")
+			call s:Append_files_list(start_line_element, "**/*.cpp")
 			if in_dir == 1
 				cd ..
 			endif

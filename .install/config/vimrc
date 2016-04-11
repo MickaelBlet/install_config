@@ -99,6 +99,8 @@ set omnifunc=syntaxcomplete#Complete
 
 set tags+=~/.vim/tags/cpp
 
+set viminfo="NONE"
+
 au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
 
 " OmniCppComplete
@@ -444,7 +446,13 @@ imap <Esc>OX				=
 
 imap -.						->
 imap FT_					ft_
+imap FT+					ft_
+imap FT)					ft_
 imap fT_					ft_
+imap fT+					ft_
+imap fT)					ft_
+imap ft+					ft_
+imap ft)					ft_
 
 " Ctrl + Up && Ctrl + Down
 
