@@ -27,7 +27,7 @@ let s:errornorm = 0
 let s:errornorm += matchadd('MyError', '\s\+\%#\@<!$', -1) " Space Error
 let s:errornorm += matchadd('MyError', '\t\zs \+', -1) " Space Error
 let s:errornorm += matchadd('MyError', ' \+\ze\t', -1) " Space Error
-let s:errornorm += matchadd('MyError', '^\n\(\_.\+\)\@!', -1) " Last Line
+let s:errornorm += matchadd('MyError', '^\%#\@<!\n\(\_.\+\)\@!', -1) " Last Line
 
 autocmd BufNewFile,BufRead *.c		call Norme()
 autocmd BufNewFile,BufRead *.h		call Norme()
@@ -48,7 +48,7 @@ function Norme()
 	let s:errornorm += matchadd('MyError', '\%>80v.\+', -1)
 
 	" Double return
-	let s:errornorm += matchadd('MyError', '^\n\(^\n\)\+', -1)
+	let s:errornorm += matchadd('MyError', '^\%#\@<!\n\(^\%#\@<!\n\)\+', -1)
 	" TAB in parenthesis
 	let s:errornorm += matchadd('MyError', '\(#.*\|\*\*.*\|\/\*.*\)\@<!(.*\zs\t\ze.*)', -1)
 	" ';' AFTER while WHIT TAB
@@ -76,39 +76,7 @@ function Norme()
 	let s:errornorm += matchadd('MyError', '\<return\> \zs\i.*\>', -1)
 
 	" ';'
-	let s:errornorm += matchadd('MyWarning', '\('.
-				\'\%#.*\|'.
-				\'#.*\|'.
-				\'\*\/.*\|'.
-				\'\*\*.*\|'.
-				\'\/\/.*\|'.
-				\'\/\*.*\|'.
-				\'{\|'.
-				\'}\|'.
-				\';\|'.
-				\'^\|'.
-				\'\<if\>.*\|'.
-				\'\<else\>.*\|'.
-				\'\<while\>.*\|'.
-				\'||.*\|'.
-				\'&&.*\|'.
-				\',\|'.
-				\'+\|'.
-				\'-\|'.
-				\'\*\|'.
-				\'/\|'.
-				\'\\\|'.
-				\'%\)\@<!\n'.
-				\'\('.
-				\'\.*{\|'.
-				\'\t\+\('.
-				\'+\|'.
-				\'-\|'.
-				\'*\|'.
-				\'/\|'.
-				\'%\|'.
-				\'&&\|'.
-				\'||\)\)\@!', -1)
+	let s:errornorm += matchadd('MyWarning', '\(\%#.*\|#.*\|\*\/.*\|\*\*.*\|\/\/.*\|\/\*.*\|{\|}\|;\|^\|\<if\>.*\|\<else\>.*\|\<while\>.*\|||.*\|&&.*\|,\|+\|-\|\*\|/\|%\)\@<!\n\(.*{\|\t\+\(+\|-\|*\|/\|%\|&&\|||\)\)\@!', -1)
 
 	" SPACE BEFORE ';'
 	let s:errornorm += matchadd('MyError', '\(continue\|break\|return\|\t\+\)\@<!\s\ze;', -1)
@@ -117,7 +85,7 @@ function Norme()
 	let s:errornorm += matchadd('MyError', '\(^{\n\)\ze\(^.*\n\(^}\)\@!\)\{25}\(^.*\n\(^\i\)\@!\)*\(^}\n\)', -1)
 
 	" 2 return / func
-	let s:errornorm += matchadd('MyError', '\(^{\n\)\(.\+\n\(^}\)\@!\)\+\n\+\(.\+\n\(^}\)\@!\)\+\zs\n\+\ze', -1)
+	let s:errornorm += matchadd('MyError', '\(^{\n\)\(.\+\n\(^}\)\@!\)\+\n\+\(.\+\n\(^}\)\@!\)\+\zs\%#\@<!\n\+\ze', -1)
 
 	" no MAJ after define
 	let s:errornorm += matchadd('MyError', '# *\<define\>\s\+\zs\(\<\([0-9A-Z_]\)*\>\)\@!\i*', -1)
