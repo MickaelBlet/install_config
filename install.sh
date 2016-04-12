@@ -26,6 +26,7 @@ function menu0()
 	rm ~/.myzshrc
 	rm ~/.zshrc
 	rm ~/.gitignore_global
+	mkdir -p ~/Library/Fonts
 	cp -r .install/config/ ~/#_my_config
 	cp -r .install/vim ~/.vim
 	cp -r .install/myvimrc ~/.myvimrc
