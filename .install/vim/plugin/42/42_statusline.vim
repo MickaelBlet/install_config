@@ -88,6 +88,7 @@ function! Line_Func()
 		endif
 		let ligne -= 1
 	endwhile
+	let save_begin = ligne
 	while empty(matchstr(getline(ligne), '^}$'))
 		if ligne == line('$')
 			let g:line_func = -1
@@ -100,6 +101,18 @@ function! Line_Func()
 		let ligne += 1
 		let g:line_func += 1
 	endwhile
+	"highlight SignColumn cterm=NONE ctermbg=NONE
+	"highlight SignColor ctermfg=white ctermbg=22
+	"sign unplace *
+	"if g:line_func < 100
+		"if g:line_func < 10
+			"exe 'sign define SignSymbol'.ligne.' text=⭐ texthl=SignColor'
+		"else
+			"exe 'sign define SignSymbol'.ligne.' text='.g:line_func.' texthl=SignColor'
+		"endif
+		"exe 'sign place 1 line='. save_begin .' name=SignSymbol'.ligne.' buffer=' . winbufnr(1)
+		"exe 'sign place 1 line='. ligne .' name=SignSymbol'.ligne.' buffer=' . winbufnr(1)
+	"endif
 	return "\ ".PrePad(g:line_func, 2)."/25\ "
 endfunction
 

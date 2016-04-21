@@ -59,8 +59,8 @@ function! Align_42()
 	call AlignPrepros()
 	%s/?????/\"/eg
 	%s/|||||/\//eg
-	%s/\t\t||/\t||/eg
-	"%s/\t\t&&/\t\&\&/eg
+	%s/\t\t\ze||/\t/eg
+	%s/\t\t\ze&&/\t/eg
 	call winrestview(winview)
 	call system("rm -fr ~/.vim/view")
 endfunction

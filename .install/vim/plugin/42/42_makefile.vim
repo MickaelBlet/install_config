@@ -24,9 +24,15 @@ autocmd BufWritePost *.c		call Actualise_makefile()
 autocmd BufWritePost *.h		call Actualise_makefile()
 
 function! Actualise_makefile()
+	let	l:count = 0
 	let l:pwd = getcwd()
 	while !filereadable('./Makefile') && !filereadable('./auteur')
 		try
+			let l:count += 1
+			if l:count > 20
+				exe ':cd '.l:pwd
+				return
+			endif
 			cd ..
 		catch
 			exe ':cd '.l:pwd

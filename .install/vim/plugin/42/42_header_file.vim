@@ -66,6 +66,8 @@ function! Extern_Actualise_H_42(list_prototype)
 		if line >= line('$')
 			let line = line('$') - 1
 			call append(line, "")
+			call append(line, "")
+			let line += 1
 		endif
 		let start_line_element = line
 		let end_line_element = line

@@ -23,6 +23,7 @@
 
 highlight Visual		term=bold				ctermbg=236
 highlight CursorLine	term=bold cterm=bold	ctermbg=234
+highlight CursorLineNr	term=bold cterm=bold	ctermbg=204
 highlight Identifier							ctermfg=11
 highlight Statement								ctermfg=yellow
 highlight String								ctermfg=darkyellow

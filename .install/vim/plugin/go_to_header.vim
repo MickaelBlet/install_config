@@ -1,6 +1,7 @@
 autocmd filetype c,cpp call		Go_to_header()
 
 function! Go_to_header()
+	let l:count = 0
 	let l:pwd = getcwd()
 	let l:dir1=expand("./includes")
 	let l:dir2=expand("./include")
@@ -9,6 +10,11 @@ function! Go_to_header()
 				\ && !isdirectory(l:dir2)
 		try
 			cd ..
+			let l:count += 1
+			if l:count > 20
+				exe ':cd '.l:pwd
+				return
+			endif
 		catch
 			exe ':cd '.l:pwd
 			return

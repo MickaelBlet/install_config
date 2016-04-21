@@ -8,6 +8,9 @@ function! GetReturnVar()
 	while num_line > 0 && empty(matchstr(getline(num_line), '^{$'))
 		let num_line -= 1
 	endwhile
+	while num_line > 0 && !empty(matchstr(getline(num_line - 1), '^\t'))
+		let num_line -= 1
+	endwhile
 	if num_line == 0
 		return ""
 	endif

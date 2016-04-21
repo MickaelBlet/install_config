@@ -24,7 +24,7 @@ highlight MyWarning			ctermbg=166
 
 let s:errornorm = 0
 
-let s:errornorm += matchadd('MyError', '\s\+\%#\@<!$', -1) " Space Error
+let s:errornorm += matchadd('MyError', '\%#\@<!\s\+\%#\@<!$', -1) " Space Error
 let s:errornorm += matchadd('MyError', '\t\zs \+', -1) " Space Error
 let s:errornorm += matchadd('MyError', ' \+\ze\t', -1) " Space Error
 let s:errornorm += matchadd('MyError', '^\%#\@<!\n\(\_.\+\)\@!', -1) " Last Line

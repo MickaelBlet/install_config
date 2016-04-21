@@ -99,6 +99,8 @@ set omnifunc=syntaxcomplete#Complete
 
 set tags+=~/.vim/tags/cpp
 
+set viminfo=""
+
 au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
 
 " OmniCppComplete
@@ -129,6 +131,7 @@ tab all
 
 highlight Visual		term=bold ctermbg=236
 highlight CursorLine	term=bold cterm=bold ctermbg=234
+highlight CursorLineNr	term=bold cterm=bold	ctermbg=204
 highlight Identifier	ctermfg=11
 highlight Statement		ctermfg=yellow
 highlight String		ctermfg=darkyellow
@@ -444,13 +447,13 @@ imap <Esc>OX				=
 
 imap -.						->
 imap FT_					ft_
-"imap FT+					ft_
-"imap FT)					ft_
+imap FT+					ft_
+imap FT)					ft_
 imap fT_					ft_
-"imap fT+					ft_
-"imap fT)					ft_
-"imap ft+					ft_
-"imap ft)					ft_
+imap fT+					ft_
+imap fT)					ft_
+imap ft+					ft_
+imap ft)					ft_
 
 " Ctrl + Up && Ctrl + Down
 

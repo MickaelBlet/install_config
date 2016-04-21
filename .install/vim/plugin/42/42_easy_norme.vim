@@ -19,5 +19,9 @@
 
 function! EasyNorme()
 	" space after common builtin
-	%s/\(\<if\>\|\<while\>\|\<return\>\|\<continue\>\|\<break\>\)\zs\S/ &/
+	"%s/\(\<if\>\|\<while\>\|\<return\>\|\<continue\>\|\<break\>\)\zs\S/ &/
+	highlight SignColumn cterm=NONE ctermbg=NONE
+	highlight SignColor ctermfg=white ctermbg=NONE
+	exe 'sign define SignSymbol text=>> texthl=SignColor'
+	exe 'sign place 1 line=' . 2 . ' name=SignSymbol buffer=' . winbufnr(1)
 endfunction
