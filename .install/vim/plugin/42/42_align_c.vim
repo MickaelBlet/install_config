@@ -51,6 +51,7 @@ function! Align_42()
 	call Preserve("normal gg=G")
 	let winview = winsaveview()
 	call SortInclude()
+	call SortInclude()
 	%s/\s\+$//e
 	%s/\"/?????/eg
 	%s/\//|||||/eg
@@ -247,9 +248,7 @@ function!	AlignAll()
 	let line = 0
 	while line <= line('$')
 		let strline = getline(line)
-		if !empty(matchstr(strline, '\t\+||')) || !empty(matchstr(strline, '\t\+&&'))
-			call setline(line, substitute(strline, '^\t\ze\t\+', '', ""))
-		elseif !empty(matchstr(strline, '^\i.*(.*'))
+		if !empty(matchstr(strline, '^\i.*(.*'))
 			let tmplen = strlen(matchstr(strline, '^\i\(^(\)*\S.\{-}\ze\s\+\**\i*('))
 			if maxlen > tmplen
 				let number_tab = 0
