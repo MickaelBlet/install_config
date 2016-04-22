@@ -21,3 +21,7 @@ MAIL="$USER@student.42.fr"
 export USER
 export GROUP
 export MAIL
+
+mkdir -p /tmp/mycache /tmp/mytemp
+export HOMEBREW_CACHE=/tmp/mycache
+export HOMEBREW_TEMP=/tmp/mytemp
