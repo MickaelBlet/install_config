@@ -22,15 +22,12 @@
 "__________________________________________________________
 
 highlight Visual		term=bold				ctermbg=236
-highlight CursorLine	term=bold cterm=bold	ctermbg=234
-highlight CursorLineNr	term=bold cterm=bold	ctermbg=204
 highlight Identifier							ctermfg=11
 highlight Statement								ctermfg=yellow
 highlight String								ctermfg=darkyellow
 highlight Comment								ctermfg=238
 highlight PreProc								ctermfg=9
 highlight Type									ctermfg=10
-highlight LineNr								ctermfg=242
 highlight Pmenu			term=reverse			ctermbg=239	ctermfg=white
 highlight PmenuSel		term=reverse			ctermbg=27	ctermfg=white
 highlight Number								ctermfg=magenta
