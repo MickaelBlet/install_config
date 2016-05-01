@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Volumes/Storage/goinfre/mblet/lem_in/includes'
-let g:netrw_dirhist_2='/Volumes/Storage/goinfre/mblet/lem_in/srcs'
-let g:netrw_dirhist_3='/Volumes/Storage/goinfre/mblet/lem_in'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/mblet/2T/sh/srcs'
+let g:netrw_dirhist_2='/Users/mblet/2T/sh'
+let g:netrw_dirhist_3='/Users/mblet/2T/sh/srcs'
+let g:netrw_dirhist_4='/Users/mblet/2T/sh/srcs/glob'

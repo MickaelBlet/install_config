@@ -85,9 +85,33 @@ ft_lstmap
 
 ft_get_next_line
 
-ft_strtable_len
-ft_strtable_del
-ft_strtable_do
+ft_table_size
+ft_table_new
+ft_table_push_front
+ft_table_push_back
+ft_table_pop_front
+ft_table_pop_back
+ft_table_push_at_index
+ft_table_push_cond
+ft_table_del_at_index
+ft_table_del_at_ptr
+ft_table_clear
+ft_table_map
+ft_table_rmap
+
+ft_strtable_size
+ft_strtable_new
+ft_strtable_push_front
+ft_strtable_push_back
+ft_strtable_pop_front
+ft_strtable_pop_back
+ft_strtable_push_at_index
+ft_strtable_push_cond
+ft_strtable_del_at_index
+ft_strtable_del_at_ptr
+ft_strtable_clear
+ft_strtable_map
+ft_strtable_rmap
 
 ft_putistr
 ft_putistr_fd

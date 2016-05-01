@@ -188,6 +188,8 @@ function ftgitc()
 	local filename
 	if [[ $1 == *"github.com"* ]]; then
 		filename=`echo $1 | rev | cut -d/ -f1 | rev`
+	elif [[ $1 == *"bitbucket.org"* ]]; then
+		filename=`echo $1 | rev | cut -d/ -f1 | rev`
 	else
 		filename=`echo $1 | rev | cut -d/ -f2 | rev`
 	fi
