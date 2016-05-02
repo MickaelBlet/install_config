@@ -468,10 +468,10 @@ vmap <silent> <s-Up>			<Up><Up><Up>
 
 map <C-right>				:tabnext<CR>i
 map <C-left>				:tabprevious<CR>i
-map <C-Home>				:tabnew ..<CR>
+map <C-Home>				:tabnew %:p:h<CR>
 imap <C-right>				<ESC>:tabnext<CR>i
 imap <C-left>				<ESC>:tabprevious<CR>i
-imap <C-Home>				<ESC>:tabnew ..<CR>
+imap <C-Home>				<ESC>:tabnew %:p:h<CR>
 
 " reset cursor position open file
 

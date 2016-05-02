@@ -35,7 +35,7 @@ function! Tabline()
 		endif
 	endfor
 
-	let s .= '%#TabLineFill#'
+	let s .= '%#TabLineFill#%=%0* %{strftime("%H:%M")} '
 	return s
 endfunction
 
