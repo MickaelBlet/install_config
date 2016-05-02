@@ -44,7 +44,7 @@
 start
 
 "refresh auto
-"set autoread
+set autoread
 
 "Dictionary
 set dictionary+=~/.vim/dict/c.dict

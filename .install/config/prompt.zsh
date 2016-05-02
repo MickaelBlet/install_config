@@ -234,3 +234,4 @@ function Prompt_nogit()
 }
 
 alias ng='Prompt_nogit'
+alias pg='Prompt_git'

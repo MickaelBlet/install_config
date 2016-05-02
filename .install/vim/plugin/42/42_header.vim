@@ -69,6 +69,7 @@ function! Header_42()
 	let l:author = $USER
 	let l:mail = $MAIL
 
+	call s:Header_Comment()
 	if s:Header_42_Check() == 0
 		return
 	endif
@@ -171,6 +172,7 @@ function! s:Header_Updated()
 	"if &mod == 0
 	"	return
 	"endif
+	call s:Header_Comment()
 	if match(getline(9), "Updated:") == -1
 		return
 	endif

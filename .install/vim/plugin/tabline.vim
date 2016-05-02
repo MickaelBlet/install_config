@@ -26,20 +26,24 @@ function! Tabline()
 		let bufmodified = getbufvar(bufnr, "&mod")
 
 		let s .= '%' . tab . 'T'
-		let s .= (tab == tabpagenr() ? '%#TabLineSel#' : '%#TabLine#')
-		let s .= ' ' . tab .':'
-		let s .= (bufname != '' ? '['. fnamemodify(bufname, ':t') . '] ' : '[No Name] ')
-
+		let s .= ((tab == tabpagenr()) ? '%#TabLineSel#' : '%#TabLine#')
 		if bufmodified
-			let s .= '[+] '
+			let s .= ' +'
+		else
+			let s .= ' '
 		endif
+		let s .= (bufname != '' ? ''. fnamemodify(bufname, ':t') . ' %#TabLineFill# ' : '[No Name] ')
+
+		"if bufmodified
+			"let s .= "\*"
+		"endif
 	endfor
 
 	let s .= '%#TabLineFill#%=%0* %{strftime("%H:%M")} '
 	return s
 endfunction
 
-hi TabLine      ctermbg=238 ctermfg=231 cterm=bold
+hi TabLine      ctermbg=240 ctermfg=231 cterm=bold
 hi TabLineFill  ctermbg=236 ctermfg=231 cterm=bold
 hi TabLineSel   ctermfg=White  ctermbg=DarkBlue  cterm=NONE
 
