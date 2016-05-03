@@ -466,11 +466,11 @@ vmap <silent> <s-Up>			<Up><Up><Up>
 
 " Ctrl + Right || Ctrl + Left = Change buffer && Ctrl + Home = NewTab
 
-map <C-right>				:tabnext<CR>i
-map <C-left>				:tabprevious<CR>i
+map <C-right>				:tabnext<CR>gi
+map <C-left>				:tabprevious<CR>gi
 map <C-Home>				:tabnew %:p:h<CR>
-imap <C-right>				<ESC>:tabnext<CR>i
-imap <C-left>				<ESC>:tabprevious<CR>i
+imap <C-right>				<ESC>:tabnext<CR>gi
+imap <C-left>				<ESC>:tabprevious<CR>gi
 imap <C-Home>				<ESC>:tabnew %:p:h<CR>
 
 " reset cursor position open file
