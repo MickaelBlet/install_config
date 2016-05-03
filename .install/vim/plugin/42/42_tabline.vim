@@ -8,6 +8,15 @@ function! Tabline()
 	let s = ''
 	for i in range(tabpagenr('$'))
 		let tab = i + 1
+		if i == 0
+			let s.= ''
+		elseif i == tabpagenr()
+			let s .= '%#TabLineSelIconF# '
+		elseif tab == tabpagenr()
+			let s .= '%#TabLineSelIconS# '
+		else
+			let s .= ' '
+		endif
 		let winnr = tabpagewinnr(tab)
 		let buflist = tabpagebuflist(tab)
 		let bufnr = buflist[winnr - 1]
@@ -17,20 +26,32 @@ function! Tabline()
 		let s .= '%' . tab . 'T'
 		let s .= ((tab == tabpagenr()) ? '%#TabLineSel#' : '%#TabLine#')
 		if bufmodified
-			let s .= ' +'
-		else
+			let s .= '+'
+		elseif i == 0
 			let s .= ' '
+		else
+			let s .= ''
 		endif
-		let s .= (bufname != '' ? ''. fnamemodify(bufname, ':t') . ' %#TabLineFill# ' : '[No Name] ')
-	endfor
+		"" #      
 
-	let s .= '%#TabLineFill#%=%0* %{strftime("%H:%M:%S")} '
+		let s .= (bufname != '' ? ''. fnamemodify(bufname, ':t') . ' ' : '[No Name] ')
+	endfor
+		let s .= ((tab == tabpagenr()) ? '%#TabLineSelIconE#' : '%#TabLineIconE#') . ' '
+
+	let s .= '%#TabLineFill#%=%#TabLineClose#%999X'
+	"' %0* %{strftime("%H:%M")} '
 	return s
 endfunction
 
-hi TabLine      ctermbg=240 ctermfg=231 cterm=bold
-hi TabLineFill  ctermbg=236 ctermfg=231 cterm=bold
-hi TabLineSel   ctermfg=White  ctermbg=DarkBlue  cterm=NONE
+hi	TabLine			ctermbg=237	ctermfg=231	cterm=bold
+hi	TabLineIcon		ctermbg=236	ctermfg=240	cterm=NONE
+hi	TabLineIconE	ctermbg=245	ctermfg=237	cterm=NONE
+hi	TabLineSel		ctermbg=25	ctermfg=231	cterm=NONE
+hi	TabLineSelIconF	ctermbg=237	ctermfg=25	cterm=NONE
+hi	TabLineSelIconS	ctermbg=25	ctermfg=237	cterm=NONE
+hi	TabLineSelIconE	ctermbg=245	ctermfg=25	cterm=NONE
+hi	TabLineFill		ctermbg=245	ctermfg=231	cterm=bold
+hi	TabLineClose	ctermfg=232	ctermbg=160	cterm=NONE
 
 set showtabline=2
 set tabline=%!Tabline()

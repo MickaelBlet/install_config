@@ -82,7 +82,7 @@ function vicd()
 			cd $localhome
 			vim $locallast
 		else
-			vim $1
+			vim $*
 		fi
 	fi
 }

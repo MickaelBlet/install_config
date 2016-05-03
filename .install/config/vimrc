@@ -296,13 +296,13 @@ imap <2-LeftMouse>			<Nop>
 
 " Ctrl + w == save quit && Ctrl + q == force quit
 
-map <silent> <C-w>			:wq<CR>
-imap <silent> <C-w>			<C-r>=:wq<CR>
-imap <silent> <C-w>			<Esc>:wq<CR>
-vmap <silent> <C-w>			<Esc>:wq<CR>
-map <silent> <C-q>			:q!<CR>
-imap <silent> <C-q>			<Esc>:q!<CR>
-vmap <silent> <C-q>			<Esc>:q!<CR>
+map <silent> <C-w>			:wq<CR>gi
+imap <silent> <C-w>			<C-r>=:wq<CR>gi
+imap <silent> <C-w>			<Esc>:wq<CR>gi
+vmap <silent> <C-w>			<Esc>:wq<CR>gi
+map <silent> <C-q>			:q!<CR>gi
+imap <silent> <C-q>			<Esc>:q!<CR>gi
+vmap <silent> <C-q>			<Esc>:q!<CR>gi
 
 " Ctrl + A == Select All
 

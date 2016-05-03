@@ -18,6 +18,17 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" #      
 
+let g:font = 1
+
+hi!	SLName			ctermbg=231		ctermfg=238		cterm=bold
+hi!	SLNameIcon		ctermbg=231		ctermfg=238		cterm=bold
+hi!	SLSep			ctermbg=231		ctermfg=238		cterm=bold
+hi!	SLSepIcon		ctermbg=231		ctermfg=238		cterm=bold
+hi!	SLLineFunc		ctermbg=231		ctermfg=238		cterm=bold
+hi!	SLLineFuncIcon	ctermbg=231		ctermfg=238		cterm=bold
+
+hi!	StatusLineSep	ctermbg=231		ctermfg=238		cterm=bold
+
 hi! User1	ctermbg=231		ctermfg=238		cterm=bold
 hi! User2	ctermbg=240		ctermfg=0
 hi! User3	ctermbg=22		ctermfg=15
@@ -43,16 +54,30 @@ autocmd BufWrite			*	call After_save()
 autocmd BufNewFile,BufRead	*	call After_save()
 
 function! StatusLine_C()
-	set statusline=
-	set statusline+=%1*\ %t\ %*
-	set statusline+=%2*%=%*
-	set statusline+=%3*%{Line_Func()}%*
-	set statusline+=%4*\ %{Line_Count()}/80\ %*
-	set statusline+=%9*%{Count_Func()}%*
-	set statusline+=%5*\ %3l/%3L\ %*
-	set statusline+=%6*\ %{Paste()}\ %*
-	set statusline+=%7*\ %{Input()}\ %*
-	set statusline+=%8*\ [%Y]\ %*
+	if g:font
+		set statusline=
+		set statusline+=%#StatusLineName#\ %t\ %*
+		set statusline+=%#StatusLineNameIcon#%{''}\ %*
+		set statusline+=%2*%=%*
+		set statusline+=%3*%{Line_Func()}%*
+		set statusline+=%4*\ %{Line_Count()}/80\ %*
+		set statusline+=%9*%{Count_Func()}%*
+		set statusline+=%5*\ %3l/%3L\ %*
+		set statusline+=%6*\ %{Paste()}\ %*
+		set statusline+=%7*\ %{Input()}\ %*
+		set statusline+=%8*\ [%Y]\ %*
+	else
+		set statusline=
+		set statusline+=%#StatusLineName#\ %t\ %*
+		set statusline+=%2*%=%*
+		set statusline+=%3*%{Line_Func()}%*
+		set statusline+=%4*\ %{Line_Count()}/80\ %*
+		set statusline+=%9*%{Count_Func()}%*
+		set statusline+=%5*\ %3l/%3L\ %*
+		set statusline+=%6*\ %{Paste()}\ %*
+		set statusline+=%7*\ %{Input()}\ %*
+		set statusline+=%8*\ [%Y]\ %*
+	endif
 endfunction
 
 au InsertLeave * call	Input()
@@ -77,17 +102,27 @@ endfunction
 function! Line_Func()
 	let g:line_func = -1
 	let ligne = line('.')
-	while empty(matchstr(getline(ligne), '^{'))
-		if ligne < 1
-			let g:line_func = -1
-			return ""
-		endif
-		if !empty(matchstr(getline(ligne), '^}'))
-			let g:line_func = -1
-			return ""
-		endif
-		let ligne -= 1
-	endwhile
+	if empty(matchstr(getline(ligne), '^}'))
+		while empty(matchstr(getline(ligne), '^{'))
+			if ligne < 1
+				let g:line_func = -1
+				return ""
+			endif
+			if !empty(matchstr(getline(ligne), '^}'))
+				let g:line_func = -1
+				return ""
+			endif
+			let ligne -= 1
+		endwhile
+	else
+		while empty(matchstr(getline(ligne), '^{'))
+			if ligne < 1
+				let g:line_func = -1
+				return ""
+			endif
+			let ligne -= 1
+		endwhile
+	endif
 	let save_begin = ligne
 	while empty(matchstr(getline(ligne), '^}$'))
 		if ligne == line('$')
@@ -105,13 +140,13 @@ function! Line_Func()
 	"highlight SignColor ctermfg=white ctermbg=22
 	"sign unplace *
 	"if g:line_func < 100
-		"if g:line_func < 10
-			"exe 'sign define SignSymbol'.ligne.' text=⭐ texthl=SignColor'
-		"else
-			"exe 'sign define SignSymbol'.ligne.' text='.g:line_func.' texthl=SignColor'
-		"endif
-		"exe 'sign place 1 line='. save_begin .' name=SignSymbol'.ligne.' buffer=' . winbufnr(1)
-		"exe 'sign place 1 line='. ligne .' name=SignSymbol'.ligne.' buffer=' . winbufnr(1)
+	"if g:line_func < 10
+	"exe 'sign define SignSymbol'.ligne.' text=⭐ texthl=SignColor'
+	"else
+	"exe 'sign define SignSymbol'.ligne.' text='.g:line_func.' texthl=SignColor'
+	"endif
+	"exe 'sign place 1 line='. save_begin .' name=SignSymbol'.ligne.' buffer=' . winbufnr(1)
+	"exe 'sign place 1 line='. ligne .' name=SignSymbol'.ligne.' buffer=' . winbufnr(1)
 	"endif
 	return "\ ".PrePad(g:line_func, 2)."/25\ "
 endfunction
@@ -150,10 +185,12 @@ endfunction
 function! Color_to_insert()
 	let l:modifier = &modified
 	if l:modifier == 0
-		hi! User1		ctermbg=238 ctermfg=231 cterm=bold
+		hi! StatusLineName		ctermbg=238 ctermfg=231 cterm=bold
+		hi! StatusLineNameIcon	ctermbg=24 ctermfg=238 cterm=bold
 		hi! User2		ctermbg=24 ctermfg=0
 	else
-		hi! User1		ctermbg=221 ctermfg=232 cterm=bold
+		hi! StatusLineName		ctermbg=221 ctermfg=232 cterm=bold
+		hi! StatusLineNameIcon	ctermbg=229 ctermfg=221 cterm=bold
 		hi! User2		ctermbg=229 ctermfg=0
 	endif
 	if g:count_func > 5
