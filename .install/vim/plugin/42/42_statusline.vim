@@ -42,7 +42,7 @@ hi! User9	ctermbg=34		ctermfg=15
 function!	StatusLine()
 	let s = ''
 	let bufnr = bufnr('%')
-	let bufname = bufname(bufnr)
+	let bufname = fnamemodify(bufname(bufnr), ':t')
 	let bufmodified = getbufvar(bufnr, "&mod")
 	let statemod = mode()
 	if statemod == 'v' || statemod == 'V'

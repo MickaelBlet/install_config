@@ -99,7 +99,7 @@ set omnifunc=syntaxcomplete#Complete
 
 set tags+=~/.vim/tags/cpp
 
-set viminfo=""
+"set viminfo=""
 
 au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
 
