@@ -1,9 +1,3 @@
-if (exists("g:tabline_42") && g:tabline_42) || &cp
-	finish
-endif
-
-let g:tabline_42 = 1
-
 function! Tabline()
 	let s = ''
 	for i in range(tabpagenr('$'))

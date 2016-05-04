@@ -39,243 +39,215 @@ hi! User7	ctermbg=130		ctermfg=231
 hi! User8	ctermbg=245		ctermfg=232		cterm=bold
 hi! User9	ctermbg=34		ctermfg=15
 
-set statusline=
-set statusline+=%1*\ %t\ %*
-set statusline+=%2*%=%*
-set statusline+=%6*\ %2c/%2{col('$')}\ %*
-set statusline+=%5*\ %3l/%3L\ %*
-set statusline+=%6*\ %{Paste()}\ %*
-set statusline+=%7*\ %{Input()}\ %*
-set statusline+=%8*\ [%Y]\ %*
-
-autocmd BufNewFile,BufRead *.c	call StatusLine_C()
-autocmd BufNewFile,BufRead *.h	call StatusLine_C()
-autocmd BufWrite			*	call After_save()
-autocmd BufNewFile,BufRead	*	call After_save()
-
-function! StatusLine_C()
-	if g:font
-		set statusline=
-		set statusline+=%#StatusLineName#\ %t\ %*
-		set statusline+=%#StatusLineNameIcon#%{''}\ %*
-		set statusline+=%2*%=%*
-		set statusline+=%3*%{Line_Func()}%*
-		set statusline+=%4*\ %{Line_Count()}/80\ %*
-		set statusline+=%9*%{Count_Func()}%*
-		set statusline+=%5*\ %3l/%3L\ %*
-		set statusline+=%6*\ %{Paste()}\ %*
-		set statusline+=%7*\ %{Input()}\ %*
-		set statusline+=%8*\ [%Y]\ %*
-	else
-		set statusline=
-		set statusline+=%#StatusLineName#\ %t\ %*
-		set statusline+=%2*%=%*
-		set statusline+=%3*%{Line_Func()}%*
-		set statusline+=%4*\ %{Line_Count()}/80\ %*
-		set statusline+=%9*%{Count_Func()}%*
-		set statusline+=%5*\ %3l/%3L\ %*
-		set statusline+=%6*\ %{Paste()}\ %*
-		set statusline+=%7*\ %{Input()}\ %*
-		set statusline+=%8*\ [%Y]\ %*
+function!	StatusLine()
+	let s = ''
+	let bufnr = bufnr('%')
+	let bufname = bufname(bufnr)
+	let bufmodified = getbufvar(bufnr, "&mod")
+	let statemod = mode()
+	if statemod == 'v' || statemod == 'V'
+		let statemod = 'visual'
+	elseif statemod == 'i'
+		let statemod = 'insert'
+	elseif statemod == 'n'
+		let statemod = 'normal'
 	endif
+	if bufmodified
+		let s .= '%#MSLName#'
+		let s .= ' ' . bufname . ' '
+	else
+		let s .= '%#SLName#'
+		let s .= ' ' . bufname . ' '
+	endif
+	if bufmodified
+		let s .= '%#MSLNameIcon#'
+		let s .= (g:font) ? ' ' : ""
+		let s .= '%#MSLSep#'
+	elseif statemod == 'insert'
+		let s .= '%#ISLNameIcon#'
+		let s .= (g:font) ? ' ' : ""
+		let s .= '%#ISLSep#'
+	elseif statemod == 'visual'
+		let s .= '%#VSLNameIcon#'
+		let s .= (g:font) ? ' ' : ""
+		let s .= '%#VSLSep#'
+	else
+		let s .= '%#SLNameIcon#'
+		let s .= (g:font) ? ' ' : ""
+		let s .= '%#SLSep#'
+	endif
+	let s .= '%='
+	if expand('%:e') ==? "c" || expand('%:e') ==? "h"
+		let s .= s:StatusLineNorme(bufmodified, statemod)
+	else
+		let s .= s:StatusLineCommon(bufmodified, statemod)
+	endif
+
+	let c_state = 'N'
+	if statemod == 'insert'
+		let c_state = 'I'
+	elseif statemod == 'visual'
+		let c_state = 'V'
+	endif
+
+	let s .= '%#' . c_state . 'SLLineFile#'
+	let s .= ' %3l/%3L '
+	let s .= '%#' . c_state . 'SLLineFileIcon#'
+	let s .= (g:font) ? '' : ""
+	let s .= '%#' . c_state . 'SLPaste#'
+	let s .= ' ' . s:Paste() . ' '
+	let s .= '%#' . c_state . 'SLPasteIcon#'
+	let s .= (g:font) ? '' : ""
+	let s .= '%#' . c_state . 'SLState#'
+	let s .= ' ' . s:Input() . ' '
+	let s .= '%#' . c_state . 'SLStateIcon#'
+	let s .= (g:font) ? '' : ""
+	let s .= '%#' . c_state . 'SLType#'
+	let s .= ' [%Y] '
+	return s
 endfunction
 
-au InsertLeave * call	Input()
+function!	s:StatusLineNorme(bufmodified, statemod)
+	let bufmodified = a:bufmodified
+	let statemod = a:statemod
+	let s = ''
 
-let g:line_func = 0
-let g:count_func = 0
-let g:line_caract = 0
-let g:last_state = ""
-let g:last_color_line_func = ""
-let g:last_color_line_caract = ""
-let g:ismodifed = 0
+	let charcount = virtcol('$') - 1
+	let funclinecount = s:GetFuncLineCount()
+	let funccount = s:GetFuncCount()
 
-function! PrePad(s,amt,...)
-	if a:0 > 0
-		let char = a:1
-	else
-		let char = ' '
+	let c_state = 'N'
+	if statemod == 'insert'
+		let c_state = 'I'
+	elseif statemod == 'visual'
+		let c_state = 'V'
 	endif
-	return repeat(char, a:amt - len(a:s)) . a:s
+	let c_charcount = (charcount <= 80) ? 'V' : 'E'
+	let c_funclinecount = (funclinecount <= 25) ? 'V' : 'E'
+	let c_funccount = (funccount <= 5) ? 'V' : 'E'
+
+	if bufmodified
+		let s .= '%#MSLSepIconNorm' . c_charcount . '#'
+	else
+		let s .= '%#' . c_state . 'SLSepIconNorm' . c_charcount . '#'
+	endif
+	let s .= (g:font) ? '' : ""
+	" CHAR COUNT
+	let s .= '%#SLNbChar' . c_charcount . '#'
+	let s .= ' '.s:PrePad(charcount, 2).'/80 '
+	if funclinecount > -1 && funccount > -1
+		let s .= '%#SLNbChar' . c_charcount . 'IcontoFuncLine' . c_funclinecount . '#'
+		let s .= (g:font) ? '' : ""
+		let s .= '%#SLFuncLine' . c_funclinecount . '#'
+		let s .= ' '.s:PrePad(funclinecount, 2).'/25 '
+		let s .= '%#SLFuncLine' . c_funclinecount . 'IcontoNbFunc' . c_funccount . '#'
+		let s .= (g:font) ? '' : ""
+		let s .= '%#SLNbFunc' . c_funccount . '#'
+		let s .= ' '.s:PrePad(funccount, 2).'/5 '
+		let s .= '%#' . c_state . 'SLNbFunc' . c_funccount . 'Icon#'
+		let s .= (g:font) ? '' : ""
+	elseif funccount > -1
+		let s .= '%#SLNbChar' . c_charcount . 'IcontoNbFunc' . c_funccount . '#'
+		let s .= (g:font) ? '' : ""
+		let s .= '%#SLNbFunc' . c_funccount . '#'
+		let s .= ' '.s:PrePad(funccount, 2).'/5 '
+		let s .= '%#' . c_state . 'SLNbFunc' . c_funccount . 'Icon#'
+		let s .= (g:font) ? '' : ""
+	else
+		let s .= '%#' . c_state . 'SLNbChar' . c_funccount . 'Icon#'
+		let s .= (g:font) ? '' : ""
+	endif
+	return s
 endfunction
 
-function! Line_Func()
-	let g:line_func = -1
-	let ligne = line('.')
-	if empty(matchstr(getline(ligne), '^}'))
-		while empty(matchstr(getline(ligne), '^{'))
-			if ligne < 1
-				let g:line_func = -1
-				return ""
+function!	s:StatusLineCommon(bufmodified, statemod)
+	let bufmodified = a:bufmodified
+	let statemod = a:statemod
+	let s = ''
+
+	let c_state = 'N'
+	if statemod == 'insert'
+		let c_state = 'I'
+	elseif statemod == 'visual'
+		let c_state = 'V'
+	endif
+
+	if bufmodified
+		let s .= '%#M' . c_state . 'SLCharCountIcon#'
+	else
+		let s .= '%#' . c_state . 'SLCharCountIcon#'
+	endif
+	let s .= (g:font) ? '' : ""
+	let s .= '%#' . c_state . 'SLPaste#'
+	let s .= ' %2c/%2 ' . col('$') . ' '
+	let s .= '%#' . c_state . 'SLPasteIconR#'
+	let s .= (g:font) ? '' : ""
+	return s
+endfunction
+
+function!	s:GetFuncLineCount()
+	let mycount = -1
+	let line = line('.')
+	if empty(matchstr(getline(line), '^}'))
+		while empty(matchstr(getline(line), '^{'))
+			if line < 1
+				return -1
 			endif
-			if !empty(matchstr(getline(ligne), '^}'))
-				let g:line_func = -1
-				return ""
+			if !empty(matchstr(getline(line), '^}'))
+				return -1
 			endif
-			let ligne -= 1
+			let line -= 1
 		endwhile
 	else
-		while empty(matchstr(getline(ligne), '^{'))
-			if ligne < 1
-				let g:line_func = -1
-				return ""
+		while empty(matchstr(getline(line), '^{'))
+			if line < 1
+				return -1
 			endif
-			let ligne -= 1
+			let line -= 1
 		endwhile
 	endif
-	let save_begin = ligne
-	while empty(matchstr(getline(ligne), '^}$'))
-		if ligne == line('$')
-			let g:line_func = -1
-			return ""
+	while empty(matchstr(getline(line), '^}$'))
+		if line == line('$')
+			return -1
 		endif
-		if !empty(matchstr(getline(ligne), '^}.*;'))
-			let g:line_func = -1
-			return ""
+		if !empty(matchstr(getline(line), '^}.*;'))
+			return -1
 		endif
-		let ligne += 1
-		let g:line_func += 1
+		let line += 1
+		let mycount += 1
 	endwhile
-	"highlight SignColumn cterm=NONE ctermbg=NONE
-	"highlight SignColor ctermfg=white ctermbg=22
-	"sign unplace *
-	"if g:line_func < 100
-	"if g:line_func < 10
-	"exe 'sign define SignSymbol'.ligne.' text=⭐ texthl=SignColor'
-	"else
-	"exe 'sign define SignSymbol'.ligne.' text='.g:line_func.' texthl=SignColor'
-	"endif
-	"exe 'sign place 1 line='. save_begin .' name=SignSymbol'.ligne.' buffer=' . winbufnr(1)
-	"exe 'sign place 1 line='. ligne .' name=SignSymbol'.ligne.' buffer=' . winbufnr(1)
-	"endif
-	return "\ ".PrePad(g:line_func, 2)."/25\ "
+	return mycount
 endfunction
 
-function! Count_Func()
-	let g:count_func = 0
-	let l:prepadn = 1
-	let ligne = 0
-	while ligne < line('$')
-		if !empty(matchstr(getline(ligne - 1), '^\t*\i.*')) && empty(matchstr(getline(ligne - 1), '^struct')) && empty(matchstr(getline(ligne - 1), '^enum')) && empty(matchstr(getline(ligne - 1), '^union')) && empty(matchstr(getline(ligne - 1), '^typedef')) && !empty(matchstr(getline(ligne), '^{'))
-			let g:count_func += 1
+function!	s:GetFuncCount()
+	let mycount = -1
+	let line = 0
+	while line < line('$')
+		if !empty(matchstr(getline(line - 1), '^\t*\i.*'))
+					\&& empty(matchstr(getline(line - 1), '^struct'))
+					\&& empty(matchstr(getline(line - 1), '^enum'))
+					\&& empty(matchstr(getline(line - 1), '^union'))
+					\&& empty(matchstr(getline(line - 1), '^typedef'))
+					\&& !empty(matchstr(getline(line), '^{'))
+			if mycount == -1
+				let mycount = 0
+			endif
+			let mycount += 1
 		endif
-		let ligne += 1
+		let line += 1
 	endwhile
-	if g:count_func > 0
-		return "\ ".PrePad(g:count_func, l:prepadn). "/5\ "
-	els
-		return ""
-	endif
+	return mycount
 endfunction
 
-function! Line_Count()
-	let g:line_caract = virtcol('$') - 1
-	return PrePad(g:line_caract, 2)
-endfunc
-
-function! Paste()
-	let passed = &paste
-	if passed == 1
+function! s:Paste()
+	if &paste
 		return " PASTE "
 	else
 		return "NOPASTE"
 	endif
 endfunction
 
-function! Color_to_insert()
-	let l:modifier = &modified
-	if l:modifier == 0
-		hi! StatusLineName		ctermbg=238 ctermfg=231 cterm=bold
-		hi! StatusLineNameIcon	ctermbg=24 ctermfg=238 cterm=bold
-		hi! User2		ctermbg=24 ctermfg=0
-	else
-		hi! StatusLineName		ctermbg=221 ctermfg=232 cterm=bold
-		hi! StatusLineNameIcon	ctermbg=229 ctermfg=221 cterm=bold
-		hi! User2		ctermbg=229 ctermfg=0
-	endif
-	if g:count_func > 5
-		hi! User9		ctermbg=160 ctermfg=15
-	else
-		hi! User9		ctermbg=34 ctermfg=15
-	endif
-	if g:line_func > 25
-		hi! User3		ctermbg=160 ctermfg=15
-	else
-		hi! User3		ctermbg=22 ctermfg=15
-	endif
-	if g:line_caract > 80
-		hi! User4		ctermbg=160 ctermfg=15
-	else
-		hi! User4		ctermbg=28 ctermfg=15
-	endif
-	hi! User5			ctermbg=31 ctermfg=15
-	hi! User6			ctermbg=117 ctermfg=23
-	hi! User7			ctermbg=231 ctermfg=23 cterm=bold
-	hi! User8			ctermbg=245 ctermfg=232 cterm=bold
-endfunction
-
-function! Color_to_visual()
-	let l:modifier = &modified
-	hi! User1			ctermbg=238 ctermfg=231 cterm=bold
-	if l:modifier == 0
-		hi! User1		ctermbg=238 ctermfg=231 cterm=bold
-		hi! User2		ctermbg=70 ctermfg=0
-	else
-		hi! User1		ctermbg=221 ctermfg=232 cterm=bold
-		hi! User2		ctermbg=229 ctermfg=0
-	endif
-	if g:count_func > 5
-		hi! User9		ctermbg=160 ctermfg=15
-	else
-		hi! User9		ctermbg=34 ctermfg=15
-	endif
-	if g:line_func > 25
-		hi! User3		ctermbg=160 ctermfg=15
-	else
-		hi! User3		ctermbg=22 ctermfg=15
-	endif
-	if g:line_caract > 80
-		hi! User4		ctermbg=160 ctermfg=15
-	else
-		hi! User4		ctermbg=28 ctermfg=15
-	endif
-	hi! User5			ctermbg=22 ctermfg=148
-	hi! User6			ctermbg=70 ctermfg=22
-	hi! User7			ctermbg=148 ctermfg=22 cterm=bold
-	hi! User8			ctermbg=245 ctermfg=232 cterm=bold
-endfunction
-
-function! Color_to_normal()
-	let l:modifier = &modified
-	if l:modifier == 0
-		hi! User1		ctermbg=238 ctermfg=231 cterm=bold
-		hi! User2		ctermbg=236 ctermfg=0
-	else
-		hi! User1		ctermbg=221 ctermfg=232 cterm=bold
-		hi! User2		ctermbg=229 ctermfg=0
-	endif
-	if g:count_func > 5
-		hi! User9		ctermbg=160 ctermfg=15
-	else
-		hi! User9		ctermbg=34 ctermfg=15
-	endif
-	if g:line_func > 25
-		hi! User3		ctermbg=196 ctermfg=15
-	else
-		hi! User3		ctermbg=22 ctermfg=15
-	endif
-	if g:line_caract > 80
-		hi! User4		ctermbg=160 ctermfg=15
-	else
-		hi! User4		ctermbg=28 ctermfg=15
-	endif
-	hi! User5			ctermbg=238 ctermfg=15
-	hi! User6			ctermbg=236 ctermfg=15
-	hi! User7			ctermbg=130 ctermfg=231
-	hi! User8			ctermbg=245 ctermfg=232 cterm=bold
-endfunction
-
-function! Input()
+function! s:Input()
 	let mode = mode()
 	let string = "[" . mode() . "]"
 	if mode == 'v' || mode == 'V'
@@ -291,32 +263,118 @@ function! Input()
 	elseif mode == 's' || mode == 'S'
 		let string = "SELECT"
 	endif
-	if (g:ismodifed != &modified)
-				\ || (mode != g:last_state)
-				\ || (g:line_func != g:last_color_line_func)
-				\ || (g:line_caract > 80 && g:last_color_line_caract <= 80)
-				\ || (g:line_caract <= 80 && g:last_color_line_caract > 80)
-		call Refresh_status_line()
-	endif
-	let g:ismodifed = &modified
-	let g:last_state = mode
-	let g:last_color_line_func = g:line_func
-	let g:last_color_line_caract = g:line_caract
 	return string
 endfunction
 
-function! Refresh_status_line()
-	let mode = mode()
-	if mode == 'v' || mode == 'V'
-		call Color_to_visual()
-	elseif mode == 'i'
-		call Color_to_insert()
-	elseif mode == 'n'
-		call Color_to_normal()
+function! s:PrePad(s,amt,...)
+	if a:0 > 0
+		let char = a:1
+	else
+		let char = ' '
 	endif
+	return repeat(char, a:amt - len(a:s)) . a:s
 endfunction
 
-function! After_save()
-	let &modified = 0
-	call Refresh_status_line()
-endfunction
+"COLOR
+
+"MOD COLOR
+hi!	MSLName						ctermbg=221	ctermfg=232	cterm=bold
+hi!	MSLNameIcon					ctermbg=229	ctermfg=221
+hi!	MSLSep						ctermbg=229	ctermfg=0
+hi!	MSLSepIconNormV				ctermbg=229	ctermfg=34
+hi!	MSLSepIconNormE				ctermbg=229	ctermfg=160
+
+"INSERT COLOR
+hi!	ISLNameIcon					ctermbg=24	ctermfg=238
+hi!	ISLSep						ctermbg=24	ctermfg=0
+hi!	ISLSepIconNormV				ctermbg=24	ctermfg=34
+hi!	ISLSepIconNormE				ctermbg=24	ctermfg=160
+hi! ISLLineFile					ctermbg=31	ctermfg=231
+hi! ISLLineFileIcon				ctermbg=31	ctermfg=117
+hi! ISLPaste					ctermbg=117	ctermfg=23
+hi! ISLPasteIcon				ctermbg=117	ctermfg=231
+hi! ISLState					ctermbg=231	ctermfg=23	cterm=bold
+hi! ISLStateIcon				ctermbg=231	ctermfg=245
+hi! ISLType						ctermbg=245	ctermfg=232	cterm=bold
+
+"VISUAL COLOR
+hi!	VSLNameIcon					ctermbg=70	ctermfg=238
+hi!	VSLSep						ctermbg=70	ctermfg=0
+hi!	VSLSepIconNormV				ctermbg=70	ctermfg=34
+hi!	VSLSepIconNormE				ctermbg=70	ctermfg=160
+hi! VSLLineFile					ctermbg=22	ctermfg=148
+hi! VSLLineFileIcon				ctermbg=22	ctermfg=70
+hi! VSLPaste					ctermbg=70	ctermfg=22
+hi! VSLPasteIcon				ctermbg=70	ctermfg=148
+hi! VSLState					ctermbg=148	ctermfg=22	cterm=bold
+hi! VSLStateIcon				ctermbg=148	ctermfg=245
+hi! VSLType						ctermbg=245	ctermfg=232	cterm=bold
+
+"NORMAL COLOR
+hi!	NSLNameIcon					ctermbg=236	ctermfg=238
+hi!	NSLSep						ctermbg=236	ctermfg=0
+hi!	NSLSepIconNormV				ctermbg=236	ctermfg=34
+hi!	NSLSepIconNormE				ctermbg=236	ctermfg=160
+hi! NSLLineFile					ctermbg=238	ctermfg=231
+hi! NSLLineFileIcon				ctermbg=238	ctermfg=236
+hi! NSLPaste					ctermbg=236	ctermfg=231
+hi! NSLPasteIcon				ctermbg=236	ctermfg=130
+hi! NSLState					ctermbg=130	ctermfg=231	cterm=bold
+hi! NSLStateIcon				ctermbg=130	ctermfg=245
+hi! NSLType						ctermbg=245	ctermfg=232	cterm=bold
+
+"COMMON COLOR
+hi! MISLCharCountIcon			ctermbg=229	ctermfg=117
+hi! MVSLCharCountIcon			ctermbg=229	ctermfg=70
+hi! MNSLCharCountIcon			ctermbg=229	ctermfg=236
+hi! ISLCharCountIcon			ctermbg=24	ctermfg=117
+hi! VSLCharCountIcon			ctermbg=70	ctermfg=70
+hi! NSLCharCountIcon			ctermbg=236	ctermfg=236
+hi! ISLPasteIconR				ctermbg=117	ctermfg=31
+hi! VSLPasteIconR				ctermbg=70	ctermfg=22
+hi! NSLPasteIconR				ctermbg=236	ctermfg=238
+
+"NORM COLOR
+hi! SLNbCharV					ctermbg=34	ctermfg=231
+hi! SLNbCharE					ctermbg=160 ctermfg=231
+hi!	SLNbCharVIcontoFuncLineV	ctermbg=34	ctermfg=28
+hi!	SLNbCharEIcontoFuncLineV	ctermbg=160	ctermfg=28
+hi!	SLNbCharVIcontoFuncLineE	ctermbg=34	ctermfg=196
+hi!	SLNbCharEIcontoFuncLineE	ctermbg=160	ctermfg=196
+hi!	SLNbCharVIcontoNbFuncV		ctermbg=34	ctermfg=22
+hi!	SLNbCharEIcontoNbFuncV		ctermbg=160	ctermfg=22
+hi!	SLNbCharVIcontoNbFuncE		ctermbg=34	ctermfg=124
+hi!	SLNbCharEIcontoNbFuncE		ctermbg=160	ctermfg=124
+hi!	ISLNbCharVIcon				ctermbg=34	ctermfg=31
+hi!	ISLNbCharEIcon				ctermbg=160	ctermfg=31
+hi!	VSLNbCharVIcon				ctermbg=34	ctermfg=22
+hi!	VSLNbCharEIcon				ctermbg=160	ctermfg=22
+hi!	NSLNbCharVIcon				ctermbg=34	ctermfg=238
+hi!	NSLNbCharEIcon				ctermbg=160	ctermfg=238
+hi! SLFuncLineV					ctermbg=28	ctermfg=231
+hi! SLFuncLineE					ctermbg=196 ctermfg=231
+hi!	SLFuncLineVIcontoNbFuncV	ctermbg=28	ctermfg=22
+hi!	SLFuncLineEIcontoNbFuncV	ctermbg=196	ctermfg=22
+hi!	SLFuncLineVIcontoNbFuncE	ctermbg=28	ctermfg=124
+hi!	SLFuncLineEIcontoNbFuncE	ctermbg=196	ctermfg=124
+hi!	ISLFuncLineVIcon			ctermbg=28	ctermfg=31
+hi!	ISLFuncLineEIcon			ctermbg=196	ctermfg=31
+hi!	VSLFuncLineVIcon			ctermbg=28	ctermfg=22
+hi!	VSLFuncLineEIcon			ctermbg=196	ctermfg=22
+hi!	NSLFuncLineVIcon			ctermbg=28	ctermfg=238
+hi!	NSLFuncLineEIcon			ctermbg=196	ctermfg=238
+hi! SLNbFuncV					ctermbg=22	ctermfg=231
+hi! SLNbFuncE					ctermbg=124 ctermfg=231
+hi!	ISLNbFuncVIcon				ctermbg=22	ctermfg=31
+hi!	ISLNbFuncEIcon				ctermbg=124	ctermfg=31
+hi!	VSLNbFuncVIcon				ctermbg=22	ctermfg=22
+hi!	VSLNbFuncEIcon				ctermbg=124	ctermfg=22
+hi!	NSLNbFuncVIcon				ctermbg=22	ctermfg=238
+hi!	NSLNbFuncEIcon				ctermbg=124	ctermfg=238
+
+hi!	SLName						ctermbg=238	ctermfg=231	cterm=bold
+hi!	SLNameIcon					ctermbg=236	ctermfg=238	cterm=bold
+hi!	SLSep						ctermbg=236	ctermfg=0
+
+set laststatus=2
+set statusline=%!StatusLine()
