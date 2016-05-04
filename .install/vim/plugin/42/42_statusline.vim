@@ -143,14 +143,14 @@ function!	s:StatusLineNorme(bufmodified, statemod)
 		let s .= '%#SLFuncLine' . c_funclinecount . 'IcontoNbFunc' . c_funccount . '#'
 		let s .= (g:font) ? '' : ""
 		let s .= '%#SLNbFunc' . c_funccount . '#'
-		let s .= ' '.s:PrePad(funccount, 2).'/5 '
+		let s .= ' '.funccount.'/5 '
 		let s .= '%#' . c_state . 'SLNbFunc' . c_funccount . 'Icon#'
 		let s .= (g:font) ? '' : ""
 	elseif funccount > -1
 		let s .= '%#SLNbChar' . c_charcount . 'IcontoNbFunc' . c_funccount . '#'
 		let s .= (g:font) ? '' : ""
 		let s .= '%#SLNbFunc' . c_funccount . '#'
-		let s .= ' '.s:PrePad(funccount, 2).'/5 '
+		let s .= ' '.funccount.'/5 '
 		let s .= '%#' . c_state . 'SLNbFunc' . c_funccount . 'Icon#'
 		let s .= (g:font) ? '' : ""
 	else

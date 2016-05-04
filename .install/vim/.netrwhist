@@ -1,10 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/Volumes/Storage/goinfre/mblet/sh/srcs'
-let g:netrw_dirhist_2='/Volumes/Storage/goinfre/mblet/sh'
-let g:netrw_dirhist_3='/Volumes/Storage/goinfre/mblet/sh/includes'
-let g:netrw_dirhist_4='/Volumes/Storage/goinfre/mblet/sh/srcs/parsing'
-let g:netrw_dirhist_5='/nfs/2013/m/mblet/.vim/plugin/42'
-let g:netrw_dirhist_6='/Volumes/Storage/goinfre/mblet/sh/srcs/kernel'
-let g:netrw_dirhist_7='/Volumes/Storage/goinfre/mblet/sh/includes'
-let g:netrw_dirhist_8='/nfs/2013/m/mblet/.vim/plugin/42'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Volumes/Storage/goinfre/mblet/sh/srcs/env'
+let g:netrw_dirhist_2='/Volumes/Storage/goinfre/mblet/sh/srcs/kernel'
+let g:netrw_dirhist_3='/Volumes/Storage/goinfre/mblet/sh/srcs'
+let g:netrw_dirhist_4='/Volumes/Storage/goinfre/mblet/sh'
+let g:netrw_dirhist_5='/Volumes/Storage/goinfre/mblet/sh/includes'

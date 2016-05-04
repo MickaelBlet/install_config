@@ -129,12 +129,12 @@ function fast_git_push()
 			return
 		fi
 		git commit -m "$d $R"
-		git push origin master
+		git push
 		git ls-files
 	else
 		git add --all
 		git commit -m "$d $*"
-		git push origin master
+		git push
 		git ls-files
 	fi
 }
@@ -152,12 +152,12 @@ function force_git_push()
 			return
 		fi
 		git commit -m "$d $R"
-		git push origin master
+		git push
 		git ls-files
 	else
 		git add --all
 		git commit -m "$d --force $*"
-		git push origin master --force
+		git push --force
 		git ls-files
 	fi
 }
