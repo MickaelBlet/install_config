@@ -35,10 +35,10 @@ highlight Character		term=bold				ctermfg=white
 
 highlight MyTable								ctermfg=28
 " highlight >> 's_exemple' && 't_exemple' && 'u_exemple' && 'e_exemple'
-syntax match myTable '\<s_\i\+\>\((\)\@!'
-syntax match myTable '\<t_\i\+\>\((\)\@!'
-syntax match myTable '\<u_\i\+\>\((\)\@!'
-syntax match myTable '\<e_\i\+\>\((\)\@!'
+syntax match myTable '\(&\)\@<!\<s_\i\+\>\((\)\@!'
+syntax match myTable '\(&\)\@<!\<t_\i\+\>\((\)\@!'
+syntax match myTable '\(&\)\@<!\<u_\i\+\>\((\)\@!'
+syntax match myTable '\(&\)\@<!\<e_\i\+\>\((\)\@!'
 highlight link myTable MyTable
 
 highlight MyElementAfterStruct					ctermfg=202
