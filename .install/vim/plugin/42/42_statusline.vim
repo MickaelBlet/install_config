@@ -18,7 +18,8 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" #      
 
-let g:font = 1
+
+let g:font = 0
 
 hi!	SLName			ctermbg=231		ctermfg=238		cterm=bold
 hi!	SLNameIcon		ctermbg=231		ctermfg=238		cterm=bold
@@ -188,24 +189,15 @@ endfunction
 function!	s:GetFuncLineCount()
 	let mycount = -1
 	let line = line('.')
-	if empty(matchstr(getline(line), '^}'))
-		while empty(matchstr(getline(line), '^{'))
-			if line < 1
-				return -1
-			endif
-			if !empty(matchstr(getline(line), '^}'))
-				return -1
-			endif
-			let line -= 1
-		endwhile
-	else
-		while empty(matchstr(getline(line), '^{'))
-			if line < 1
-				return -1
-			endif
-			let line -= 1
-		endwhile
-	endif
+	while empty(matchstr(getline(line), '^{'))
+		if line < 1
+			return -1
+		endif
+		if !empty(matchstr(getline(line), '^}')) && line != line('.')
+			return -1
+		endif
+		let line -= 1
+	endwhile
 	while empty(matchstr(getline(line), '^}$'))
 		if line == line('$')
 			return -1

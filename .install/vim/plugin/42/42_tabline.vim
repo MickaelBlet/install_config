@@ -1,3 +1,5 @@
+let g:font = 1
+
 function! Tabline()
 	let s = ''
 	for i in range(tabpagenr('$'))
@@ -5,11 +7,13 @@ function! Tabline()
 		if i == 0
 			let s.= ''
 		elseif i == tabpagenr()
-			let s .= '%#TabLineSelIconF# '
+			let s .= '%#TabLineSelIconF#'
+			let s .= (g:font) ? ' ' : " "
 		elseif tab == tabpagenr()
-			let s .= '%#TabLineSelIconS# '
+			let s .= '%#TabLineSelIconS#'
+			let s .= (g:font) ? ' ' : " "
 		else
-			let s .= ' '
+			let s .= (g:font) ? ' ' : " "
 		endif
 		let winnr = tabpagewinnr(tab)
 		let buflist = tabpagebuflist(tab)
@@ -30,9 +34,17 @@ function! Tabline()
 
 		let s .= (bufname != '' ? ''. fnamemodify(bufname, ':t') . ' ' : '[No Name] ')
 	endfor
-		let s .= ((tab == tabpagenr()) ? '%#TabLineSelIconE#' : '%#TabLineIconE#') . ' '
 
-	let s .= '%#TabLineFill#%=%#TabLineClose#%999X'
+	if (tab == tabpagenr())
+		let s .= '%#TabLineSelIconE#'
+	else
+		let s.= '%#TabLineIconE#'
+	endif
+	let s .= (g:font) ? ' ' : ""
+
+	let s .= '%#TabLineFill#%=%#TabLineClose#%999X'
+
+	let s .= (g:font) ? '' : "X"
 	"' %0* %{strftime("%H:%M")} '
 	return s
 endfunction
