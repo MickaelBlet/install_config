@@ -5,7 +5,7 @@ autoload -U colors && colors
 rm -fr ~/Library/Fonts/Meslo\ LG\ L\ DZ\ Regular\ for\ Powerline.otf
 cp ~/#_my_config/Fonts/Meslo\ LG\ L\ DZ\ Regular\ for\ Powerline.otf ~/Library/Fonts/
 
-export PROMPT_GIT="false"
+export PROMPT_GIT="true"
 
 TMOUT=60
 TRAPALRM() {
