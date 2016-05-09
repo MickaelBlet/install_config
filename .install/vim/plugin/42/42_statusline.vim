@@ -190,6 +190,20 @@ function!	s:GetFuncLineCount()
 	let mycount = -1
 	let line = line('.')
 	while empty(matchstr(getline(line), '^{'))
+				\&& empty(matchstr(getline(line), '^}'))
+				\&& strlen(getline(line)) > 0
+		if line == line('$')
+			return -1
+		endif
+		let line += 1
+	endwhile
+	if !empty(matchstr(getline(line), '^{'))
+		let line += 1
+	endif
+	if !empty(matchstr(getline(line), '^}'))
+		let line -= 1
+	endif
+	while empty(matchstr(getline(line), '^{'))
 		if line < 1
 			return -1
 		endif

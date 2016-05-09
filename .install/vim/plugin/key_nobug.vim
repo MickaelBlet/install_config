@@ -6,8 +6,10 @@ function!	Include_pum()
 	let l:char=getline('.')[col('.')-2]
 	if l:char == '/'
 		return "\<C-X>\<C-F>\<Up>"
-	else
+	elseif empty(matchstr(getline('.'), '#include'))
 		return "#include \"\"\<Left>\<C-X>\<C-F>\<Up>"
+	else
+		return ""
 	endif
 endfunction
 
