@@ -53,13 +53,13 @@ function! Align_42()
 	call SortInclude()
 	call SortInclude()
 	%s/\s\+$//e
-	%s/\"/?????/eg
-	%s/\//|||||/eg
+	"%s/\"/?????/eg
+	"%s/\//|||||/eg
 	silent g/^\_$\n\_^$/d
 	call AlignAll()
 	call AlignPrepros()
-	%s/?????/\"/eg
-	%s/|||||/\//eg
+	"%s/?????/\"/eg
+	"%s/|||||/\//eg
 	%s/\t\t\ze||/\t/eg
 	%s/\t\t\ze&&/\t/eg
 	call winrestview(winview)
@@ -68,11 +68,11 @@ endfunction
 
 function! Align_speed_42()
 	%s/\s\+$//e
-	%s/\"/?????/eg
-	%s/\//|||||/eg
+	"%s/\"/?????/eg
+	"%s/\//|||||/eg
 	call AlignSpeedFunc()
-	%s/?????/\"/eg
-	%s/|||||/\//eg
+	"%s/?????/\"/eg
+	"%s/|||||/\//eg
 endfunction
 
 " [Align precmd]
