@@ -130,12 +130,10 @@ function fast_git_push()
 		fi
 		git commit -m "$d $R"
 		git push
-		git ls-files
 	else
 		git add --all
 		git commit -m "$d $*"
 		git push
-		git ls-files
 	fi
 }
 
@@ -153,12 +151,10 @@ function force_git_push()
 		fi
 		git commit -m "$d $R"
 		git push
-		git ls-files
 	else
 		git add --all
 		git commit -m "$d --force $*"
 		git push --force
-		git ls-files
 	fi
 }
 

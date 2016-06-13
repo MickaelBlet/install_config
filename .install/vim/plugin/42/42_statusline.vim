@@ -155,7 +155,7 @@ function!	s:StatusLineNorme(bufmodified, statemod)
 		let s .= '%#' . c_state . 'SLNbFunc' . c_funccount . 'Icon#'
 		let s .= (g:font) ? '' : ""
 	else
-		let s .= '%#' . c_state . 'SLNbChar' . c_funccount . 'Icon#'
+		let s .= '%#' . c_state . 'SLNbChar' . c_charcount . 'Icon#'
 		let s .= (g:font) ? '' : ""
 	endif
 	return s

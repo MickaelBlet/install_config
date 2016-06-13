@@ -18,7 +18,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 highlight Parenthesis		ctermfg=160 term=bold cterm=bold
-highlight NotAutorised		ctermbg=88
+highlight NotAutorised		ctermbg=52
 highlight MyError			ctermbg=darkred
 highlight MyWarning			ctermbg=166
 
@@ -45,7 +45,7 @@ function Norme()
 	" C++ Comment
 	let s:errornorm += matchadd('NotAutorised', '\%(\*\*.*\)\@<!\/\/.*', -1)
 	" > 80 COLLUM
-	let s:errornorm += matchadd('MyError', '\%>80v.\+', -1)
+	let s:errornorm += matchadd('MyError', '\%81v.', -1)
 
 	" Double return
 	let s:errornorm += matchadd('MyError', '^\%#\@<!\n\(^\%#\@<!\n\)\+', -1)
@@ -105,6 +105,9 @@ function Norme()
 
 	" Double Space
 	syntax match myNorme '\(# *\)\@<!  \+'
+
+	" Maj and Min in same word
+	syntax match myNorme '\(0\(x\|X\)\)\@!\<\i*\(\([a-z]\i*[A-Z]\)\|\([A-Z]\i*[a-z]\)\)\i*\>'
 
 	" Triple Tab
 	syntax match myNorme '\(\t\+[^\t]\+\)\@<=\t\+\ze[^\t]\+\t\+'
