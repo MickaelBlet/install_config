@@ -46,6 +46,7 @@ endfunction
 let s:makefile = [
 			\'NAME		=	' . expand('%:p:h:t'),
 			\'NAMEBASE    =   $(shell basename $(NAME))',
+			\'LENGTHNAME	=	`printf "%s" $(NAMEBASE) | wc -c`',
 			\'MAX_COLS	=	$$(echo "$$(tput cols)-24-$(LENGTHNAME)"|bc)',
 			\'',
 			\'CC			=	gcc',
@@ -65,7 +66,7 @@ let s:makefile = [
 			\'',
 			\'.SILENT:',
 			\'',
-			\'all',
+			\'all:',
 			\'	$(MAKE) -j $(NAME)',
 			\'	echo "\033[38;5;44m☑️  ALL    $(NAMEBASE) is done\033[0m\033[K"',
 			\'',

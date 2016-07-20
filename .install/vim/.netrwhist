@@ -1,7 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/nfs/2013/m/mblet/42_RT.git/includes'
-let g:netrw_dirhist_2='/nfs/2013/m/mblet/42_RT.git'
-let g:netrw_dirhist_3='/nfs/2013/m/mblet/42_RT.git/srcs'
-let g:netrw_dirhist_4='/private/tmp/vroussea'
-let g:netrw_dirhist_5='/private/tmp/vroussea/test_map'
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/nfs/2013/m/mblet/42_Lem-ipc.git/srcs'
+let g:netrw_dirhist_2='/nfs/2013/m/mblet/42_Lem-ipc.git/new_ver/srcs/singletons'
+let g:netrw_dirhist_3='/nfs/2013/m/mblet/42_Lem-ipc.git/new_ver/srcs'
+let g:netrw_dirhist_4='/nfs/2013/m/mblet/42_Lem-ipc.git/new_ver/srcs/singletons'
+let g:netrw_dirhist_5='/nfs/2013/m/mblet/42_Lem-ipc.git/new_ver/srcs'
+let g:netrw_dirhist_6='/nfs/2013/m/mblet/42_Lem-ipc.git/new_ver'
+let g:netrw_dirhist_7='/nfs/2013/m/mblet/42_Lem-ipc.git/new_ver/includes'
+let g:netrw_dirhist_8='/nfs/2013/m/mblet/42_Lem-ipc.git/new_ver'
+let g:netrw_dirhist_9='/nfs/2013/m/mblet/42_Lem-ipc.git/new_ver/srcs'
