@@ -1,6 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/nfs/2013/m/mblet/42_Lem-ipc.git/srcs'
-let g:netrw_dirhist_2='/nfs/2013/m/mblet/42_Lem-ipc.git'
-let g:netrw_dirhist_3='/nfs/2013/m/mblet/42_Lem-ipc.git/includes'
-let g:netrw_dirhist_4='/nfs/2013/m/mblet/42_Lem-ipc.git/new_ver/srcs'
+let g:netrw_dirhist_cnt =0
