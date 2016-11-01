@@ -18,27 +18,111 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" #      
 
-
 let g:font = 0
 
-hi!	SLName			ctermbg=231		ctermfg=238		cterm=bold
-hi!	SLNameIcon		ctermbg=231		ctermfg=238		cterm=bold
-hi!	SLSep			ctermbg=231		ctermfg=238		cterm=bold
-hi!	SLSepIcon		ctermbg=231		ctermfg=238		cterm=bold
-hi!	SLLineFunc		ctermbg=231		ctermfg=238		cterm=bold
-hi!	SLLineFuncIcon	ctermbg=231		ctermfg=238		cterm=bold
+set laststatus=2
+set statusline=%!StatusLine()
 
-hi!	StatusLineSep	ctermbg=231		ctermfg=238		cterm=bold
+"COLOR
 
-hi! User1	ctermbg=231		ctermfg=238		cterm=bold
-hi! User2	ctermbg=240		ctermfg=0
-hi! User3	ctermbg=22		ctermfg=15
-hi! User4	ctermbg=28		ctermfg=15
-hi! User5	ctermbg=238		ctermfg=15
-hi! User6	ctermbg=236		ctermfg=15
-hi! User7	ctermbg=130		ctermfg=231
-hi! User8	ctermbg=245		ctermfg=232		cterm=bold
-hi! User9	ctermbg=34		ctermfg=15
+"MOD COLOR
+hi!	MSLName						ctermbg=221	ctermfg=232	cterm=bold
+hi!	MSLNameIcon					ctermbg=229	ctermfg=221
+hi!	MSLSep						ctermbg=229	ctermfg=0
+hi!	MSLSepIconNormV				ctermbg=229	ctermfg=34
+hi!	MSLSepIconNormE				ctermbg=229	ctermfg=160
+
+"INSERT COLOR
+hi!	ISLNameIcon					ctermbg=24	ctermfg=238
+hi!	ISLSep						ctermbg=24	ctermfg=0
+hi!	ISLSepIconNormV				ctermbg=24	ctermfg=34
+hi!	ISLSepIconNormE				ctermbg=24	ctermfg=160
+hi! ISLLineFile					ctermbg=31	ctermfg=231
+hi! ISLLineFileIcon				ctermbg=31	ctermfg=117
+hi! ISLPaste					ctermbg=117	ctermfg=23
+hi! ISLPasteIcon				ctermbg=117	ctermfg=231
+hi! ISLState					ctermbg=231	ctermfg=23	cterm=bold
+hi! ISLStateIcon				ctermbg=231	ctermfg=245
+hi! ISLType						ctermbg=245	ctermfg=232	cterm=bold
+
+"VISUAL COLOR
+hi!	VSLNameIcon					ctermbg=70	ctermfg=238
+hi!	VSLSep						ctermbg=70	ctermfg=0
+hi!	VSLSepIconNormV				ctermbg=70	ctermfg=34
+hi!	VSLSepIconNormE				ctermbg=70	ctermfg=160
+hi! VSLLineFile					ctermbg=22	ctermfg=148
+hi! VSLLineFileIcon				ctermbg=22	ctermfg=70
+hi! VSLPaste					ctermbg=70	ctermfg=22
+hi! VSLPasteIcon				ctermbg=70	ctermfg=148
+hi! VSLState					ctermbg=148	ctermfg=22	cterm=bold
+hi! VSLStateIcon				ctermbg=148	ctermfg=245
+hi! VSLType						ctermbg=245	ctermfg=232	cterm=bold
+
+"NORMAL COLOR
+hi!	NSLNameIcon					ctermbg=236	ctermfg=238
+hi!	NSLSep						ctermbg=236	ctermfg=0
+hi!	NSLSepIconNormV				ctermbg=236	ctermfg=34
+hi!	NSLSepIconNormE				ctermbg=236	ctermfg=160
+hi! NSLLineFile					ctermbg=238	ctermfg=231
+hi! NSLLineFileIcon				ctermbg=238	ctermfg=236
+hi! NSLPaste					ctermbg=236	ctermfg=231
+hi! NSLPasteIcon				ctermbg=236	ctermfg=130
+hi! NSLState					ctermbg=130	ctermfg=231	cterm=bold
+hi! NSLStateIcon				ctermbg=130	ctermfg=245
+hi! NSLType						ctermbg=245	ctermfg=232	cterm=bold
+
+"COMMON COLOR
+hi! MISLCharCountIcon			ctermbg=229	ctermfg=117
+hi! MVSLCharCountIcon			ctermbg=229	ctermfg=70
+hi! MNSLCharCountIcon			ctermbg=229	ctermfg=236
+hi! ISLCharCountIcon			ctermbg=24	ctermfg=117
+hi! VSLCharCountIcon			ctermbg=70	ctermfg=70
+hi! NSLCharCountIcon			ctermbg=236	ctermfg=236
+hi! ISLPasteIconR				ctermbg=117	ctermfg=31
+hi! VSLPasteIconR				ctermbg=70	ctermfg=22
+hi! NSLPasteIconR				ctermbg=236	ctermfg=238
+
+"NORM COLOR
+hi! SLNbCharV					ctermbg=34	ctermfg=231
+hi! SLNbCharE					ctermbg=160 ctermfg=231
+hi!	SLNbCharVIcontoFuncLineV	ctermbg=34	ctermfg=28
+hi!	SLNbCharEIcontoFuncLineV	ctermbg=160	ctermfg=28
+hi!	SLNbCharVIcontoFuncLineE	ctermbg=34	ctermfg=196
+hi!	SLNbCharEIcontoFuncLineE	ctermbg=160	ctermfg=196
+hi!	SLNbCharVIcontoNbFuncV		ctermbg=34	ctermfg=22
+hi!	SLNbCharEIcontoNbFuncV		ctermbg=160	ctermfg=22
+hi!	SLNbCharVIcontoNbFuncE		ctermbg=34	ctermfg=124
+hi!	SLNbCharEIcontoNbFuncE		ctermbg=160	ctermfg=124
+hi!	ISLNbCharVIcon				ctermbg=34	ctermfg=31
+hi!	ISLNbCharEIcon				ctermbg=160	ctermfg=31
+hi!	VSLNbCharVIcon				ctermbg=34	ctermfg=22
+hi!	VSLNbCharEIcon				ctermbg=160	ctermfg=22
+hi!	NSLNbCharVIcon				ctermbg=34	ctermfg=238
+hi!	NSLNbCharEIcon				ctermbg=160	ctermfg=238
+hi! SLFuncLineV					ctermbg=28	ctermfg=231
+hi! SLFuncLineE					ctermbg=196 ctermfg=231
+hi!	SLFuncLineVIcontoNbFuncV	ctermbg=28	ctermfg=22
+hi!	SLFuncLineEIcontoNbFuncV	ctermbg=196	ctermfg=22
+hi!	SLFuncLineVIcontoNbFuncE	ctermbg=28	ctermfg=124
+hi!	SLFuncLineEIcontoNbFuncE	ctermbg=196	ctermfg=124
+hi!	ISLFuncLineVIcon			ctermbg=28	ctermfg=31
+hi!	ISLFuncLineEIcon			ctermbg=196	ctermfg=31
+hi!	VSLFuncLineVIcon			ctermbg=28	ctermfg=22
+hi!	VSLFuncLineEIcon			ctermbg=196	ctermfg=22
+hi!	NSLFuncLineVIcon			ctermbg=28	ctermfg=238
+hi!	NSLFuncLineEIcon			ctermbg=196	ctermfg=238
+hi! SLNbFuncV					ctermbg=22	ctermfg=231
+hi! SLNbFuncE					ctermbg=124 ctermfg=231
+hi!	ISLNbFuncVIcon				ctermbg=22	ctermfg=31
+hi!	ISLNbFuncEIcon				ctermbg=124	ctermfg=31
+hi!	VSLNbFuncVIcon				ctermbg=22	ctermfg=22
+hi!	VSLNbFuncEIcon				ctermbg=124	ctermfg=22
+hi!	NSLNbFuncVIcon				ctermbg=22	ctermfg=238
+hi!	NSLNbFuncEIcon				ctermbg=124	ctermfg=238
+
+hi!	SLName						ctermbg=238	ctermfg=231	cterm=bold
+hi!	SLNameIcon					ctermbg=236	ctermfg=238	cterm=bold
+hi!	SLSep						ctermbg=236	ctermfg=0
 
 function!	StatusLine()
 	let s = ''
@@ -280,107 +364,3 @@ function! s:PrePad(s,amt,...)
 	endif
 	return repeat(char, a:amt - len(a:s)) . a:s
 endfunction
-
-"COLOR
-
-"MOD COLOR
-hi!	MSLName						ctermbg=221	ctermfg=232	cterm=bold
-hi!	MSLNameIcon					ctermbg=229	ctermfg=221
-hi!	MSLSep						ctermbg=229	ctermfg=0
-hi!	MSLSepIconNormV				ctermbg=229	ctermfg=34
-hi!	MSLSepIconNormE				ctermbg=229	ctermfg=160
-
-"INSERT COLOR
-hi!	ISLNameIcon					ctermbg=24	ctermfg=238
-hi!	ISLSep						ctermbg=24	ctermfg=0
-hi!	ISLSepIconNormV				ctermbg=24	ctermfg=34
-hi!	ISLSepIconNormE				ctermbg=24	ctermfg=160
-hi! ISLLineFile					ctermbg=31	ctermfg=231
-hi! ISLLineFileIcon				ctermbg=31	ctermfg=117
-hi! ISLPaste					ctermbg=117	ctermfg=23
-hi! ISLPasteIcon				ctermbg=117	ctermfg=231
-hi! ISLState					ctermbg=231	ctermfg=23	cterm=bold
-hi! ISLStateIcon				ctermbg=231	ctermfg=245
-hi! ISLType						ctermbg=245	ctermfg=232	cterm=bold
-
-"VISUAL COLOR
-hi!	VSLNameIcon					ctermbg=70	ctermfg=238
-hi!	VSLSep						ctermbg=70	ctermfg=0
-hi!	VSLSepIconNormV				ctermbg=70	ctermfg=34
-hi!	VSLSepIconNormE				ctermbg=70	ctermfg=160
-hi! VSLLineFile					ctermbg=22	ctermfg=148
-hi! VSLLineFileIcon				ctermbg=22	ctermfg=70
-hi! VSLPaste					ctermbg=70	ctermfg=22
-hi! VSLPasteIcon				ctermbg=70	ctermfg=148
-hi! VSLState					ctermbg=148	ctermfg=22	cterm=bold
-hi! VSLStateIcon				ctermbg=148	ctermfg=245
-hi! VSLType						ctermbg=245	ctermfg=232	cterm=bold
-
-"NORMAL COLOR
-hi!	NSLNameIcon					ctermbg=236	ctermfg=238
-hi!	NSLSep						ctermbg=236	ctermfg=0
-hi!	NSLSepIconNormV				ctermbg=236	ctermfg=34
-hi!	NSLSepIconNormE				ctermbg=236	ctermfg=160
-hi! NSLLineFile					ctermbg=238	ctermfg=231
-hi! NSLLineFileIcon				ctermbg=238	ctermfg=236
-hi! NSLPaste					ctermbg=236	ctermfg=231
-hi! NSLPasteIcon				ctermbg=236	ctermfg=130
-hi! NSLState					ctermbg=130	ctermfg=231	cterm=bold
-hi! NSLStateIcon				ctermbg=130	ctermfg=245
-hi! NSLType						ctermbg=245	ctermfg=232	cterm=bold
-
-"COMMON COLOR
-hi! MISLCharCountIcon			ctermbg=229	ctermfg=117
-hi! MVSLCharCountIcon			ctermbg=229	ctermfg=70
-hi! MNSLCharCountIcon			ctermbg=229	ctermfg=236
-hi! ISLCharCountIcon			ctermbg=24	ctermfg=117
-hi! VSLCharCountIcon			ctermbg=70	ctermfg=70
-hi! NSLCharCountIcon			ctermbg=236	ctermfg=236
-hi! ISLPasteIconR				ctermbg=117	ctermfg=31
-hi! VSLPasteIconR				ctermbg=70	ctermfg=22
-hi! NSLPasteIconR				ctermbg=236	ctermfg=238
-
-"NORM COLOR
-hi! SLNbCharV					ctermbg=34	ctermfg=231
-hi! SLNbCharE					ctermbg=160 ctermfg=231
-hi!	SLNbCharVIcontoFuncLineV	ctermbg=34	ctermfg=28
-hi!	SLNbCharEIcontoFuncLineV	ctermbg=160	ctermfg=28
-hi!	SLNbCharVIcontoFuncLineE	ctermbg=34	ctermfg=196
-hi!	SLNbCharEIcontoFuncLineE	ctermbg=160	ctermfg=196
-hi!	SLNbCharVIcontoNbFuncV		ctermbg=34	ctermfg=22
-hi!	SLNbCharEIcontoNbFuncV		ctermbg=160	ctermfg=22
-hi!	SLNbCharVIcontoNbFuncE		ctermbg=34	ctermfg=124
-hi!	SLNbCharEIcontoNbFuncE		ctermbg=160	ctermfg=124
-hi!	ISLNbCharVIcon				ctermbg=34	ctermfg=31
-hi!	ISLNbCharEIcon				ctermbg=160	ctermfg=31
-hi!	VSLNbCharVIcon				ctermbg=34	ctermfg=22
-hi!	VSLNbCharEIcon				ctermbg=160	ctermfg=22
-hi!	NSLNbCharVIcon				ctermbg=34	ctermfg=238
-hi!	NSLNbCharEIcon				ctermbg=160	ctermfg=238
-hi! SLFuncLineV					ctermbg=28	ctermfg=231
-hi! SLFuncLineE					ctermbg=196 ctermfg=231
-hi!	SLFuncLineVIcontoNbFuncV	ctermbg=28	ctermfg=22
-hi!	SLFuncLineEIcontoNbFuncV	ctermbg=196	ctermfg=22
-hi!	SLFuncLineVIcontoNbFuncE	ctermbg=28	ctermfg=124
-hi!	SLFuncLineEIcontoNbFuncE	ctermbg=196	ctermfg=124
-hi!	ISLFuncLineVIcon			ctermbg=28	ctermfg=31
-hi!	ISLFuncLineEIcon			ctermbg=196	ctermfg=31
-hi!	VSLFuncLineVIcon			ctermbg=28	ctermfg=22
-hi!	VSLFuncLineEIcon			ctermbg=196	ctermfg=22
-hi!	NSLFuncLineVIcon			ctermbg=28	ctermfg=238
-hi!	NSLFuncLineEIcon			ctermbg=196	ctermfg=238
-hi! SLNbFuncV					ctermbg=22	ctermfg=231
-hi! SLNbFuncE					ctermbg=124 ctermfg=231
-hi!	ISLNbFuncVIcon				ctermbg=22	ctermfg=31
-hi!	ISLNbFuncEIcon				ctermbg=124	ctermfg=31
-hi!	VSLNbFuncVIcon				ctermbg=22	ctermfg=22
-hi!	VSLNbFuncEIcon				ctermbg=124	ctermfg=22
-hi!	NSLNbFuncVIcon				ctermbg=22	ctermfg=238
-hi!	NSLNbFuncEIcon				ctermbg=124	ctermfg=238
-
-hi!	SLName						ctermbg=238	ctermfg=231	cterm=bold
-hi!	SLNameIcon					ctermbg=236	ctermfg=238	cterm=bold
-hi!	SLSep						ctermbg=236	ctermfg=0
-
-set laststatus=2
-set statusline=%!StatusLine()

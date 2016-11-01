@@ -370,6 +370,8 @@ func!	Comment()
 	let commenttypeline = ""
 	if &filetype == "c" || &filetype == "cpp"
 		let commenttypeline = "\\/\\/"
+	elseif &filetype == "asm"
+		let commenttypeline = ";"
 	elseif &filetype == "vim"
 		let commenttypeline = "\""
 	elseif &filetype == "sh" || &filetype == "zsh" || &filetype == "make"

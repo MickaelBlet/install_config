@@ -42,14 +42,14 @@ syntax match myTable '\(&\)\@<!\<e_\i\+\>\((\)\@!'
 highlight link myTable MyTable
 
 highlight MyElementAfterStruct					ctermfg=202
-" highlight >> 'test->test.test'
+" highlight >> 'g_exemple'
 syntax match myElementAfterStruct '\(\(->\)\|\(\.\)\)\@<=\(\<\i\+\>\)\(\(->\)\|\(\.\)\)\@!'
 highlight link myElementAfterStruct MyElementAfterStruct
 
 
 highlight MyElementBetweenStruct				ctermfg=215
 " highlight >> 'test->test.test'
-syntax match myElementBetweenStruct '\(\(->\)\|\(\.\)\)\@<=\(\<\i\+\>\)\ze\(\[\<\i\+\>\]\)*\(\(->\)\|\(\.\)\)\@='
+syntax match myElementBetweenStruct '\(\(->\)\|\(\.\)\)\@<=\(\<\i\+\>\)\(\(->\)\|\(\.\)\)\@='
 highlight link myElementBetweenStruct MyElementBetweenStruct
 
 "__________________________________________________________

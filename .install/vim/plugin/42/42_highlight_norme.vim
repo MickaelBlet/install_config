@@ -22,13 +22,9 @@ highlight NotAutorised		ctermbg=52
 highlight MyError			ctermbg=darkred
 highlight MyWarning			ctermbg=166
 
-let s:errornorm = 0
+highlight MyNorme			cterm=italic ctermfg=darkred ctermbg=black
 
-let s:errornorm += matchadd('MyError', '\%#\@<!\s\+\%#\@<!$', -1) " Space Error
-let s:errornorm += matchadd('MyError', '\t\zs \+', -1) " Space Error
-let s:errornorm += matchadd('MyError', ' \+\ze\t', -1) " Space Error
-let s:errornorm += matchadd('MyError', '^\%#\@<!\n\(\_.\+\)\@!', -1) " Last Line
-
+" When vim open
 autocmd BufNewFile,BufRead *.c		call Norme()
 autocmd BufNewFile,BufRead *.h		call Norme()
 autocmd BufNewFile,BufRead *.cpp	call NormeCpp()
@@ -42,10 +38,16 @@ function Norme()
 	" Format comments norme 42
 	set comments=sr:/*,mr:**,er:*/
 
+	let s:errornorm = 0
+
+	" Last empty line
+	let s:errornorm += matchadd('MyNorme', '^\%#\@<!\n\(\_.\+\)\@!', -1)
+
+	" > 80 COLLUM
+	let s:errornorm += matchadd('MyNorme', '\%81v.', -1)
+
 	" C++ Comment
 	let s:errornorm += matchadd('NotAutorised', '\%(\*\*.*\)\@<!\/\/.*', -1)
-	" > 80 COLLUM
-	let s:errornorm += matchadd('MyError', '\%81v.', -1)
 
 	" Double return
 	let s:errornorm += matchadd('MyError', '^\%#\@<!\n\(^\%#\@<!\n\)\+', -1)
@@ -68,21 +70,16 @@ function Norme()
 	let s:errornorm += matchadd('MyError', '(\zs ', -1)
 
 	" SPACE & TAB
-	let s:errornorm += matchadd('MyError', '\<if\>\zs \@!', -1)
-	let s:errornorm += matchadd('MyError', '\<while\>\zs \@!', -1)
-	let s:errornorm += matchadd('MyError', '\<return\>\zs \@!', -1)
-	let s:errornorm += matchadd('MyError', '\<continue\>\zs \@!', -1)
-	let s:errornorm += matchadd('MyError', '\<break\>\zs \@!', -1)
 	let s:errornorm += matchadd('MyError', '\<return\> \zs\i.*\>', -1)
 
 	" ';'
-	let s:errornorm += matchadd('MyWarning', '\(\%#.*\|#.*\|\*\/.*\|\*\*.*\|\/\/.*\|\/\*.*\|{\|}\|;\|^\|\<if\>.*\|\<else\>.*\|\<while\>.*\|||.*\|&&.*\|,\|+\|-\|\*\|/\|%\)\@<!\n\(.*{\|\t\+\(+\|-\|*\|/\|%\|&&\|||\)\)\@!', -1)
+	let s:errornorm += matchadd('MyWarning', '\(\%#.*\|#.*\|\*\/.*\|\*\*.*\|\/\/.*\|\/\*.*\|{\|}\|;\|^\|\<if\>.*\|\<else\>.*\|\<while\>.*\|,\n.*\|||.*\|&&.*\|,\|+\|-\|\*\|/\|%\)\@<!\n\(.*{\|\t\+\(+\|-\|*\|/\|%\|&&\|||\)\)\@!', -1)
 
-	" SPACE BEFORE ';'
-	let s:errornorm += matchadd('MyError', '\(continue\|break\|return\|\t\+\)\@<!\s\ze;', -1)
+	" ' ' after common utility
+	let s:errornorm += matchadd('MyError', '\<\(if\|while\|continue\|break\|return\)\>\zs\( \)\@!', -1)
 
-	" +25 line / func
-	let s:errornorm += matchadd('MyError', '\(^{\n\)\ze\(^.*\n\(^}\)\@!\)\{25}\(^.*\n\(^\i\)\@!\)*\(^}\n\)', -1)
+	" ' ' before ';'
+	let s:errornorm += matchadd('MyError', '\(\<\(continue\|break\|return\)\>\|^\t\+\)\@<!\s\ze;', -1)
 
 	" 2 return / func
 	let s:errornorm += matchadd('MyError', '\(^{\n\)\(.\+\n\(^}\)\@!\)\+\n\+\(.\+\n\(^}\)\@!\)\+\zs\%#\@<!\n\+\ze', -1)
@@ -101,7 +98,17 @@ function Norme()
 
 	highlight link notAutorised NotAutorised
 
-	highlight MyNorme			cterm=italic ctermfg=darkred ctermbg=black
+	" >25 lines / function
+	syntax match myNorme '\(^{\n\)\ze\(^.*\n\(^}\)\@!\)\{25}\(^.*\n\(^\i\)\@!\)*\(^}\n\)'
+
+	" '\t' && ' '
+	syntax match myNorme '\t\zs \+'
+
+	" ' ' && '\t'
+	syntax match myNorme ' \+\ze\t'
+
+	" ' ' || '\t' && Return
+	syntax match myNorme '^\%#\@<!\(\s\%#\@<!\)\+$'
 
 	" Double Space
 	syntax match myNorme '\(# *\)\@<!  \+'

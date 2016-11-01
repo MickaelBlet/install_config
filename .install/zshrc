@@ -25,3 +25,5 @@ export MAIL
 mkdir -p /tmp/mycache /tmp/mytemp
 export HOMEBREW_CACHE=/tmp/mycache
 export HOMEBREW_TEMP=/tmp/mytemp
+
+export ANDROID_HOME=/usr/local/opt/android-sdk

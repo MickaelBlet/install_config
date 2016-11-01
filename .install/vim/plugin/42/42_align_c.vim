@@ -68,11 +68,7 @@ endfunction
 
 function! Align_speed_42()
 	%s/\s\+$//e
-	"%s/\"/?????/eg
-	"%s/\//|||||/eg
 	call AlignSpeedFunc()
-	"%s/?????/\"/eg
-	"%s/|||||/\//eg
 endfunction
 
 " [Align precmd]
@@ -97,7 +93,7 @@ function! AlignPrepros()
 	let strline = getline(line)
 	" Check all line of file
 	while line <= line('$')
-		" Check if in string of line find '#' and ('if' or 'el' or 'define' or 'include')
+		" Check string find '#' and ('if' or 'el' or 'define' or 'include')
 		if !empty(matchstr(strline, '^\#\s*if'))
 					\ || !empty(matchstr(strline, '^\#\s*el'))
 					\ || !empty(matchstr(strline, '^\#\s*define'))
@@ -198,7 +194,7 @@ function!	AlignAll()
 			let maxlen_var = 0
 			let line += 1
 			let strline = getline(line)
-			while !empty(matchstr(strline, '^\t.*')) && line <= line('$')
+			while !empty(matchstr(strline, '^\t.*;$')) && line <= line('$')
 				let lenlines += 1
 				let line += 1
 				let strline = getline(line)
@@ -206,7 +202,7 @@ function!	AlignAll()
 			if empty(matchstr(strline, '^}$'))
 				let line = line - lenlines
 				let strline = getline(line)
-				while !empty(matchstr(strline, '^\t.*')) && line <= line('$')
+				while !empty(matchstr(strline, '^\t.*;$')) && line <= line('$')
 					let tmplen = strlen(matchstr(strline, '^\t\+\zs\i.\{-}\S\+\ze\s\+\(\(\**\S\+\( [\+\-\*\/\=\%\&\|]\+ .*\)*\)\|\(\**(.*)\)\);\(^\t\)\@<!'))
 					let maxlen_var = (tmplen > maxlen_var) ? tmplen : maxlen_var
 					let line += 1
@@ -215,7 +211,7 @@ function!	AlignAll()
 				let maxlen_var = ((maxlen_var % &tabstop) > 2) ? (maxlen_var + &tabstop) : maxlen_var
 				let line = line - lenlines
 				let strline = getline(line)
-				while !empty(matchstr(strline, '^\t.*')) && line <= line('$')
+				while !empty(matchstr(strline, '^\t.*;$')) && line <= line('$')
 					let tmplen = strlen(matchstr(strline, '^\t\+\zs\i.\{-}\S\+\ze\s\+\(\(\**\S\+\( [\+\-\*\/\=\%\&\|]\+ .*\)*\)\|\(\**(.*)\)\);\(^\t\)\@<!'))
 					if maxlen_var > tmplen
 						let number_tab = 0
@@ -267,7 +263,7 @@ function!	AlignAll()
 				call setline(line, substitute(strline, '\s\+\ze\**\i*(\(^\t\)*', '\t', ""))
 			endif
 		elseif !empty(matchstr(strline, '^\i.*'))
-			let tmplen = strlen(matchstr(strline, '^\i.*\S\+\ze\s\+\**\i\+;*$'))
+			let tmplen = strlen(matchstr(strline, '^\i.*\S.\{-}\ze\s\+\**\i\+;*$'))
 			if maxlen > tmplen
 				let number_tab = 0
 				let diff = maxlen - tmplen
@@ -280,9 +276,11 @@ function!	AlignAll()
 					let number_tab += diff / &tabstop
 				endif
 				let number_tab += 1
-				call setline(line, substitute(strline, '\s\+\ze\**\i\+;*$', repeat('\t', number_tab), ""))
+				"call setline(line, substitute(strline, '\s\+\ze\**\i\+;*$', repeat('\t', number_tab), ""))
+						call setline(line, substitute(strline, '^\i.*\S.\{-}\zs\s\+\ze\(\(\**\S\+\( [\+\-\*\/\=\%\&\|]\+ .*\)*\)\|\(\**(.*)\)\);*\(^\t\)\@<!', repeat('\t', number_tab), ""))
 			else
-				call setline(line, substitute(strline, '\s\+\ze\**\i\+;*$', '\t', ""))
+				"call setline(line, substitute(strline, '\s\+\ze\**\i\+;*$', '\t', ""))
+						call setline(line, substitute(strline, '^\i.*\S.\{-}\zs\s\+\ze\(\(\**\S\+\( [\+\-\*\/\=\%\&\|]\+ .*\)*\)\|\(\**(.*)\)\);*\(^\t\)\@<!', '\t', ""))
 			endif
 		elseif !empty(matchstr(strline, '^{$'))
 			let lenlines = 0

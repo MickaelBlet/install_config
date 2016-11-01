@@ -1,4 +1,4 @@
-autocmd Filetype c,cpp call Key_C()
+autocmd Filetype * call Key_C()
 
 " No Bug
 

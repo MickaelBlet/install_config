@@ -45,7 +45,7 @@ endfunction
 
 let s:makefile = [
 			\'NAME		=	' . expand('%:p:h:t'),
-			\'NAMEBASE    =   $(shell basename $(NAME))',
+			\'NAMEBASE	=	$(shell basename $(NAME))',
 			\'LENGTHNAME	=	`printf "%s" $(NAMEBASE) | wc -c`',
 			\'MAX_COLS	=	$$(echo "$$(tput cols)-24-$(LENGTHNAME)"|bc)',
 			\'',
