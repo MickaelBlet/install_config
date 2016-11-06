@@ -16,7 +16,7 @@ endfunction
 function Key_C()
 	imap <silent><C-N> <C-N>
 	imap <expr> <silent> <C-P> pumvisible() ? "\<Up>" : "\<C-P>\<Up>"
-	imap <expr> <silent> <C-L> pumvisible() ? "\<Up>" : "\<C-X>\<C-K>\<Up>"
-	imap <expr> <silent> <C-O> pumvisible() ? "\<Up>" : "\<C-X>\<C-L>\<Up>"
+	imap <expr> <silent> <C-L> pumvisible() ? "\<Up>" : "\<C-X>\<C-L>\<Up>"
+	imap <expr> <silent> <C-O> pumvisible() ? "\<Up>" : "\<C-X>\<C-O>\<Up>"
 	imap <expr> <silent> <C-End> pumvisible() ? "\<Up>" : Include_pum()
 endfunction

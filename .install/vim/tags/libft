@@ -1,0 +1,507 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+$	objs/_part1/memset.o	/^销睨/;"	v
+$$	Makefile	/^	if [[ `rm -R $(OBJDIR) &> \/dev\/null 2>&1; echo $$?` == "0" ]]; then		\\$/;"	v
+$H	objs/_part1/memmove.o	/^销睨/;"	v
+A	objs/printf/add/add_string.o	/^/;"	v
+ADD_CHAR_H	includes/printf/add/add_char.h	/^# define ADD_CHAR_H$/;"	d
+ADD_STRING_H	includes/printf/add/add_string.h	/^# define ADD_STRING_H$/;"	d
+ADD_WCHAR_H	includes/printf/add/add_wchar.h	/^# define ADD_WCHAR_H$/;"	d
+BIG_D_H	includes/printf/conversion/big_d.h	/^# define BIG_D_H$/;"	d
+BIG_O_H	includes/printf/conversion/big_o.h	/^# define BIG_O_H$/;"	d
+BIG_X_H	includes/printf/conversion/big_x.h	/^# define BIG_X_H$/;"	d
+BUFF_SIZE	includes/libft.h	/^# define BUFF_SIZE	/;"	d
+B_H	includes/printf/conversion/b.h	/^# define B_H$/;"	d
+COLOR_BASIC_H	includes/printf/color/color_basic.h	/^# define COLOR_BASIC_H$/;"	d
+COLOR_FG_BG_H	includes/printf/color/color_fg_bg.h	/^# define COLOR_FG_BG_H$/;"	d
+COLOR_FORMAT_H	includes/printf/color/color_format.h	/^# define COLOR_FORMAT_H$/;"	d
+CONCAT_H	includes/printf/color/concat.h	/^# define CONCAT_H$/;"	d
+C_H	includes/printf/conversion/c.h	/^# define C_H$/;"	d
+DG	includes/libft.h	/^#  define DG(/;"	d
+DGL	includes/libft.h	/^#  define DGL /;"	d
+DH	objs/printf/modifiers.o	/^销睨/;"	v
+ERR	includes/libft.h	/^#  define ERR(/;"	d
+FILL_CHARACTER_H	includes/printf/add/fill_character.h	/^# define FILL_CHARACTER_H$/;"	d
+FLAGS_H	includes/printf/flags.h	/^# define FLAGS_H$/;"	d
+FORM_INTERGER_H	includes/printf/label/form_interger.h	/^# define FORM_INTERGER_H$/;"	d
+FORM_PERCENT_H	includes/printf/label/form_percent.h	/^# define FORM_PERCENT_H$/;"	d
+F_H	includes/printf/conversion/f.h	/^# define F_H$/;"	d
+GET_CHAR_H	includes/printf/arg_get/get_char.h	/^# define GET_CHAR_H$/;"	d
+GET_DOUBLE_H	includes/printf/arg_get/get_double.h	/^# define GET_DOUBLE_H$/;"	d
+GET_INT_H	includes/printf/arg_get/get_int.h	/^# define GET_INT_H$/;"	d
+GET_LONG_H	includes/printf/arg_get/get_long.h	/^# define GET_LONG_H$/;"	d
+GET_NEXT_LINE_H	includes/get_next_line.h	/^# define GET_NEXT_LINE_H$/;"	d
+GET_STRING_H	includes/printf/arg_get/get_string.h	/^# define GET_STRING_H$/;"	d
+GET_VOID_H	includes/printf/arg_get/get_void.h	/^# define GET_VOID_H$/;"	d
+H	objs/_bonus/lstdelone.o	/^销睨/;"	v
+H	objs/_part1/memset.o	/^销睨/;"	v
+H	objs/_part2/memdel.o	/^销睨/;"	v
+H	objs/lists/lstd_clear.o	/^销睨/;"	v
+H	objs/printf/modifiers.o	/^销睨/;"	v
+H	objs/string/ftoa.o	/^/;"	v
+H	objs/table/table_map.o	/^销睨/;"	v
+Hc	objs/printf/color/color_format.o	/^销睨/;"	v
+INI_PRINTF_H	includes/printf/init/ini_printf.h	/^# define INI_PRINTF_H$/;"	d
+INT_MAX	includes/libft.h	/^#  define INT_MAX	/;"	d
+INT_MIN	includes/libft.h	/^#  define INT_MIN	/;"	d
+I_H	includes/printf/conversion/i.h	/^# define I_H$/;"	d
+L	objs/_part2/itoa.o	/^销睨/;"	v
+L	objs/hashtable/get.o	/^销睨/;"	v
+L	objs/string/ltoa.o	/^销睨/;"	v
+L9	objs/lists/lstd_pop_back.o	/^销睨/;"	v
+L9	objs/lists/lstd_pop_front.o	/^销睨/;"	v
+LIBFT_H	includes/libft.h	/^# define LIBFT_H$/;"	d
+LIST_COLOR1	includes/printf/color/replace_color.h	/^# define LIST_COLOR1	/;"	d
+LIST_COLOR2	includes/printf/color/replace_color.h	/^# define LIST_COLOR2	/;"	d
+LIST_COLOR3	includes/printf/color/replace_color.h	/^# define LIST_COLOR3	/;"	d
+LIST_COLOR4	includes/printf/color/replace_color.h	/^# define LIST_COLOR4	/;"	d
+LLONG_MAX	includes/libft.h	/^#  define LLONG_MAX	/;"	d
+LLONG_MIN	includes/libft.h	/^#  define LLONG_MIN	/;"	d
+LONG_MAX	includes/libft.h	/^#  define LONG_MAX	/;"	d
+LONG_MIN	includes/libft.h	/^#  define LONG_MIN	/;"	d
+MATHFT_H	includes/mathft.h	/^# define MATHFT_H$/;"	d
+MODIFIERS_H	includes/printf/modifiers.h	/^# define MODIFIERS_H$/;"	d
+NULL	includes/libft.h	/^#  define NULL	/;"	d
+NUMBER2_H	includes/printf/label/number2.h	/^# define NUMBER2_H$/;"	d
+NUMBER_H	includes/printf/label/number.h	/^# define NUMBER_H$/;"	d
+NUMBER_LEFT_H	includes/printf/label/number_left.h	/^# define NUMBER_LEFT_H$/;"	d
+O_H	includes/printf/conversion/o.h	/^# define O_H$/;"	d
+PRINTF_H	includes/printf/printf.h	/^# define PRINTF_H$/;"	d
+P_H	includes/printf/conversion/p.h	/^# define P_H$/;"	d
+REPLACE_COLOR_H	includes/printf/color/replace_color.h	/^# define REPLACE_COLOR_H$/;"	d
+STRERROR_H	includes/errno/strerror.h	/^# define STRERROR_H$/;"	d
+STRWLEN_PRINT_H	includes/printf/strwlen_print.h	/^# define STRWLEN_PRINT_H$/;"	d
+S_H	includes/printf/conversion/s.h	/^# define S_H$/;"	d
+TO_STRING_H	includes/printf/conversion/to_string.h	/^# define TO_STRING_H$/;"	d
+U_H	includes/printf/conversion/u.h	/^# define U_H$/;"	d
+WSTR_TO_STR_H	includes/printf/wstr_to_str.h	/^# define WSTR_TO_STR_H$/;"	d
+X	objs/lists/lstd_back.o	/^销睨/;"	v
+X	objs/lists/lstd_front.o	/^销睨/;"	v
+X_H	includes/printf/conversion/x.h	/^# define X_H$/;"	d
+__FT0	includes/libft.h	/^#  define __FT0	/;"	d
+__FT1	includes/libft.h	/^#  define __FT1	/;"	d
+__FT2	includes/libft.h	/^#  define __FT2	/;"	d
+__FT3	includes/libft.h	/^#  define __FT3	/;"	d
+__FT4	includes/libft.h	/^#  define __FT4	/;"	d
+__FT5	includes/libft.h	/^#  define __FT5	/;"	d
+add_char	srcs/printf/add/add_char.c	/^void			add_char(t_printf *t, unsigned char c)$/;"	f	signature:(t_printf *t, unsigned char c)
+add_string	srcs/printf/add/add_string.c	/^void			add_string(t_printf *t, char *s)$/;"	f	signature:(t_printf *t, char *s)
+add_wchar	srcs/printf/add/add_wchar.c	/^void	add_wchar(t_printf *t, wchar_t c)$/;"	f	signature:(t_printf *t, wchar_t c)
+alt	includes/printf/printf.h	/^	t_bool					alt;$/;"	m	struct:s_printf_flag	access:public
+arg_get_char	srcs/printf/arg_get/get_char.c	/^char			arg_get_char(t_printf *t)$/;"	f	signature:(t_printf *t)
+arg_get_double	srcs/printf/arg_get/get_double.c	/^double			arg_get_double(t_printf *t)$/;"	f	signature:(t_printf *t)
+arg_get_int	srcs/printf/arg_get/get_int.c	/^int				arg_get_int(t_printf *t)$/;"	f	signature:(t_printf *t)
+arg_get_long_int	srcs/printf/arg_get/get_long.c	/^long int				arg_get_long_int(t_printf *t)$/;"	f	signature:(t_printf *t)
+arg_get_long_long_int	srcs/printf/arg_get/get_long.c	/^long long int			arg_get_long_long_int(t_printf *t)$/;"	f	signature:(t_printf *t)
+arg_get_longdouble	srcs/printf/arg_get/get_double.c	/^long double		arg_get_longdouble(t_printf *t)$/;"	f	signature:(t_printf *t)
+arg_get_string	srcs/printf/arg_get/get_string.c	/^char		*arg_get_string(t_printf *t)$/;"	f	signature:(t_printf *t)
+arg_get_uchar	srcs/printf/arg_get/get_char.c	/^unsigned char	arg_get_uchar(t_printf *t)$/;"	f	signature:(t_printf *t)
+arg_get_uint	srcs/printf/arg_get/get_int.c	/^unsigned int	arg_get_uint(t_printf *t)$/;"	f	signature:(t_printf *t)
+arg_get_ulong	srcs/printf/arg_get/get_long.c	/^unsigned long			arg_get_ulong(t_printf *t)$/;"	f	signature:(t_printf *t)
+arg_get_ulong_int	srcs/printf/arg_get/get_long.c	/^unsigned long int		arg_get_ulong_int(t_printf *t)$/;"	f	signature:(t_printf *t)
+arg_get_ulong_long_int	srcs/printf/arg_get/get_long.c	/^unsigned long long int	arg_get_ulong_long_int(t_printf *t)$/;"	f	signature:(t_printf *t)
+arg_get_void	srcs/printf/arg_get/get_void.c	/^void	*arg_get_void(t_printf *t)$/;"	f	signature:(t_printf *t)
+arg_get_wchar	srcs/printf/arg_get/get_char.c	/^wchar_t			arg_get_wchar(t_printf *t)$/;"	f	signature:(t_printf *t)
+arg_get_wstring	srcs/printf/arg_get/get_string.c	/^wchar_t		*arg_get_wstring(t_printf *t)$/;"	f	signature:(t_printf *t)
+args	includes/printf/printf.h	/^	va_list					args;$/;"	m	struct:s_printf	access:public
+b	includes/printf/printf.h	/^	b,$/;"	e	enum:e_printf_conversion
+base	includes/printf/printf.h	/^	int						base;$/;"	m	struct:s_printf_flag	access:public
+big_b	includes/printf/printf.h	/^	big_b,$/;"	e	enum:e_printf_conversion
+big_c	includes/printf/printf.h	/^	big_c,$/;"	e	enum:e_printf_conversion
+big_d	includes/printf/printf.h	/^	big_d,$/;"	e	enum:e_printf_conversion
+big_f	includes/printf/printf.h	/^	big_f,$/;"	e	enum:e_printf_conversion
+big_o	includes/printf/printf.h	/^	big_o,$/;"	e	enum:e_printf_conversion
+big_s	includes/printf/printf.h	/^	big_s,$/;"	e	enum:e_printf_conversion
+big_u	includes/printf/printf.h	/^	big_u,$/;"	e	enum:e_printf_conversion
+big_x	includes/printf/printf.h	/^	big_x,$/;"	e	enum:e_printf_conversion
+buffer	includes/printf/printf.h	/^	char					*buffer;$/;"	m	struct:s_printf	access:public
+buffer_size	includes/printf/printf.h	/^	unsigned int			buffer_size;$/;"	m	struct:s_printf	access:public
+c	includes/printf/printf.h	/^	c,$/;"	e	enum:e_printf_conversion
+color_basic	srcs/printf/color/color_basic.c	/^void			color_basic(t_replace_color co)$/;"	f	signature:(t_replace_color co)
+color_fg_bg	srcs/printf/color/color_fg_bg.c	/^void		color_fg_bg(t_replace_color co)$/;"	f	signature:(t_replace_color co)
+color_format	srcs/printf/color/color_format.c	/^void			color_format(t_replace_color co)$/;"	f	signature:(t_replace_color co)
+concat	srcs/printf/color/concat.c	/^char	*concat(char *s1, int *len1, char *s2, int len2)$/;"	f	signature:(char *s1, int *len1, char *s2, int len2)
+concat2	srcs/printf/color/concat.c	/^char	*concat2(char *s1, int len1, char *s2, int len2)$/;"	f	signature:(char *s1, int len1, char *s2, int len2)
+content	includes/libft.h	/^	void			*content;$/;"	m	struct:s_list	access:public
+content_size	includes/libft.h	/^	size_t			content_size;$/;"	m	struct:s_list	access:public
+conversion_b	srcs/printf/conversion/b.c	/^void	conversion_b(t_printf *t)$/;"	f	signature:(t_printf *t)
+conversion_big_b	srcs/printf/conversion/b.c	/^void	conversion_big_b(t_printf *t)$/;"	f	signature:(t_printf *t)
+conversion_big_c	srcs/printf/conversion/c.c	/^void	conversion_big_c(t_printf *t)$/;"	f	signature:(t_printf *t)
+conversion_big_d	srcs/printf/conversion/big_d.c	/^void	conversion_big_d(t_printf *t)$/;"	f	signature:(t_printf *t)
+conversion_big_f	srcs/printf/conversion/f.c	/^void	conversion_big_f(t_printf *t)$/;"	f	signature:(t_printf *t)
+conversion_big_o	srcs/printf/conversion/big_o.c	/^void	conversion_big_o(t_printf *t)$/;"	f	signature:(t_printf *t)
+conversion_big_s	srcs/printf/conversion/s.c	/^void	conversion_big_s(t_printf *t)$/;"	f	signature:(t_printf *t)
+conversion_big_u	srcs/printf/conversion/u.c	/^void	conversion_big_u(t_printf *t)$/;"	f	signature:(t_printf *t)
+conversion_big_x	srcs/printf/conversion/big_x.c	/^void	conversion_big_x(t_printf *t)$/;"	f	signature:(t_printf *t)
+conversion_c	srcs/printf/conversion/c.c	/^void	conversion_c(t_printf *t)$/;"	f	signature:(t_printf *t)
+conversion_f	srcs/printf/conversion/f.c	/^void	conversion_f(t_printf *t)$/;"	f	signature:(t_printf *t)
+conversion_i	srcs/printf/conversion/i.c	/^void	conversion_i(t_printf *t)$/;"	f	signature:(t_printf *t)
+conversion_len	includes/printf/printf.h	/^	conversion_len$/;"	e	enum:e_printf_conversion
+conversion_o	srcs/printf/conversion/o.c	/^void	conversion_o(t_printf *t)$/;"	f	signature:(t_printf *t)
+conversion_p	srcs/printf/conversion/p.c	/^void	conversion_p(t_printf *t)$/;"	f	signature:(t_printf *t)
+conversion_s	srcs/printf/conversion/s.c	/^void	conversion_s(t_printf *t)$/;"	f	signature:(t_printf *t)
+conversion_u	srcs/printf/conversion/u.c	/^void	conversion_u(t_printf *t)$/;"	f	signature:(t_printf *t)
+conversion_x	srcs/printf/conversion/x.c	/^void	conversion_x(t_printf *t)$/;"	f	signature:(t_printf *t)
+d	includes/printf/printf.h	/^	d,$/;"	e	enum:e_printf_conversion
+data	includes/libft.h	/^	void			*data;$/;"	m	struct:s_hashtable_data	access:public
+data	includes/libft.h	/^	void			*data;$/;"	m	struct:s_listd	access:public
+e_bool	includes/libft.h	/^typedef enum		e_bool$/;"	g
+e_printf_conversion	includes/printf/printf.h	/^typedef enum				e_printf_conversion$/;"	g
+eof	includes/get_next_line.h	/^	int			eof;$/;"	m	struct:s_get_next_line	access:public
+f	includes/printf/printf.h	/^	f,$/;"	e	enum:e_printf_conversion
+false	includes/libft.h	/^	false,$/;"	e	enum:e_bool
+fd	includes/get_next_line.h	/^	int			fd;$/;"	m	struct:s_get_next_line	access:public
+fill_character	srcs/printf/add/fill_character.c	/^void	fill_character(t_printf *t, char c)$/;"	f	signature:(t_printf *t, char c)
+flags	includes/printf/printf.h	/^	t_printf_flag			flags;$/;"	m	struct:s_printf	access:public
+flags	srcs/printf/flags.c	/^t_bool			flags(t_printf *t, char **s)$/;"	f	signature:(t_printf *t, char **s)
+form_interger	srcs/printf/label/form_interger.c	/^void	form_interger(t_printf *t)$/;"	f	signature:(t_printf *t)
+form_percent	srcs/printf/label/form_percent.c	/^void	form_percent(t_printf *t)$/;"	f	signature:(t_printf *t)
+ft_abs	srcs/math/abs.c	/^unsigned long int	ft_abs(long int n)$/;"	f	signature:(long int n)
+ft_ahtoi	srcs/string/ahtoi.c	/^int			ft_ahtoi(const char *s)$/;"	f	signature:(const char *s)
+ft_aisf	srcs/string/aisf.c	/^t_bool	ft_aisf(const char *s)$/;"	f	signature:(const char *s)
+ft_aish	srcs/string/aish.c	/^t_bool	ft_aish(const char *s)$/;"	f	signature:(const char *s)
+ft_aisi	srcs/string/aisi.c	/^t_bool	ft_aisi(const char *s)$/;"	f	signature:(const char *s)
+ft_asprintf	srcs/printf/ft_asprintf.c	/^int				ft_asprintf(char **ret, const char *format, ...)$/;"	f	signature:(char **ret, const char *format, ...)
+ft_atof	srcs/string/atof.c	/^double	ft_atof(const char *s)$/;"	f	signature:(const char *s)
+ft_atoi	srcs/_part1/atoi.c	/^int			ft_atoi(const char *str)$/;"	f	signature:(const char *str)
+ft_atol	srcs/string/atol.c	/^long		ft_atol(const char *s)$/;"	f	signature:(const char *s)
+ft_basetoa	srcs/string/basetoa.c	/^char			*ft_basetoa(long long int n, char *base)$/;"	f	signature:(long long int n, char *base)
+ft_bzero	srcs/_part1/bzero.c	/^void	ft_bzero(void *s, size_t n)$/;"	f	signature:(void *s, size_t n)
+ft_do_op	srcs/math/do_op.c	/^double			ft_do_op(const char *s)$/;"	f	signature:(const char *s)
+ft_dprintf	srcs/printf/ft_printf.c	/^int				ft_dprintf(int fd, const char *format, ...)$/;"	f	signature:(int fd, const char *format, ...)
+ft_fabs	srcs/math/fabs.c	/^float	ft_fabs(float n)$/;"	f	signature:(float n)
+ft_ftoa	srcs/string/ftoa.c	/^char			*ft_ftoa(double n, long prec)$/;"	f	signature:(double n, long prec)
+ft_get_next_line	srcs/get_next_line.c	/^int						ft_get_next_line(const int fd, char **line)$/;"	f	signature:(const int fd, char **line)
+ft_hashtable_get	srcs/hashtable/get.c	/^void	*ft_hashtable_get(t_hashtable *ht, char *key)$/;"	f	signature:(t_hashtable *ht, char *key)
+ft_hashtable_new	srcs/hashtable/new.c	/^t_hashtable		*ft_hashtable_new(size_t size)$/;"	f	signature:(size_t size)
+ft_hashtable_set	srcs/hashtable/set.c	/^t_bool			ft_hashtable_set(t_hashtable **ht, char *key, void *data)$/;"	f	signature:(t_hashtable **ht, char *key, void *data)
+ft_hashtable_transform	srcs/hashtable/transform.c	/^unsigned long int	ft_hashtable_transform(t_hashtable *ht, char *key)$/;"	f	signature:(t_hashtable *ht, char *key)
+ft_isalnum	srcs/_part1/isalnum.c	/^int		ft_isalnum(int c)$/;"	f	signature:(int c)
+ft_isalpha	srcs/_part1/isalpha.c	/^int		ft_isalpha(int c)$/;"	f	signature:(int c)
+ft_isascii	srcs/_part1/isascii.c	/^int		ft_isascii(int c)$/;"	f	signature:(int c)
+ft_isdigit	srcs/_part1/isdigit.c	/^int		ft_isdigit(int c)$/;"	f	signature:(int c)
+ft_isprint	srcs/_part1/isprint.c	/^int		ft_isprint(int c)$/;"	f	signature:(int c)
+ft_isspace	srcs/_part2/strtrim.c	/^static int	ft_isspace(char c)$/;"	f	file:	signature:(char c)
+ft_itoa	srcs/_part2/itoa.c	/^char			*ft_itoa(int n)$/;"	f	signature:(int n)
+ft_lstadd	srcs/_bonus/lstadd.c	/^void	ft_lstadd(t_list **alst, t_list *new)$/;"	f	signature:(t_list **alst, t_list *new)
+ft_lstd_back	srcs/lists/lstd_back.c	/^t_listd		*ft_lstd_back(t_listd *lstd)$/;"	f	signature:(t_listd *lstd)
+ft_lstd_clear	srcs/lists/lstd_clear.c	/^void	ft_lstd_clear(t_listd **alst, void (*del)(void*))$/;"	f	signature:(t_listd **alst, void (*del)(void*))
+ft_lstd_del	srcs/lists/lstd_del.c	/^void	ft_lstd_del(t_listd **alst, void (*del)())$/;"	f	signature:(t_listd **alst, void (*del)())
+ft_lstd_do	srcs/lists/lstd_do.c	/^void	ft_lstd_do(t_listd **alst, int (*cmp)(),$/;"	f	signature:(t_listd **alst, int (*cmp)(), void (*action)(), int type)
+ft_lstd_front	srcs/lists/lstd_front.c	/^t_listd		*ft_lstd_front(t_listd *lstd)$/;"	f	signature:(t_listd *lstd)
+ft_lstd_get_last	srcs/lists/lstd_get_last.c	/^t_listd		*ft_lstd_get_last(t_listd *alst)$/;"	f	signature:(t_listd *alst)
+ft_lstd_map	srcs/lists/lstd_map.c	/^void	ft_lstd_map(t_listd **alst, void (*map)())$/;"	f	signature:(t_listd **alst, void (*map)())
+ft_lstd_new	srcs/lists/lstd_new.c	/^void	ft_lstd_new(t_listd **alst, void *new)$/;"	f	signature:(t_listd **alst, void *new)
+ft_lstd_pop_back	srcs/lists/lstd_pop_back.c	/^void	ft_lstd_pop_back(t_listd **alst, void (*del)(void*))$/;"	f	signature:(t_listd **alst, void (*del)(void*))
+ft_lstd_pop_front	srcs/lists/lstd_pop_front.c	/^void	ft_lstd_pop_front(t_listd **alst, void (*del)())$/;"	f	signature:(t_listd **alst, void (*del)())
+ft_lstd_push_after	srcs/lists/lstd_push_after.c	/^void	ft_lstd_push_after(t_listd **alst, void *new)$/;"	f	signature:(t_listd **alst, void *new)
+ft_lstd_push_back	srcs/lists/lstd_push_back.c	/^void	ft_lstd_push_back(t_listd **alst, void *new)$/;"	f	signature:(t_listd **alst, void *new)
+ft_lstd_push_before	srcs/lists/lstd_push_before.c	/^void	ft_lstd_push_before(t_listd **alst, void *new)$/;"	f	signature:(t_listd **alst, void *new)
+ft_lstd_push_cond	srcs/lists/lstd_push_cond.c	/^void	ft_lstd_push_cond(t_listd **alst, void *new,$/;"	f	signature:(t_listd **alst, void *new, int (*cond)())
+ft_lstd_push_front	srcs/lists/lstd_push_front.c	/^void	ft_lstd_push_front(t_listd **alst, void *new)$/;"	f	signature:(t_listd **alst, void *new)
+ft_lstd_rmap	srcs/lists/lstd_rmap.c	/^void	ft_lstd_rmap(t_listd **alst, void (*map)(void*))$/;"	f	signature:(t_listd **alst, void (*map)(void*))
+ft_lstd_size	srcs/lists/lstd_size.c	/^size_t	ft_lstd_size(t_listd *lstd)$/;"	f	signature:(t_listd *lstd)
+ft_lstdel	srcs/_bonus/lstdel.c	/^void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))$/;"	f	signature:(t_list **alst, void (*del)(void *, size_t))
+ft_lstdelone	srcs/_bonus/lstdelone.c	/^void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t))$/;"	f	signature:(t_list **alst, void (*del)(void*, size_t))
+ft_lstiter	srcs/_bonus/lstiter.c	/^void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))$/;"	f	signature:(t_list *lst, void (*f)(t_list *elem))
+ft_lstmap	srcs/_bonus/lstmap.c	/^t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))$/;"	f	signature:(t_list *lst, t_list *(*f)(t_list *elem))
+ft_lstnew	srcs/_bonus/lstnew.c	/^t_list	*ft_lstnew(void const *content, size_t content_size)$/;"	f	signature:(void const *content, size_t content_size)
+ft_ltoa	srcs/string/ltoa.c	/^char			*ft_ltoa(long n)$/;"	f	signature:(long n)
+ft_max	srcs/math/max.c	/^int		ft_max(int a, int b)$/;"	f	signature:(int a, int b)
+ft_memalloc	srcs/_part2/memalloc.c	/^void	*ft_memalloc(size_t size)$/;"	f	signature:(size_t size)
+ft_memccpy	srcs/_part1/memccpy.c	/^void	*ft_memccpy(void *s1, const void *s2, int c, size_t n)$/;"	f	signature:(void *s1, const void *s2, int c, size_t n)
+ft_memchr	srcs/_part1/memchr.c	/^void	*ft_memchr(const void *s, int c, size_t n)$/;"	f	signature:(const void *s, int c, size_t n)
+ft_memcmp	srcs/_part1/memcmp.c	/^int		ft_memcmp(const void *s1, const void *s2, size_t n)$/;"	f	signature:(const void *s1, const void *s2, size_t n)
+ft_memcpy	srcs/_part1/memcpy.c	/^void	*ft_memcpy(void *s1, const void *s2, size_t n)$/;"	f	signature:(void *s1, const void *s2, size_t n)
+ft_memdel	srcs/_part2/memdel.c	/^void	ft_memdel(void **ap)$/;"	f	signature:(void **ap)
+ft_memmove	srcs/_part1/memmove.c	/^void	*ft_memmove(void *s1, const void *s2, size_t n)$/;"	f	signature:(void *s1, const void *s2, size_t n)
+ft_memset	srcs/_part1/memset.c	/^void	*ft_memset(void *b, int c, size_t len)$/;"	f	signature:(void *b, int c, size_t len)
+ft_min	srcs/math/min.c	/^int		ft_min(int a, int b)$/;"	f	signature:(int a, int b)
+ft_pow	srcs/math/pow.c	/^int		ft_pow(int base, int pow)$/;"	f	signature:(int base, int pow)
+ft_printf	srcs/printf/ft_printf.c	/^int				ft_printf(const char *format, ...)$/;"	f	signature:(const char *format, ...)
+ft_putchar	srcs/_part2/putchar.c	/^int		ft_putchar(int c)$/;"	f	signature:(int c)
+ft_putchar_fd	srcs/_part2/putchar_fd.c	/^int		ft_putchar_fd(char c, int fd)$/;"	f	signature:(char c, int fd)
+ft_putendl	srcs/_part2/putendl.c	/^void	ft_putendl(char const *s)$/;"	f	signature:(char const *s)
+ft_putendl_fd	srcs/_part2/putendl_fd.c	/^void	ft_putendl_fd(char const *s, int fd)$/;"	f	signature:(char const *s, int fd)
+ft_putiendl	srcs/infinite/putiendl.c	/^void		ft_putiendl(char *s, ...)$/;"	f	signature:(char *s, ...)
+ft_putiendl_fd	srcs/infinite/putiendl_fd.c	/^void		ft_putiendl_fd(int fd, char *s, ...)$/;"	f	signature:(int fd, char *s, ...)
+ft_putistr	srcs/infinite/putistr.c	/^void		ft_putistr(char *s, ...)$/;"	f	signature:(char *s, ...)
+ft_putistr_fd	srcs/infinite/putistr_fd.c	/^void		ft_putistr_fd(int fd, char *s, ...)$/;"	f	signature:(int fd, char *s, ...)
+ft_putnbr	srcs/_part2/putnbr.c	/^void	ft_putnbr(int n)$/;"	f	signature:(int n)
+ft_putnbr_fd	srcs/_part2/putnbr_fd.c	/^void	ft_putnbr_fd(int n, int fd)$/;"	f	signature:(int n, int fd)
+ft_putstr	srcs/_part2/putstr.c	/^void	ft_putstr(char const *s)$/;"	f	signature:(char const *s)
+ft_putstr_fd	srcs/_part2/putstr_fd.c	/^void	ft_putstr_fd(char const *s, int fd)$/;"	f	signature:(char const *s, int fd)
+ft_sprintf	srcs/printf/ft_asprintf.c	/^int				ft_sprintf(char *ret, const char *format, ...)$/;"	f	signature:(char *ret, const char *format, ...)
+ft_sqrt	srcs/math/sqrt.c	/^float	ft_sqrt(float x)$/;"	f	signature:(float x)
+ft_straddchar	srcs/string/straddchar.c	/^void	ft_straddchar(char **s, const char c)$/;"	f	signature:(char **s, const char c)
+ft_strcat	srcs/_part1/strcat.c	/^char	*ft_strcat(char *s1, const char *s2)$/;"	f	signature:(char *s1, const char *s2)
+ft_strchr	srcs/_part1/strchr.c	/^char	*ft_strchr(const char *s, int c)$/;"	f	signature:(const char *s, int c)
+ft_strclr	srcs/_part2/strclr.c	/^void	ft_strclr(char *s)$/;"	f	signature:(char *s)
+ft_strcmp	srcs/_part1/strcmp.c	/^int		ft_strcmp(const char *s1, const char *s2)$/;"	f	signature:(const char *s1, const char *s2)
+ft_strcpy	srcs/_part1/strcpy.c	/^char	*ft_strcpy(char *s1, const char *s2)$/;"	f	signature:(char *s1, const char *s2)
+ft_strdel	srcs/_part2/strdel.c	/^void	ft_strdel(char **as)$/;"	f	signature:(char **as)
+ft_strdup	srcs/_part1/strdup.c	/^char	*ft_strdup(const char *s1)$/;"	f	signature:(const char *s1)
+ft_strequ	srcs/_part2/strequ.c	/^int		ft_strequ(char const *s1, char const *s2)$/;"	f	signature:(char const *s1, char const *s2)
+ft_strerr	srcs/errno/strerror.c	/^char	*ft_strerr(int err)$/;"	f	signature:(int err)
+ft_strerror	srcs/errno/strerror.c	/^char	*ft_strerror(void)$/;"	f	signature:(void)
+ft_stridel	srcs/infinite/stridel.c	/^void	ft_stridel(char **s, ...)$/;"	f	signature:(char **s, ...)
+ft_strijoin	srcs/infinite/strijoin.c	/^char	*ft_strijoin(char *s, ...)$/;"	f	signature:(char *s, ...)
+ft_strijoind	srcs/infinite/strijoind.c	/^char	*ft_strijoind(char *s, ...)$/;"	f	signature:(char *s, ...)
+ft_striter	srcs/_part2/striter.c	/^void	ft_striter(char *s, void (*f)(char *))$/;"	f	signature:(char *s, void (*f)(char *))
+ft_striteri	srcs/_part2/striteri.c	/^void	ft_striteri(char *s, void (*f)(unsigned int, char *))$/;"	f	signature:(char *s, void (*f)(unsigned int, char *))
+ft_strjoin	srcs/_part2/strjoin.c	/^char	*ft_strjoin(char const *s1, char const *s2)$/;"	f	signature:(char const *s1, char const *s2)
+ft_strlcat	srcs/_part1/strlcat.c	/^size_t	ft_strlcat(char *dst, const char *src, size_t size)$/;"	f	signature:(char *dst, const char *src, size_t size)
+ft_strlen	srcs/_part1/strlen.c	/^size_t	ft_strlen(const char *s)$/;"	f	signature:(const char *s)
+ft_strmap	srcs/_part2/strmap.c	/^char	*ft_strmap(char const *s, char (*f)(char))$/;"	f	signature:(char const *s, char (*f)(char))
+ft_strmapi	srcs/_part2/strmapi.c	/^char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))$/;"	f	signature:(char const *s, char (*f)(unsigned int, char))
+ft_strncat	srcs/_part1/strncat.c	/^char	*ft_strncat(char *s1, char *s2, size_t n)$/;"	f	signature:(char *s1, char *s2, size_t n)
+ft_strncmp	srcs/_part1/strncmp.c	/^int		ft_strncmp(const char *s1, const char *s2, size_t n)$/;"	f	signature:(const char *s1, const char *s2, size_t n)
+ft_strncpy	srcs/_part1/strncpy.c	/^char	*ft_strncpy(char *s1, const char *s2, size_t n)$/;"	f	signature:(char *s1, const char *s2, size_t n)
+ft_strnequ	srcs/_part2/strnequ.c	/^int		ft_strnequ(char const *s1, char const *s2, size_t n)$/;"	f	signature:(char const *s1, char const *s2, size_t n)
+ft_strnew	srcs/_part2/strnew.c	/^char	*ft_strnew(size_t size)$/;"	f	signature:(size_t size)
+ft_strnstr	srcs/_part1/strnstr.c	/^char			*ft_strnstr(const char *s1, const char *s2, size_t n)$/;"	f	signature:(const char *s1, const char *s2, size_t n)
+ft_strrchr	srcs/_part1/strrchr.c	/^char	*ft_strrchr(const char *s, int c)$/;"	f	signature:(const char *s, int c)
+ft_strreplace	srcs/string/strreplace.c	/^char	*ft_strreplace(char *src, char *key, char *rep, size_t start)$/;"	f	signature:(char *src, char *key, char *rep, size_t start)
+ft_strsplit	srcs/_part2/strsplit.c	/^char			**ft_strsplit(char const *s, char c)$/;"	f	signature:(char const *s, char c)
+ft_strsplit_tolist	srcs/string/strsplit_tolist.c	/^t_listd			*ft_strsplit_tolist(char const *s, char c)$/;"	f	signature:(char const *s, char c)
+ft_strstr	srcs/_part1/strstr.c	/^char	*ft_strstr(const char *s1, const char *s2)$/;"	f	signature:(const char *s1, const char *s2)
+ft_strsub	srcs/_part2/strsub.c	/^char	*ft_strsub(char const *s, unsigned int start, size_t len)$/;"	f	signature:(char const *s, unsigned int start, size_t len)
+ft_strtable_clear	srcs/strtable/strtable_clear.c	/^void	ft_strtable_clear(char ***atbl)$/;"	f	signature:(char ***atbl)
+ft_strtable_del_at_index	srcs/strtable/strtable_del_at_index.c	/^void	ft_strtable_del_at_index(char ***atbl, size_t index)$/;"	f	signature:(char ***atbl, size_t index)
+ft_strtable_del_at_ptr	srcs/strtable/strtable_del_at_ptr.c	/^void	ft_strtable_del_at_ptr(char ***atbl, void *ptr)$/;"	f	signature:(char ***atbl, void *ptr)
+ft_strtable_map	srcs/strtable/strtable_map.c	/^void	ft_strtable_map(char **tbl, void (*map)())$/;"	f	signature:(char **tbl, void (*map)())
+ft_strtable_pop_back	srcs/strtable/strtable_pop_back.c	/^void	ft_strtable_pop_back(char ***atbl)$/;"	f	signature:(char ***atbl)
+ft_strtable_pop_front	srcs/strtable/strtable_pop_front.c	/^void	ft_strtable_pop_front(char ***atbl)$/;"	f	signature:(char ***atbl)
+ft_strtable_push_at_index	srcs/strtable/strtable_push_at_index.c	/^void	ft_strtable_push_at_index(char ***atbl, void *new,$/;"	f	signature:(char ***atbl, void *new, size_t index)
+ft_strtable_push_back	srcs/strtable/strtable_push_back.c	/^void	ft_strtable_push_back(char ***atbl, void *new)$/;"	f	signature:(char ***atbl, void *new)
+ft_strtable_push_cond	srcs/strtable/strtable_push_cond.c	/^void	ft_strtable_push_cond(char ***atbl, void *new,$/;"	f	signature:(char ***atbl, void *new, int (*cond)())
+ft_strtable_push_front	srcs/strtable/strtable_push_front.c	/^void	ft_strtable_push_front(char ***atbl, void *new)$/;"	f	signature:(char ***atbl, void *new)
+ft_strtable_rmap	srcs/strtable/strtable_rmap.c	/^void	ft_strtable_rmap(char **tbl, void (*map)())$/;"	f	signature:(char **tbl, void (*map)())
+ft_strtable_size	srcs/strtable/strtable_size.c	/^size_t	ft_strtable_size(char **strtable)$/;"	f	signature:(char **strtable)
+ft_strtrim	srcs/_part2/strtrim.c	/^char		*ft_strtrim(char const *s)$/;"	f	signature:(char const *s)
+ft_table_clear	srcs/table/table_clear.c	/^void	ft_table_clear(void ***atbl, void (*del)())$/;"	f	signature:(void ***atbl, void (*del)())
+ft_table_del_at_index	srcs/table/table_del_at_index.c	/^void	ft_table_del_at_index(void ***atbl, size_t index,$/;"	f	signature:(void ***atbl, size_t index, void (*del)())
+ft_table_del_at_ptr	srcs/table/table_del_at_ptr.c	/^void	ft_table_del_at_ptr(void ***atbl, void *ptr,$/;"	f	signature:(void ***atbl, void *ptr, void (*del)())
+ft_table_map	srcs/table/table_map.c	/^void	ft_table_map(void **tbl, void (*map)())$/;"	f	signature:(void **tbl, void (*map)())
+ft_table_new	srcs/table/table_new.c	/^void	ft_table_new(void ***atbl, void *new)$/;"	f	signature:(void ***atbl, void *new)
+ft_table_pop_back	srcs/table/table_pop_back.c	/^void	ft_table_pop_back(void ***atbl, void (*del)())$/;"	f	signature:(void ***atbl, void (*del)())
+ft_table_pop_front	srcs/table/table_pop_front.c	/^void	ft_table_pop_front(void ***atbl, void (*del)())$/;"	f	signature:(void ***atbl, void (*del)())
+ft_table_push_at_index	srcs/table/table_push_at_index.c	/^void	ft_table_push_at_index(void ***atbl, void *new, size_t index)$/;"	f	signature:(void ***atbl, void *new, size_t index)
+ft_table_push_back	srcs/table/table_push_back.c	/^void	ft_table_push_back(void ***atbl, void *new)$/;"	f	signature:(void ***atbl, void *new)
+ft_table_push_cond	srcs/table/table_push_cond.c	/^void	ft_table_push_cond(void ***atbl, void *new,$/;"	f	signature:(void ***atbl, void *new, int (*cond)())
+ft_table_push_front	srcs/table/table_push_front.c	/^void	ft_table_push_front(void ***atbl, void *new)$/;"	f	signature:(void ***atbl, void *new)
+ft_table_rmap	srcs/table/table_rmap.c	/^void	ft_table_rmap(void **tbl, void (*map)())$/;"	f	signature:(void **tbl, void (*map)())
+ft_table_size	srcs/table/table_size.c	/^size_t	ft_table_size(void **tbl)$/;"	f	signature:(void **tbl)
+ft_tolower	srcs/_part1/tolower.c	/^int		ft_tolower(int c)$/;"	f	signature:(int c)
+ft_toupper	srcs/_part1/toupper.c	/^int		ft_toupper(int c)$/;"	f	signature:(int c)
+ft_ubasetoa	srcs/string/ubasetoa.c	/^char			*ft_ubasetoa(unsigned long int n, char *base)$/;"	f	signature:(unsigned long int n, char *base)
+group	includes/printf/printf.h	/^	t_bool					group;$/;"	m	struct:s_printf_flag	access:public
+h	objs/_part2/memdel.o	/^销睨/;"	v
+h	objs/_part2/strsub.o	/^销睨/;"	v
+h	objs/printf/strwlen_print.o	/^销睨/;"	v
+h	objs/table/table_map.o	/^销睨/;"	v
+i	includes/printf/color/replace_color.h	/^	int			*i;$/;"	m	struct:s_replace_color	access:public
+i	includes/printf/printf.h	/^	i,$/;"	e	enum:e_printf_conversion
+ini_flags	srcs/printf/init/ini_printf.c	/^void				ini_flags(t_printf *t)$/;"	f	signature:(t_printf *t)
+ini_printf	srcs/printf/init/ini_printf.c	/^t_printf			*ini_printf(void)$/;"	f	signature:(void)
+ini_strerror	srcs/errno/ini_strerror.c	/^void			ini_strerror(char ***at)$/;"	f	signature:(char ***at)
+is_char	includes/printf/printf.h	/^	t_bool					is_char;$/;"	m	struct:s_printf_flag	access:public
+is_long	includes/printf/printf.h	/^	t_bool					is_long;$/;"	m	struct:s_printf_flag	access:public
+is_long_double	includes/printf/printf.h	/^	t_bool					is_long_double;$/;"	m	struct:s_printf_flag	access:public
+is_negative	includes/printf/printf.h	/^	t_bool					is_negative;$/;"	m	struct:s_printf_flag	access:public
+is_short	includes/printf/printf.h	/^	t_bool					is_short;$/;"	m	struct:s_printf_flag	access:public
+key	includes/libft.h	/^	char			*key;$/;"	m	struct:s_hashtable_data	access:public
+left	includes/printf/printf.h	/^	t_bool					left;$/;"	m	struct:s_printf_flag	access:public
+len	includes/printf/color/replace_color.h	/^	int			*len;$/;"	m	struct:s_replace_color	access:public
+len	includes/printf/printf.h	/^	int						len;$/;"	m	struct:s_printf	access:public
+longdouble	includes/printf/printf.h	/^	double					longdouble;$/;"	m	union:u_number	access:public
+longlong	includes/printf/printf.h	/^	unsigned long long int	longlong;$/;"	m	union:u_number	access:public
+modifiers	srcs/printf/modifiers.c	/^t_bool			modifiers(t_printf *t, char **s)$/;"	f	signature:(t_printf *t, char **s)
+next	includes/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list::s_list	access:public
+next	includes/libft.h	/^	struct s_listd	*next;$/;"	m	struct:s_listd	typeref:struct:s_listd::s_listd	access:public
+number	includes/printf/printf.h	/^	t_number				number;$/;"	m	struct:s_printf_flag	access:public
+number	srcs/printf/label/number.c	/^void			number(t_printf *t)$/;"	f	signature:(t_printf *t)
+number_left	srcs/printf/label/number_left.c	/^void			number_left(t_printf *t)$/;"	f	signature:(t_printf *t)
+number_type	srcs/printf/label/number2.c	/^void			number_type(t_printf *t)$/;"	f	signature:(t_printf *t)
+o	includes/printf/printf.h	/^	o,$/;"	e	enum:e_printf_conversion
+p	includes/printf/printf.h	/^	p,$/;"	e	enum:e_printf_conversion
+pad	includes/printf/printf.h	/^	char					pad;$/;"	m	struct:s_printf_flag	access:public
+percent	includes/printf/printf.h	/^	percent = 0,$/;"	e	enum:e_printf_conversion
+prec	includes/printf/printf.h	/^	int						prec;$/;"	m	struct:s_printf_flag	access:public
+prev	includes/libft.h	/^	struct s_listd	*prev;$/;"	m	struct:s_listd	typeref:struct:s_listd::s_listd	access:public
+ptr_funcs	includes/printf/printf.h	/^	t_ptr_flag_func			ptr_funcs[conversion_len];$/;"	m	struct:s_printf	access:public
+replace_color	srcs/printf/color/replace_color.c	/^void			replace_color(t_printf *t, char *s, int len)$/;"	f	signature:(t_printf *t, char *s, int len)
+s	includes/printf/printf.h	/^	s,$/;"	e	enum:e_printf_conversion
+s_add_i	srcs/math/do_op.c	/^static size_t	*s_add_i(const char *s, size_t *i)$/;"	f	file:	signature:(const char *s, size_t *i)
+s_add_wchar_in_str	srcs/printf/wstr_to_str.c	/^static size_t	s_add_wchar_in_str(char **s, wchar_t wc, size_t j)$/;"	f	file:	signature:(char **s, wchar_t wc, size_t j)
+s_alt	srcs/printf/label/number.c	/^static void		s_alt(t_printf *t)$/;"	f	file:	signature:(t_printf *t)
+s_alt	srcs/printf/label/number_left.c	/^static void		s_alt(t_printf *t)$/;"	f	file:	signature:(t_printf *t)
+s_calcul	srcs/math/do_op.c	/^static double	s_calcul(const char *s, size_t *i)$/;"	f	file:	signature:(const char *s, size_t *i)
+s_check_action	srcs/printf/ft_asprintf.c	/^static void		s_check_action(t_printf *t, char **s)$/;"	f	file:	signature:(t_printf *t, char **s)
+s_check_action	srcs/printf/ft_printf.c	/^static void		s_check_action(t_printf *t, char **s)$/;"	f	file:	signature:(t_printf *t, char **s)
+s_check_conversion	srcs/printf/ft_asprintf.c	/^static t_bool	s_check_conversion(t_printf *t, char **s)$/;"	f	file:	signature:(t_printf *t, char **s)
+s_check_conversion	srcs/printf/ft_printf.c	/^static t_bool	s_check_conversion(t_printf *t, char **s)$/;"	f	file:	signature:(t_printf *t, char **s)
+s_check_opt	srcs/printf/color/replace_color.c	/^static t_bool	s_check_opt(char *s, int len)$/;"	f	file:	signature:(char *s, int len)
+s_clean	srcs/get_next_line.c	/^static t_get_next_line	*s_clean(t_get_next_line *n)$/;"	f	file:	signature:(t_get_next_line *n)
+s_count_word	srcs/_part2/strsplit.c	/^static size_t	s_count_word(char const *s, char c)$/;"	f	file:	signature:(char const *s, char c)
+s_doublestrchr	srcs/get_next_line.c	/^static char				*s_doublestrchr(char *str, char c1, char c2)$/;"	f	file:	signature:(char *str, char c1, char c2)
+s_fd_in_list	srcs/get_next_line.c	/^static t_get_next_line	*s_fd_in_list(t_listd **alist, int fd)$/;"	f	file:	signature:(t_listd **alist, int fd)
+s_flags	srcs/printf/label/number.c	/^static void		s_flags(t_printf *t)$/;"	f	file:	signature:(t_printf *t)
+s_flags	srcs/printf/label/number_left.c	/^static void		s_flags(t_printf *t)$/;"	f	file:	signature:(t_printf *t)
+s_flags_1	srcs/printf/flags.c	/^static t_bool	s_flags_1(t_printf *t, char **s)$/;"	f	file:	signature:(t_printf *t, char **s)
+s_flags_2	srcs/printf/flags.c	/^static t_bool	s_flags_2(t_printf *t, char **s)$/;"	f	file:	signature:(t_printf *t, char **s)
+s_flags_3	srcs/printf/flags.c	/^static t_bool	s_flags_3(t_printf *t, char **s)$/;"	f	file:	signature:(t_printf *t, char **s)
+s_flags_4	srcs/printf/flags.c	/^static t_bool	s_flags_4(t_printf *t, char **s)$/;"	f	file:	signature:(t_printf *t, char **s)
+s_float_check	srcs/printf/label/number2.c	/^static void		s_float_check(t_printf *t)$/;"	f	file:	signature:(t_printf *t)
+s_get_next_line	includes/get_next_line.h	/^typedef struct	s_get_next_line$/;"	s
+s_get_next_line::eof	includes/get_next_line.h	/^	int			eof;$/;"	m	struct:s_get_next_line	access:public
+s_get_next_line::fd	includes/get_next_line.h	/^	int			fd;$/;"	m	struct:s_get_next_line	access:public
+s_get_next_line::str	includes/get_next_line.h	/^	char		*str;$/;"	m	struct:s_get_next_line	access:public
+s_get_pprec	srcs/string/ftoa.c	/^long int		s_get_pprec(long prec)$/;"	f	signature:(long prec)
+s_hashtable	includes/libft.h	/^typedef struct		s_hashtable$/;"	s
+s_hashtable::size	includes/libft.h	/^	size_t			size;$/;"	m	struct:s_hashtable	access:public
+s_hashtable::table	includes/libft.h	/^	t_listd			**table;$/;"	m	struct:s_hashtable	access:public
+s_hashtable_data	includes/libft.h	/^typedef struct		s_hashtable_data$/;"	s
+s_hashtable_data::data	includes/libft.h	/^	void			*data;$/;"	m	struct:s_hashtable_data	access:public
+s_hashtable_data::key	includes/libft.h	/^	char			*key;$/;"	m	struct:s_hashtable_data	access:public
+s_if_flags	srcs/printf/label/number.c	/^static void		s_if_flags(t_printf *t)$/;"	f	file:	signature:(t_printf *t)
+s_if_key_exist	srcs/hashtable/set.c	/^static t_bool	s_if_key_exist(t_listd *l, char *key)$/;"	f	file:	signature:(t_listd *l, char *key)
+s_ini_ptr_functions	srcs/printf/init/ini_printf.c	/^static void			s_ini_ptr_functions(t_printf **ptr)$/;"	f	file:	signature:(t_printf **ptr)
+s_ini_strerror1	srcs/errno/ini_strerror.c	/^static void		s_ini_strerror1(char ***at)$/;"	f	file:	signature:(char ***at)
+s_ini_strerror2	srcs/errno/ini_strerror.c	/^static void		s_ini_strerror2(char ***at)$/;"	f	file:	signature:(char ***at)
+s_ini_strerror3	srcs/errno/ini_strerror.c	/^static void		s_ini_strerror3(char ***at)$/;"	f	file:	signature:(char ***at)
+s_ini_strerror4	srcs/errno/ini_strerror.c	/^static void		s_ini_strerror4(char ***at)$/;"	f	file:	signature:(char ***at)
+s_is_alpha	srcs/string/ahtoi.c	/^static int	s_is_alpha(int c)$/;"	f	file:	signature:(int c)
+s_is_specialchar	srcs/string/ahtoi.c	/^static int	s_is_specialchar(int c)$/;"	f	file:	signature:(int c)
+s_is_specialchar	srcs/string/atol.c	/^static int	s_is_specialchar(int c)$/;"	f	file:	signature:(int c)
+s_len_word	srcs/_part2/strsplit.c	/^static size_t	s_len_word(char const *s, char c)$/;"	f	file:	signature:(char const *s, char c)
+s_len_word	srcs/string/strsplit_tolist.c	/^static size_t	s_len_word(char const *s, char c)$/;"	f	file:	signature:(char const *s, char c)
+s_list	includes/libft.h	/^typedef struct		s_list$/;"	s
+s_list::content	includes/libft.h	/^	void			*content;$/;"	m	struct:s_list	access:public
+s_list::content_size	includes/libft.h	/^	size_t			content_size;$/;"	m	struct:s_list	access:public
+s_list::next	includes/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list::s_list	access:public
+s_listd	includes/libft.h	/^typedef struct		s_listd$/;"	s
+s_listd::data	includes/libft.h	/^	void			*data;$/;"	m	struct:s_listd	access:public
+s_listd::next	includes/libft.h	/^	struct s_listd	*next;$/;"	m	struct:s_listd	typeref:struct:s_listd::s_listd	access:public
+s_listd::prev	includes/libft.h	/^	struct s_listd	*prev;$/;"	m	struct:s_listd	typeref:struct:s_listd::s_listd	access:public
+s_malloc_printf	srcs/printf/init/ini_printf.c	/^static t_printf		*s_malloc_printf(void)$/;"	f	file:	signature:(void)
+s_modifiers_1	srcs/printf/modifiers.c	/^static t_bool	s_modifiers_1(t_printf *t, char **s)$/;"	f	file:	signature:(t_printf *t, char **s)
+s_modifiers_2	srcs/printf/modifiers.c	/^static t_bool	s_modifiers_2(t_printf *t, char **s)$/;"	f	file:	signature:(t_printf *t, char **s)
+s_mul_div	srcs/math/do_op.c	/^static double	s_mul_div(const char *s, size_t *i)$/;"	f	file:	signature:(const char *s, size_t *i)
+s_mult_repeat	srcs/string/atof.c	/^size_t	s_mult_repeat(size_t base, int number)$/;"	f	signature:(size_t base, int number)
+s_new_buffer	srcs/printf/add/add_char.c	/^static void		s_new_buffer(t_printf *t, unsigned char c)$/;"	f	file:	signature:(t_printf *t, unsigned char c)
+s_new_buffer	srcs/printf/add/add_string.c	/^static void		s_new_buffer(t_printf *t, char *s)$/;"	f	file:	signature:(t_printf *t, char *s)
+s_not_left	srcs/printf/label/number.c	/^static void		s_not_left(t_printf *t)$/;"	f	file:	signature:(t_printf *t)
+s_point	srcs/string/ftoa.c	/^static void		s_point(long t, long int pprec, long prec, char **str)$/;"	f	file:	signature:(long t, long int pprec, long prec, char **str)
+s_printf	includes/printf/printf.h	/^typedef struct				s_printf$/;"	s
+s_printf	srcs/printf/ft_asprintf.c	/^static void		s_printf(t_printf *t, char *s)$/;"	f	file:	signature:(t_printf *t, char *s)
+s_printf	srcs/printf/ft_printf.c	/^static void		s_printf(t_printf *t, char *s)$/;"	f	file:	signature:(t_printf *t, char *s)
+s_printf::args	includes/printf/printf.h	/^	va_list					args;$/;"	m	struct:s_printf	access:public
+s_printf::buffer	includes/printf/printf.h	/^	char					*buffer;$/;"	m	struct:s_printf	access:public
+s_printf::buffer_size	includes/printf/printf.h	/^	unsigned int			buffer_size;$/;"	m	struct:s_printf	access:public
+s_printf::flags	includes/printf/printf.h	/^	t_printf_flag			flags;$/;"	m	struct:s_printf	access:public
+s_printf::len	includes/printf/printf.h	/^	int						len;$/;"	m	struct:s_printf	access:public
+s_printf::ptr_funcs	includes/printf/printf.h	/^	t_ptr_flag_func			ptr_funcs[conversion_len];$/;"	m	struct:s_printf	access:public
+s_printf::work_buffer	includes/printf/printf.h	/^	char					*work_buffer;$/;"	m	struct:s_printf	access:public
+s_printf_flag	includes/printf/printf.h	/^typedef struct				s_printf_flag$/;"	s
+s_printf_flag::alt	includes/printf/printf.h	/^	t_bool					alt;$/;"	m	struct:s_printf_flag	access:public
+s_printf_flag::base	includes/printf/printf.h	/^	int						base;$/;"	m	struct:s_printf_flag	access:public
+s_printf_flag::group	includes/printf/printf.h	/^	t_bool					group;$/;"	m	struct:s_printf_flag	access:public
+s_printf_flag::is_char	includes/printf/printf.h	/^	t_bool					is_char;$/;"	m	struct:s_printf_flag	access:public
+s_printf_flag::is_long	includes/printf/printf.h	/^	t_bool					is_long;$/;"	m	struct:s_printf_flag	access:public
+s_printf_flag::is_long_double	includes/printf/printf.h	/^	t_bool					is_long_double;$/;"	m	struct:s_printf_flag	access:public
+s_printf_flag::is_negative	includes/printf/printf.h	/^	t_bool					is_negative;$/;"	m	struct:s_printf_flag	access:public
+s_printf_flag::is_short	includes/printf/printf.h	/^	t_bool					is_short;$/;"	m	struct:s_printf_flag	access:public
+s_printf_flag::left	includes/printf/printf.h	/^	t_bool					left;$/;"	m	struct:s_printf_flag	access:public
+s_printf_flag::number	includes/printf/printf.h	/^	t_number				number;$/;"	m	struct:s_printf_flag	access:public
+s_printf_flag::pad	includes/printf/printf.h	/^	char					pad;$/;"	m	struct:s_printf_flag	access:public
+s_printf_flag::prec	includes/printf/printf.h	/^	int						prec;$/;"	m	struct:s_printf_flag	access:public
+s_printf_flag::showsign	includes/printf/printf.h	/^	t_bool					showsign;$/;"	m	struct:s_printf_flag	access:public
+s_printf_flag::space	includes/printf/printf.h	/^	t_bool					space;$/;"	m	struct:s_printf_flag	access:public
+s_printf_flag::spec	includes/printf/printf.h	/^	char					spec;$/;"	m	struct:s_printf_flag	access:public
+s_printf_flag::width	includes/printf/printf.h	/^	int						width;$/;"	m	struct:s_printf_flag	access:public
+s_read_fd	srcs/get_next_line.c	/^static int				s_read_fd(t_get_next_line **old, char **line)$/;"	f	file:	signature:(t_get_next_line **old, char **line)
+s_replace	srcs/printf/color/replace_color.c	/^static void		s_replace(t_replace_color co)$/;"	f	file:	signature:(t_replace_color co)
+s_replace1	srcs/printf/color/color_basic.c	/^static void		s_replace1(t_replace_color co)$/;"	f	file:	signature:(t_replace_color co)
+s_replace1	srcs/printf/color/color_format.c	/^static void		s_replace1(t_replace_color co)$/;"	f	file:	signature:(t_replace_color co)
+s_replace2	srcs/printf/color/color_basic.c	/^static void		s_replace2(t_replace_color co)$/;"	f	file:	signature:(t_replace_color co)
+s_replace2	srcs/printf/color/color_format.c	/^static void		s_replace2(t_replace_color co)$/;"	f	file:	signature:(t_replace_color co)
+s_replace3	srcs/printf/color/color_basic.c	/^static void		s_replace3(t_replace_color co)$/;"	f	file:	signature:(t_replace_color co)
+s_replace4	srcs/printf/color/color_basic.c	/^static void		s_replace4(t_replace_color co)$/;"	f	file:	signature:(t_replace_color co)
+s_replace_color	includes/printf/color/replace_color.h	/^typedef struct	s_replace_color$/;"	s
+s_replace_color::i	includes/printf/color/replace_color.h	/^	int			*i;$/;"	m	struct:s_replace_color	access:public
+s_replace_color::len	includes/printf/color/replace_color.h	/^	int			*len;$/;"	m	struct:s_replace_color	access:public
+s_replace_color::save	includes/printf/color/replace_color.h	/^	int			*save;$/;"	m	struct:s_replace_color	access:public
+s_replace_color::t	includes/printf/color/replace_color.h	/^	t_printf	*t;$/;"	m	struct:s_replace_color	access:public
+s_replace_color::tmp	includes/printf/color/replace_color.h	/^	char		**tmp;$/;"	m	struct:s_replace_color	access:public
+s_searchchr	srcs/_part1/atoi.c	/^static int	s_searchchr(int c)$/;"	f	file:	signature:(int c)
+s_strcal	srcs/_part2/itoa.c	/^static void		s_strcal(char **s, long long int n, char *base, size_t len)$/;"	f	file:	signature:(char **s, long long int n, char *base, size_t len)
+s_strcal	srcs/string/basetoa.c	/^static void		s_strcal(char **s, long long int n, char *base, size_t len)$/;"	f	file:	signature:(char **s, long long int n, char *base, size_t len)
+s_strcal	srcs/string/ftoa.c	/^static void		s_strcal(char **s, long int n)$/;"	f	file:	signature:(char **s, long int n)
+s_strcal	srcs/string/ltoa.c	/^static void		s_strcal(char **s, long long int n, char *base, size_t len)$/;"	f	file:	signature:(char **s, long long int n, char *base, size_t len)
+s_strcal	srcs/string/ubasetoa.c	/^static void		s_strcal(char **s, unsigned long int n, char *base, size_t len)$/;"	f	file:	signature:(char **s, unsigned long int n, char *base, size_t len)
+s_strcal_p	srcs/string/ftoa.c	/^static void		s_strcal_p(char **s, long n, long *prec)$/;"	f	file:	signature:(char **s, long n, long *prec)
+s_strjoin	srcs/printf/add/add_string.c	/^static void		s_strjoin(t_printf *t, char *s1, char *s2, unsigned int len)$/;"	f	file:	signature:(t_printf *t, char *s1, char *s2, unsigned int len)
+s_strwlen	srcs/printf/wstr_to_str.c	/^static size_t	s_strwlen(const wchar_t *s)$/;"	f	file:	signature:(const wchar_t *s)
+s_to_int	srcs/string/ahtoi.c	/^static int	s_to_int(const char *s, int is_neg)$/;"	f	file:	signature:(const char *s, int is_neg)
+s_toupper	srcs/printf/label/number2.c	/^static char		s_toupper(char c)$/;"	f	file:	signature:(char c)
+s_trunc	srcs/printf/conversion/to_string.c	/^static void		s_trunc(char **s, int length)$/;"	f	file:	signature:(char **s, int length)
+s_valid_option	srcs/printf/color/color_fg_bg.c	/^static int	s_valid_option(char *s)$/;"	f	file:	signature:(char *s)
+s_wlen	srcs/printf/wstr_to_str.c	/^static size_t	s_wlen(const wchar_t c)$/;"	f	file:	signature:(const wchar_t c)
+save	includes/printf/color/replace_color.h	/^	int			*save;$/;"	m	struct:s_replace_color	access:public
+showsign	includes/printf/printf.h	/^	t_bool					showsign;$/;"	m	struct:s_printf_flag	access:public
+size	includes/libft.h	/^	size_t			size;$/;"	m	struct:s_hashtable	access:public
+space	includes/printf/printf.h	/^	t_bool					space;$/;"	m	struct:s_printf_flag	access:public
+spec	includes/printf/printf.h	/^	char					spec;$/;"	m	struct:s_printf_flag	access:public
+str	includes/get_next_line.h	/^	char		*str;$/;"	m	struct:s_get_next_line	access:public
+strwlen_print	srcs/printf/strwlen_print.c	/^size_t	strwlen_print(const wchar_t *s)$/;"	f	signature:(const wchar_t *s)
+sub_add_mod	srcs/math/do_op.c	/^double			sub_add_mod(const char *s, size_t *i)$/;"	f	signature:(const char *s, size_t *i)
+t	includes/printf/color/replace_color.h	/^	t_printf	*t;$/;"	m	struct:s_replace_color	access:public
+t	objs/_part1/memchr.o	/^销睨/;"	v
+t	objs/_part1/strchr.o	/^销睨/;"	v
+tBH	objs/lists/lstd_clear.o	/^销睨/;"	v
+tDL	objs/lists/lstd_push_front.o	/^销睨/;"	v
+tHL	objs/lists/lstd_push_before.o	/^销睨/;"	v
+tOH	objs/lists/lstd_pop_back.o	/^销睨/;"	v
+tQH	objs/lists/lstd_pop_front.o	/^销睨/;"	v
+t_bool	includes/libft.h	/^}					t_bool;$/;"	t	typeref:enum:e_bool
+t_get_next_line	includes/get_next_line.h	/^}				t_get_next_line;$/;"	t	typeref:struct:s_get_next_line
+t_hashtable	includes/libft.h	/^}					t_hashtable;$/;"	t	typeref:struct:s_hashtable
+t_hashtable_data	includes/libft.h	/^}					t_hashtable_data;$/;"	t	typeref:struct:s_hashtable_data
+t_list	includes/libft.h	/^}					t_list;$/;"	t	typeref:struct:s_list
+t_listd	includes/libft.h	/^}					t_listd;$/;"	t	typeref:struct:s_listd
+t_number	includes/printf/printf.h	/^}							t_number;$/;"	t	typeref:union:u_number
+t_printf	includes/printf/printf.h	/^}							t_printf;$/;"	t	typeref:struct:s_printf
+t_printf_conversion	includes/printf/printf.h	/^}							t_printf_conversion;$/;"	t	typeref:enum:e_printf_conversion
+t_printf_flag	includes/printf/printf.h	/^}							t_printf_flag;$/;"	t	typeref:struct:s_printf_flag
+t_ptr_flag_func	includes/printf/printf.h	/^typedef void				(*t_ptr_flag_func)();$/;"	t
+t_replace_color	includes/printf/color/replace_color.h	/^}				t_replace_color;$/;"	t	typeref:struct:s_replace_color
+table	includes/libft.h	/^	t_listd			**table;$/;"	m	struct:s_hashtable	access:public
+tmp	includes/printf/color/replace_color.h	/^	char		**tmp;$/;"	m	struct:s_replace_color	access:public
+toH	objs/table/table_push_back.o	/^销睨/;"	v
+to_char	srcs/printf/conversion/to_string.c	/^void			to_char(t_printf *t, char c)$/;"	f	signature:(t_printf *t, char c)
+to_string	srcs/printf/conversion/to_string.c	/^void			to_string(t_printf *t, char *s)$/;"	f	signature:(t_printf *t, char *s)
+to_wchar	srcs/printf/conversion/to_string.c	/^void			to_wchar(t_printf *t, wchar_t c)$/;"	f	signature:(t_printf *t, wchar_t c)
+true	includes/libft.h	/^	true$/;"	e	enum:e_bool
+u	includes/printf/printf.h	/^	u,$/;"	e	enum:e_printf_conversion
+u	objs/lists/lstd_do.o	/^销睨/;"	v
+u_number	includes/printf/printf.h	/^typedef union				u_number$/;"	u
+u_number::longdouble	includes/printf/printf.h	/^	double					longdouble;$/;"	m	union:u_number	access:public
+u_number::longlong	includes/printf/printf.h	/^	unsigned long long int	longlong;$/;"	m	union:u_number	access:public
+u_number::word	includes/printf/printf.h	/^	unsigned long int		word;$/;"	m	union:u_number	access:public
+width	includes/printf/printf.h	/^	int						width;$/;"	m	struct:s_printf_flag	access:public
+word	includes/printf/printf.h	/^	unsigned long int		word;$/;"	m	union:u_number	access:public
+work_buffer	includes/printf/printf.h	/^	char					*work_buffer;$/;"	m	struct:s_printf	access:public
+wstr_to_str	srcs/printf/wstr_to_str.c	/^char			*wstr_to_str(t_printf *t, wchar_t *s)$/;"	f	signature:(t_printf *t, wchar_t *s)
+x	includes/printf/printf.h	/^	x,$/;"	e	enum:e_printf_conversion
+x	objs/_part1/memmove.o	/^销睨/;"	v
+x	objs/_part2/strmapi.o	/^销睨/;"	v
+x	objs/printf/color/replace_color.o	/^销睨/;"	v
+x	objs/string/atol.o	/^销睨/;"	v
+x	objs/table/table_del_at_ptr.o	/^销睨/;"	v
+x	objs/table/table_push_at_index.o	/^销睨/;"	v
+~H	objs/lists/lstd_del.o	/^销睨/;"	v

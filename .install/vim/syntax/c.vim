@@ -42,14 +42,14 @@ syntax match myTable '\(&\)\@<!\<e_\i\+\>\((\)\@!'
 highlight link myTable MyTable
 
 highlight MyElementAfterStruct					ctermfg=202
-" highlight >> 'g_exemple'
+" highlight >> 'test->test.test'
 syntax match myElementAfterStruct '\(\(->\)\|\(\.\)\)\@<=\(\<\i\+\>\)\(\(->\)\|\(\.\)\)\@!'
 highlight link myElementAfterStruct MyElementAfterStruct
 
 
 highlight MyElementBetweenStruct				ctermfg=215
 " highlight >> 'test->test.test'
-syntax match myElementBetweenStruct '\(\(->\)\|\(\.\)\)\@<=\(\<\i\+\>\)\(\(->\)\|\(\.\)\)\@='
+syntax match myElementBetweenStruct '\(\(->\)\|\(\.\)\)\@<=\(\<\i\+\>\)\ze\(\[\<\i\+\>\]\)*\(\(->\)\|\(\.\)\)\@='
 highlight link myElementBetweenStruct MyElementBetweenStruct
 
 "__________________________________________________________
@@ -60,29 +60,29 @@ highlight MyStatement							ctermfg=yellow
 syntax match myStatement '->'
 syntax match myStatement '\.'
 syntax match myStatement '!'
-syntax match myStatement '\s\zs-\ze '
-syntax match myStatement '\s\zs+\ze '
-syntax match myStatement '\s\zs\*\ze '
-syntax match myStatement '\s\zs\/\ze '
-syntax match myStatement '\s\zs%\ze '
-syntax match myStatement '\s\zs<\ze '
-syntax match myStatement '\s\zs<<\ze '
-syntax match myStatement '\s\zs>\ze '
-syntax match myStatement '\s\zs>>\ze '
-syntax match myStatement '\s\zs=\ze '
-syntax match myStatement '\s\zs==\ze '
-syntax match myStatement '\s\zs+=\ze '
-syntax match myStatement '\s\zs-=\ze '
-syntax match myStatement '\s\zs\*=\ze '
-syntax match myStatement '\s\zs/=\ze '
-syntax match myStatement '\s\zs%=\ze '
-syntax match myStatement '\s\zs!=\ze '
-syntax match myStatement '\s\zs>=\ze '
-syntax match myStatement '\s\zs<=\ze '
-syntax match myStatement '\s\zs&=\ze '
-syntax match myStatement '\s\zs|=\ze '
-syntax match myStatement '\s\zs&&\ze '
-syntax match myStatement '\s\zs||\ze '
+syntax match myStatement '\s\zs-\ze\( \|$\)'
+syntax match myStatement '\s\zs+\ze\( \|$\)'
+syntax match myStatement '\s\zs\*\ze\( \|$\)'
+syntax match myStatement '\s\zs\/\ze\( \|$\)'
+syntax match myStatement '\s\zs%\ze\( \|$\)'
+syntax match myStatement '\s\zs<\ze\( \|$\)'
+syntax match myStatement '\s\zs<<\ze\( \|$\)'
+syntax match myStatement '\s\zs>\ze\( \|$\)'
+syntax match myStatement '\s\zs>>\ze\( \|$\)'
+syntax match myStatement '\s\zs=\ze\( \|$\)'
+syntax match myStatement '\s\zs==\ze\( \|$\)'
+syntax match myStatement '\s\zs+=\ze\( \|$\)'
+syntax match myStatement '\s\zs-=\ze\( \|$\)'
+syntax match myStatement '\s\zs\*=\ze\( \|$\)'
+syntax match myStatement '\s\zs/=\ze\( \|$\)'
+syntax match myStatement '\s\zs%=\ze\( \|$\)'
+syntax match myStatement '\s\zs!=\ze\( \|$\)'
+syntax match myStatement '\s\zs>=\ze\( \|$\)'
+syntax match myStatement '\s\zs<=\ze\( \|$\)'
+syntax match myStatement '\s\zs&=\ze\( \|$\)'
+syntax match myStatement '\s\zs|=\ze\( \|$\)'
+syntax match myStatement '\s\zs&&\ze\( \|$\)'
+syntax match myStatement '\s\zs||\ze\( \|$\)'
 highlight link myStatement MyStatement
 
 highlight MyMacro								ctermfg=red

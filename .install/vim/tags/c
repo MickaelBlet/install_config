@@ -1,0 +1,8 @@
+t_list	libft	/^$/;"	s
+t_list::content	libft	/^$/;"	m	struct:t_list	access:public
+t_list::content_size	libft	/^$/;"	m	struct:t_list	access:public
+t_list::next	libft	/^$/;"	m	struct:t_list	access:public
+t_listd	libft	/^$/;"	s
+t_listd::data	libft	/^$/;"	m	struct:t_listd	access:public
+t_listd::prev	libft	/^$/;"	m	struct:t_listd	access:public
+t_listd::next	libft	/^$/;"	m	struct:t_listd	access:public

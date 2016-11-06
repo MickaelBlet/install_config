@@ -92,16 +92,18 @@ set pastetoggle=<F6>
 set lazyredraw
 set wildmenu					" Use wildmenu auto completion
 set wildmode=list:longest		" Set options for auto completion
-set complete=.,w,b,t,u,i,d,t,k	" Default, except that I remove the 'u' option
+set complete=.,w,b,t,u,i,d,k	" Default, except that I remove the 'u' option
 
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
 set tags+=~/.vim/tags/cpp
+set tags+=~/.vim/tags/current
+set tags+=~/.vim/tags/libft
 
 "set viminfo=""
 
-au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
+au BufNewFile,BufRead,BufEnter *.c,*.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
 
 " OmniCppComplete
 let OmniCpp_NamespaceSearch = 1
@@ -297,7 +299,6 @@ imap <2-LeftMouse>			<Nop>
 " Ctrl + w == save quit && Ctrl + q == force quit
 
 map <silent> <C-w>			:wq<CR>gi
-imap <silent> <C-w>			<C-r>=:wq<CR>gi
 imap <silent> <C-w>			<Esc>:wq<CR>gi
 vmap <silent> <C-w>			<Esc>:wq<CR>gi
 map <silent> <C-q>			:q!<CR>gi
@@ -384,8 +385,11 @@ func!	Comment()
 	endif
 endfunc
 
-imap <silent> /'	<Esc>:call Comment()<CR>gi
-vmap <silent> /'	:call Comment()<CR>gi
+" Ctrl + / Comment
+
+imap <silent> 	<Esc>:call Comment()<CR>gi
+vmap <silent> 	:call Comment()<CR>gi
+
 
 " Ctrl Up (move line)
 
@@ -447,7 +451,7 @@ imap <Esc>Ol				+
 imap <Esc>OS				-
 imap <Esc>OX				=
 
-imap -.						->
+imap -.						-<Left><right>>
 imap FT_					ft_
 imap FT+					ft_
 imap FT)					ft_

@@ -40,6 +40,7 @@ function! Actualise_makefile()
 		endtry
 	endwhile
 	silent! exe ':!screen -d -m vim -c "wq" Makefile'
+	silent! exe ':!screen -d -m ctags -R --language-force="c++" --fields=+iaS --extra=+q -o "$HOME/.vim/tags/current" .'
 	exe ':cd '.l:pwd . '|redraw!'
 endfunction
 

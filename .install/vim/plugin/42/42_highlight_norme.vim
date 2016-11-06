@@ -53,10 +53,8 @@ function Norme()
 	let s:errornorm += matchadd('MyError', '^\%#\@<!\n\(^\%#\@<!\n\)\+', -1)
 	" TAB in parenthesis
 	let s:errornorm += matchadd('MyError', '\(#.*\|\*\*.*\|\/\*.*\)\@<!(.*\zs\t\ze.*)', -1)
-	" ';' AFTER while WHIT TAB
-	let s:errornorm += matchadd('MyError', '^\t.*\<while\>.*\zs;$', -1)
-	" ';' AFTER if WHIT TAB
-	let s:errornorm += matchadd('MyError', '^\t.*\<if\>.*\zs;$', -1)
+	" ';' AFTER while or if WHIT TAB
+	let s:errornorm += matchadd('MyError', '^\t.*\<\(while\|if\)\>.*\zs;$', -1)
 
 	" 'SPACE' AFTER @ WHIT TAB
 	let s:errornorm += matchadd('MyError', '\(^\t\(\<\i\+\> *\)\+\)\@<= \ze\**\i\+;', -1)
@@ -167,10 +165,10 @@ function Norme()
 	" ' ' after '+'
 	syntax match myNorme '\(+\)\@!.\zs+\ze.\( \|+\|=\)\@<!'
 	" OTHER BEFORE '+'
-	syntax match myNorme '\(\]\|)\| \|+\|\( .*\)\@<!\t\)\@!.\zs+\ze.\(+\|=\)\@<!'
+	syntax match myNorme '\(\]\|)\| \|\t\+\|+\|\( .*\)\@<!\t\)\@!.\zs+\ze.\(+\|=\)\@<!'
 	syntax match myNorme '\( [0-9]\)\@<=+'
 	" OTHER BEFORE '-'
-	syntax match myNorme '\(\]\|)\| \|-\)\@!.\zs-\ze.\(-\|=\|>\)\@<!'
+	syntax match myNorme '\(\]\|)\| \|\t\+\|-\)\@!.\zs-\ze.\(-\|=\|>\)\@<!'
 	syntax match myNorme '\( [0-9]\|\]\)\@<=-\ze.\(>\)\@<!'
 	" CAST "
 	syntax match myNorme '\()\)\@<!\<malloc\>'
