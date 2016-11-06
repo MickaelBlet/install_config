@@ -4,326 +4,166 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-APPLY	libxft/includes/libxft.h	/^# define APPLY(/;"	d
-APPLY_1	libxft/includes/libxft.h	/^# define APPLY_1(/;"	d
-APPLY_2	libxft/includes/libxft.h	/^# define APPLY_2(/;"	d
-APPLY_3	libxft/includes/libxft.h	/^# define APPLY_3(/;"	d
-APPLY_4	libxft/includes/libxft.h	/^# define APPLY_4(/;"	d
-APPLY_5	libxft/includes/libxft.h	/^# define APPLY_5(/;"	d
-APPLY_6	libxft/includes/libxft.h	/^# define APPLY_6(/;"	d
-APPLY_7	libxft/includes/libxft.h	/^# define APPLY_7(/;"	d
-APPLY_8	libxft/includes/libxft.h	/^# define APPLY_8(/;"	d
-BIN_NAME	includes/corewar.h	/^# define BIN_NAME	/;"	d
-CAT	libxft/includes/libxft.h	/^# define CAT(/;"	d
-COREWAR_H	includes/corewar.h	/^# define COREWAR_H$/;"	d
-ERROR	includes/corewar.h	/^# define ERROR(/;"	d
-ERR_DUMP_FORMAT	includes/corewar.h	/^# define ERR_DUMP_FORMAT	/;"	d
-ERR_FILE_FORMAT_ID	includes/corewar.h	/^# define ERR_FILE_FORMAT_ID	/;"	d
-ERR_FILE_NOT_VALID	includes/corewar.h	/^# define ERR_FILE_NOT_VALID	/;"	d
-ERR_FILE_SAME_ID	includes/corewar.h	/^# define ERR_FILE_SAME_ID	/;"	d
-ERR_INIT_MLX	includes/corewar.h	/^# define ERR_INIT_MLX	/;"	d
-ERR_TOO_MANY_PLAYERS	includes/corewar.h	/^# define ERR_TOO_MANY_PLAYERS	/;"	d
-LIBXFT_H	libxft/includes/libxft.h	/^# define LIBXFT_H$/;"	d
-LIBX_DRAW_CIRCLE_TO_IMAGE	libxft/includes/libxft.h	/^# define LIBX_DRAW_CIRCLE_TO_IMAGE(/;"	d
-LIBX_DRAW_LINE_TO_IMAGE	libxft/includes/libxft.h	/^# define LIBX_DRAW_LINE_TO_IMAGE(/;"	d
-LIBX_DRAW_SQUARE_TO_IMAGE	libxft/includes/libxft.h	/^# define LIBX_DRAW_SQUARE_TO_IMAGE(/;"	d
-LIBX_IMAGE_TO_IMAGE	libxft/includes/libxft.h	/^# define LIBX_IMAGE_TO_IMAGE(/;"	d
-LIBX_IMAGE_TO_IMAGE_PNG	libxft/includes/libxft.h	/^# define LIBX_IMAGE_TO_IMAGE_PNG(/;"	d
-LIBX_KEY_0	libxft/includes/libxft.h	/^# define LIBX_KEY_0	/;"	d
-LIBX_KEY_1	libxft/includes/libxft.h	/^# define LIBX_KEY_1	/;"	d
-LIBX_KEY_2	libxft/includes/libxft.h	/^# define LIBX_KEY_2	/;"	d
-LIBX_KEY_3	libxft/includes/libxft.h	/^# define LIBX_KEY_3	/;"	d
-LIBX_KEY_4	libxft/includes/libxft.h	/^# define LIBX_KEY_4	/;"	d
-LIBX_KEY_5	libxft/includes/libxft.h	/^# define LIBX_KEY_5	/;"	d
-LIBX_KEY_6	libxft/includes/libxft.h	/^# define LIBX_KEY_6	/;"	d
-LIBX_KEY_7	libxft/includes/libxft.h	/^# define LIBX_KEY_7	/;"	d
-LIBX_KEY_8	libxft/includes/libxft.h	/^# define LIBX_KEY_8	/;"	d
-LIBX_KEY_9	libxft/includes/libxft.h	/^# define LIBX_KEY_9	/;"	d
-LIBX_KEY_A	libxft/includes/libxft.h	/^# define LIBX_KEY_A	/;"	d
-LIBX_KEY_ADD	libxft/includes/libxft.h	/^# define LIBX_KEY_ADD	/;"	d
-LIBX_KEY_ALT_LEFT	libxft/includes/libxft.h	/^# define LIBX_KEY_ALT_LEFT	/;"	d
-LIBX_KEY_ALT_RIGHT	libxft/includes/libxft.h	/^# define LIBX_KEY_ALT_RIGHT	/;"	d
-LIBX_KEY_B	libxft/includes/libxft.h	/^# define LIBX_KEY_B	/;"	d
-LIBX_KEY_BRACKET_CLOSE	libxft/includes/libxft.h	/^# define LIBX_KEY_BRACKET_CLOSE	/;"	d
-LIBX_KEY_BRACKET_OPEN	libxft/includes/libxft.h	/^# define LIBX_KEY_BRACKET_OPEN	/;"	d
-LIBX_KEY_C	libxft/includes/libxft.h	/^# define LIBX_KEY_C	/;"	d
-LIBX_KEY_CLEAR	libxft/includes/libxft.h	/^# define LIBX_KEY_CLEAR	/;"	d
-LIBX_KEY_CMD_LEFT	libxft/includes/libxft.h	/^# define LIBX_KEY_CMD_LEFT	/;"	d
-LIBX_KEY_CMD_RIGHT	libxft/includes/libxft.h	/^# define LIBX_KEY_CMD_RIGHT	/;"	d
-LIBX_KEY_CTRL_LEFT	libxft/includes/libxft.h	/^# define LIBX_KEY_CTRL_LEFT	/;"	d
-LIBX_KEY_CTRL_RIGHT	libxft/includes/libxft.h	/^# define LIBX_KEY_CTRL_RIGHT	/;"	d
-LIBX_KEY_D	libxft/includes/libxft.h	/^# define LIBX_KEY_D	/;"	d
-LIBX_KEY_DELETE	libxft/includes/libxft.h	/^# define LIBX_KEY_DELETE	/;"	d
-LIBX_KEY_DOUBLE_DOTS	libxft/includes/libxft.h	/^# define LIBX_KEY_DOUBLE_DOTS	/;"	d
-LIBX_KEY_DOWN	libxft/includes/libxft.h	/^# define LIBX_KEY_DOWN	/;"	d
-LIBX_KEY_E	libxft/includes/libxft.h	/^# define LIBX_KEY_E	/;"	d
-LIBX_KEY_END	libxft/includes/libxft.h	/^# define LIBX_KEY_END	/;"	d
-LIBX_KEY_ESC	libxft/includes/libxft.h	/^# define LIBX_KEY_ESC	/;"	d
-LIBX_KEY_F	libxft/includes/libxft.h	/^# define LIBX_KEY_F	/;"	d
-LIBX_KEY_FN	libxft/includes/libxft.h	/^# define LIBX_KEY_FN	/;"	d
-LIBX_KEY_G	libxft/includes/libxft.h	/^# define LIBX_KEY_G	/;"	d
-LIBX_KEY_H	libxft/includes/libxft.h	/^# define LIBX_KEY_H	/;"	d
-LIBX_KEY_HOME	libxft/includes/libxft.h	/^# define LIBX_KEY_HOME	/;"	d
-LIBX_KEY_I	libxft/includes/libxft.h	/^# define LIBX_KEY_I	/;"	d
-LIBX_KEY_INFERIOR	libxft/includes/libxft.h	/^# define LIBX_KEY_INFERIOR	/;"	d
-LIBX_KEY_J	libxft/includes/libxft.h	/^# define LIBX_KEY_J	/;"	d
-LIBX_KEY_K	libxft/includes/libxft.h	/^# define LIBX_KEY_K	/;"	d
-LIBX_KEY_L	libxft/includes/libxft.h	/^# define LIBX_KEY_L	/;"	d
-LIBX_KEY_LEFT	libxft/includes/libxft.h	/^# define LIBX_KEY_LEFT	/;"	d
-LIBX_KEY_M	libxft/includes/libxft.h	/^# define LIBX_KEY_M	/;"	d
-LIBX_KEY_N	libxft/includes/libxft.h	/^# define LIBX_KEY_N	/;"	d
-LIBX_KEY_NUMPAD_0	libxft/includes/libxft.h	/^# define LIBX_KEY_NUMPAD_0	/;"	d
-LIBX_KEY_NUMPAD_1	libxft/includes/libxft.h	/^# define LIBX_KEY_NUMPAD_1	/;"	d
-LIBX_KEY_NUMPAD_2	libxft/includes/libxft.h	/^# define LIBX_KEY_NUMPAD_2	/;"	d
-LIBX_KEY_NUMPAD_3	libxft/includes/libxft.h	/^# define LIBX_KEY_NUMPAD_3	/;"	d
-LIBX_KEY_NUMPAD_4	libxft/includes/libxft.h	/^# define LIBX_KEY_NUMPAD_4	/;"	d
-LIBX_KEY_NUMPAD_5	libxft/includes/libxft.h	/^# define LIBX_KEY_NUMPAD_5	/;"	d
-LIBX_KEY_NUMPAD_6	libxft/includes/libxft.h	/^# define LIBX_KEY_NUMPAD_6	/;"	d
-LIBX_KEY_NUMPAD_7	libxft/includes/libxft.h	/^# define LIBX_KEY_NUMPAD_7	/;"	d
-LIBX_KEY_NUMPAD_8	libxft/includes/libxft.h	/^# define LIBX_KEY_NUMPAD_8	/;"	d
-LIBX_KEY_NUMPAD_9	libxft/includes/libxft.h	/^# define LIBX_KEY_NUMPAD_9	/;"	d
-LIBX_KEY_NUMPAD_ADD	libxft/includes/libxft.h	/^# define LIBX_KEY_NUMPAD_ADD	/;"	d
-LIBX_KEY_NUMPAD_DIV	libxft/includes/libxft.h	/^# define LIBX_KEY_NUMPAD_DIV	/;"	d
-LIBX_KEY_NUMPAD_DOT	libxft/includes/libxft.h	/^# define LIBX_KEY_NUMPAD_DOT	/;"	d
-LIBX_KEY_NUMPAD_ENTER	libxft/includes/libxft.h	/^# define LIBX_KEY_NUMPAD_ENTER	/;"	d
-LIBX_KEY_NUMPAD_EQUAL	libxft/includes/libxft.h	/^# define LIBX_KEY_NUMPAD_EQUAL	/;"	d
-LIBX_KEY_NUMPAD_MUL	libxft/includes/libxft.h	/^# define LIBX_KEY_NUMPAD_MUL	/;"	d
-LIBX_KEY_NUMPAD_SUB	libxft/includes/libxft.h	/^# define LIBX_KEY_NUMPAD_SUB	/;"	d
-LIBX_KEY_O	libxft/includes/libxft.h	/^# define LIBX_KEY_O	/;"	d
-LIBX_KEY_P	libxft/includes/libxft.h	/^# define LIBX_KEY_P	/;"	d
-LIBX_KEY_PAGE_DOWN	libxft/includes/libxft.h	/^# define LIBX_KEY_PAGE_DOWN	/;"	d
-LIBX_KEY_PAGE_UP	libxft/includes/libxft.h	/^# define LIBX_KEY_PAGE_UP	/;"	d
-LIBX_KEY_PIPE	libxft/includes/libxft.h	/^# define LIBX_KEY_PIPE	/;"	d
-LIBX_KEY_PRESS	libxft/includes/libxft.h	/^# define LIBX_KEY_PRESS	/;"	d
-LIBX_KEY_Q	libxft/includes/libxft.h	/^# define LIBX_KEY_Q	/;"	d
-LIBX_KEY_QUESTION_MARK	libxft/includes/libxft.h	/^# define LIBX_KEY_QUESTION_MARK	/;"	d
-LIBX_KEY_QUOTE	libxft/includes/libxft.h	/^# define LIBX_KEY_QUOTE	/;"	d
-LIBX_KEY_R	libxft/includes/libxft.h	/^# define LIBX_KEY_R	/;"	d
-LIBX_KEY_RELEASE	libxft/includes/libxft.h	/^# define LIBX_KEY_RELEASE	/;"	d
-LIBX_KEY_RETURN	libxft/includes/libxft.h	/^# define LIBX_KEY_RETURN	/;"	d
-LIBX_KEY_RIGHT	libxft/includes/libxft.h	/^# define LIBX_KEY_RIGHT	/;"	d
-LIBX_KEY_S	libxft/includes/libxft.h	/^# define LIBX_KEY_S	/;"	d
-LIBX_KEY_SHIFT_LEFT	libxft/includes/libxft.h	/^# define LIBX_KEY_SHIFT_LEFT	/;"	d
-LIBX_KEY_SHIFT_RIGHT	libxft/includes/libxft.h	/^# define LIBX_KEY_SHIFT_RIGHT	/;"	d
-LIBX_KEY_SPACE	libxft/includes/libxft.h	/^# define LIBX_KEY_SPACE	/;"	d
-LIBX_KEY_SUB	libxft/includes/libxft.h	/^# define LIBX_KEY_SUB	/;"	d
-LIBX_KEY_SUPERIOR	libxft/includes/libxft.h	/^# define LIBX_KEY_SUPERIOR	/;"	d
-LIBX_KEY_SUPPR	libxft/includes/libxft.h	/^# define LIBX_KEY_SUPPR	/;"	d
-LIBX_KEY_T	libxft/includes/libxft.h	/^# define LIBX_KEY_T	/;"	d
-LIBX_KEY_TAB	libxft/includes/libxft.h	/^# define LIBX_KEY_TAB	/;"	d
-LIBX_KEY_TILDE	libxft/includes/libxft.h	/^# define LIBX_KEY_TILDE	/;"	d
-LIBX_KEY_U	libxft/includes/libxft.h	/^# define LIBX_KEY_U	/;"	d
-LIBX_KEY_UP	libxft/includes/libxft.h	/^# define LIBX_KEY_UP	/;"	d
-LIBX_KEY_V	libxft/includes/libxft.h	/^# define LIBX_KEY_V	/;"	d
-LIBX_KEY_W	libxft/includes/libxft.h	/^# define LIBX_KEY_W	/;"	d
-LIBX_KEY_X	libxft/includes/libxft.h	/^# define LIBX_KEY_X	/;"	d
-LIBX_KEY_Y	libxft/includes/libxft.h	/^# define LIBX_KEY_Y	/;"	d
-LIBX_KEY_Z	libxft/includes/libxft.h	/^# define LIBX_KEY_Z	/;"	d
-LIBX_MOUSE_BUTTON_LEFT	libxft/includes/libxft.h	/^# define LIBX_MOUSE_BUTTON_LEFT	/;"	d
-LIBX_MOUSE_BUTTON_MIDDLE	libxft/includes/libxft.h	/^# define LIBX_MOUSE_BUTTON_MIDDLE	/;"	d
-LIBX_MOUSE_BUTTON_RIGHT	libxft/includes/libxft.h	/^# define LIBX_MOUSE_BUTTON_RIGHT	/;"	d
-LIBX_MOUSE_SCROLL_DOWN	libxft/includes/libxft.h	/^# define LIBX_MOUSE_SCROLL_DOWN	/;"	d
-LIBX_MOUSE_SCROLL_UP	libxft/includes/libxft.h	/^# define LIBX_MOUSE_SCROLL_UP	/;"	d
-LIBX_STRING_TO_IMAGE	libxft/includes/libxft.h	/^# define LIBX_STRING_TO_IMAGE(/;"	d
-MSG_USAGE	includes/corewar.h	/^# define MSG_USAGE	/;"	d
-NARGS	libxft/includes/libxft.h	/^# define NARGS(/;"	d
-NARGS_SEQ	libxft/includes/libxft.h	/^# define NARGS_SEQ(/;"	d
-PRIMITIVE_CAT	libxft/includes/libxft.h	/^# define PRIMITIVE_CAT(/;"	d
-VM_COLOR_BOLD	includes/corewar.h	/^# define VM_COLOR_BOLD	/;"	d
-VM_INFO_WIDTH	includes/corewar.h	/^# define VM_INFO_WIDTH	/;"	d
-VM_MEMORY_BYTE_HEIGHT	includes/corewar.h	/^# define VM_MEMORY_BYTE_HEIGHT	/;"	d
-VM_MEMORY_BYTE_WIDTH	includes/corewar.h	/^# define VM_MEMORY_BYTE_WIDTH	/;"	d
-VM_MEMORY_D_HEIGHT	includes/corewar.h	/^# define VM_MEMORY_D_HEIGHT	/;"	d
-VM_MEMORY_NB_BYTE_LINE	includes/corewar.h	/^# define VM_MEMORY_NB_BYTE_LINE	/;"	d
-VM_PATH_FONT	includes/corewar.h	/^# define VM_PATH_FONT	/;"	d
-VM_TOOLTIP_HEIGHT	includes/corewar.h	/^# define VM_TOOLTIP_HEIGHT	/;"	d
-VM_TOOLTIP_MINI_HEIGHT	includes/corewar.h	/^# define VM_TOOLTIP_MINI_HEIGHT	/;"	d
-VM_TOOLTIP_MINI_WIDTH	includes/corewar.h	/^# define VM_TOOLTIP_MINI_WIDTH	/;"	d
-VM_TOOLTIP_WIDTH	includes/corewar.h	/^# define VM_TOOLTIP_WIDTH	/;"	d
-VM_WIN_HEIGHT	includes/corewar.h	/^# define VM_WIN_HEIGHT	/;"	d
-VM_WIN_WIDTH	includes/corewar.h	/^# define VM_WIN_WIDTH	/;"	d
-__D0	libxft/includes/libxft.h	/^# define __D0	/;"	d
-__D0_C	libxft/includes/libxft.h	/^# define __D0_C(/;"	d
-__D1	libxft/includes/libxft.h	/^# define __D1	/;"	d
-__D2	libxft/includes/libxft.h	/^# define __D2	/;"	d
-__D3	libxft/includes/libxft.h	/^# define __D3	/;"	d
-__D8	libxft/includes/libxft.h	/^# define __D8	/;"	d
-__D9	libxft/includes/libxft.h	/^# define __D9	/;"	d
-__ER0	includes/corewar.h	/^# define __ER0	/;"	d
-__MSG1	includes/corewar.h	/^# define __MSG1	/;"	d
-__MSG2	includes/corewar.h	/^# define __MSG2	/;"	d
-__MSG3	includes/corewar.h	/^# define __MSG3	/;"	d
-aff	includes/corewar.h	/^	t_bool				aff;$/;"	m	struct:s_verbose	access:public
-b	libxft/includes/libxft.h	/^	double		b;$/;"	m	struct:s_libx_color	access:public
-background_info	includes/corewar.h	/^	unsigned char		*background_info;$/;"	m	struct:s_vm_mlx	access:public
-background_memory	includes/corewar.h	/^	unsigned char		*background_memory;$/;"	m	struct:s_vm_mlx	access:public
-bits_per_pixel	libxft/includes/libxft.h	/^	int			bits_per_pixel;$/;"	m	struct:s_libx_img	access:public
-buffer	libxft/includes/libxft.h	/^	char		*buffer;$/;"	m	struct:s_libx_img	access:public
-carry	includes/corewar.h	/^	int					carry;$/;"	m	struct:s_process	access:public
-color	includes/corewar.h	/^	int					color[19];$/;"	m	struct:s_vm_mlx	access:public
-color_id	includes/corewar.h	/^	int					color_id;$/;"	m	struct:s_byte	access:public
-color_id	includes/corewar.h	/^	int					color_id;$/;"	m	struct:s_player	access:public
-color_id	includes/corewar.h	/^	int					color_id;$/;"	m	struct:s_process	access:public
-cycle	includes/corewar.h	/^	long				cycle;$/;"	m	struct:s_corewar	access:public
-cycle	includes/corewar.h	/^	t_bool				cycle;$/;"	m	struct:s_verbose	access:public
-cycle_check	includes/corewar.h	/^	size_t				cycle_check;$/;"	m	struct:s_corewar	access:public
-cycle_to_die	includes/corewar.h	/^	long				cycle_to_die;$/;"	m	struct:s_corewar	access:public
-data	includes/corewar.h	/^	char				data[CHAMP_MAX_SIZE + sizeof(t_header)];$/;"	m	struct:s_file	access:public
-data	includes/corewar.h	/^	unsigned char		data;$/;"	m	struct:s_byte	access:public
-death	includes/corewar.h	/^	t_bool				death;$/;"	m	struct:s_verbose	access:public
-description	includes/corewar.h	/^	char				*description;$/;"	m	struct:s_player	access:public
-dump	includes/corewar.h	/^	int					dump;$/;"	m	struct:s_option	access:public
-endian	libxft/includes/libxft.h	/^	int			endian;$/;"	m	struct:s_libx_img	access:public
-files	includes/corewar.h	/^	t_listd				*files;$/;"	m	struct:s_corewar	access:public
-g	libxft/includes/libxft.h	/^	double		g;$/;"	m	struct:s_libx_color	access:public
-graphic	includes/corewar.h	/^	t_bool				graphic;$/;"	m	struct:s_option	access:public
-header	includes/corewar.h	/^	t_header			*header;$/;"	m	struct:s_file	access:public
-height	libxft/includes/libxft.h	/^	int			height;$/;"	m	struct:s_libx_img	access:public
-id	includes/corewar.h	/^	int					id;$/;"	m	struct:s_file	access:public
-id	includes/corewar.h	/^	int					id;$/;"	m	struct:s_player	access:public
-id	includes/corewar.h	/^	int					id;$/;"	m	struct:s_process	access:public
-id_last_live	includes/corewar.h	/^	int					id_last_live;$/;"	m	struct:s_corewar	access:public
-img_font	includes/corewar.h	/^	t_libx_img			*img_font;$/;"	m	struct:s_vm_mlx	access:public
-img_info	includes/corewar.h	/^	t_libx_img			*img_info;$/;"	m	struct:s_vm_mlx	access:public
-img_memory	includes/corewar.h	/^	t_libx_img			*img_memory;$/;"	m	struct:s_vm_mlx	access:public
-img_ptr	libxft/includes/libxft.h	/^	void		*img_ptr;$/;"	m	struct:s_libx_img	access:public
-in_action	includes/corewar.h	/^	t_bool				in_action;$/;"	m	struct:s_process	access:public
-last_cycle_check	includes/corewar.h	/^	long				last_cycle_check;$/;"	m	struct:s_corewar	access:public
-last_live	includes/corewar.h	/^	long				last_live;$/;"	m	struct:s_player	access:public
-live	includes/corewar.h	/^	int					live;$/;"	m	struct:s_byte	access:public
-live	includes/corewar.h	/^	int					live;$/;"	m	struct:s_process	access:public
-live	includes/corewar.h	/^	size_t				live;$/;"	m	struct:s_player	access:public
-live	includes/corewar.h	/^	t_bool				live;$/;"	m	struct:s_verbose	access:public
-mlx	includes/corewar.h	/^	void				*mlx;$/;"	m	struct:s_vm_mlx	access:public
-modified_cycle	includes/corewar.h	/^	int					modified_cycle;$/;"	m	struct:s_byte	access:public
-mouse	includes/corewar.h	/^	t_mouse				mouse;$/;"	m	struct:s_vm_mlx	access:public
-move	includes/corewar.h	/^	t_bool				move;$/;"	m	struct:s_verbose	access:public
-mutex	includes/corewar.h	/^	pthread_mutex_t		mutex;$/;"	m	struct:s_corewar	access:public
-mutex_info	includes/corewar.h	/^	pthread_mutex_t		mutex_info;$/;"	m	struct:s_vm_mlx	access:public
-mutex_key	includes/corewar.h	/^	pthread_mutex_t		mutex_key;$/;"	m	struct:s_vm_mlx	access:public
-mutex_memory	includes/corewar.h	/^	pthread_mutex_t		mutex_memory;$/;"	m	struct:s_vm_mlx	access:public
-mutex_process	includes/corewar.h	/^	pthread_mutex_t		mutex_process;$/;"	m	struct:s_corewar	access:public
-name	includes/corewar.h	/^	char				*name;$/;"	m	struct:s_player	access:public
-nb_cycle_per_second	includes/corewar.h	/^	size_t				nb_cycle_per_second;$/;"	m	struct:s_corewar	access:public
-nb_process	includes/corewar.h	/^	size_t				nb_process;$/;"	m	struct:s_corewar	access:public
-op	includes/corewar.h	/^	t_bool				op;$/;"	m	struct:s_verbose	access:public
-op	includes/corewar.h	/^	t_op				op;$/;"	m	struct:s_process	access:public
-op_cycle	includes/corewar.h	/^	int					op_cycle;$/;"	m	struct:s_process	access:public
-option	includes/corewar.h	/^	t_option			option;$/;"	m	struct:s_corewar	access:public
-pause	includes/corewar.h	/^	t_bool				pause;$/;"	m	struct:s_vm_mlx	access:public
-pc	includes/corewar.h	/^	size_t				pc;$/;"	m	struct:s_process	access:public
-players	includes/corewar.h	/^	t_listd				*players;$/;"	m	struct:s_corewar	access:public
-process	includes/corewar.h	/^	t_listd				*process;$/;"	m	struct:s_corewar	access:public
-r	libxft/includes/libxft.h	/^	double		r;$/;"	m	struct:s_libx_color	access:public
-ram	includes/corewar.h	/^	t_byte				ram[MEM_SIZE];$/;"	m	struct:s_corewar	access:public
-reg	includes/corewar.h	/^	int					reg[REG_NUMBER];$/;"	m	struct:s_process	access:public
-run	includes/corewar.h	/^	t_bool				run;$/;"	m	struct:s_corewar	access:public
-s_byte	includes/corewar.h	/^typedef struct			s_byte$/;"	s
-s_byte::color_id	includes/corewar.h	/^	int					color_id;$/;"	m	struct:s_byte	access:public
-s_byte::data	includes/corewar.h	/^	unsigned char		data;$/;"	m	struct:s_byte	access:public
-s_byte::live	includes/corewar.h	/^	int					live;$/;"	m	struct:s_byte	access:public
-s_byte::modified_cycle	includes/corewar.h	/^	int					modified_cycle;$/;"	m	struct:s_byte	access:public
-s_corewar	includes/corewar.h	/^typedef struct			s_corewar$/;"	s
-s_corewar::cycle	includes/corewar.h	/^	long				cycle;$/;"	m	struct:s_corewar	access:public
-s_corewar::cycle_check	includes/corewar.h	/^	size_t				cycle_check;$/;"	m	struct:s_corewar	access:public
-s_corewar::cycle_to_die	includes/corewar.h	/^	long				cycle_to_die;$/;"	m	struct:s_corewar	access:public
-s_corewar::files	includes/corewar.h	/^	t_listd				*files;$/;"	m	struct:s_corewar	access:public
-s_corewar::id_last_live	includes/corewar.h	/^	int					id_last_live;$/;"	m	struct:s_corewar	access:public
-s_corewar::last_cycle_check	includes/corewar.h	/^	long				last_cycle_check;$/;"	m	struct:s_corewar	access:public
-s_corewar::mutex	includes/corewar.h	/^	pthread_mutex_t		mutex;$/;"	m	struct:s_corewar	access:public
-s_corewar::mutex_process	includes/corewar.h	/^	pthread_mutex_t		mutex_process;$/;"	m	struct:s_corewar	access:public
-s_corewar::nb_cycle_per_second	includes/corewar.h	/^	size_t				nb_cycle_per_second;$/;"	m	struct:s_corewar	access:public
-s_corewar::nb_process	includes/corewar.h	/^	size_t				nb_process;$/;"	m	struct:s_corewar	access:public
-s_corewar::option	includes/corewar.h	/^	t_option			option;$/;"	m	struct:s_corewar	access:public
-s_corewar::players	includes/corewar.h	/^	t_listd				*players;$/;"	m	struct:s_corewar	access:public
-s_corewar::process	includes/corewar.h	/^	t_listd				*process;$/;"	m	struct:s_corewar	access:public
-s_corewar::ram	includes/corewar.h	/^	t_byte				ram[MEM_SIZE];$/;"	m	struct:s_corewar	access:public
-s_corewar::run	includes/corewar.h	/^	t_bool				run;$/;"	m	struct:s_corewar	access:public
-s_corewar::thread	includes/corewar.h	/^	pthread_t			thread;$/;"	m	struct:s_corewar	access:public
-s_file	includes/corewar.h	/^typedef struct			s_file$/;"	s
-s_file::data	includes/corewar.h	/^	char				data[CHAMP_MAX_SIZE + sizeof(t_header)];$/;"	m	struct:s_file	access:public
-s_file::header	includes/corewar.h	/^	t_header			*header;$/;"	m	struct:s_file	access:public
-s_file::id	includes/corewar.h	/^	int					id;$/;"	m	struct:s_file	access:public
-s_libx_color	libxft/includes/libxft.h	/^typedef struct	s_libx_color$/;"	s
-s_libx_color::b	libxft/includes/libxft.h	/^	double		b;$/;"	m	struct:s_libx_color	access:public
-s_libx_color::g	libxft/includes/libxft.h	/^	double		g;$/;"	m	struct:s_libx_color	access:public
-s_libx_color::r	libxft/includes/libxft.h	/^	double		r;$/;"	m	struct:s_libx_color	access:public
-s_libx_img	libxft/includes/libxft.h	/^typedef struct	s_libx_img$/;"	s
-s_libx_img::bits_per_pixel	libxft/includes/libxft.h	/^	int			bits_per_pixel;$/;"	m	struct:s_libx_img	access:public
-s_libx_img::buffer	libxft/includes/libxft.h	/^	char		*buffer;$/;"	m	struct:s_libx_img	access:public
-s_libx_img::endian	libxft/includes/libxft.h	/^	int			endian;$/;"	m	struct:s_libx_img	access:public
-s_libx_img::height	libxft/includes/libxft.h	/^	int			height;$/;"	m	struct:s_libx_img	access:public
-s_libx_img::img_ptr	libxft/includes/libxft.h	/^	void		*img_ptr;$/;"	m	struct:s_libx_img	access:public
-s_libx_img::size_line	libxft/includes/libxft.h	/^	int			size_line;$/;"	m	struct:s_libx_img	access:public
-s_libx_img::width	libxft/includes/libxft.h	/^	int			width;$/;"	m	struct:s_libx_img	access:public
-s_mouse	includes/corewar.h	/^typedef struct			s_mouse$/;"	s
-s_mouse::x	includes/corewar.h	/^	int					x;$/;"	m	struct:s_mouse	access:public
-s_mouse::y	includes/corewar.h	/^	int					y;$/;"	m	struct:s_mouse	access:public
-s_option	includes/corewar.h	/^typedef struct			s_option$/;"	s
-s_option::dump	includes/corewar.h	/^	int					dump;$/;"	m	struct:s_option	access:public
-s_option::graphic	includes/corewar.h	/^	t_bool				graphic;$/;"	m	struct:s_option	access:public
-s_option::verbose	includes/corewar.h	/^	t_verbose			verbose;$/;"	m	struct:s_option	access:public
-s_player	includes/corewar.h	/^typedef struct			s_player$/;"	s
-s_player::color_id	includes/corewar.h	/^	int					color_id;$/;"	m	struct:s_player	access:public
-s_player::description	includes/corewar.h	/^	char				*description;$/;"	m	struct:s_player	access:public
-s_player::id	includes/corewar.h	/^	int					id;$/;"	m	struct:s_player	access:public
-s_player::last_live	includes/corewar.h	/^	long				last_live;$/;"	m	struct:s_player	access:public
-s_player::live	includes/corewar.h	/^	size_t				live;$/;"	m	struct:s_player	access:public
-s_player::name	includes/corewar.h	/^	char				*name;$/;"	m	struct:s_player	access:public
-s_process	includes/corewar.h	/^typedef struct			s_process$/;"	s
-s_process::carry	includes/corewar.h	/^	int					carry;$/;"	m	struct:s_process	access:public
-s_process::color_id	includes/corewar.h	/^	int					color_id;$/;"	m	struct:s_process	access:public
-s_process::id	includes/corewar.h	/^	int					id;$/;"	m	struct:s_process	access:public
-s_process::in_action	includes/corewar.h	/^	t_bool				in_action;$/;"	m	struct:s_process	access:public
-s_process::live	includes/corewar.h	/^	int					live;$/;"	m	struct:s_process	access:public
-s_process::op	includes/corewar.h	/^	t_op				op;$/;"	m	struct:s_process	access:public
-s_process::op_cycle	includes/corewar.h	/^	int					op_cycle;$/;"	m	struct:s_process	access:public
-s_process::pc	includes/corewar.h	/^	size_t				pc;$/;"	m	struct:s_process	access:public
-s_process::reg	includes/corewar.h	/^	int					reg[REG_NUMBER];$/;"	m	struct:s_process	access:public
-s_process::uid	includes/corewar.h	/^	size_t				uid;$/;"	m	struct:s_process	access:public
-s_verbose	includes/corewar.h	/^typedef struct			s_verbose$/;"	s
-s_verbose::aff	includes/corewar.h	/^	t_bool				aff;$/;"	m	struct:s_verbose	access:public
-s_verbose::cycle	includes/corewar.h	/^	t_bool				cycle;$/;"	m	struct:s_verbose	access:public
-s_verbose::death	includes/corewar.h	/^	t_bool				death;$/;"	m	struct:s_verbose	access:public
-s_verbose::live	includes/corewar.h	/^	t_bool				live;$/;"	m	struct:s_verbose	access:public
-s_verbose::move	includes/corewar.h	/^	t_bool				move;$/;"	m	struct:s_verbose	access:public
-s_verbose::op	includes/corewar.h	/^	t_bool				op;$/;"	m	struct:s_verbose	access:public
-s_vm_mlx	includes/corewar.h	/^typedef struct			s_vm_mlx$/;"	s
-s_vm_mlx::background_info	includes/corewar.h	/^	unsigned char		*background_info;$/;"	m	struct:s_vm_mlx	access:public
-s_vm_mlx::background_memory	includes/corewar.h	/^	unsigned char		*background_memory;$/;"	m	struct:s_vm_mlx	access:public
-s_vm_mlx::color	includes/corewar.h	/^	int					color[19];$/;"	m	struct:s_vm_mlx	access:public
-s_vm_mlx::img_font	includes/corewar.h	/^	t_libx_img			*img_font;$/;"	m	struct:s_vm_mlx	access:public
-s_vm_mlx::img_info	includes/corewar.h	/^	t_libx_img			*img_info;$/;"	m	struct:s_vm_mlx	access:public
-s_vm_mlx::img_memory	includes/corewar.h	/^	t_libx_img			*img_memory;$/;"	m	struct:s_vm_mlx	access:public
-s_vm_mlx::mlx	includes/corewar.h	/^	void				*mlx;$/;"	m	struct:s_vm_mlx	access:public
-s_vm_mlx::mouse	includes/corewar.h	/^	t_mouse				mouse;$/;"	m	struct:s_vm_mlx	access:public
-s_vm_mlx::mutex_info	includes/corewar.h	/^	pthread_mutex_t		mutex_info;$/;"	m	struct:s_vm_mlx	access:public
-s_vm_mlx::mutex_key	includes/corewar.h	/^	pthread_mutex_t		mutex_key;$/;"	m	struct:s_vm_mlx	access:public
-s_vm_mlx::mutex_memory	includes/corewar.h	/^	pthread_mutex_t		mutex_memory;$/;"	m	struct:s_vm_mlx	access:public
-s_vm_mlx::pause	includes/corewar.h	/^	t_bool				pause;$/;"	m	struct:s_vm_mlx	access:public
-s_vm_mlx::thread_info	includes/corewar.h	/^	pthread_t			thread_info;$/;"	m	struct:s_vm_mlx	access:public
-s_vm_mlx::thread_memory	includes/corewar.h	/^	pthread_t			thread_memory;$/;"	m	struct:s_vm_mlx	access:public
-s_vm_mlx::win	includes/corewar.h	/^	void				*win;$/;"	m	struct:s_vm_mlx	access:public
-size_line	libxft/includes/libxft.h	/^	int			size_line;$/;"	m	struct:s_libx_img	access:public
-t_byte	includes/corewar.h	/^}						t_byte;$/;"	t	typeref:struct:s_byte
-t_corewar	includes/corewar.h	/^}						t_corewar;$/;"	t	typeref:struct:s_corewar
-t_file	includes/corewar.h	/^}						t_file;$/;"	t	typeref:struct:s_file
-t_func_op	includes/corewar.h	/^typedef void			(*t_func_op)(t_process *process, int type[4],$/;"	t
-t_libx_color	libxft/includes/libxft.h	/^}				t_libx_color;$/;"	t	typeref:struct:s_libx_color
-t_libx_img	libxft/includes/libxft.h	/^}				t_libx_img;$/;"	t	typeref:struct:s_libx_img
-t_libx_key_func	libxft/includes/libxft.h	/^typedef void	(*t_libx_key_func)();$/;"	t
-t_mouse	includes/corewar.h	/^}						t_mouse;$/;"	t	typeref:struct:s_mouse
-t_option	includes/corewar.h	/^}						t_option;$/;"	t	typeref:struct:s_option
-t_player	includes/corewar.h	/^}						t_player;$/;"	t	typeref:struct:s_player
-t_process	includes/corewar.h	/^}						t_process;$/;"	t	typeref:struct:s_process
-t_verbose	includes/corewar.h	/^}						t_verbose;$/;"	t	typeref:struct:s_verbose
-t_vm_mlx	includes/corewar.h	/^}						t_vm_mlx;$/;"	t	typeref:struct:s_vm_mlx
-thread	includes/corewar.h	/^	pthread_t			thread;$/;"	m	struct:s_corewar	access:public
-thread_info	includes/corewar.h	/^	pthread_t			thread_info;$/;"	m	struct:s_vm_mlx	access:public
-thread_memory	includes/corewar.h	/^	pthread_t			thread_memory;$/;"	m	struct:s_vm_mlx	access:public
-uid	includes/corewar.h	/^	size_t				uid;$/;"	m	struct:s_process	access:public
-verbose	includes/corewar.h	/^	t_verbose			verbose;$/;"	m	struct:s_option	access:public
-width	libxft/includes/libxft.h	/^	int			width;$/;"	m	struct:s_libx_img	access:public
-win	includes/corewar.h	/^	void				*win;$/;"	m	struct:s_vm_mlx	access:public
-x	includes/corewar.h	/^	int					x;$/;"	m	struct:s_mouse	access:public
-y	includes/corewar.h	/^	int					y;$/;"	m	struct:s_mouse	access:public
+ASM_H	includes/asm.h	/^# define ASM_H$/;"	d
+BIN_NAME	includes/asm.h	/^# define BIN_NAME	/;"	d
+COMMENT_CHAR_BASIC	includes/asm.h	/^# define COMMENT_CHAR_BASIC	/;"	d
+ERROR	includes/asm.h	/^# define ERROR(/;"	d
+ERR_CMD_COM_EXTRA_ARG	includes/asm.h	/^# define ERR_CMD_COM_EXTRA_ARG	/;"	d
+ERR_CMD_COM_NO_ARG	includes/asm.h	/^# define ERR_CMD_COM_NO_ARG	/;"	d
+ERR_CMD_COM_NO_QUOTE	includes/asm.h	/^# define ERR_CMD_COM_NO_QUOTE	/;"	d
+ERR_CMD_EXTRA_ARG	includes/asm.h	/^# define ERR_CMD_EXTRA_ARG	/;"	d
+ERR_CMD_NAME_EXTRA_ARG	includes/asm.h	/^# define ERR_CMD_NAME_EXTRA_ARG	/;"	d
+ERR_CMD_NAME_NO_ARG	includes/asm.h	/^# define ERR_CMD_NAME_NO_ARG	/;"	d
+ERR_CMD_NAME_NO_QUOTE	includes/asm.h	/^# define ERR_CMD_NAME_NO_QUOTE	/;"	d
+ERR_CMD_SAME	includes/asm.h	/^# define ERR_CMD_SAME	/;"	d
+ERR_LAB_A_CHAR	includes/asm.h	/^# define ERR_LAB_A_CHAR	/;"	d
+ERR_LAB_B_CHAR	includes/asm.h	/^# define ERR_LAB_B_CHAR	/;"	d
+ERR_LAB_NAME	includes/asm.h	/^# define ERR_LAB_NAME	/;"	d
+ERR_LAB_SAME	includes/asm.h	/^# define ERR_LAB_SAME	/;"	d
+ERR_OP_BAD_ARG	includes/asm.h	/^# define ERR_OP_BAD_ARG	/;"	d
+ERR_OP_BAD_TYPE	includes/asm.h	/^# define ERR_OP_BAD_TYPE	/;"	d
+ERR_OP_LAB_NOT_FOUND	includes/asm.h	/^# define ERR_OP_LAB_NOT_FOUND /;"	d
+ERR_OP_NO_ARG	includes/asm.h	/^# define ERR_OP_NO_ARG	/;"	d
+ERR_OP_SEP	includes/asm.h	/^# define ERR_OP_SEP	/;"	d
+ERR_OP_TOO_FEW	includes/asm.h	/^# define ERR_OP_TOO_FEW	/;"	d
+ERR_OP_TOO_MANY	includes/asm.h	/^# define ERR_OP_TOO_MANY	/;"	d
+ERR_OP_UNKNOWN	includes/asm.h	/^# define ERR_OP_UNKNOWN	/;"	d
+QUOTE_CHAR	includes/asm.h	/^# define QUOTE_CHAR	/;"	d
+USAGE	includes/asm.h	/^# define USAGE	/;"	d
+WAR_CMD_UNKNOWN	includes/asm.h	/^# define WAR_CMD_UNKNOWN	/;"	d
+__ER0	includes/asm.h	/^# define __ER0	/;"	d
+args	includes/asm.h	/^	t_arg			args[MAX_ARGS_NUMBER];$/;"	m	struct:s_line	access:public
+code	includes/asm.h	/^	int				code;$/;"	m	struct:s_arg	access:public
+column	includes/asm.h	/^	int				column;$/;"	m	struct:s_arg	access:public
+column	includes/asm.h	/^	int				column;$/;"	m	struct:s_error	access:public
+command_check_same	srcs/command/check_same.c	/^t_bool	command_check_same(char *name)$/;"	f	signature:(char *name)
+command_comment	srcs/command/comment.c	/^void			command_comment(int column, t_arg arg)$/;"	f	signature:(int column, t_arg arg)
+command_name	srcs/command/name.c	/^void			command_name(int column, t_arg arg)$/;"	f	signature:(int column, t_arg arg)
+commands	includes/asm.h	/^	t_listd			*commands;$/;"	m	struct:s_asm	access:public
+cor	includes/asm.h	/^	t_cor			cor;$/;"	m	struct:s_asm	access:public
+cor_asm	srcs/asm.c	/^int				cor_asm(int argc, char **argv)$/;"	f	signature:(int argc, char **argv)
+data	includes/asm.h	/^	char			*data;$/;"	m	struct:s_arg	access:public
+data	includes/asm.h	/^	char			*data;$/;"	m	struct:s_line	access:public
+data	includes/asm.h	/^	char			data[CHAMP_MAX_SIZE];$/;"	m	struct:s_cor	access:public
+error	includes/asm.h	/^	t_bool			error;$/;"	m	struct:s_asm	access:public
+error_list_print	srcs/errors/list_print.c	/^void			error_list_print(void)$/;"	f	signature:(void)
+error_print	srcs/errors/print.c	/^void			error_print(t_arg arg, const char *str)$/;"	f	signature:(t_arg arg, const char *str)
+error_print_sug	srcs/errors/print.c	/^void			error_print_sug(t_arg arg, const char *str, const char *sug)$/;"	f	signature:(t_arg arg, const char *str, const char *sug)
+errors	includes/asm.h	/^	t_listd			*errors;$/;"	m	struct:s_asm	access:public
+file_clean	srcs/file/clean.c	/^void			file_clean(void)$/;"	f	signature:(void)
+file_name	includes/asm.h	/^	char			*file_name;$/;"	m	struct:s_asm	access:public
+file_read	srcs/file/read.c	/^void			file_read(char *file_name)$/;"	f	signature:(char *file_name)
+file_write	srcs/file/write.c	/^void			file_write(void)$/;"	f	signature:(void)
+header	includes/asm.h	/^	t_header		header;$/;"	m	struct:s_cor	access:public
+index	includes/asm.h	/^	int				index;$/;"	m	struct:s_line	access:public
+index_cor	includes/asm.h	/^	int				index_cor;$/;"	m	struct:s_arg	access:public
+index_cor	includes/asm.h	/^	int				index_cor;$/;"	m	struct:s_asm	access:public
+index_cor	includes/asm.h	/^	int				index_cor;$/;"	m	struct:s_line	access:public
+ini_cor	srcs/ini_cor.c	/^void		ini_cor(void)$/;"	f	signature:(void)
+label_add	srcs/label/add.c	/^void	label_add(t_arg arg)$/;"	f	signature:(t_arg arg)
+label_check_name	srcs/label/check_name.c	/^t_bool	label_check_name(char *name)$/;"	f	signature:(char *name)
+label_check_same	srcs/label/check_same.c	/^t_bool	label_check_same(char *name)$/;"	f	signature:(char *name)
+label_get_addr	srcs/label/get_addr_label.c	/^int		label_get_addr(int index, char *name)$/;"	f	signature:(int index, char *name)
+labels	includes/asm.h	/^	t_listd			*labels;$/;"	m	struct:s_asm	access:public
+line	includes/asm.h	/^	int				line;$/;"	m	struct:s_error	access:public
+line	includes/asm.h	/^	struct s_line	*line;$/;"	m	struct:s_arg	typeref:struct:s_arg::s_line	access:public
+line_check_command	srcs/line/check_command.c	/^void			line_check_command(int column, t_line *line)$/;"	f	signature:(int column, t_line *line)
+line_check_label	srcs/line/check_label.c	/^void	line_check_label(int column, t_arg arg)$/;"	f	signature:(int column, t_arg arg)
+line_check_op	srcs/line/check_op.c	/^void			line_check_op(int column, t_arg arg)$/;"	f	signature:(int column, t_arg arg)
+line_creat	srcs/line/creat.c	/^t_line	*line_creat(int index, char *str)$/;"	f	signature:(int index, char *str)
+line_label_scan	srcs/line/label_scan.c	/^void			line_label_scan(int column, t_line *line)$/;"	f	signature:(int column, t_line *line)
+line_scan	srcs/line/scan.c	/^void			line_scan(int column, t_line *line)$/;"	f	signature:(int column, t_line *line)
+line_scan_op	srcs/line/scan_op.c	/^void			line_scan_op(t_line *line)$/;"	f	signature:(t_line *line)
+lines	includes/asm.h	/^	t_listd			*lines;$/;"	m	struct:s_asm	access:public
+main	srcs/main.c	/^int		main(int argc, char **argv)$/;"	f	signature:(int argc, char **argv)
+nb_args	includes/asm.h	/^	int				nb_args;$/;"	m	struct:s_line	access:public
+op	includes/asm.h	/^	t_op			op;$/;"	m	struct:s_line	access:public
+op_arg_to_cor	srcs/op/arg_to_cor.c	/^void			op_arg_to_cor(t_line *line, t_arg *arg)$/;"	f	signature:(t_line *line, t_arg *arg)
+op_check_name	srcs/op/check_name.c	/^t_bool		op_check_name(char *name)$/;"	f	signature:(char *name)
+op_get_from_name	srcs/op/get_from_name.c	/^t_op	op_get_from_name(char *name)$/;"	f	signature:(char *name)
+op_get_type	srcs/op/get_type.c	/^int			op_get_type(t_op op, char *str)$/;"	f	signature:(t_op op, char *str)
+op_tab	srcs/op_tab.c	/^t_op			op_tab(int index)$/;"	f	signature:(int index)
+op_to_cor	srcs/op/to_cor.c	/^void		op_to_cor(t_line *line)$/;"	f	signature:(t_line *line)
+s_arg	includes/asm.h	/^typedef struct		s_arg$/;"	s
+s_arg::code	includes/asm.h	/^	int				code;$/;"	m	struct:s_arg	access:public
+s_arg::column	includes/asm.h	/^	int				column;$/;"	m	struct:s_arg	access:public
+s_arg::data	includes/asm.h	/^	char			*data;$/;"	m	struct:s_arg	access:public
+s_arg::index_cor	includes/asm.h	/^	int				index_cor;$/;"	m	struct:s_arg	access:public
+s_arg::line	includes/asm.h	/^	struct s_line	*line;$/;"	m	struct:s_arg	typeref:struct:s_arg::s_line	access:public
+s_arg::type	includes/asm.h	/^	int				type;$/;"	m	struct:s_arg	access:public
+s_asm	includes/asm.h	/^typedef struct		s_asm$/;"	s
+s_asm::commands	includes/asm.h	/^	t_listd			*commands;$/;"	m	struct:s_asm	access:public
+s_asm::cor	includes/asm.h	/^	t_cor			cor;$/;"	m	struct:s_asm	access:public
+s_asm::error	includes/asm.h	/^	t_bool			error;$/;"	m	struct:s_asm	access:public
+s_asm::errors	includes/asm.h	/^	t_listd			*errors;$/;"	m	struct:s_asm	access:public
+s_asm::file_name	includes/asm.h	/^	char			*file_name;$/;"	m	struct:s_asm	access:public
+s_asm::index_cor	includes/asm.h	/^	int				index_cor;$/;"	m	struct:s_asm	access:public
+s_asm::labels	includes/asm.h	/^	t_listd			*labels;$/;"	m	struct:s_asm	access:public
+s_asm::lines	includes/asm.h	/^	t_listd			*lines;$/;"	m	struct:s_asm	access:public
+s_check_types	srcs/line/scan_op.c	/^static void		s_check_types(t_line *line)$/;"	f	file:	signature:(t_line *line)
+s_cond	srcs/errors/print.c	/^static int		s_cond(t_error *e1, t_error *e2)$/;"	f	file:	signature:(t_error *e1, t_error *e2)
+s_cor	includes/asm.h	/^typedef struct		s_cor$/;"	s
+s_cor::data	includes/asm.h	/^	char			data[CHAMP_MAX_SIZE];$/;"	m	struct:s_cor	access:public
+s_cor::header	includes/asm.h	/^	t_header		header;$/;"	m	struct:s_cor	access:public
+s_delete_arg	srcs/file/clean.c	/^static void		s_delete_arg(t_arg *arg)$/;"	f	file:	signature:(t_arg *arg)
+s_delete_commands	srcs/file/clean.c	/^static void		s_delete_commands(char *s)$/;"	f	file:	signature:(char *s)
+s_delete_errors	srcs/file/clean.c	/^static void		s_delete_errors(t_error *error)$/;"	f	file:	signature:(t_error *error)
+s_delete_line	srcs/file/clean.c	/^static void		s_delete_line(t_line *line)$/;"	f	file:	signature:(t_line *line)
+s_error	includes/asm.h	/^typedef struct		s_error$/;"	s
+s_error::column	includes/asm.h	/^	int				column;$/;"	m	struct:s_error	access:public
+s_error::line	includes/asm.h	/^	int				line;$/;"	m	struct:s_error	access:public
+s_error::str	includes/asm.h	/^	char			*str;$/;"	m	struct:s_error	access:public
+s_file_read_line	srcs/file/read.c	/^static t_bool	s_file_read_line(int fd)$/;"	f	file:	signature:(int fd)
+s_get_argument	srcs/line/check_op.c	/^static void		s_get_argument(int column, t_line *line)$/;"	f	file:	signature:(int column, t_line *line)
+s_get_direct	srcs/op/get_type.c	/^static int	s_get_direct(t_op op, char *str)$/;"	f	file:	signature:(t_op op, char *str)
+s_get_first_word	srcs/line/check_command.c	/^static char		*s_get_first_word(int *column, char *str)$/;"	f	file:	signature:(int *column, char *str)
+s_get_first_word	srcs/line/check_op.c	/^static char		*s_get_first_word(int *column, char *str)$/;"	f	file:	signature:(int *column, char *str)
+s_get_first_word	srcs/line/label_scan.c	/^static char		*s_get_first_word(int *column, char *str)$/;"	f	file:	signature:(int *column, char *str)
+s_get_first_word	srcs/line/scan.c	/^static char		*s_get_first_word(int *column, char *str)$/;"	f	file:	signature:(int *column, char *str)
+s_get_label	srcs/op/get_type.c	/^static int	s_get_label(t_op op, char *str)$/;"	f	file:	signature:(t_op op, char *str)
+s_get_pcode	srcs/op/to_cor.c	/^static int	s_get_pcode(t_line *line)$/;"	f	file:	signature:(t_line *line)
+s_get_registre	srcs/op/get_type.c	/^static int	s_get_registre(t_op op, char *str)$/;"	f	file:	signature:(t_op op, char *str)
+s_get_str_in_quote	srcs/command/comment.c	/^static char		*s_get_str_in_quote(int *column, char *str)$/;"	f	file:	signature:(int *column, char *str)
+s_get_str_in_quote	srcs/command/name.c	/^static char		*s_get_str_in_quote(int *column, char *str)$/;"	f	file:	signature:(int *column, char *str)
+s_ini_op_tab	srcs/op_tab.c	/^static void		s_ini_op_tab(t_op **t)$/;"	f	file:	signature:(t_op **t)
+s_ini_op_tab2	srcs/op_tab.c	/^static void		s_ini_op_tab2(t_op **t)$/;"	f	file:	signature:(t_op **t)
+s_ini_singleton	srcs/sgt/sgt_asm.c	/^static void		s_ini_singleton(t_asm *t)$/;"	f	file:	signature:(t_asm *t)
+s_jump_whitespace	srcs/command/comment.c	/^static void		s_jump_whitespace(int *column, char *str)$/;"	f	file:	signature:(int *column, char *str)
+s_jump_whitespace	srcs/command/name.c	/^static void		s_jump_whitespace(int *column, char *str)$/;"	f	file:	signature:(int *column, char *str)
+s_jump_whitespace	srcs/line/check_command.c	/^static void		s_jump_whitespace(int *column, char *str)$/;"	f	file:	signature:(int *column, char *str)
+s_jump_whitespace	srcs/line/check_op.c	/^static void		s_jump_whitespace(int *column, char *str)$/;"	f	file:	signature:(int *column, char *str)
+s_jump_whitespace	srcs/line/label_scan.c	/^static void		s_jump_whitespace(int *column, char *str)$/;"	f	file:	signature:(int *column, char *str)
+s_jump_whitespace	srcs/line/scan.c	/^static void		s_jump_whitespace(int *column, char *str)$/;"	f	file:	signature:(int *column, char *str)
+s_lab_to_cor	srcs/op/arg_to_cor.c	/^static void		s_lab_to_cor(t_line *line, t_arg *arg)$/;"	f	file:	signature:(t_line *line, t_arg *arg)
+s_line	includes/asm.h	/^typedef struct		s_line$/;"	s
+s_line	srcs/file/read.c	/^static t_bool	s_line(t_listd **list, int index, char *line_str)$/;"	f	file:	signature:(t_listd **list, int index, char *line_str)
+s_line::args	includes/asm.h	/^	t_arg			args[MAX_ARGS_NUMBER];$/;"	m	struct:s_line	access:public
+s_line::data	includes/asm.h	/^	char			*data;$/;"	m	struct:s_line	access:public
+s_line::index	includes/asm.h	/^	int				index;$/;"	m	struct:s_line	access:public
+s_line::index_cor	includes/asm.h	/^	int				index_cor;$/;"	m	struct:s_line	access:public
+s_line::nb_args	includes/asm.h	/^	int				nb_args;$/;"	m	struct:s_line	access:public
+s_line::op	includes/asm.h	/^	t_op			op;$/;"	m	struct:s_line	access:public
+s_print	srcs/errors/list_print.c	/^static void		s_print(t_error *error)$/;"	f	file:	signature:(t_error *error)
+s_print_indicator	srcs/errors/print.c	/^static void		s_print_indicator(char **error, t_arg arg)$/;"	f	file:	signature:(char **error, t_arg arg)
+s_print_indicator	srcs/errors/warning.c	/^static void		s_print_indicator(t_arg arg)$/;"	f	file:	signature:(t_arg arg)
+s_print_sugestion	srcs/errors/print.c	/^static void		s_print_sugestion(char **error, t_arg arg, const char *sug)$/;"	f	file:	signature:(char **error, t_arg arg, const char *sug)
+s_scan_lexical	srcs/asm.c	/^static void		s_scan_lexical(t_line *line)$/;"	f	file:	signature:(t_line *line)
+s_scan_op	srcs/asm.c	/^static void		s_scan_op(t_line *line)$/;"	f	file:	signature:(t_line *line)
+s_set_2byte_value	srcs/op/arg_to_cor.c	/^static void		s_set_2byte_value(char *cor, int index, unsigned short n)$/;"	f	file:	signature:(char *cor, int index, unsigned short n)
+s_set_4byte_value	srcs/op/arg_to_cor.c	/^static void		s_set_4byte_value(char *cor, int index, unsigned int n)$/;"	f	file:	signature:(char *cor, int index, unsigned int n)
+s_set_arg	srcs/line/check_op.c	/^static void		s_set_arg(t_line *line, int i, int *column)$/;"	f	file:	signature:(t_line *line, int i, int *column)
+s_set_comment_in_header	srcs/command/comment.c	/^static void		s_set_comment_in_header(t_arg arg)$/;"	f	file:	signature:(t_arg arg)
+s_set_name_in_header	srcs/command/name.c	/^static void		s_set_name_in_header(t_arg arg)$/;"	f	file:	signature:(t_arg arg)
+s_set_new_name	srcs/file/write.c	/^static void		s_set_new_name(char **ret, char *file_name)$/;"	f	file:	signature:(char **ret, char *file_name)
+s_singleton	srcs/sgt/sgt_asm.c	/^static t_asm	**s_singleton(void)$/;"	f	file:	signature:(void)
+s_swap	srcs/file/write.c	/^static int		s_swap(int val)$/;"	f	file:	signature:(int val)
+sgt_addr_asm	srcs/sgt/sgt_asm.c	/^t_asm			**sgt_addr_asm(void)$/;"	f	signature:(void)
+sgt_asm	srcs/sgt/sgt_asm.c	/^t_asm			*sgt_asm(void)$/;"	f	signature:(void)
+str	includes/asm.h	/^	char			*str;$/;"	m	struct:s_error	access:public
+t_arg	includes/asm.h	/^}					t_arg;$/;"	t	typeref:struct:s_arg
+t_asm	includes/asm.h	/^}					t_asm;$/;"	t	typeref:struct:s_asm
+t_cor	includes/asm.h	/^}					t_cor;$/;"	t	typeref:struct:s_cor
+t_error	includes/asm.h	/^}					t_error;$/;"	t	typeref:struct:s_error
+t_line	includes/asm.h	/^}					t_line;$/;"	t	typeref:struct:s_line
+type	includes/asm.h	/^	int				type;$/;"	m	struct:s_arg	access:public
+warning_print	srcs/errors/warning.c	/^void			warning_print(t_arg arg, const char *str)$/;"	f	signature:(t_arg arg, const char *str)
