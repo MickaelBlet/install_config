@@ -4,9 +4,6 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-$	objs/cycle.o	/^/;"	v
-$$	Makefile	/^	if [[ `rm -R $(OBJDIR) &> \/dev\/null 2>&1; echo $$?` == "0" ]]; then		\\$/;"	v
-$$	libxft/Makefile	/^	if [[ `rm -R $(OBJDIR) &> \/dev\/null 2>&1; echo $$?` == "0" ]]; then		\\$/;"	v
 APPLY	libxft/includes/libxft.h	/^# define APPLY(/;"	d
 APPLY_1	libxft/includes/libxft.h	/^# define APPLY_1(/;"	d
 APPLY_2	libxft/includes/libxft.h	/^# define APPLY_2(/;"	d
@@ -19,8 +16,6 @@ APPLY_8	libxft/includes/libxft.h	/^# define APPLY_8(/;"	d
 BIN_NAME	includes/corewar.h	/^# define BIN_NAME	/;"	d
 CAT	libxft/includes/libxft.h	/^# define CAT(/;"	d
 COREWAR_H	includes/corewar.h	/^# define COREWAR_H$/;"	d
-E	libxft/libxft.a	/^color_to_int.o/;"	v
-E	libxft/objs/color_to_int.o	/^销睨/;"	v
 ERROR	includes/corewar.h	/^# define ERROR(/;"	d
 ERR_DUMP_FORMAT	includes/corewar.h	/^# define ERR_DUMP_FORMAT	/;"	d
 ERR_FILE_FORMAT_ID	includes/corewar.h	/^# define ERR_FILE_FORMAT_ID	/;"	d
@@ -28,10 +23,6 @@ ERR_FILE_NOT_VALID	includes/corewar.h	/^# define ERR_FILE_NOT_VALID	/;"	d
 ERR_FILE_SAME_ID	includes/corewar.h	/^# define ERR_FILE_SAME_ID	/;"	d
 ERR_INIT_MLX	includes/corewar.h	/^# define ERR_INIT_MLX	/;"	d
 ERR_TOO_MANY_PLAYERS	includes/corewar.h	/^# define ERR_TOO_MANY_PLAYERS	/;"	d
-H	objs/mlx/loop_hook.o	/^销睨/;"	v
-H	objs/mlx/mouse/byte_position_mouse.o	/^销睨/;"	v
-H	objs/verbosity/move.o	/^/;"	v
-L	objs/process/check_live.o	/^/;"	v
 LIBXFT_H	libxft/includes/libxft.h	/^# define LIBXFT_H$/;"	d
 LIBX_DRAW_CIRCLE_TO_IMAGE	libxft/includes/libxft.h	/^# define LIBX_DRAW_CIRCLE_TO_IMAGE(/;"	d
 LIBX_DRAW_LINE_TO_IMAGE	libxft/includes/libxft.h	/^# define LIBX_DRAW_LINE_TO_IMAGE(/;"	d
@@ -134,13 +125,10 @@ LIBX_MOUSE_BUTTON_RIGHT	libxft/includes/libxft.h	/^# define LIBX_MOUSE_BUTTON_RI
 LIBX_MOUSE_SCROLL_DOWN	libxft/includes/libxft.h	/^# define LIBX_MOUSE_SCROLL_DOWN	/;"	d
 LIBX_MOUSE_SCROLL_UP	libxft/includes/libxft.h	/^# define LIBX_MOUSE_SCROLL_UP	/;"	d
 LIBX_STRING_TO_IMAGE	libxft/includes/libxft.h	/^# define LIBX_STRING_TO_IMAGE(/;"	d
-M	libxft/libxft.a	/^color_to_int.o/;"	v
-M	libxft/objs/color_to_int.o	/^销睨/;"	v
 MSG_USAGE	includes/corewar.h	/^# define MSG_USAGE	/;"	d
 NARGS	libxft/includes/libxft.h	/^# define NARGS(/;"	d
 NARGS_SEQ	libxft/includes/libxft.h	/^# define NARGS_SEQ(/;"	d
 PRIMITIVE_CAT	libxft/includes/libxft.h	/^# define PRIMITIVE_CAT(/;"	d
-UH	libxft/objs/color_to_int.o	/^销睨/;"	v
 VM_COLOR_BOLD	includes/corewar.h	/^# define VM_COLOR_BOLD	/;"	d
 VM_INFO_WIDTH	includes/corewar.h	/^# define VM_INFO_WIDTH	/;"	d
 VM_MEMORY_BYTE_HEIGHT	includes/corewar.h	/^# define VM_MEMORY_BYTE_HEIGHT	/;"	d
@@ -165,25 +153,19 @@ __ER0	includes/corewar.h	/^# define __ER0	/;"	d
 __MSG1	includes/corewar.h	/^# define __MSG1	/;"	d
 __MSG2	includes/corewar.h	/^# define __MSG2	/;"	d
 __MSG3	includes/corewar.h	/^# define __MSG3	/;"	d
-__cstring__TEXT	objs/verbosity/cycle.o	/^销睨/;"	v
 aff	includes/corewar.h	/^	t_bool				aff;$/;"	m	struct:s_verbose	access:public
 b	libxft/includes/libxft.h	/^	double		b;$/;"	m	struct:s_libx_color	access:public
 background_info	includes/corewar.h	/^	unsigned char		*background_info;$/;"	m	struct:s_vm_mlx	access:public
 background_memory	includes/corewar.h	/^	unsigned char		*background_memory;$/;"	m	struct:s_vm_mlx	access:public
 bits_per_pixel	libxft/includes/libxft.h	/^	int			bits_per_pixel;$/;"	m	struct:s_libx_img	access:public
 buffer	libxft/includes/libxft.h	/^	char		*buffer;$/;"	m	struct:s_libx_img	access:public
-byte_code_to_type	srcs/op/byte_code_to_type.c	/^void		byte_code_to_type(int (*t)[4], unsigned char b)$/;"	f	signature:(int (*t)[4], unsigned char b)
-byte_position_mouse	srcs/mlx/mouse/byte_position_mouse.c	/^void			byte_position_mouse(void)$/;"	f	signature:(void)
 carry	includes/corewar.h	/^	int					carry;$/;"	m	struct:s_process	access:public
-check_type_args	srcs/op/check_type_args.c	/^t_bool	check_type_args(t_op op, int type[4], int arg[4])$/;"	f	signature:(t_op op, int type[4], int arg[4])
 color	includes/corewar.h	/^	int					color[19];$/;"	m	struct:s_vm_mlx	access:public
 color_id	includes/corewar.h	/^	int					color_id;$/;"	m	struct:s_byte	access:public
 color_id	includes/corewar.h	/^	int					color_id;$/;"	m	struct:s_player	access:public
 color_id	includes/corewar.h	/^	int					color_id;$/;"	m	struct:s_process	access:public
-corewar	srcs/corewar.c	/^void			corewar(int argc, char **argv)$/;"	f	signature:(int argc, char **argv)
 cycle	includes/corewar.h	/^	long				cycle;$/;"	m	struct:s_corewar	access:public
 cycle	includes/corewar.h	/^	t_bool				cycle;$/;"	m	struct:s_verbose	access:public
-cycle	srcs/cycle.c	/^void			cycle(void)$/;"	f	signature:(void)
 cycle_check	includes/corewar.h	/^	size_t				cycle_check;$/;"	m	struct:s_corewar	access:public
 cycle_to_die	includes/corewar.h	/^	long				cycle_to_die;$/;"	m	struct:s_corewar	access:public
 data	includes/corewar.h	/^	char				data[CHAMP_MAX_SIZE + sizeof(t_header)];$/;"	m	struct:s_file	access:public
@@ -191,23 +173,10 @@ data	includes/corewar.h	/^	unsigned char		data;$/;"	m	struct:s_byte	access:publi
 death	includes/corewar.h	/^	t_bool				death;$/;"	m	struct:s_verbose	access:public
 description	includes/corewar.h	/^	char				*description;$/;"	m	struct:s_player	access:public
 dump	includes/corewar.h	/^	int					dump;$/;"	m	struct:s_option	access:public
-dump	srcs/dump.c	/^void			dump(void)$/;"	f	signature:(void)
-echo	Makefile	/^		echo "\\r\\033[38;5;124m馃摃  CLEAN  $(NAMEBASE)\\033[0m\\033[K";			\\$/;"	v
-echo	Makefile	/^		echo "\\r\\033[38;5;124m馃摃  FCLEAN $(NAMEBASE)\\033[0m\\033[K";			\\$/;"	v
 endian	libxft/includes/libxft.h	/^	int			endian;$/;"	m	struct:s_libx_img	access:public
-file_check	srcs/file/check.c	/^void			file_check(int *i, char **argv)$/;"	f	signature:(int *i, char **argv)
-file_get_header	srcs/file/get_header.c	/^t_header				*file_get_header(void *ptr)$/;"	f	signature:(void *ptr)
-file_read	srcs/file/read.c	/^t_file			*file_read(char *file_name)$/;"	f	signature:(char *file_name)
 files	includes/corewar.h	/^	t_listd				*files;$/;"	m	struct:s_corewar	access:public
-func_tab	srcs/func_tab.c	/^t_func_op		func_tab(int index)$/;"	f	signature:(int index)
-func_verbose_tab	srcs/func_verbose_tab.c	/^t_func_op		func_verbose_tab(int index)$/;"	f	signature:(int index)
 g	libxft/includes/libxft.h	/^	double		g;$/;"	m	struct:s_libx_color	access:public
-get_dir_value	srcs/ram/get_values.c	/^int		get_dir_value(size_t index)$/;"	f	signature:(size_t index)
-get_ind_value	srcs/ram/get_values.c	/^int		get_ind_value(size_t index)$/;"	f	signature:(size_t index)
-get_reg_value	srcs/ram/get_values.c	/^int		get_reg_value(size_t index)$/;"	f	signature:(size_t index)
-get_value_from_type	srcs/ram/get_values.c	/^int		get_value_from_type(size_t index, int type, int has_idx)$/;"	f	signature:(size_t index, int type, int has_idx)
 graphic	includes/corewar.h	/^	t_bool				graphic;$/;"	m	struct:s_option	access:public
-h	objs/mlx/draw/background.o	/^销睨/;"	v
 header	includes/corewar.h	/^	t_header			*header;$/;"	m	struct:s_file	access:public
 height	libxft/includes/libxft.h	/^	int			height;$/;"	m	struct:s_libx_img	access:public
 id	includes/corewar.h	/^	int					id;$/;"	m	struct:s_file	access:public
@@ -219,32 +188,12 @@ img_info	includes/corewar.h	/^	t_libx_img			*img_info;$/;"	m	struct:s_vm_mlx	acc
 img_memory	includes/corewar.h	/^	t_libx_img			*img_memory;$/;"	m	struct:s_vm_mlx	access:public
 img_ptr	libxft/includes/libxft.h	/^	void		*img_ptr;$/;"	m	struct:s_libx_img	access:public
 in_action	includes/corewar.h	/^	t_bool				in_action;$/;"	m	struct:s_process	access:public
-ini_ram	srcs/ram/ini_ram.c	/^void			ini_ram(void)$/;"	f	signature:(void)
-l$	objs/mlx/draw/rect.o	/^销睨/;"	v
 last_cycle_check	includes/corewar.h	/^	long				last_cycle_check;$/;"	m	struct:s_corewar	access:public
 last_live	includes/corewar.h	/^	long				last_live;$/;"	m	struct:s_player	access:public
-libx_color_to_int	libxft/srcs/color_to_int.c	/^int		libx_color_to_int(t_libx_color color)$/;"	f	signature:(t_libx_color color)
-libx_destroy_image	libxft/srcs/destroy_image.c	/^void	libx_destroy_image(void *mlx, t_libx_img *img)$/;"	f	signature:(void *mlx, t_libx_img *img)
-libx_draw_circle_to_image	libxft/srcs/draw_circle_to_image.c	/^void			libx_draw_circle_to_image(t_libx_img *img, ...)$/;"	f	signature:(t_libx_img *img, ...)
-libx_draw_line_to_image	libxft/srcs/draw_line_to_image.c	/^void			libx_draw_line_to_image(t_libx_img *img, ...)$/;"	f	signature:(t_libx_img *img, ...)
-libx_draw_square_to_image	libxft/srcs/draw_square_to_image.c	/^void			libx_draw_square_to_image(t_libx_img *img, ...)$/;"	f	signature:(t_libx_img *img, ...)
-libx_func_key	libxft/srcs/func_key.c	/^void					libx_func_key(int key, int flag, t_libx_key_func f)$/;"	f	signature:(int key, int flag, t_libx_key_func f)
-libx_get_color_in_image	libxft/srcs/get_color_in_image.c	/^int		libx_get_color_in_image(t_libx_img *img, int x, int y)$/;"	f	signature:(t_libx_img *img, int x, int y)
-libx_hook_key_press	libxft/srcs/func_key.c	/^int						libx_hook_key_press(int key, void *e)$/;"	f	signature:(int key, void *e)
-libx_hook_key_release	libxft/srcs/func_key.c	/^int						libx_hook_key_release(int key, void *e)$/;"	f	signature:(int key, void *e)
-libx_image_fill	libxft/srcs/image_fill.c	/^void	libx_image_fill(t_libx_img *img, int c)$/;"	f	signature:(t_libx_img *img, int c)
-libx_image_to_image	libxft/srcs/image_to_image.c	/^void			libx_image_to_image(t_libx_img *dst, t_libx_img *src,$/;"	f	signature:(t_libx_img *dst, t_libx_img *src, ...)
-libx_image_to_image_png	libxft/srcs/image_to_image_png.c	/^void			libx_image_to_image_png(t_libx_img *dst, t_libx_img *src,$/;"	f	signature:(t_libx_img *dst, t_libx_img *src, ...)
-libx_int_to_color	libxft/srcs/int_to_color.c	/^t_libx_color	libx_int_to_color(int color)$/;"	f	signature:(int color)
-libx_new_image	libxft/srcs/new_image.c	/^t_libx_img	*libx_new_image(void *mlx, int width, int height)$/;"	f	signature:(void *mlx, int width, int height)
-libx_put_pixel_to_image	libxft/srcs/put_pixel_to_image.c	/^void	libx_put_pixel_to_image(t_libx_img *img, int x, int y, int c)$/;"	f	signature:(t_libx_img *img, int x, int y, int c)
-libx_string_to_image	libxft/srcs/string_to_image.c	/^void			libx_string_to_image(t_libx_img *img, t_libx_img *font,$/;"	f	signature:(t_libx_img *img, t_libx_img *font, const char *str, ...)
-libx_xpm_file_to_image	libxft/srcs/xpm_file_to_image.c	/^t_libx_img	*libx_xpm_file_to_image(void *mlx, char *path_file)$/;"	f	signature:(void *mlx, char *path_file)
 live	includes/corewar.h	/^	int					live;$/;"	m	struct:s_byte	access:public
 live	includes/corewar.h	/^	int					live;$/;"	m	struct:s_process	access:public
 live	includes/corewar.h	/^	size_t				live;$/;"	m	struct:s_player	access:public
 live	includes/corewar.h	/^	t_bool				live;$/;"	m	struct:s_verbose	access:public
-main	srcs/main.c	/^int		main(int argc, char **argv)$/;"	f	signature:(int argc, char **argv)
 mlx	includes/corewar.h	/^	void				*mlx;$/;"	m	struct:s_vm_mlx	access:public
 modified_cycle	includes/corewar.h	/^	int					modified_cycle;$/;"	m	struct:s_byte	access:public
 mouse	includes/corewar.h	/^	t_mouse				mouse;$/;"	m	struct:s_vm_mlx	access:public
@@ -259,57 +208,21 @@ nb_cycle_per_second	includes/corewar.h	/^	size_t				nb_cycle_per_second;$/;"	m	s
 nb_process	includes/corewar.h	/^	size_t				nb_process;$/;"	m	struct:s_corewar	access:public
 op	includes/corewar.h	/^	t_bool				op;$/;"	m	struct:s_verbose	access:public
 op	includes/corewar.h	/^	t_op				op;$/;"	m	struct:s_process	access:public
-op_add	srcs/op/add.c	/^void	op_add(t_process *process, int type[4], int arg[4])$/;"	f	signature:(t_process *process, int type[4], int arg[4])
-op_aff	srcs/op/aff.c	/^void	op_aff(t_process *process, int type[4], int arg[4])$/;"	f	signature:(t_process *process, int type[4], int arg[4])
-op_and	srcs/op/and.c	/^void	op_and(t_process *process, int type[4], int arg[4])$/;"	f	signature:(t_process *process, int type[4], int arg[4])
 op_cycle	includes/corewar.h	/^	int					op_cycle;$/;"	m	struct:s_process	access:public
-op_fork	srcs/op/fork.c	/^void	op_fork(t_process *process, int type[4], int arg[4])$/;"	f	signature:(t_process *process, int type[4], int arg[4])
-op_ld	srcs/op/ld.c	/^void	op_ld(t_process *process, int type[4], int arg[4])$/;"	f	signature:(t_process *process, int type[4], int arg[4])
-op_ldi	srcs/op/ldi.c	/^void	op_ldi(t_process *process, int type[4], int arg[4])$/;"	f	signature:(t_process *process, int type[4], int arg[4])
-op_lfork	srcs/op/lfork.c	/^void	op_lfork(t_process *process, int type[4], int arg[4])$/;"	f	signature:(t_process *process, int type[4], int arg[4])
-op_live	srcs/op/live.c	/^void	op_live(t_process *process, int type[4], int arg[4])$/;"	f	signature:(t_process *process, int type[4], int arg[4])
-op_lld	srcs/op/lld.c	/^void	op_lld(t_process *process, int type[4], int arg[4])$/;"	f	signature:(t_process *process, int type[4], int arg[4])
-op_lldi	srcs/op/lldi.c	/^void	op_lldi(t_process *process, int type[4], int arg[4])$/;"	f	signature:(t_process *process, int type[4], int arg[4])
-op_or	srcs/op/or.c	/^void	op_or(t_process *process, int type[4], int arg[4])$/;"	f	signature:(t_process *process, int type[4], int arg[4])
-op_st	srcs/op/st.c	/^void	op_st(t_process *process, int type[4], int arg[4])$/;"	f	signature:(t_process *process, int type[4], int arg[4])
-op_sti	srcs/op/sti.c	/^void	op_sti(t_process *process, int type[4], int arg[4])$/;"	f	signature:(t_process *process, int type[4], int arg[4])
-op_sub	srcs/op/sub.c	/^void	op_sub(t_process *process, int type[4], int arg[4])$/;"	f	signature:(t_process *process, int type[4], int arg[4])
-op_tab	srcs/op_tab.c	/^t_op			op_tab(int index)$/;"	f	signature:(int index)
-op_xor	srcs/op/xor.c	/^void	op_xor(t_process *process, int type[4], int arg[4])$/;"	f	signature:(t_process *process, int type[4], int arg[4])
-op_zjmp	srcs/op/zjmp.c	/^void	op_zjmp(t_process *process, int type[4], int arg[4])$/;"	f	signature:(t_process *process, int type[4], int arg[4])
 option	includes/corewar.h	/^	t_option			option;$/;"	m	struct:s_corewar	access:public
-option	srcs/option.c	/^void			option(int argc, char **argv)$/;"	f	signature:(int argc, char **argv)
-p	objs/process/jump.o	/^销睨/;"	v
 pause	includes/corewar.h	/^	t_bool				pause;$/;"	m	struct:s_vm_mlx	access:public
 pc	includes/corewar.h	/^	size_t				pc;$/;"	m	struct:s_process	access:public
-player_creat	srcs/player/creat.c	/^t_player	*player_creat(t_file *file, int color_id)$/;"	f	signature:(t_file *file, int color_id)
 players	includes/corewar.h	/^	t_listd				*players;$/;"	m	struct:s_corewar	access:public
 process	includes/corewar.h	/^	t_listd				*process;$/;"	m	struct:s_corewar	access:public
-process_action	srcs/process/action.c	/^void			process_action(t_process *process)$/;"	f	signature:(t_process *process)
-process_check_live	srcs/process/check_live.c	/^void			process_check_live(void)$/;"	f	signature:(void)
-process_creat	srcs/process/creat.c	/^t_process		*process_creat(size_t index, int id, int color_id)$/;"	f	signature:(size_t index, int id, int color_id)
-process_fork	srcs/process/fork.c	/^t_process		*process_fork(t_process *process, size_t index)$/;"	f	signature:(t_process *process, size_t index)
-process_jump	srcs/process/jump.c	/^void		process_jump(t_process *process, int jump)$/;"	f	signature:(t_process *process, int jump)
 r	libxft/includes/libxft.h	/^	double		r;$/;"	m	struct:s_libx_color	access:public
 ram	includes/corewar.h	/^	t_byte				ram[MEM_SIZE];$/;"	m	struct:s_corewar	access:public
 reg	includes/corewar.h	/^	int					reg[REG_NUMBER];$/;"	m	struct:s_process	access:public
 run	includes/corewar.h	/^	t_bool				run;$/;"	m	struct:s_corewar	access:public
-s_background	srcs/mlx/draw/tooltip.c	/^static void		s_background(int pc, int x, int y)$/;"	f	file:	signature:(int pc, int x, int y)
-s_basic_run	srcs/corewar.c	/^static void		s_basic_run(void)$/;"	f	file:	signature:(void)
 s_byte	includes/corewar.h	/^typedef struct			s_byte$/;"	s
 s_byte::color_id	includes/corewar.h	/^	int					color_id;$/;"	m	struct:s_byte	access:public
 s_byte::data	includes/corewar.h	/^	unsigned char		data;$/;"	m	struct:s_byte	access:public
 s_byte::live	includes/corewar.h	/^	int					live;$/;"	m	struct:s_byte	access:public
 s_byte::modified_cycle	includes/corewar.h	/^	int					modified_cycle;$/;"	m	struct:s_byte	access:public
-s_check_cycle	srcs/cycle.c	/^static void		s_check_cycle(t_corewar *c)$/;"	f	file:	signature:(t_corewar *c)
-s_check_dump	srcs/option.c	/^static void		s_check_dump(int *i, char *arg)$/;"	f	file:	signature:(int *i, char *arg)
-s_check_file_without_id	srcs/option.c	/^static void		s_check_file_without_id(char *arg)$/;"	f	file:	signature:(char *arg)
-s_check_if_free_id	srcs/file/check.c	/^static void		s_check_if_free_id(int id)$/;"	f	file:	signature:(int id)
-s_check_verbosity	srcs/option.c	/^static t_bool	s_check_verbosity(char *arg)$/;"	f	file:	signature:(char *arg)
-s_color_init	srcs/mlx/mlx_init.c	/^static void		s_color_init(void)$/;"	f	file:	signature:(void)
-s_convert_byte_to_hex	srcs/dump.c	/^static void		s_convert_byte_to_hex(char *ret, unsigned char byte)$/;"	f	file:	signature:(char *ret, unsigned char byte)
-s_convert_byte_to_hex	srcs/mlx/draw/memory.c	/^static void		s_convert_byte_to_hex(char *ret, unsigned char byte)$/;"	f	file:	signature:(char *ret, unsigned char byte)
-s_convert_byte_to_hex	srcs/verbosity/move.c	/^static void		s_convert_byte_to_hex(char *ret, unsigned char byte)$/;"	f	file:	signature:(char *ret, unsigned char byte)
 s_corewar	includes/corewar.h	/^typedef struct			s_corewar$/;"	s
 s_corewar::cycle	includes/corewar.h	/^	long				cycle;$/;"	m	struct:s_corewar	access:public
 s_corewar::cycle_check	includes/corewar.h	/^	size_t				cycle_check;$/;"	m	struct:s_corewar	access:public
@@ -327,45 +240,10 @@ s_corewar::process	includes/corewar.h	/^	t_listd				*process;$/;"	m	struct:s_cor
 s_corewar::ram	includes/corewar.h	/^	t_byte				ram[MEM_SIZE];$/;"	m	struct:s_corewar	access:public
 s_corewar::run	includes/corewar.h	/^	t_bool				run;$/;"	m	struct:s_corewar	access:public
 s_corewar::thread	includes/corewar.h	/^	pthread_t			thread;$/;"	m	struct:s_corewar	access:public
-s_del	srcs/process/check_live.c	/^static t_bool	s_del(t_listd **list, t_process *process)$/;"	f	file:	signature:(t_listd **list, t_process *process)
-s_draw_circle	libxft/srcs/draw_circle_to_image.c	/^static void		s_draw_circle(t_libx_img *img, int data[5])$/;"	f	file:	signature:(t_libx_img *img, int data[5])
-s_draw_init	srcs/mlx/launch.c	/^static void		s_draw_init(void)$/;"	f	file:	signature:(void)
-s_draw_line	libxft/srcs/draw_line_to_image.c	/^static void		s_draw_line(t_libx_img *img, int data[5])$/;"	f	file:	signature:(t_libx_img *img, int data[5])
-s_draw_live	srcs/mlx/draw/memory.c	/^static void		s_draw_live(size_t i)$/;"	f	file:	signature:(size_t i)
-s_draw_process_pc	srcs/mlx/draw/memory.c	/^static void		s_draw_process_pc(void)$/;"	f	file:	signature:(void)
-s_draw_rect_position	srcs/mlx/mouse/byte_position_mouse.c	/^static void		s_draw_rect_position(int pc)$/;"	f	file:	signature:(int pc)
-s_draw_square	libxft/srcs/draw_square_to_image.c	/^static void		s_draw_square(t_libx_img *img, int data[5])$/;"	f	file:	signature:(t_libx_img *img, int data[5])
-s_dump	srcs/cycle.c	/^static void		s_dump(void)$/;"	f	file:	signature:(void)
-s_error	srcs/file/read.c	/^static void		s_error(int id, void *object)$/;"	f	file:	signature:(int id, void *object)
 s_file	includes/corewar.h	/^typedef struct			s_file$/;"	s
 s_file::data	includes/corewar.h	/^	char				data[CHAMP_MAX_SIZE + sizeof(t_header)];$/;"	m	struct:s_file	access:public
 s_file::header	includes/corewar.h	/^	t_header			*header;$/;"	m	struct:s_file	access:public
 s_file::id	includes/corewar.h	/^	int					id;$/;"	m	struct:s_file	access:public
-s_file_merge	srcs/ram/ini_ram.c	/^static void		s_file_merge(t_file *file, size_t index, int id)$/;"	f	file:	signature:(t_file *file, size_t index, int id)
-s_fill_transparent_rect	srcs/mlx/draw/pause.c	/^void			s_fill_transparent_rect(t_libx_img *img,$/;"	f	signature:(t_libx_img *img, int xy[2], int wh[2])
-s_find_free_id	srcs/option.c	/^static int		s_find_free_id(void)$/;"	f	file:	signature:(void)
-s_fork_reg	srcs/process/fork.c	/^static void		s_fork_reg(t_process *new, t_process *process)$/;"	f	file:	signature:(t_process *new, t_process *process)
-s_func	srcs/mlx/tooltip/info_byte/get_info.c	/^static void		s_func(char *ret, t_op op, int pc)$/;"	f	file:	signature:(char *ret, t_op op, int pc)
-s_func	srcs/process/action.c	/^static void		s_func(t_process *process)$/;"	f	file:	signature:(t_process *process)
-s_func_pcode	srcs/mlx/tooltip/info_byte/get_info.c	/^static void		s_func_pcode(char *ret, t_op op, int pc)$/;"	f	file:	signature:(char *ret, t_op op, int pc)
-s_func_pcode	srcs/process/action.c	/^static void		s_func_pcode(t_process *process)$/;"	f	file:	signature:(t_process *process)
-s_general	srcs/mlx/draw/info.c	/^static void		s_general(char *str)$/;"	f	file:	signature:(char *str)
-s_get_nb_live	srcs/cycle.c	/^static size_t	s_get_nb_live(t_corewar *c)$/;"	f	file:	signature:(t_corewar *c)
-s_hook_init	srcs/mlx/mlx_init.c	/^static t_bool	s_hook_init(void)$/;"	f	file:	signature:(void)
-s_image_to_image	libxft/srcs/image_to_image.c	/^static void		s_image_to_image(t_libx_img *dst, t_libx_img *src, int data[4])$/;"	f	file:	signature:(t_libx_img *dst, t_libx_img *src, int data[4])
-s_image_to_image	libxft/srcs/image_to_image_png.c	/^static void		s_image_to_image(t_libx_img *dst, t_libx_img *src, int data[4])$/;"	f	file:	signature:(t_libx_img *dst, t_libx_img *src, int data[4])
-s_img_init	srcs/mlx/mlx_init.c	/^static t_bool	s_img_init(void)$/;"	f	file:	signature:(void)
-s_index	srcs/mlx/draw/tooltip.c	/^static void		s_index(int pc, int x, int y)$/;"	f	file:	signature:(int pc, int x, int y)
-s_info	srcs/mlx/draw/tooltip.c	/^static void		s_info(int pc, int x, int y)$/;"	f	file:	signature:(int pc, int x, int y)
-s_info_keys	srcs/mlx/draw/background.c	/^static void		s_info_keys(t_vm_mlx *mlx)$/;"	f	file:	signature:(t_vm_mlx *mlx)
-s_info_players	srcs/mlx/draw/background.c	/^static void		s_info_players(t_vm_mlx *mlx)$/;"	f	file:	signature:(t_vm_mlx *mlx)
-s_ini_func_tab	srcs/func_tab.c	/^static void		s_ini_func_tab(t_func_op *t)$/;"	f	file:	signature:(t_func_op *t)
-s_ini_func_tab	srcs/func_verbose_tab.c	/^static void		s_ini_func_tab(t_func_op *t)$/;"	f	file:	signature:(t_func_op *t)
-s_ini_op_tab	srcs/op_tab.c	/^static void		s_ini_op_tab(t_op **t)$/;"	f	file:	signature:(t_op **t)
-s_ini_op_tab2	srcs/op_tab.c	/^static void		s_ini_op_tab2(t_op **t)$/;"	f	file:	signature:(t_op **t)
-s_ini_reg	srcs/process/creat.c	/^static void		s_ini_reg(t_process *process, int id)$/;"	f	file:	signature:(t_process *process, int id)
-s_ini_singleton	srcs/sgt/sgt_corewar.c	/^static void			s_ini_singleton(t_corewar *t)$/;"	f	file:	signature:(t_corewar *t)
-s_ini_singleton	srcs/sgt/sgt_mlx.c	/^static void			s_ini_singleton(t_vm_mlx *t)$/;"	f	file:	signature:(t_vm_mlx *t)
 s_libx_color	libxft/includes/libxft.h	/^typedef struct	s_libx_color$/;"	s
 s_libx_color::b	libxft/includes/libxft.h	/^	double		b;$/;"	m	struct:s_libx_color	access:public
 s_libx_color::g	libxft/includes/libxft.h	/^	double		g;$/;"	m	struct:s_libx_color	access:public
@@ -381,16 +259,10 @@ s_libx_img::width	libxft/includes/libxft.h	/^	int			width;$/;"	m	struct:s_libx_i
 s_mouse	includes/corewar.h	/^typedef struct			s_mouse$/;"	s
 s_mouse::x	includes/corewar.h	/^	int					x;$/;"	m	struct:s_mouse	access:public
 s_mouse::y	includes/corewar.h	/^	int					y;$/;"	m	struct:s_mouse	access:public
-s_mutex_init	srcs/mlx/launch.c	/^static t_bool	s_mutex_init(void)$/;"	f	file:	signature:(void)
-s_mutex_init	srcs/thread/launch.c	/^static t_bool	s_mutex_init(void)$/;"	f	file:	signature:(void)
-s_new_op	srcs/process/action.c	/^static t_bool	s_new_op(t_process *process)$/;"	f	file:	signature:(t_process *process)
 s_option	includes/corewar.h	/^typedef struct			s_option$/;"	s
 s_option::dump	includes/corewar.h	/^	int					dump;$/;"	m	struct:s_option	access:public
 s_option::graphic	includes/corewar.h	/^	t_bool				graphic;$/;"	m	struct:s_option	access:public
 s_option::verbose	includes/corewar.h	/^	t_verbose			verbose;$/;"	m	struct:s_option	access:public
-s_pixel_to_gray	srcs/mlx/draw/fill_transparent_rect.c	/^static void		s_pixel_to_gray(t_libx_img *img, int x, int y)$/;"	f	file:	signature:(t_libx_img *img, int x, int y)
-s_pixel_to_gray	srcs/mlx/draw/pause.c	/^static void		s_pixel_to_gray(t_libx_img *img, int x, int y)$/;"	f	file:	signature:(t_libx_img *img, int x, int y)
-s_place_file_and_creat_pc	srcs/ram/ini_ram.c	/^static void		s_place_file_and_creat_pc(void)$/;"	f	file:	signature:(void)
 s_player	includes/corewar.h	/^typedef struct			s_player$/;"	s
 s_player::color_id	includes/corewar.h	/^	int					color_id;$/;"	m	struct:s_player	access:public
 s_player::description	includes/corewar.h	/^	char				*description;$/;"	m	struct:s_player	access:public
@@ -398,9 +270,6 @@ s_player::id	includes/corewar.h	/^	int					id;$/;"	m	struct:s_player	access:publ
 s_player::last_live	includes/corewar.h	/^	long				last_live;$/;"	m	struct:s_player	access:public
 s_player::live	includes/corewar.h	/^	size_t				live;$/;"	m	struct:s_player	access:public
 s_player::name	includes/corewar.h	/^	char				*name;$/;"	m	struct:s_player	access:public
-s_players	srcs/mlx/draw/info.c	/^static void		s_players(char *str)$/;"	f	file:	signature:(char *str)
-s_print	srcs/mlx/tooltip/info_byte/get_info.c	/^static void		s_print(char *ret, t_op op, int type[4], int arg[4])$/;"	f	file:	signature:(char *ret, t_op op, int type[4], int arg[4])
-s_print_line	libxft/srcs/draw_line_to_image.c	/^static void		s_print_line(t_libx_img *img,$/;"	f	file:	signature:(t_libx_img *img, int dir[4], int ls[2], int data[5])
 s_process	includes/corewar.h	/^typedef struct			s_process$/;"	s
 s_process::carry	includes/corewar.h	/^	int					carry;$/;"	m	struct:s_process	access:public
 s_process::color_id	includes/corewar.h	/^	int					color_id;$/;"	m	struct:s_process	access:public
@@ -412,22 +281,6 @@ s_process::op_cycle	includes/corewar.h	/^	int					op_cycle;$/;"	m	struct:s_proce
 s_process::pc	includes/corewar.h	/^	size_t				pc;$/;"	m	struct:s_process	access:public
 s_process::reg	includes/corewar.h	/^	int					reg[REG_NUMBER];$/;"	m	struct:s_process	access:public
 s_process::uid	includes/corewar.h	/^	size_t				uid;$/;"	m	struct:s_process	access:public
-s_put_pixel	libxft/srcs/string_to_image.c	/^static void		s_put_pixel(t_libx_img *img, t_libx_img *font,$/;"	f	file:	signature:(t_libx_img *img, t_libx_img *font, int data[4], int color)
-s_putchar	libxft/srcs/string_to_image.c	/^static void		s_putchar(t_libx_img *img, t_libx_img *font,$/;"	f	file:	signature:(t_libx_img *img, t_libx_img *font, char c, int data[3])
-s_putstr	libxft/srcs/string_to_image.c	/^static void		s_putstr(t_libx_img *img, t_libx_img *font,$/;"	f	file:	signature:(t_libx_img *img, t_libx_img *font, const char *str, int data[3])
-s_read	srcs/file/read.c	/^static void		s_read(t_file *file, int fd, char *file_name)$/;"	f	file:	signature:(t_file *file, int fd, char *file_name)
-s_reset_live_player	srcs/cycle.c	/^static void		s_reset_live_player(t_corewar *c)$/;"	f	file:	signature:(t_corewar *c)
-s_set_direction	libxft/srcs/draw_line_to_image.c	/^static void		s_set_direction(int dir[4], int w, int h)$/;"	f	file:	signature:(int dir[4], int w, int h)
-s_set_long_short	libxft/srcs/draw_line_to_image.c	/^static int		*s_set_long_short(int ls[2], int dir[4], int w, int h)$/;"	f	file:	signature:(int ls[2], int dir[4], int w, int h)
-s_singleton	libxft/srcs/func_key.c	/^static t_libx_key_func	*s_singleton(int flag)$/;"	f	file:	signature:(int flag)
-s_singleton	srcs/sgt/sgt_corewar.c	/^static t_corewar	**s_singleton(void)$/;"	f	file:	signature:(void)
-s_singleton	srcs/sgt/sgt_mlx.c	/^static t_vm_mlx		**s_singleton(void)$/;"	f	file:	signature:(void)
-s_size_print	srcs/mlx/tooltip/info_byte/get_info.c	/^static void		s_size_print(char *ret, int pc, int index_type)$/;"	f	file:	signature:(char *ret, int pc, int index_type)
-s_sleep	srcs/thread/vm.c	/^static void		s_sleep(void)$/;"	f	file:	signature:(void)
-s_sort_files	srcs/ram/ini_ram.c	/^static void		s_sort_files(void)$/;"	f	file:	signature:(void)
-s_swap_int	srcs/file/get_header.c	/^static unsigned int		s_swap_int(unsigned int a)$/;"	f	file:	signature:(unsigned int a)
-s_thread	srcs/mlx/draw/memory.c	/^static void		*s_thread(void *e)$/;"	f	file:	signature:(void *e)
-s_to_type	srcs/op/byte_code_to_type.c	/^static int	s_to_type(unsigned char b)$/;"	f	file:	signature:(unsigned char b)
 s_verbose	includes/corewar.h	/^typedef struct			s_verbose$/;"	s
 s_verbose::aff	includes/corewar.h	/^	t_bool				aff;$/;"	m	struct:s_verbose	access:public
 s_verbose::cycle	includes/corewar.h	/^	t_bool				cycle;$/;"	m	struct:s_verbose	access:public
@@ -451,15 +304,6 @@ s_vm_mlx::pause	includes/corewar.h	/^	t_bool				pause;$/;"	m	struct:s_vm_mlx	acc
 s_vm_mlx::thread_info	includes/corewar.h	/^	pthread_t			thread_info;$/;"	m	struct:s_vm_mlx	access:public
 s_vm_mlx::thread_memory	includes/corewar.h	/^	pthread_t			thread_memory;$/;"	m	struct:s_vm_mlx	access:public
 s_vm_mlx::win	includes/corewar.h	/^	void				*win;$/;"	m	struct:s_vm_mlx	access:public
-s_win_init	srcs/mlx/mlx_init.c	/^static t_bool	s_win_init(void)$/;"	f	file:	signature:(void)
-s_winner	srcs/mlx/draw/info.c	/^static void		s_winner(char *str)$/;"	f	file:	signature:(char *str)
-set_1byte_value	srcs/ram/set_values.c	/^void	set_1byte_value(t_process *process, int index, unsigned char value)$/;"	f	signature:(t_process *process, int index, unsigned char value)
-set_2byte_value	srcs/ram/set_values.c	/^void	set_2byte_value(t_process *process, int index, unsigned short value)$/;"	f	signature:(t_process *process, int index, unsigned short value)
-set_4byte_value	srcs/ram/set_values.c	/^void	set_4byte_value(t_process *process, int index, unsigned int value)$/;"	f	signature:(t_process *process, int index, unsigned int value)
-sgt_addr_corewar	srcs/sgt/sgt_corewar.c	/^t_corewar			**sgt_addr_corewar(void)$/;"	f	signature:(void)
-sgt_addr_mlx	srcs/sgt/sgt_mlx.c	/^t_vm_mlx			**sgt_addr_mlx(void)$/;"	f	signature:(void)
-sgt_corewar	srcs/sgt/sgt_corewar.c	/^t_corewar			*sgt_corewar(void)$/;"	f	signature:(void)
-sgt_mlx	srcs/sgt/sgt_mlx.c	/^t_vm_mlx			*sgt_mlx(void)$/;"	f	signature:(void)
 size_line	libxft/includes/libxft.h	/^	int			size_line;$/;"	m	struct:s_libx_img	access:public
 t_byte	includes/corewar.h	/^}						t_byte;$/;"	t	typeref:struct:s_byte
 t_corewar	includes/corewar.h	/^}						t_corewar;$/;"	t	typeref:struct:s_corewar
@@ -476,61 +320,10 @@ t_verbose	includes/corewar.h	/^}						t_verbose;$/;"	t	typeref:struct:s_verbose
 t_vm_mlx	includes/corewar.h	/^}						t_vm_mlx;$/;"	t	typeref:struct:s_vm_mlx
 thread	includes/corewar.h	/^	pthread_t			thread;$/;"	m	struct:s_corewar	access:public
 thread_info	includes/corewar.h	/^	pthread_t			thread_info;$/;"	m	struct:s_vm_mlx	access:public
-thread_launch	srcs/thread/launch.c	/^void			thread_launch(void)$/;"	f	signature:(void)
 thread_memory	includes/corewar.h	/^	pthread_t			thread_memory;$/;"	m	struct:s_vm_mlx	access:public
-thread_vm	srcs/thread/vm.c	/^void			*thread_vm(void *e)$/;"	f	signature:(void *e)
 uid	includes/corewar.h	/^	size_t				uid;$/;"	m	struct:s_process	access:public
-usage	srcs/usage.c	/^void	usage(void)$/;"	f	signature:(void)
 verbose	includes/corewar.h	/^	t_verbose			verbose;$/;"	m	struct:s_option	access:public
-verbose_cycle	srcs/verbosity/cycle.c	/^void	verbose_cycle(void)$/;"	f	signature:(void)
-verbose_cycle_to_die	srcs/verbosity/cycle_to_die.c	/^void	verbose_cycle_to_die(void)$/;"	f	signature:(void)
-verbose_death	srcs/verbosity/death.c	/^void	verbose_death(t_process *process)$/;"	f	signature:(t_process *process)
-verbose_live	srcs/verbosity/live.c	/^void	verbose_live(int id, char *name)$/;"	f	signature:(int id, char *name)
-verbose_move	srcs/verbosity/move.c	/^void			verbose_move(t_process *process, int jump)$/;"	f	signature:(t_process *process, int jump)
-verbose_op	srcs/verbosity/op.c	/^void	verbose_op(t_process *process, int type[4], int arg[4])$/;"	f	signature:(t_process *process, int type[4], int arg[4])
-verbose_op_add	srcs/verbosity/op/add.c	/^void	verbose_op_add(t_process *process, int type[4], int arg[4])$/;"	f	signature:(t_process *process, int type[4], int arg[4])
-verbose_op_aff	srcs/verbosity/op/aff.c	/^void	verbose_op_aff(t_process *process, int type[4], int arg[4])$/;"	f	signature:(t_process *process, int type[4], int arg[4])
-verbose_op_and	srcs/verbosity/op/and.c	/^void	verbose_op_and(t_process *process, int type[4], int arg[4])$/;"	f	signature:(t_process *process, int type[4], int arg[4])
-verbose_op_fork	srcs/verbosity/op/fork.c	/^void	verbose_op_fork(t_process *process, int type[4], int arg[4])$/;"	f	signature:(t_process *process, int type[4], int arg[4])
-verbose_op_ld	srcs/verbosity/op/ld.c	/^void	verbose_op_ld(t_process *process, int type[4], int arg[4])$/;"	f	signature:(t_process *process, int type[4], int arg[4])
-verbose_op_ldi	srcs/verbosity/op/ldi.c	/^void	verbose_op_ldi(t_process *process, int type[4], int arg[4])$/;"	f	signature:(t_process *process, int type[4], int arg[4])
-verbose_op_lfork	srcs/verbosity/op/lfork.c	/^void	verbose_op_lfork(t_process *process, int type[4], int arg[4])$/;"	f	signature:(t_process *process, int type[4], int arg[4])
-verbose_op_live	srcs/verbosity/op/live.c	/^void	verbose_op_live(t_process *process, int type[4], int arg[4])$/;"	f	signature:(t_process *process, int type[4], int arg[4])
-verbose_op_lld	srcs/verbosity/op/lld.c	/^void	verbose_op_lld(t_process *process, int type[4], int arg[4])$/;"	f	signature:(t_process *process, int type[4], int arg[4])
-verbose_op_lldi	srcs/verbosity/op/lldi.c	/^void	verbose_op_lldi(t_process *process, int type[4], int arg[4])$/;"	f	signature:(t_process *process, int type[4], int arg[4])
-verbose_op_or	srcs/verbosity/op/or.c	/^void	verbose_op_or(t_process *process, int type[4], int arg[4])$/;"	f	signature:(t_process *process, int type[4], int arg[4])
-verbose_op_st	srcs/verbosity/op/st.c	/^void	verbose_op_st(t_process *process, int type[4], int arg[4])$/;"	f	signature:(t_process *process, int type[4], int arg[4])
-verbose_op_sti	srcs/verbosity/op/sti.c	/^void	verbose_op_sti(t_process *process, int type[4], int arg[4])$/;"	f	signature:(t_process *process, int type[4], int arg[4])
-verbose_op_sub	srcs/verbosity/op/sub.c	/^void	verbose_op_sub(t_process *process, int type[4], int arg[4])$/;"	f	signature:(t_process *process, int type[4], int arg[4])
-verbose_op_xor	srcs/verbosity/op/xor.c	/^void	verbose_op_xor(t_process *process, int type[4], int arg[4])$/;"	f	signature:(t_process *process, int type[4], int arg[4])
-verbose_op_zjmp	srcs/verbosity/op/zjmp.c	/^void	verbose_op_zjmp(t_process *process, int type[4], int arg[4])$/;"	f	signature:(t_process *process, int type[4], int arg[4])
-vm_mlx_draw_background_info	srcs/mlx/draw/background.c	/^void			vm_mlx_draw_background_info(void)$/;"	f	signature:(void)
-vm_mlx_draw_background_memory	srcs/mlx/draw/background.c	/^void			vm_mlx_draw_background_memory(void)$/;"	f	signature:(void)
-vm_mlx_draw_fill_transparent_rect	srcs/mlx/draw/fill_transparent_rect.c	/^void			vm_mlx_draw_fill_transparent_rect(t_libx_img *img,$/;"	f	signature:(t_libx_img *img, int xy[2], int wh[2])
-vm_mlx_draw_info	srcs/mlx/draw/info.c	/^void			vm_mlx_draw_info(void)$/;"	f	signature:(void)
-vm_mlx_draw_memory	srcs/mlx/draw/memory.c	/^void			vm_mlx_draw_memory(void)$/;"	f	signature:(void)
-vm_mlx_draw_pause	srcs/mlx/draw/pause.c	/^void			vm_mlx_draw_pause(void)$/;"	f	signature:(void)
-vm_mlx_draw_rect	srcs/mlx/draw/rect.c	/^void	vm_mlx_draw_rect(t_libx_img *img, int xy[2], int wh[2],$/;"	f	signature:(t_libx_img *img, int xy[2], int wh[2], int color)
-vm_mlx_draw_tooltip	srcs/mlx/draw/tooltip.c	/^void			vm_mlx_draw_tooltip(int pc)$/;"	f	signature:(int pc)
-vm_mlx_get_info_byte	srcs/mlx/tooltip/info_byte/get_info.c	/^char			*vm_mlx_get_info_byte(t_op op, int pc)$/;"	f	signature:(t_op op, int pc)
-vm_mlx_get_position_memory_from_pc	srcs/mlx/get_position_memory_from_pc.c	/^void	vm_mlx_get_position_memory_from_pc(int pc, int *x, int *y)$/;"	f	signature:(int pc, int *x, int *y)
-vm_mlx_init	srcs/mlx/mlx_init.c	/^void			vm_mlx_init(void)$/;"	f	signature:(void)
-vm_mlx_launch	srcs/mlx/launch.c	/^void			vm_mlx_launch(void)$/;"	f	signature:(void)
-vm_mlx_loop_hook	srcs/mlx/loop_hook.c	/^int		vm_mlx_loop_hook(t_vm_mlx *mlx)$/;"	f	signature:(t_vm_mlx *mlx)
-vm_mlx_mouse_motion	srcs/mlx/mouse/motion.c	/^int		vm_mlx_mouse_motion(int x, int y, t_vm_mlx *mlx)$/;"	f	signature:(int x, int y, t_vm_mlx *mlx)
-vm_mlx_thread_info	srcs/mlx/threads/info.c	/^void	*vm_mlx_thread_info(void *e)$/;"	f	signature:(void *e)
-vm_mlx_thread_memory	srcs/mlx/threads/memory.c	/^void	*vm_mlx_thread_memory(void *e)$/;"	f	signature:(void *e)
-vm_press_key_0	srcs/mlx/keys/key_0.c	/^void	vm_press_key_0(t_vm_mlx *mlx)$/;"	f	signature:(t_vm_mlx *mlx)
-vm_press_key_9	srcs/mlx/keys/key_9.c	/^void	vm_press_key_9(t_vm_mlx *mlx)$/;"	f	signature:(t_vm_mlx *mlx)
-vm_press_key_add	srcs/mlx/keys/add.c	/^void	vm_press_key_add(t_vm_mlx *mlx)$/;"	f	signature:(t_vm_mlx *mlx)
-vm_press_key_esc	srcs/mlx/keys/esc.c	/^void	vm_press_key_esc(t_vm_mlx *mlx)$/;"	f	signature:(t_vm_mlx *mlx)
-vm_press_key_s	srcs/mlx/keys/s.c	/^void	vm_press_key_s(t_vm_mlx *mlx)$/;"	f	signature:(t_vm_mlx *mlx)
-vm_press_key_space	srcs/mlx/keys/space.c	/^void	vm_press_key_space(t_vm_mlx *mlx)$/;"	f	signature:(t_vm_mlx *mlx)
-vm_press_key_sub	srcs/mlx/keys/sub.c	/^void	vm_press_key_sub(t_vm_mlx *mlx)$/;"	f	signature:(t_vm_mlx *mlx)
 width	libxft/includes/libxft.h	/^	int			width;$/;"	m	struct:s_libx_img	access:public
 win	includes/corewar.h	/^	void				*win;$/;"	m	struct:s_vm_mlx	access:public
-win	srcs/win.c	/^void	win(void)$/;"	f	signature:(void)
 x	includes/corewar.h	/^	int					x;$/;"	m	struct:s_mouse	access:public
-x	objs/mlx/launch.o	/^销睨/;"	v
-x	objs/verbosity/move.o	/^/;"	v
 y	includes/corewar.h	/^	int					y;$/;"	m	struct:s_mouse	access:public
