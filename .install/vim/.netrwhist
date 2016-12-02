@@ -1,8 +1,8 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/mblet/42_CoreWar.git/asm_dir'
-let g:netrw_dirhist_2='/Users/mblet/42_CoreWar.git'
-let g:netrw_dirhist_3='/Users/mblet/42_CoreWar.git/includes'
-let g:netrw_dirhist_4='/Users/mblet/42_CoreWar.git/asm_dir/srcs'
-let g:netrw_dirhist_5='/Users/mblet/42_CoreWar.git/asm_dir'
-let g:netrw_dirhist_6='/Users/mblet/42_CoreWar.git/asm_dir/includes'
+let g:netrw_dirhist_1='/Users/mblet/42_CoreWar.git/vm_dir/srcs'
+let g:netrw_dirhist_2='/Users/mblet/42_Fdf.git/fdf'
+let g:netrw_dirhist_3='/Users/mblet/42_CoreWar.git/vm_dir/libxft/srcs'
+let g:netrw_dirhist_4='/Users/mblet/42_Fdf.git/fdf/includes'
+let g:netrw_dirhist_5='/Users/mblet/42_Fdf.git/fdf'
+let g:netrw_dirhist_6='/Users/mblet/42_Fdf.git/fdf/srcs'
