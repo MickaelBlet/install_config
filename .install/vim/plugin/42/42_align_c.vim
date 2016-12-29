@@ -202,7 +202,7 @@ function!	AlignAll()
 			if empty(matchstr(strline, '^}$') && line < line('$'))
 				let line = line - lenlines
 				let strline = getline(line)
-				while !empty(matchstr(strline, '^\t.*;$')) && line <= line('$')
+				while !empty(matchstr(strline, '^\t.*;$')) && empty(matchstr(strline, '.*=')) && empty(matchstr(strline, '.*(')) && line <= line('$')
 					let tmplen = strlen(matchstr(strline, '^\t\+\zs\i.\{-}\S\+\ze\s\+\(\(\**\S\+\( [\+\-\*\/\=\%\&\|]\+ .*\)*\)\|\(\**(.*)\)\);\(^\t\)\@<!'))
 					let maxlen_var = (tmplen > maxlen_var) ? tmplen : maxlen_var
 					let line += 1
@@ -211,7 +211,7 @@ function!	AlignAll()
 				let maxlen_var = ((maxlen_var % &tabstop) > 2) ? (maxlen_var + &tabstop) : maxlen_var
 				let line = line - lenlines
 				let strline = getline(line)
-				while !empty(matchstr(strline, '^\t.*;$')) && line <= line('$')
+				while !empty(matchstr(strline, '^\t.*;$')) && lenlines > 0 && line <= line('$')
 					let tmplen = strlen(matchstr(strline, '^\t\+\zs\i.\{-}\S\+\ze\s\+\(\(\**\S\+\( [\+\-\*\/\=\%\&\|]\+ .*\)*\)\|\(\**(.*)\)\);\(^\t\)\@<!'))
 					if maxlen_var > tmplen
 						let number_tab = 0
@@ -231,6 +231,7 @@ function!	AlignAll()
 					endif
 					let line += 1
 					let strline = getline(line)
+					let lenlines -= 1
 				endwhile
 				let line -= 1
 				let strline = getline(line)
@@ -294,7 +295,7 @@ function!	AlignAll()
 			if !empty(matchstr(strline, '^}.*;$'))
 				let line = line - lenlines
 				let strline = getline(line)
-				while !empty(matchstr(strline, '^\t.*')) && line <= line('$')
+				while !empty(matchstr(strline, '^\t.*')) && lenlines > 0 && line <= line('$')
 					let tmplen = strlen(matchstr(strline, '^\t\+\zs\i.\{-}\S\+\ze\s\+\(\(\**\S\+\( [\+\-\*\/\=\%\&\|]\+ .*\)*\)\|\(\**(.*)\)\);\(^\t\)\@<!'))
 					if maxlen > tmplen
 						let number_tab = 0
@@ -314,6 +315,7 @@ function!	AlignAll()
 					endif
 					let line += 1
 					let strline = getline(line)
+					let lenlines -= 1
 				endwhile
 				let line -= 1
 			endif
