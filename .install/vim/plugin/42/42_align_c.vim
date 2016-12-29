@@ -194,12 +194,12 @@ function!	AlignAll()
 			let maxlen_var = 0
 			let line += 1
 			let strline = getline(line)
-			while !empty(matchstr(strline, '^\t.*;$')) && line <= line('$')
+			while !empty(matchstr(strline, '^\t.*;$')) && empty(matchstr(strline, '.*=')) && empty(matchstr(strline, '.*(')) && line <= line('$')
 				let lenlines += 1
 				let line += 1
 				let strline = getline(line)
 			endwhile
-			if empty(matchstr(strline, '^}$'))
+			if empty(matchstr(strline, '^}$') && line < line('$'))
 				let line = line - lenlines
 				let strline = getline(line)
 				while !empty(matchstr(strline, '^\t.*;$')) && line <= line('$')

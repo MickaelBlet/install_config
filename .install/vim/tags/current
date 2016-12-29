@@ -4,166 +4,102 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-ASM_H	includes/asm.h	/^# define ASM_H$/;"	d
-BIN_NAME	includes/asm.h	/^# define BIN_NAME	/;"	d
-COMMENT_CHAR_BASIC	includes/asm.h	/^# define COMMENT_CHAR_BASIC	/;"	d
-ERROR	includes/asm.h	/^# define ERROR(/;"	d
-ERR_CMD_COM_EXTRA_ARG	includes/asm.h	/^# define ERR_CMD_COM_EXTRA_ARG	/;"	d
-ERR_CMD_COM_NO_ARG	includes/asm.h	/^# define ERR_CMD_COM_NO_ARG	/;"	d
-ERR_CMD_COM_NO_QUOTE	includes/asm.h	/^# define ERR_CMD_COM_NO_QUOTE	/;"	d
-ERR_CMD_EXTRA_ARG	includes/asm.h	/^# define ERR_CMD_EXTRA_ARG	/;"	d
-ERR_CMD_NAME_EXTRA_ARG	includes/asm.h	/^# define ERR_CMD_NAME_EXTRA_ARG	/;"	d
-ERR_CMD_NAME_NO_ARG	includes/asm.h	/^# define ERR_CMD_NAME_NO_ARG	/;"	d
-ERR_CMD_NAME_NO_QUOTE	includes/asm.h	/^# define ERR_CMD_NAME_NO_QUOTE	/;"	d
-ERR_CMD_SAME	includes/asm.h	/^# define ERR_CMD_SAME	/;"	d
-ERR_LAB_A_CHAR	includes/asm.h	/^# define ERR_LAB_A_CHAR	/;"	d
-ERR_LAB_B_CHAR	includes/asm.h	/^# define ERR_LAB_B_CHAR	/;"	d
-ERR_LAB_NAME	includes/asm.h	/^# define ERR_LAB_NAME	/;"	d
-ERR_LAB_SAME	includes/asm.h	/^# define ERR_LAB_SAME	/;"	d
-ERR_OP_BAD_ARG	includes/asm.h	/^# define ERR_OP_BAD_ARG	/;"	d
-ERR_OP_BAD_TYPE	includes/asm.h	/^# define ERR_OP_BAD_TYPE	/;"	d
-ERR_OP_LAB_NOT_FOUND	includes/asm.h	/^# define ERR_OP_LAB_NOT_FOUND /;"	d
-ERR_OP_NO_ARG	includes/asm.h	/^# define ERR_OP_NO_ARG	/;"	d
-ERR_OP_SEP	includes/asm.h	/^# define ERR_OP_SEP	/;"	d
-ERR_OP_TOO_FEW	includes/asm.h	/^# define ERR_OP_TOO_FEW	/;"	d
-ERR_OP_TOO_MANY	includes/asm.h	/^# define ERR_OP_TOO_MANY	/;"	d
-ERR_OP_UNKNOWN	includes/asm.h	/^# define ERR_OP_UNKNOWN	/;"	d
-QUOTE_CHAR	includes/asm.h	/^# define QUOTE_CHAR	/;"	d
-USAGE	includes/asm.h	/^# define USAGE	/;"	d
-WAR_CMD_UNKNOWN	includes/asm.h	/^# define WAR_CMD_UNKNOWN	/;"	d
-__ER0	includes/asm.h	/^# define __ER0	/;"	d
-args	includes/asm.h	/^	t_arg			args[MAX_ARGS_NUMBER];$/;"	m	struct:s_line	access:public
-code	includes/asm.h	/^	int				code;$/;"	m	struct:s_arg	access:public
-column	includes/asm.h	/^	int				column;$/;"	m	struct:s_arg	access:public
-column	includes/asm.h	/^	int				column;$/;"	m	struct:s_error	access:public
-command_check_same	srcs/command/check_same.c	/^t_bool	command_check_same(char *name)$/;"	f	signature:(char *name)
-command_comment	srcs/command/comment.c	/^void			command_comment(int column, t_arg arg)$/;"	f	signature:(int column, t_arg arg)
-command_name	srcs/command/name.c	/^void			command_name(int column, t_arg arg)$/;"	f	signature:(int column, t_arg arg)
-commands	includes/asm.h	/^	t_listd			*commands;$/;"	m	struct:s_asm	access:public
-cor	includes/asm.h	/^	t_cor			cor;$/;"	m	struct:s_asm	access:public
-cor_asm	srcs/asm.c	/^int				cor_asm(int argc, char **argv)$/;"	f	signature:(int argc, char **argv)
-data	includes/asm.h	/^	char			*data;$/;"	m	struct:s_arg	access:public
-data	includes/asm.h	/^	char			*data;$/;"	m	struct:s_line	access:public
-data	includes/asm.h	/^	char			data[CHAMP_MAX_SIZE];$/;"	m	struct:s_cor	access:public
-error	includes/asm.h	/^	t_bool			error;$/;"	m	struct:s_asm	access:public
-error_list_print	srcs/errors/list_print.c	/^void			error_list_print(void)$/;"	f	signature:(void)
-error_print	srcs/errors/print.c	/^void			error_print(t_arg arg, const char *str)$/;"	f	signature:(t_arg arg, const char *str)
-error_print_sug	srcs/errors/print.c	/^void			error_print_sug(t_arg arg, const char *str, const char *sug)$/;"	f	signature:(t_arg arg, const char *str, const char *sug)
-errors	includes/asm.h	/^	t_listd			*errors;$/;"	m	struct:s_asm	access:public
-file_clean	srcs/file/clean.c	/^void			file_clean(void)$/;"	f	signature:(void)
-file_name	includes/asm.h	/^	char			*file_name;$/;"	m	struct:s_asm	access:public
-file_read	srcs/file/read.c	/^void			file_read(char *file_name)$/;"	f	signature:(char *file_name)
-file_write	srcs/file/write.c	/^void			file_write(void)$/;"	f	signature:(void)
-header	includes/asm.h	/^	t_header		header;$/;"	m	struct:s_cor	access:public
-index	includes/asm.h	/^	int				index;$/;"	m	struct:s_line	access:public
-index_cor	includes/asm.h	/^	int				index_cor;$/;"	m	struct:s_arg	access:public
-index_cor	includes/asm.h	/^	int				index_cor;$/;"	m	struct:s_asm	access:public
-index_cor	includes/asm.h	/^	int				index_cor;$/;"	m	struct:s_line	access:public
-ini_cor	srcs/ini_cor.c	/^void		ini_cor(void)$/;"	f	signature:(void)
-label_add	srcs/label/add.c	/^void	label_add(t_arg arg)$/;"	f	signature:(t_arg arg)
-label_check_name	srcs/label/check_name.c	/^t_bool	label_check_name(char *name)$/;"	f	signature:(char *name)
-label_check_same	srcs/label/check_same.c	/^t_bool	label_check_same(char *name)$/;"	f	signature:(char *name)
-label_get_addr	srcs/label/get_addr_label.c	/^int		label_get_addr(int index, char *name)$/;"	f	signature:(int index, char *name)
-labels	includes/asm.h	/^	t_listd			*labels;$/;"	m	struct:s_asm	access:public
-line	includes/asm.h	/^	int				line;$/;"	m	struct:s_error	access:public
-line	includes/asm.h	/^	struct s_line	*line;$/;"	m	struct:s_arg	typeref:struct:s_arg::s_line	access:public
-line_check_command	srcs/line/check_command.c	/^void			line_check_command(int column, t_line *line)$/;"	f	signature:(int column, t_line *line)
-line_check_label	srcs/line/check_label.c	/^void	line_check_label(int column, t_arg arg)$/;"	f	signature:(int column, t_arg arg)
-line_check_op	srcs/line/check_op.c	/^void			line_check_op(int column, t_arg arg)$/;"	f	signature:(int column, t_arg arg)
-line_creat	srcs/line/creat.c	/^t_line	*line_creat(int index, char *str)$/;"	f	signature:(int index, char *str)
-line_label_scan	srcs/line/label_scan.c	/^void			line_label_scan(int column, t_line *line)$/;"	f	signature:(int column, t_line *line)
-line_scan	srcs/line/scan.c	/^void			line_scan(int column, t_line *line)$/;"	f	signature:(int column, t_line *line)
-line_scan_op	srcs/line/scan_op.c	/^void			line_scan_op(t_line *line)$/;"	f	signature:(t_line *line)
-lines	includes/asm.h	/^	t_listd			*lines;$/;"	m	struct:s_asm	access:public
-main	srcs/main.c	/^int		main(int argc, char **argv)$/;"	f	signature:(int argc, char **argv)
-nb_args	includes/asm.h	/^	int				nb_args;$/;"	m	struct:s_line	access:public
-op	includes/asm.h	/^	t_op			op;$/;"	m	struct:s_line	access:public
-op_arg_to_cor	srcs/op/arg_to_cor.c	/^void			op_arg_to_cor(t_line *line, t_arg *arg)$/;"	f	signature:(t_line *line, t_arg *arg)
-op_check_name	srcs/op/check_name.c	/^t_bool		op_check_name(char *name)$/;"	f	signature:(char *name)
-op_get_from_name	srcs/op/get_from_name.c	/^t_op	op_get_from_name(char *name)$/;"	f	signature:(char *name)
-op_get_type	srcs/op/get_type.c	/^int			op_get_type(t_op op, char *str)$/;"	f	signature:(t_op op, char *str)
-op_tab	srcs/op_tab.c	/^t_op			op_tab(int index)$/;"	f	signature:(int index)
-op_to_cor	srcs/op/to_cor.c	/^void		op_to_cor(t_line *line)$/;"	f	signature:(t_line *line)
-s_arg	includes/asm.h	/^typedef struct		s_arg$/;"	s
-s_arg::code	includes/asm.h	/^	int				code;$/;"	m	struct:s_arg	access:public
-s_arg::column	includes/asm.h	/^	int				column;$/;"	m	struct:s_arg	access:public
-s_arg::data	includes/asm.h	/^	char			*data;$/;"	m	struct:s_arg	access:public
-s_arg::index_cor	includes/asm.h	/^	int				index_cor;$/;"	m	struct:s_arg	access:public
-s_arg::line	includes/asm.h	/^	struct s_line	*line;$/;"	m	struct:s_arg	typeref:struct:s_arg::s_line	access:public
-s_arg::type	includes/asm.h	/^	int				type;$/;"	m	struct:s_arg	access:public
-s_asm	includes/asm.h	/^typedef struct		s_asm$/;"	s
-s_asm::commands	includes/asm.h	/^	t_listd			*commands;$/;"	m	struct:s_asm	access:public
-s_asm::cor	includes/asm.h	/^	t_cor			cor;$/;"	m	struct:s_asm	access:public
-s_asm::error	includes/asm.h	/^	t_bool			error;$/;"	m	struct:s_asm	access:public
-s_asm::errors	includes/asm.h	/^	t_listd			*errors;$/;"	m	struct:s_asm	access:public
-s_asm::file_name	includes/asm.h	/^	char			*file_name;$/;"	m	struct:s_asm	access:public
-s_asm::index_cor	includes/asm.h	/^	int				index_cor;$/;"	m	struct:s_asm	access:public
-s_asm::labels	includes/asm.h	/^	t_listd			*labels;$/;"	m	struct:s_asm	access:public
-s_asm::lines	includes/asm.h	/^	t_listd			*lines;$/;"	m	struct:s_asm	access:public
-s_check_types	srcs/line/scan_op.c	/^static void		s_check_types(t_line *line)$/;"	f	file:	signature:(t_line *line)
-s_cond	srcs/errors/print.c	/^static int		s_cond(t_error *e1, t_error *e2)$/;"	f	file:	signature:(t_error *e1, t_error *e2)
-s_cor	includes/asm.h	/^typedef struct		s_cor$/;"	s
-s_cor::data	includes/asm.h	/^	char			data[CHAMP_MAX_SIZE];$/;"	m	struct:s_cor	access:public
-s_cor::header	includes/asm.h	/^	t_header		header;$/;"	m	struct:s_cor	access:public
-s_delete_arg	srcs/file/clean.c	/^static void		s_delete_arg(t_arg *arg)$/;"	f	file:	signature:(t_arg *arg)
-s_delete_commands	srcs/file/clean.c	/^static void		s_delete_commands(char *s)$/;"	f	file:	signature:(char *s)
-s_delete_errors	srcs/file/clean.c	/^static void		s_delete_errors(t_error *error)$/;"	f	file:	signature:(t_error *error)
-s_delete_line	srcs/file/clean.c	/^static void		s_delete_line(t_line *line)$/;"	f	file:	signature:(t_line *line)
-s_error	includes/asm.h	/^typedef struct		s_error$/;"	s
-s_error::column	includes/asm.h	/^	int				column;$/;"	m	struct:s_error	access:public
-s_error::line	includes/asm.h	/^	int				line;$/;"	m	struct:s_error	access:public
-s_error::str	includes/asm.h	/^	char			*str;$/;"	m	struct:s_error	access:public
-s_file_read_line	srcs/file/read.c	/^static t_bool	s_file_read_line(int fd)$/;"	f	file:	signature:(int fd)
-s_get_argument	srcs/line/check_op.c	/^static void		s_get_argument(int column, t_line *line)$/;"	f	file:	signature:(int column, t_line *line)
-s_get_direct	srcs/op/get_type.c	/^static int	s_get_direct(t_op op, char *str)$/;"	f	file:	signature:(t_op op, char *str)
-s_get_first_word	srcs/line/check_command.c	/^static char		*s_get_first_word(int *column, char *str)$/;"	f	file:	signature:(int *column, char *str)
-s_get_first_word	srcs/line/check_op.c	/^static char		*s_get_first_word(int *column, char *str)$/;"	f	file:	signature:(int *column, char *str)
-s_get_first_word	srcs/line/label_scan.c	/^static char		*s_get_first_word(int *column, char *str)$/;"	f	file:	signature:(int *column, char *str)
-s_get_first_word	srcs/line/scan.c	/^static char		*s_get_first_word(int *column, char *str)$/;"	f	file:	signature:(int *column, char *str)
-s_get_label	srcs/op/get_type.c	/^static int	s_get_label(t_op op, char *str)$/;"	f	file:	signature:(t_op op, char *str)
-s_get_pcode	srcs/op/to_cor.c	/^static int	s_get_pcode(t_line *line)$/;"	f	file:	signature:(t_line *line)
-s_get_registre	srcs/op/get_type.c	/^static int	s_get_registre(t_op op, char *str)$/;"	f	file:	signature:(t_op op, char *str)
-s_get_str_in_quote	srcs/command/comment.c	/^static char		*s_get_str_in_quote(int *column, char *str)$/;"	f	file:	signature:(int *column, char *str)
-s_get_str_in_quote	srcs/command/name.c	/^static char		*s_get_str_in_quote(int *column, char *str)$/;"	f	file:	signature:(int *column, char *str)
-s_ini_op_tab	srcs/op_tab.c	/^static void		s_ini_op_tab(t_op **t)$/;"	f	file:	signature:(t_op **t)
-s_ini_op_tab2	srcs/op_tab.c	/^static void		s_ini_op_tab2(t_op **t)$/;"	f	file:	signature:(t_op **t)
-s_ini_singleton	srcs/sgt/sgt_asm.c	/^static void		s_ini_singleton(t_asm *t)$/;"	f	file:	signature:(t_asm *t)
-s_jump_whitespace	srcs/command/comment.c	/^static void		s_jump_whitespace(int *column, char *str)$/;"	f	file:	signature:(int *column, char *str)
-s_jump_whitespace	srcs/command/name.c	/^static void		s_jump_whitespace(int *column, char *str)$/;"	f	file:	signature:(int *column, char *str)
-s_jump_whitespace	srcs/line/check_command.c	/^static void		s_jump_whitespace(int *column, char *str)$/;"	f	file:	signature:(int *column, char *str)
-s_jump_whitespace	srcs/line/check_op.c	/^static void		s_jump_whitespace(int *column, char *str)$/;"	f	file:	signature:(int *column, char *str)
-s_jump_whitespace	srcs/line/label_scan.c	/^static void		s_jump_whitespace(int *column, char *str)$/;"	f	file:	signature:(int *column, char *str)
-s_jump_whitespace	srcs/line/scan.c	/^static void		s_jump_whitespace(int *column, char *str)$/;"	f	file:	signature:(int *column, char *str)
-s_lab_to_cor	srcs/op/arg_to_cor.c	/^static void		s_lab_to_cor(t_line *line, t_arg *arg)$/;"	f	file:	signature:(t_line *line, t_arg *arg)
-s_line	includes/asm.h	/^typedef struct		s_line$/;"	s
-s_line	srcs/file/read.c	/^static t_bool	s_line(t_listd **list, int index, char *line_str)$/;"	f	file:	signature:(t_listd **list, int index, char *line_str)
-s_line::args	includes/asm.h	/^	t_arg			args[MAX_ARGS_NUMBER];$/;"	m	struct:s_line	access:public
-s_line::data	includes/asm.h	/^	char			*data;$/;"	m	struct:s_line	access:public
-s_line::index	includes/asm.h	/^	int				index;$/;"	m	struct:s_line	access:public
-s_line::index_cor	includes/asm.h	/^	int				index_cor;$/;"	m	struct:s_line	access:public
-s_line::nb_args	includes/asm.h	/^	int				nb_args;$/;"	m	struct:s_line	access:public
-s_line::op	includes/asm.h	/^	t_op			op;$/;"	m	struct:s_line	access:public
-s_print	srcs/errors/list_print.c	/^static void		s_print(t_error *error)$/;"	f	file:	signature:(t_error *error)
-s_print_indicator	srcs/errors/print.c	/^static void		s_print_indicator(char **error, t_arg arg)$/;"	f	file:	signature:(char **error, t_arg arg)
-s_print_indicator	srcs/errors/warning.c	/^static void		s_print_indicator(t_arg arg)$/;"	f	file:	signature:(t_arg arg)
-s_print_sugestion	srcs/errors/print.c	/^static void		s_print_sugestion(char **error, t_arg arg, const char *sug)$/;"	f	file:	signature:(char **error, t_arg arg, const char *sug)
-s_scan_lexical	srcs/asm.c	/^static void		s_scan_lexical(t_line *line)$/;"	f	file:	signature:(t_line *line)
-s_scan_op	srcs/asm.c	/^static void		s_scan_op(t_line *line)$/;"	f	file:	signature:(t_line *line)
-s_set_2byte_value	srcs/op/arg_to_cor.c	/^static void		s_set_2byte_value(char *cor, int index, unsigned short n)$/;"	f	file:	signature:(char *cor, int index, unsigned short n)
-s_set_4byte_value	srcs/op/arg_to_cor.c	/^static void		s_set_4byte_value(char *cor, int index, unsigned int n)$/;"	f	file:	signature:(char *cor, int index, unsigned int n)
-s_set_arg	srcs/line/check_op.c	/^static void		s_set_arg(t_line *line, int i, int *column)$/;"	f	file:	signature:(t_line *line, int i, int *column)
-s_set_comment_in_header	srcs/command/comment.c	/^static void		s_set_comment_in_header(t_arg arg)$/;"	f	file:	signature:(t_arg arg)
-s_set_name_in_header	srcs/command/name.c	/^static void		s_set_name_in_header(t_arg arg)$/;"	f	file:	signature:(t_arg arg)
-s_set_new_name	srcs/file/write.c	/^static void		s_set_new_name(char **ret, char *file_name)$/;"	f	file:	signature:(char **ret, char *file_name)
-s_singleton	srcs/sgt/sgt_asm.c	/^static t_asm	**s_singleton(void)$/;"	f	file:	signature:(void)
-s_swap	srcs/file/write.c	/^static int		s_swap(int val)$/;"	f	file:	signature:(int val)
-sgt_addr_asm	srcs/sgt/sgt_asm.c	/^t_asm			**sgt_addr_asm(void)$/;"	f	signature:(void)
-sgt_asm	srcs/sgt/sgt_asm.c	/^t_asm			*sgt_asm(void)$/;"	f	signature:(void)
-str	includes/asm.h	/^	char			*str;$/;"	m	struct:s_error	access:public
-t_arg	includes/asm.h	/^}					t_arg;$/;"	t	typeref:struct:s_arg
-t_asm	includes/asm.h	/^}					t_asm;$/;"	t	typeref:struct:s_asm
-t_cor	includes/asm.h	/^}					t_cor;$/;"	t	typeref:struct:s_cor
-t_error	includes/asm.h	/^}					t_error;$/;"	t	typeref:struct:s_error
-t_line	includes/asm.h	/^}					t_line;$/;"	t	typeref:struct:s_line
-type	includes/asm.h	/^	int				type;$/;"	m	struct:s_arg	access:public
-warning_print	srcs/errors/warning.c	/^void			warning_print(t_arg arg, const char *str)$/;"	f	signature:(t_arg arg, const char *str)
+BLUE	inc/ft_printf.h	/^# define BLUE	/;"	d
+BUFFSIZE	inc/ft_printf.h	/^# define BUFFSIZE	/;"	d
+CYAN	inc/ft_printf.h	/^# define CYAN	/;"	d
+FT_PRINTF_H	inc/ft_printf.h	/^# define FT_PRINTF_H$/;"	d
+GREEN	inc/ft_printf.h	/^# define GREEN	/;"	d
+G_COL_H	inc/g_col.h	/^# define G_COL_H$/;"	d
+LIBFT_H	inc/libft.h	/^# define LIBFT_H$/;"	d
+MAGENTA	inc/ft_printf.h	/^# define MAGENTA	/;"	d
+NORM	inc/ft_printf.h	/^# define NORM	/;"	d
+RED	inc/ft_printf.h	/^# define RED	/;"	d
+WHITE	inc/ft_printf.h	/^# define WHITE /;"	d
+YELLOW	inc/ft_printf.h	/^# define YELLOW	/;"	d
+c	inc/ft_printf.h	/^	char					c;$/;"	m	struct:s_data	access:public
+code	inc/ft_printf.h	/^	char					*code;$/;"	m	struct:s_col	access:public
+codelen	inc/ft_printf.h	/^	int						codelen;$/;"	m	struct:s_col	access:public
+content	inc/libft.h	/^	void			*content;$/;"	m	struct:s_list	access:public
+content_size	inc/libft.h	/^	size_t			content_size;$/;"	m	struct:s_list	access:public
+d	inc/ft_printf.h	/^	int						d;$/;"	m	struct:s_data	access:public
+data	inc/ft_printf.h	/^	struct s_data			data;$/;"	m	struct:s_arg	typeref:struct:s_arg::s_data	access:public
+f	inc/ft_printf.h	/^	long double				f;$/;"	m	struct:s_data	access:public
+flag	inc/ft_printf.h	/^	char					*flag;$/;"	m	struct:s_arg	access:public
+format	inc/ft_printf.h	/^	char					format;$/;"	m	struct:s_arg	access:public
+g_coltab	inc/g_col.h	/^t_col		g_coltab[] =$/;"	v
+lc	inc/ft_printf.h	/^	wchar_t					lc;$/;"	m	struct:s_data	access:public
+ld	inc/ft_printf.h	/^	long int				ld;$/;"	m	struct:s_data	access:public
+len	inc/ft_printf.h	/^	int						len;$/;"	m	struct:s_arg	access:public
+len	inc/ft_printf.h	/^	int						len;$/;"	m	struct:s_col	access:public
+len	inc/ft_printf.h	/^	int						len;$/;"	m	struct:s_out	access:public
+len	inc/ft_printf.h	/^	int						len;$/;"	m	struct:s_outp	access:public
+ll	inc/ft_printf.h	/^	long long int			ll;$/;"	m	struct:s_data	access:public
+llu	inc/ft_printf.h	/^	unsigned long long int	llu;$/;"	m	struct:s_data	access:public
+lu	inc/ft_printf.h	/^	unsigned long int		lu;$/;"	m	struct:s_data	access:public
+modifier	inc/ft_printf.h	/^	char					modifier;$/;"	m	struct:s_arg	access:public
+next	inc/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list::s_list	access:public
+out	inc/ft_printf.h	/^	char					*out;$/;"	m	struct:s_out	access:public
+out	inc/ft_printf.h	/^	char					out[BUFFSIZE];$/;"	m	struct:s_outp	access:public
+out1	inc/ft_printf.h	/^	char					out1[BUFFSIZE];$/;"	m	struct:s_out	access:public
+p	inc/ft_printf.h	/^	void					*p;$/;"	m	struct:s_data	access:public
+pad	inc/ft_printf.h	/^	int						pad;$/;"	m	struct:s_arg	access:public
+padchar	inc/ft_printf.h	/^	char					padchar;$/;"	m	struct:s_arg	access:public
+padleft	inc/ft_printf.h	/^	int						padleft;$/;"	m	struct:s_arg	access:public
+precision	inc/ft_printf.h	/^	int						precision;$/;"	m	struct:s_arg	access:public
+s_arg	inc/ft_printf.h	/^typedef	struct				s_arg$/;"	s
+s_arg::data	inc/ft_printf.h	/^	struct s_data			data;$/;"	m	struct:s_arg	typeref:struct:s_arg::s_data	access:public
+s_arg::flag	inc/ft_printf.h	/^	char					*flag;$/;"	m	struct:s_arg	access:public
+s_arg::format	inc/ft_printf.h	/^	char					format;$/;"	m	struct:s_arg	access:public
+s_arg::len	inc/ft_printf.h	/^	int						len;$/;"	m	struct:s_arg	access:public
+s_arg::modifier	inc/ft_printf.h	/^	char					modifier;$/;"	m	struct:s_arg	access:public
+s_arg::pad	inc/ft_printf.h	/^	int						pad;$/;"	m	struct:s_arg	access:public
+s_arg::padchar	inc/ft_printf.h	/^	char					padchar;$/;"	m	struct:s_arg	access:public
+s_arg::padleft	inc/ft_printf.h	/^	int						padleft;$/;"	m	struct:s_arg	access:public
+s_arg::precision	inc/ft_printf.h	/^	int						precision;$/;"	m	struct:s_arg	access:public
+s_arg::type	inc/ft_printf.h	/^	char					type;$/;"	m	struct:s_arg	access:public
+s_arg::zero	inc/ft_printf.h	/^	int						zero;$/;"	m	struct:s_arg	access:public
+s_col	inc/ft_printf.h	/^typedef struct				s_col$/;"	s
+s_col::code	inc/ft_printf.h	/^	char					*code;$/;"	m	struct:s_col	access:public
+s_col::codelen	inc/ft_printf.h	/^	int						codelen;$/;"	m	struct:s_col	access:public
+s_col::len	inc/ft_printf.h	/^	int						len;$/;"	m	struct:s_col	access:public
+s_col::str	inc/ft_printf.h	/^	char					str[20];$/;"	m	struct:s_col	access:public
+s_data	inc/ft_printf.h	/^typedef struct				s_data$/;"	s
+s_data::c	inc/ft_printf.h	/^	char					c;$/;"	m	struct:s_data	access:public
+s_data::d	inc/ft_printf.h	/^	int						d;$/;"	m	struct:s_data	access:public
+s_data::f	inc/ft_printf.h	/^	long double				f;$/;"	m	struct:s_data	access:public
+s_data::lc	inc/ft_printf.h	/^	wchar_t					lc;$/;"	m	struct:s_data	access:public
+s_data::ld	inc/ft_printf.h	/^	long int				ld;$/;"	m	struct:s_data	access:public
+s_data::ll	inc/ft_printf.h	/^	long long int			ll;$/;"	m	struct:s_data	access:public
+s_data::llu	inc/ft_printf.h	/^	unsigned long long int	llu;$/;"	m	struct:s_data	access:public
+s_data::lu	inc/ft_printf.h	/^	unsigned long int		lu;$/;"	m	struct:s_data	access:public
+s_data::p	inc/ft_printf.h	/^	void					*p;$/;"	m	struct:s_data	access:public
+s_data::u	inc/ft_printf.h	/^	unsigned int			u;$/;"	m	struct:s_data	access:public
+s_data::uc	inc/ft_printf.h	/^	unsigned char			uc;$/;"	m	struct:s_data	access:public
+s_list	inc/libft.h	/^typedef struct		s_list$/;"	s
+s_list::content	inc/libft.h	/^	void			*content;$/;"	m	struct:s_list	access:public
+s_list::content_size	inc/libft.h	/^	size_t			content_size;$/;"	m	struct:s_list	access:public
+s_list::next	inc/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list::s_list	access:public
+s_out	inc/ft_printf.h	/^typedef struct				s_out$/;"	s
+s_out::len	inc/ft_printf.h	/^	int						len;$/;"	m	struct:s_out	access:public
+s_out::out	inc/ft_printf.h	/^	char					*out;$/;"	m	struct:s_out	access:public
+s_out::out1	inc/ft_printf.h	/^	char					out1[BUFFSIZE];$/;"	m	struct:s_out	access:public
+s_out::stocked	inc/ft_printf.h	/^	int						stocked;$/;"	m	struct:s_out	access:public
+s_outp	inc/ft_printf.h	/^typedef struct				s_outp$/;"	s
+s_outp::len	inc/ft_printf.h	/^	int						len;$/;"	m	struct:s_outp	access:public
+s_outp::out	inc/ft_printf.h	/^	char					out[BUFFSIZE];$/;"	m	struct:s_outp	access:public
+s_outp::stock	inc/ft_printf.h	/^	char					*stock;$/;"	m	struct:s_outp	access:public
+s_outp::stocked	inc/ft_printf.h	/^	int						stocked;$/;"	m	struct:s_outp	access:public
+stock	inc/ft_printf.h	/^	char					*stock;$/;"	m	struct:s_outp	access:public
+stocked	inc/ft_printf.h	/^	int						stocked;$/;"	m	struct:s_out	access:public
+stocked	inc/ft_printf.h	/^	int						stocked;$/;"	m	struct:s_outp	access:public
+str	inc/ft_printf.h	/^	char					str[20];$/;"	m	struct:s_col	access:public
+t_arg	inc/ft_printf.h	/^}							t_arg;$/;"	t	typeref:struct:s_arg
+t_col	inc/ft_printf.h	/^}							t_col;$/;"	t	typeref:struct:s_col
+t_data	inc/ft_printf.h	/^}							t_data;$/;"	t	typeref:struct:s_data
+t_list	inc/libft.h	/^}					t_list;$/;"	t	typeref:struct:s_list
+t_out	inc/ft_printf.h	/^}							t_out;$/;"	t	typeref:struct:s_out
+t_outp	inc/ft_printf.h	/^}							t_outp;$/;"	t	typeref:struct:s_outp
+type	inc/ft_printf.h	/^	char					type;$/;"	m	struct:s_arg	access:public
+u	inc/ft_printf.h	/^	unsigned int			u;$/;"	m	struct:s_data	access:public
+uc	inc/ft_printf.h	/^	unsigned char			uc;$/;"	m	struct:s_data	access:public
+zero	inc/ft_printf.h	/^	int						zero;$/;"	m	struct:s_arg	access:public
