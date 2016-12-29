@@ -4,112 +4,6 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-<<<<<<< HEAD
-BLUE	inc/ft_printf.h	/^# define BLUE	/;"	d
-BUFFSIZE	inc/ft_printf.h	/^# define BUFFSIZE	/;"	d
-CYAN	inc/ft_printf.h	/^# define CYAN	/;"	d
-FT_PRINTF_H	inc/ft_printf.h	/^# define FT_PRINTF_H$/;"	d
-GREEN	inc/ft_printf.h	/^# define GREEN	/;"	d
-G_COL_H	inc/g_col.h	/^# define G_COL_H$/;"	d
-LIBFT_H	inc/libft.h	/^# define LIBFT_H$/;"	d
-MAGENTA	inc/ft_printf.h	/^# define MAGENTA	/;"	d
-NORM	inc/ft_printf.h	/^# define NORM	/;"	d
-RED	inc/ft_printf.h	/^# define RED	/;"	d
-WHITE	inc/ft_printf.h	/^# define WHITE /;"	d
-YELLOW	inc/ft_printf.h	/^# define YELLOW	/;"	d
-c	inc/ft_printf.h	/^	char					c;$/;"	m	struct:s_data	access:public
-code	inc/ft_printf.h	/^	char					*code;$/;"	m	struct:s_col	access:public
-codelen	inc/ft_printf.h	/^	int						codelen;$/;"	m	struct:s_col	access:public
-content	inc/libft.h	/^	void			*content;$/;"	m	struct:s_list	access:public
-content_size	inc/libft.h	/^	size_t			content_size;$/;"	m	struct:s_list	access:public
-d	inc/ft_printf.h	/^	int						d;$/;"	m	struct:s_data	access:public
-data	inc/ft_printf.h	/^	struct s_data			data;$/;"	m	struct:s_arg	typeref:struct:s_arg::s_data	access:public
-f	inc/ft_printf.h	/^	long double				f;$/;"	m	struct:s_data	access:public
-flag	inc/ft_printf.h	/^	char					*flag;$/;"	m	struct:s_arg	access:public
-format	inc/ft_printf.h	/^	char					format;$/;"	m	struct:s_arg	access:public
-g_coltab	inc/g_col.h	/^t_col		g_coltab[] =$/;"	v
-lc	inc/ft_printf.h	/^	wchar_t					lc;$/;"	m	struct:s_data	access:public
-ld	inc/ft_printf.h	/^	long int				ld;$/;"	m	struct:s_data	access:public
-len	inc/ft_printf.h	/^	int						len;$/;"	m	struct:s_arg	access:public
-len	inc/ft_printf.h	/^	int						len;$/;"	m	struct:s_col	access:public
-len	inc/ft_printf.h	/^	int						len;$/;"	m	struct:s_out	access:public
-len	inc/ft_printf.h	/^	int						len;$/;"	m	struct:s_outp	access:public
-ll	inc/ft_printf.h	/^	long long int			ll;$/;"	m	struct:s_data	access:public
-llu	inc/ft_printf.h	/^	unsigned long long int	llu;$/;"	m	struct:s_data	access:public
-lu	inc/ft_printf.h	/^	unsigned long int		lu;$/;"	m	struct:s_data	access:public
-modifier	inc/ft_printf.h	/^	char					modifier;$/;"	m	struct:s_arg	access:public
-next	inc/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list::s_list	access:public
-out	inc/ft_printf.h	/^	char					*out;$/;"	m	struct:s_out	access:public
-out	inc/ft_printf.h	/^	char					out[BUFFSIZE];$/;"	m	struct:s_outp	access:public
-out1	inc/ft_printf.h	/^	char					out1[BUFFSIZE];$/;"	m	struct:s_out	access:public
-p	inc/ft_printf.h	/^	void					*p;$/;"	m	struct:s_data	access:public
-pad	inc/ft_printf.h	/^	int						pad;$/;"	m	struct:s_arg	access:public
-padchar	inc/ft_printf.h	/^	char					padchar;$/;"	m	struct:s_arg	access:public
-padleft	inc/ft_printf.h	/^	int						padleft;$/;"	m	struct:s_arg	access:public
-precision	inc/ft_printf.h	/^	int						precision;$/;"	m	struct:s_arg	access:public
-s_arg	inc/ft_printf.h	/^typedef	struct				s_arg$/;"	s
-s_arg::data	inc/ft_printf.h	/^	struct s_data			data;$/;"	m	struct:s_arg	typeref:struct:s_arg::s_data	access:public
-s_arg::flag	inc/ft_printf.h	/^	char					*flag;$/;"	m	struct:s_arg	access:public
-s_arg::format	inc/ft_printf.h	/^	char					format;$/;"	m	struct:s_arg	access:public
-s_arg::len	inc/ft_printf.h	/^	int						len;$/;"	m	struct:s_arg	access:public
-s_arg::modifier	inc/ft_printf.h	/^	char					modifier;$/;"	m	struct:s_arg	access:public
-s_arg::pad	inc/ft_printf.h	/^	int						pad;$/;"	m	struct:s_arg	access:public
-s_arg::padchar	inc/ft_printf.h	/^	char					padchar;$/;"	m	struct:s_arg	access:public
-s_arg::padleft	inc/ft_printf.h	/^	int						padleft;$/;"	m	struct:s_arg	access:public
-s_arg::precision	inc/ft_printf.h	/^	int						precision;$/;"	m	struct:s_arg	access:public
-s_arg::type	inc/ft_printf.h	/^	char					type;$/;"	m	struct:s_arg	access:public
-s_arg::zero	inc/ft_printf.h	/^	int						zero;$/;"	m	struct:s_arg	access:public
-s_col	inc/ft_printf.h	/^typedef struct				s_col$/;"	s
-s_col::code	inc/ft_printf.h	/^	char					*code;$/;"	m	struct:s_col	access:public
-s_col::codelen	inc/ft_printf.h	/^	int						codelen;$/;"	m	struct:s_col	access:public
-s_col::len	inc/ft_printf.h	/^	int						len;$/;"	m	struct:s_col	access:public
-s_col::str	inc/ft_printf.h	/^	char					str[20];$/;"	m	struct:s_col	access:public
-s_data	inc/ft_printf.h	/^typedef struct				s_data$/;"	s
-s_data::c	inc/ft_printf.h	/^	char					c;$/;"	m	struct:s_data	access:public
-s_data::d	inc/ft_printf.h	/^	int						d;$/;"	m	struct:s_data	access:public
-s_data::f	inc/ft_printf.h	/^	long double				f;$/;"	m	struct:s_data	access:public
-s_data::lc	inc/ft_printf.h	/^	wchar_t					lc;$/;"	m	struct:s_data	access:public
-s_data::ld	inc/ft_printf.h	/^	long int				ld;$/;"	m	struct:s_data	access:public
-s_data::ll	inc/ft_printf.h	/^	long long int			ll;$/;"	m	struct:s_data	access:public
-s_data::llu	inc/ft_printf.h	/^	unsigned long long int	llu;$/;"	m	struct:s_data	access:public
-s_data::lu	inc/ft_printf.h	/^	unsigned long int		lu;$/;"	m	struct:s_data	access:public
-s_data::p	inc/ft_printf.h	/^	void					*p;$/;"	m	struct:s_data	access:public
-s_data::u	inc/ft_printf.h	/^	unsigned int			u;$/;"	m	struct:s_data	access:public
-s_data::uc	inc/ft_printf.h	/^	unsigned char			uc;$/;"	m	struct:s_data	access:public
-s_list	inc/libft.h	/^typedef struct		s_list$/;"	s
-s_list::content	inc/libft.h	/^	void			*content;$/;"	m	struct:s_list	access:public
-s_list::content_size	inc/libft.h	/^	size_t			content_size;$/;"	m	struct:s_list	access:public
-s_list::next	inc/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list::s_list	access:public
-s_out	inc/ft_printf.h	/^typedef struct				s_out$/;"	s
-s_out::len	inc/ft_printf.h	/^	int						len;$/;"	m	struct:s_out	access:public
-s_out::out	inc/ft_printf.h	/^	char					*out;$/;"	m	struct:s_out	access:public
-s_out::out1	inc/ft_printf.h	/^	char					out1[BUFFSIZE];$/;"	m	struct:s_out	access:public
-s_out::stocked	inc/ft_printf.h	/^	int						stocked;$/;"	m	struct:s_out	access:public
-s_outp	inc/ft_printf.h	/^typedef struct				s_outp$/;"	s
-s_outp::len	inc/ft_printf.h	/^	int						len;$/;"	m	struct:s_outp	access:public
-s_outp::out	inc/ft_printf.h	/^	char					out[BUFFSIZE];$/;"	m	struct:s_outp	access:public
-s_outp::stock	inc/ft_printf.h	/^	char					*stock;$/;"	m	struct:s_outp	access:public
-s_outp::stocked	inc/ft_printf.h	/^	int						stocked;$/;"	m	struct:s_outp	access:public
-stock	inc/ft_printf.h	/^	char					*stock;$/;"	m	struct:s_outp	access:public
-stocked	inc/ft_printf.h	/^	int						stocked;$/;"	m	struct:s_out	access:public
-stocked	inc/ft_printf.h	/^	int						stocked;$/;"	m	struct:s_outp	access:public
-str	inc/ft_printf.h	/^	char					str[20];$/;"	m	struct:s_col	access:public
-t_arg	inc/ft_printf.h	/^}							t_arg;$/;"	t	typeref:struct:s_arg
-t_col	inc/ft_printf.h	/^}							t_col;$/;"	t	typeref:struct:s_col
-t_data	inc/ft_printf.h	/^}							t_data;$/;"	t	typeref:struct:s_data
-t_list	inc/libft.h	/^}					t_list;$/;"	t	typeref:struct:s_list
-t_out	inc/ft_printf.h	/^}							t_out;$/;"	t	typeref:struct:s_out
-t_outp	inc/ft_printf.h	/^}							t_outp;$/;"	t	typeref:struct:s_outp
-type	inc/ft_printf.h	/^	char					type;$/;"	m	struct:s_arg	access:public
-u	inc/ft_printf.h	/^	unsigned int			u;$/;"	m	struct:s_data	access:public
-uc	inc/ft_printf.h	/^	unsigned char			uc;$/;"	m	struct:s_data	access:public
-zero	inc/ft_printf.h	/^	int						zero;$/;"	m	struct:s_arg	access:public
-=======
-$	libft/objs/_part1/memset.o	/^/;"	v
-$	libft/objs/_part1/strrchr.o	/^/;"	v
-$$	Makefile	/^	if [[ `rm -R $(OBJDIR) &> \/dev\/null 2>&1; echo $$?` == "0" ]]; then		\\$/;"	v
-$$	libft/Makefile	/^	if [[ `rm -R $(OBJDIR) &> \/dev\/null 2>&1; echo $$?` == "0" ]]; then		\\$/;"	v
-$$	libxft/Makefile	/^	if [[ `rm -R $(OBJDIR) &> \/dev\/null 2>&1; echo $$?` == "0" ]]; then		\\$/;"	v
 APPLY	libxft/includes/libxft.h	/^# define APPLY(/;"	d
 APPLY_1	libxft/includes/libxft.h	/^# define APPLY_1(/;"	d
 APPLY_2	libxft/includes/libxft.h	/^# define APPLY_2(/;"	d
@@ -119,40 +13,16 @@ APPLY_5	libxft/includes/libxft.h	/^# define APPLY_5(/;"	d
 APPLY_6	libxft/includes/libxft.h	/^# define APPLY_6(/;"	d
 APPLY_7	libxft/includes/libxft.h	/^# define APPLY_7(/;"	d
 APPLY_8	libxft/includes/libxft.h	/^# define APPLY_8(/;"	d
-BUFF_SIZE	libft/includes/libft.h	/^# define BUFF_SIZE	/;"	d
+BIN_NAME	includes/corewar.h	/^# define BIN_NAME	/;"	d
 CAT	libxft/includes/libxft.h	/^# define CAT(/;"	d
-D	libft/objs/_part1/strrchr.o	/^/;"	v
-D	minilibx_macos/mlx_int_str_to_wordtab.o	/^/;"	v
-DG	libft/includes/libft.h	/^#  define DG(/;"	d
-DGL	libft/includes/libft.h	/^#  define DGL /;"	d
-E	libft/objs/printf/add/add_char.o	/^/;"	v
-E	libxft/libxft.a	/^/;"	v
-E	libxft/objs/color_to_int.o	/^/;"	v
-ERR	libft/includes/libft.h	/^#  define ERR(/;"	d
-F	libft/objs/string/ahtoi.o	/^/;"	v
-FDF_H	includes/fdf.h	/^# define FDF_H$/;"	d
-FONT_HEIGHT	minilibx_macos/mlx_int.h	/^#define	FONT_HEIGHT	/;"	d
-FONT_WIDTH	minilibx_macos/mlx_int.h	/^#define FONT_WIDTH	/;"	d
-FT_DRAW_POINT_H	includes/ft_draw_point.h	/^# define FT_DRAW_POINT_H$/;"	d
-FT_FDF_H	includes/ft_fdf.h	/^# define FT_FDF_H$/;"	d
-GET_NEXT_LINE_H	libft/includes/get_next_line.h	/^# define GET_NEXT_LINE_H$/;"	d
-H	libft/objs/_part1/memset.o	/^/;"	v
-H	libft/objs/_part2/memdel.o	/^/;"	v
-H	libft/objs/_part2/strtrim.o	/^/;"	v
-H	libft/objs/lists/lstd_clear.o	/^/;"	v
-H	libft/objs/string/ftoa.o	/^/;"	v
-H	minilibx_macos/mlx_shaders.o	/^/;"	v
-HEIGHT	includes/ft_fdf.h	/^# define HEIGHT /;"	d
-Hc	libft/objs/printf/color/color_format.o	/^/;"	v
-INT_MAX	libft/includes/libft.h	/^#  define INT_MAX	/;"	d
-INT_MIN	libft/includes/libft.h	/^#  define INT_MIN	/;"	d
-L	libft/objs/_part1/memmove.o	/^/;"	v
-L	libft/objs/_part2/itoa.o	/^/;"	v
-L	libft/objs/hashtable/get.o	/^/;"	v
-L	libft/objs/string/ltoa.o	/^/;"	v
-L	minilibx_macos/mlx_init_loop.o	/^/;"	v
-L9	libft/objs/lists/lstd_pop_front.o	/^/;"	v
-LIBFT_H	libft/includes/libft.h	/^# define LIBFT_H$/;"	d
+COREWAR_H	includes/corewar.h	/^# define COREWAR_H$/;"	d
+ERROR	includes/corewar.h	/^# define ERROR(/;"	d
+ERR_DUMP_FORMAT	includes/corewar.h	/^# define ERR_DUMP_FORMAT	/;"	d
+ERR_FILE_FORMAT_ID	includes/corewar.h	/^# define ERR_FILE_FORMAT_ID	/;"	d
+ERR_FILE_NOT_VALID	includes/corewar.h	/^# define ERR_FILE_NOT_VALID	/;"	d
+ERR_FILE_SAME_ID	includes/corewar.h	/^# define ERR_FILE_SAME_ID	/;"	d
+ERR_INIT_MLX	includes/corewar.h	/^# define ERR_INIT_MLX	/;"	d
+ERR_TOO_MANY_PLAYERS	includes/corewar.h	/^# define ERR_TOO_MANY_PLAYERS	/;"	d
 LIBXFT_H	libxft/includes/libxft.h	/^# define LIBXFT_H$/;"	d
 LIBX_DRAW_CIRCLE_TO_IMAGE	libxft/includes/libxft.h	/^# define LIBX_DRAW_CIRCLE_TO_IMAGE(/;"	d
 LIBX_DRAW_LINE_TO_IMAGE	libxft/includes/libxft.h	/^# define LIBX_DRAW_LINE_TO_IMAGE(/;"	d
@@ -255,36 +125,23 @@ LIBX_MOUSE_BUTTON_RIGHT	libxft/includes/libxft.h	/^# define LIBX_MOUSE_BUTTON_RI
 LIBX_MOUSE_SCROLL_DOWN	libxft/includes/libxft.h	/^# define LIBX_MOUSE_SCROLL_DOWN	/;"	d
 LIBX_MOUSE_SCROLL_UP	libxft/includes/libxft.h	/^# define LIBX_MOUSE_SCROLL_UP	/;"	d
 LIBX_STRING_TO_IMAGE	libxft/includes/libxft.h	/^# define LIBX_STRING_TO_IMAGE(/;"	d
-LIST_COLOR1	libft/includes/printf.h	/^# define LIST_COLOR1	/;"	d
-LIST_COLOR2	libft/includes/printf.h	/^# define LIST_COLOR2	/;"	d
-LIST_COLOR3	libft/includes/printf.h	/^# define LIST_COLOR3	/;"	d
-LIST_COLOR4	libft/includes/printf.h	/^# define LIST_COLOR4	/;"	d
-LLONG_MAX	libft/includes/libft.h	/^#  define LLONG_MAX	/;"	d
-LLONG_MIN	libft/includes/libft.h	/^#  define LLONG_MIN	/;"	d
-LONG_MAX	libft/includes/libft.h	/^#  define LONG_MAX	/;"	d
-LONG_MIN	libft/includes/libft.h	/^#  define LONG_MIN	/;"	d
-M	libxft/libxft.a	/^/;"	v
-M	libxft/objs/color_to_int.o	/^/;"	v
-M	minilibx_macos/mlx_shaders.o	/^/;"	v
-MATHFT_H	libft/includes/mathft.h	/^# define MATHFT_H$/;"	d
-MAX_EVENT	minilibx_macos/mlx_int.h	/^#define	MAX_EVENT	/;"	d
-MAX_PIXEL_NB	minilibx_macos/mlx_int.h	/^#define MAX_PIXEL_NB	/;"	d
-MLX_H	minilibx_macos/mlx.h	/^# define MLX_H$/;"	d
+MSG_USAGE	includes/corewar.h	/^# define MSG_USAGE	/;"	d
 NARGS	libxft/includes/libxft.h	/^# define NARGS(/;"	d
 NARGS_SEQ	libxft/includes/libxft.h	/^# define NARGS_SEQ(/;"	d
-NULL	libft/includes/libft.h	/^#  define NULL	/;"	d
 PRIMITIVE_CAT	libxft/includes/libxft.h	/^# define PRIMITIVE_CAT(/;"	d
-PRINTF_H	libft/includes/printf.h	/^# define PRINTF_H$/;"	d
-RETURN	minilibx_macos/mlx_xpm.c	/^#define	RETURN	/;"	d	file:
-STRERROR_H	libft/includes/errno/strerror.h	/^# define STRERROR_H$/;"	d
-U	minilibx_macos/font.xcf	/^/;"	v
-UH	libxft/objs/color_to_int.o	/^/;"	v
-UNIQ_BPP	minilibx_macos/mlx_int.h	/^#define UNIQ_BPP	/;"	d
-VA_ARG	libft/includes/printf.h	/^# define VA_ARG(/;"	d
-WIDTH	includes/ft_fdf.h	/^# define WIDTH /;"	d
-WIN_HEIGHT	includes/ft_fdf.h	/^# define WIN_HEIGHT /;"	d
-WIN_WIDTH	includes/ft_fdf.h	/^# define WIN_WIDTH /;"	d
-Z_HEIGHT	includes/ft_fdf.h	/^# define Z_HEIGHT /;"	d
+VM_COLOR_BOLD	includes/corewar.h	/^# define VM_COLOR_BOLD	/;"	d
+VM_INFO_WIDTH	includes/corewar.h	/^# define VM_INFO_WIDTH	/;"	d
+VM_MEMORY_BYTE_HEIGHT	includes/corewar.h	/^# define VM_MEMORY_BYTE_HEIGHT	/;"	d
+VM_MEMORY_BYTE_WIDTH	includes/corewar.h	/^# define VM_MEMORY_BYTE_WIDTH	/;"	d
+VM_MEMORY_D_HEIGHT	includes/corewar.h	/^# define VM_MEMORY_D_HEIGHT	/;"	d
+VM_MEMORY_NB_BYTE_LINE	includes/corewar.h	/^# define VM_MEMORY_NB_BYTE_LINE	/;"	d
+VM_PATH_FONT	includes/corewar.h	/^# define VM_PATH_FONT	/;"	d
+VM_TOOLTIP_HEIGHT	includes/corewar.h	/^# define VM_TOOLTIP_HEIGHT	/;"	d
+VM_TOOLTIP_MINI_HEIGHT	includes/corewar.h	/^# define VM_TOOLTIP_MINI_HEIGHT	/;"	d
+VM_TOOLTIP_MINI_WIDTH	includes/corewar.h	/^# define VM_TOOLTIP_MINI_WIDTH	/;"	d
+VM_TOOLTIP_WIDTH	includes/corewar.h	/^# define VM_TOOLTIP_WIDTH	/;"	d
+VM_WIN_HEIGHT	includes/corewar.h	/^# define VM_WIN_HEIGHT	/;"	d
+VM_WIN_WIDTH	includes/corewar.h	/^# define VM_WIN_WIDTH	/;"	d
 __D0	libxft/includes/libxft.h	/^# define __D0	/;"	d
 __D0_C	libxft/includes/libxft.h	/^# define __D0_C(/;"	d
 __D1	libxft/includes/libxft.h	/^# define __D1	/;"	d
@@ -292,516 +149,101 @@ __D2	libxft/includes/libxft.h	/^# define __D2	/;"	d
 __D3	libxft/includes/libxft.h	/^# define __D3	/;"	d
 __D8	libxft/includes/libxft.h	/^# define __D8	/;"	d
 __D9	libxft/includes/libxft.h	/^# define __D9	/;"	d
-__FT0	libft/includes/libft.h	/^#  define __FT0	/;"	d
-__FT1	libft/includes/libft.h	/^#  define __FT1	/;"	d
-__FT2	libft/includes/libft.h	/^#  define __FT2	/;"	d
-__FT3	libft/includes/libft.h	/^#  define __FT3	/;"	d
-__FT4	libft/includes/libft.h	/^#  define __FT4	/;"	d
-__FT5	libft/includes/libft.h	/^#  define __FT5	/;"	d
-__anon1::bytes_per_pixel	minilibx_macos/font.c	/^	unsigned int	bytes_per_pixel; \/* 2:RGB16, 3:RGB, 4:RGBA *\/$/;"	m	struct:__anon1	file:	access:public
-__anon1::height	minilibx_macos/font.c	/^	unsigned int	height;$/;"	m	struct:__anon1	file:	access:public
-__anon1::pixel_data	minilibx_macos/font.c	/^	unsigned char	pixel_data[1140 * 20 * 4 + 1];$/;"	m	struct:__anon1	file:	access:public
-__anon1::width	minilibx_macos/font.c	/^	unsigned int	width;$/;"	m	struct:__anon1	file:	access:public
-__text__TEXT	libft/objs/string/ftoa.o	/^Οϊνώ/;"	v
-add_img_to_ctx	minilibx_macos/mlx_new_image.m	/^mlx_img_ctx_t	*add_img_to_ctx(mlx_img_list_t *img, mlx_win_list_t *win)$/;"	f	signature:(mlx_img_list_t *img, mlx_win_list_t *win)
-alt	libft/includes/printf.h	/^	t_bool					alt;$/;"	m	struct:s_printf_flag	access:public
-appid	minilibx_macos/mlx_int.h	/^  void			*appid;$/;"	m	struct:mlx_ptr_s	access:public
-args	libft/includes/printf.h	/^	va_list					args;$/;"	m	struct:s_printf	access:public
+__ER0	includes/corewar.h	/^# define __ER0	/;"	d
+__MSG1	includes/corewar.h	/^# define __MSG1	/;"	d
+__MSG2	includes/corewar.h	/^# define __MSG2	/;"	d
+__MSG3	includes/corewar.h	/^# define __MSG3	/;"	d
+aff	includes/corewar.h	/^	t_bool				aff;$/;"	m	struct:s_verbose	access:public
 b	libxft/includes/libxft.h	/^	double		b;$/;"	m	struct:s_libx_color	access:public
-base	libft/includes/printf.h	/^	int						base;$/;"	m	struct:s_printf_flag	access:public
+background_info	includes/corewar.h	/^	unsigned char		*background_info;$/;"	m	struct:s_vm_mlx	access:public
+background_memory	includes/corewar.h	/^	unsigned char		*background_memory;$/;"	m	struct:s_vm_mlx	access:public
 bits_per_pixel	libxft/includes/libxft.h	/^	int			bits_per_pixel;$/;"	m	struct:s_libx_img	access:public
-buffer	libft/includes/printf.h	/^	char					*buffer;$/;"	m	struct:s_printf	access:public
 buffer	libxft/includes/libxft.h	/^	char		*buffer;$/;"	m	struct:s_libx_img	access:public
-buffer	minilibx_macos/mlx_int.h	/^  char			*buffer;$/;"	m	struct:mlx_img_list_s	access:public
-buffer_size	libft/includes/printf.h	/^	unsigned int			buffer_size;$/;"	m	struct:s_printf	access:public
-bytes_per_pixel	minilibx_macos/font.c	/^	unsigned int	bytes_per_pixel; \/* 2:RGB16, 3:RGB, 4:RGBA *\/$/;"	m	struct:__anon1	file:	access:public
-col	minilibx_macos/mlx_xpm.c	/^  int           col;$/;"	m	struct:s_xpm_col	file:	access:public
-color	minilibx_macos/mlx_xpm.c	/^  int   color;$/;"	m	struct:s_col_name	file:	access:public
-content	libft/includes/libft.h	/^	void			*content;$/;"	m	struct:s_list	access:public
-content_size	libft/includes/libft.h	/^	size_t			content_size;$/;"	m	struct:s_list	access:public
-cumul	includes/ft_fdf.h	/^	int			cumul;$/;"	m	struct:s_draw_point	access:public
-data	libft/includes/libft.h	/^	void			*data;$/;"	m	struct:s_hashtable_data	access:public
-data	libft/includes/libft.h	/^	void			*data;$/;"	m	struct:s_listd	access:public
-display_log	minilibx_macos/mlx_shaders.c	/^void display_log(GLuint object, void (*param_func)(), void (*getlog_func)())$/;"	f	signature:(GLuint object, void (*param_func)(), void (*getlog_func)())
-do_loop_flush	minilibx_macos/mlx_init_loop.m	/^void do_loop_flush(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void * info)$/;"	f	signature:(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void * info)
-do_loop_hook2	minilibx_macos/mlx_init_loop.m	/^void	do_loop_hook2(CFRunLoopTimerRef observer, void * info)$/;"	f	signature:(CFRunLoopTimerRef observer, void * info)
-dx	includes/ft_fdf.h	/^	int			dx;$/;"	m	struct:s_draw_point	access:public
-dy	includes/ft_fdf.h	/^	int			dy;$/;"	m	struct:s_draw_point	access:public
-e_bool	libft/includes/libft.h	/^typedef enum		e_bool$/;"	g
-echo	Makefile	/^		echo "\\r\\033[38;5;124mπ“•  CLEAN  $(NAMEBASE)\\033[0m\\033[K";			\\$/;"	v
-echo	Makefile	/^		echo "\\r\\033[38;5;124mπ“•  FCLEAN $(NAMEBASE)\\033[0m\\033[K";			\\$/;"	v
+carry	includes/corewar.h	/^	int					carry;$/;"	m	struct:s_process	access:public
+color	includes/corewar.h	/^	int					color[19];$/;"	m	struct:s_vm_mlx	access:public
+color_id	includes/corewar.h	/^	int					color_id;$/;"	m	struct:s_byte	access:public
+color_id	includes/corewar.h	/^	int					color_id;$/;"	m	struct:s_player	access:public
+color_id	includes/corewar.h	/^	int					color_id;$/;"	m	struct:s_process	access:public
+cycle	includes/corewar.h	/^	long				cycle;$/;"	m	struct:s_corewar	access:public
+cycle	includes/corewar.h	/^	t_bool				cycle;$/;"	m	struct:s_verbose	access:public
+cycle_check	includes/corewar.h	/^	size_t				cycle_check;$/;"	m	struct:s_corewar	access:public
+cycle_to_die	includes/corewar.h	/^	long				cycle_to_die;$/;"	m	struct:s_corewar	access:public
+data	includes/corewar.h	/^	char				data[CHAMP_MAX_SIZE + sizeof(t_header)];$/;"	m	struct:s_file	access:public
+data	includes/corewar.h	/^	unsigned char		data;$/;"	m	struct:s_byte	access:public
+death	includes/corewar.h	/^	t_bool				death;$/;"	m	struct:s_verbose	access:public
+description	includes/corewar.h	/^	char				*description;$/;"	m	struct:s_player	access:public
+dump	includes/corewar.h	/^	int					dump;$/;"	m	struct:s_option	access:public
 endian	libxft/includes/libxft.h	/^	int			endian;$/;"	m	struct:s_libx_img	access:public
-eof	libft/includes/get_next_line.h	/^	int			eof;$/;"	m	struct:s_get_next_line	access:public
-expose_hook	srcs/ft_fdf.c	/^static int		expose_hook(t_env *e)$/;"	f	file:	signature:(t_env *e)
-false	libft/includes/libft.h	/^	false,$/;"	e	enum:e_bool
-fd	includes/ft_fdf.h	/^	int			fd;$/;"	m	struct:s_env	access:public
-fd	libft/includes/get_next_line.h	/^	int			fd;$/;"	m	struct:s_get_next_line	access:public
-fdf	srcs/fdf.c	/^int				fdf(int argc, char **argv)$/;"	f	signature:(int argc, char **argv)
-fdf_split	srcs/split.c	/^char	**fdf_split(char *line)$/;"	f	signature:(char *line)
-flags	libft/includes/printf.h	/^	t_printf_flag			flags;$/;"	m	struct:s_printf	access:public
-font	minilibx_macos/mlx_int.h	/^  mlx_img_list_t	*font;$/;"	m	struct:mlx_ptr_s	access:public
-font_atlas	minilibx_macos/font.c	/^} font_atlas = {$/;"	v	typeref:struct:__anon1	file:
-font_fshader	minilibx_macos/mlx_int.h	/^  GLuint	font_fshader;$/;"	m	struct:glsl_info_s	access:public
-font_program	minilibx_macos/mlx_int.h	/^  GLuint	font_program;$/;"	m	struct:glsl_info_s	access:public
-font_vshader	minilibx_macos/mlx_int.h	/^  GLuint	font_vshader;$/;"	m	struct:glsl_info_s	access:public
-ft_abs	libft/srcs/math/abs.c	/^unsigned long int	ft_abs(long int n)$/;"	f	signature:(long int n)
-ft_ahtoi	libft/srcs/string/ahtoi.c	/^int			ft_ahtoi(const char *s)$/;"	f	signature:(const char *s)
-ft_aisf	libft/srcs/string/aisf.c	/^t_bool	ft_aisf(const char *s)$/;"	f	signature:(const char *s)
-ft_aish	libft/srcs/string/aish.c	/^t_bool	ft_aish(const char *s)$/;"	f	signature:(const char *s)
-ft_aisi	libft/srcs/string/aisi.c	/^t_bool	ft_aisi(const char *s)$/;"	f	signature:(const char *s)
-ft_asprintf	libft/srcs/printf/printf.c	/^int				ft_asprintf(char **ret, const char *format, ...)$/;"	f	signature:(char **ret, const char *format, ...)
-ft_atof	libft/srcs/string/atof.c	/^double	ft_atof(const char *s)$/;"	f	signature:(const char *s)
-ft_atoi	libft/srcs/_part1/atoi.c	/^int			ft_atoi(const char *str)$/;"	f	signature:(const char *str)
-ft_atol	libft/srcs/string/atol.c	/^long		ft_atol(const char *s)$/;"	f	signature:(const char *s)
-ft_basetoa	libft/srcs/string/basetoa.c	/^char			*ft_basetoa(long long int n, char *base)$/;"	f	signature:(long long int n, char *base)
-ft_bzero	libft/srcs/_part1/bzero.c	/^void	ft_bzero(void *s, size_t n)$/;"	f	signature:(void *s, size_t n)
-ft_color	srcs/ft_draw_point.c	/^static size_t	ft_color(t_draw_point *t, int z1, int z2, int color)$/;"	f	file:	signature:(t_draw_point *t, int z1, int z2, int color)
-ft_do_op	libft/srcs/math/do_op.c	/^double			ft_do_op(const char *s)$/;"	f	signature:(const char *s)
-ft_dprintf	libft/srcs/printf/printf.c	/^int				ft_dprintf(int fd, const char *format, ...)$/;"	f	signature:(int fd, const char *format, ...)
-ft_draw_horizontal	srcs/ft_draw_point.c	/^void			ft_draw_horizontal(t_env *e, t_draw_point *t, int z1, int z2)$/;"	f	signature:(t_env *e, t_draw_point *t, int z1, int z2)
-ft_draw_multi_point	srcs/ft_fdf.c	/^static void		ft_draw_multi_point(t_env *e, char **tb, char **lasttb, int y)$/;"	f	file:	signature:(t_env *e, char **tb, char **lasttb, int y)
-ft_draw_vertical	srcs/ft_draw_point.c	/^void			ft_draw_vertical(t_env *e, t_draw_point *t, int z1, int z2)$/;"	f	signature:(t_env *e, t_draw_point *t, int z1, int z2)
-ft_drawline	srcs/ft_fdf.c	/^static void		ft_drawline(t_env *e, t_pt_to_pt *p)$/;"	f	file:	signature:(t_env *e, t_pt_to_pt *p)
-ft_fabs	libft/srcs/math/fabs.c	/^float	ft_fabs(float n)$/;"	f	signature:(float n)
-ft_ftoa	libft/srcs/string/ftoa.c	/^char			*ft_ftoa(double n, long prec)$/;"	f	signature:(double n, long prec)
-ft_get_next_line	libft/srcs/get_next_line.c	/^int						ft_get_next_line(const int fd, char **line)$/;"	f	signature:(const int fd, char **line)
-ft_hashtable_get	libft/srcs/hashtable/get.c	/^void	*ft_hashtable_get(t_hashtable *ht, char *key)$/;"	f	signature:(t_hashtable *ht, char *key)
-ft_hashtable_new	libft/srcs/hashtable/new.c	/^t_hashtable		*ft_hashtable_new(size_t size)$/;"	f	signature:(size_t size)
-ft_hashtable_set	libft/srcs/hashtable/set.c	/^t_bool			ft_hashtable_set(t_hashtable **ht, char *key, void *data)$/;"	f	signature:(t_hashtable **ht, char *key, void *data)
-ft_hashtable_transform	libft/srcs/hashtable/transform.c	/^unsigned long int	ft_hashtable_transform(t_hashtable *ht, char *key)$/;"	f	signature:(t_hashtable *ht, char *key)
-ft_isalnum	libft/srcs/_part1/isalnum.c	/^int		ft_isalnum(int c)$/;"	f	signature:(int c)
-ft_isalpha	libft/srcs/_part1/isalpha.c	/^int		ft_isalpha(int c)$/;"	f	signature:(int c)
-ft_isascii	libft/srcs/_part1/isascii.c	/^int		ft_isascii(int c)$/;"	f	signature:(int c)
-ft_isdigit	libft/srcs/_part1/isdigit.c	/^int		ft_isdigit(int c)$/;"	f	signature:(int c)
-ft_isprint	libft/srcs/_part1/isprint.c	/^int		ft_isprint(int c)$/;"	f	signature:(int c)
-ft_isspace	libft/srcs/_part2/strtrim.c	/^static int	ft_isspace(char c)$/;"	f	file:	signature:(char c)
-ft_itoa	libft/srcs/_part2/itoa.c	/^char			*ft_itoa(int n)$/;"	f	signature:(int n)
-ft_loc_pt_x	srcs/ft_draw_point.c	/^t_pt_to_pt		*ft_loc_pt_x(int atoi_tb, int atoi_tb1, int x, int y)$/;"	f	signature:(int atoi_tb, int atoi_tb1, int x, int y)
-ft_loc_pt_y	srcs/ft_draw_point.c	/^t_pt_to_pt		*ft_loc_pt_y(int atoi_tb, int atoi_lasttb, int x, int y)$/;"	f	signature:(int atoi_tb, int atoi_lasttb, int x, int y)
-ft_lstadd	libft/srcs/_bonus/lstadd.c	/^void	ft_lstadd(t_list **alst, t_list *new)$/;"	f	signature:(t_list **alst, t_list *new)
-ft_lstd_back	libft/srcs/lists/lstd_back.c	/^t_listd		*ft_lstd_back(t_listd *lstd)$/;"	f	signature:(t_listd *lstd)
-ft_lstd_clear	libft/srcs/lists/lstd_clear.c	/^void	ft_lstd_clear(t_listd **alst, void (*del)(void*))$/;"	f	signature:(t_listd **alst, void (*del)(void*))
-ft_lstd_del	libft/srcs/lists/lstd_del.c	/^void	ft_lstd_del(t_listd **alst, void (*del)())$/;"	f	signature:(t_listd **alst, void (*del)())
-ft_lstd_do	libft/srcs/lists/lstd_do.c	/^void	ft_lstd_do(t_listd **alst, int (*cmp)(),$/;"	f	signature:(t_listd **alst, int (*cmp)(), void (*action)(), int type)
-ft_lstd_front	libft/srcs/lists/lstd_front.c	/^t_listd		*ft_lstd_front(t_listd *lstd)$/;"	f	signature:(t_listd *lstd)
-ft_lstd_get_last	libft/srcs/lists/lstd_get_last.c	/^t_listd		*ft_lstd_get_last(t_listd *alst)$/;"	f	signature:(t_listd *alst)
-ft_lstd_map	libft/srcs/lists/lstd_map.c	/^void	ft_lstd_map(t_listd **alst, void (*map)())$/;"	f	signature:(t_listd **alst, void (*map)())
-ft_lstd_new	libft/srcs/lists/lstd_new.c	/^void	ft_lstd_new(t_listd **alst, void *new)$/;"	f	signature:(t_listd **alst, void *new)
-ft_lstd_pop_back	libft/srcs/lists/lstd_pop_back.c	/^void	ft_lstd_pop_back(t_listd **alst, void (*del)(void*))$/;"	f	signature:(t_listd **alst, void (*del)(void*))
-ft_lstd_pop_front	libft/srcs/lists/lstd_pop_front.c	/^void	ft_lstd_pop_front(t_listd **alst, void (*del)())$/;"	f	signature:(t_listd **alst, void (*del)())
-ft_lstd_push_after	libft/srcs/lists/lstd_push_after.c	/^void	ft_lstd_push_after(t_listd **alst, void *new)$/;"	f	signature:(t_listd **alst, void *new)
-ft_lstd_push_back	libft/srcs/lists/lstd_push_back.c	/^void	ft_lstd_push_back(t_listd **alst, void *new)$/;"	f	signature:(t_listd **alst, void *new)
-ft_lstd_push_before	libft/srcs/lists/lstd_push_before.c	/^void	ft_lstd_push_before(t_listd **alst, void *new)$/;"	f	signature:(t_listd **alst, void *new)
-ft_lstd_push_cond	libft/srcs/lists/lstd_push_cond.c	/^void	ft_lstd_push_cond(t_listd **alst, void *new,$/;"	f	signature:(t_listd **alst, void *new, int (*cond)())
-ft_lstd_push_front	libft/srcs/lists/lstd_push_front.c	/^void	ft_lstd_push_front(t_listd **alst, void *new)$/;"	f	signature:(t_listd **alst, void *new)
-ft_lstd_rmap	libft/srcs/lists/lstd_rmap.c	/^void	ft_lstd_rmap(t_listd **alst, void (*map)(void*))$/;"	f	signature:(t_listd **alst, void (*map)(void*))
-ft_lstd_size	libft/srcs/lists/lstd_size.c	/^size_t	ft_lstd_size(t_listd *lstd)$/;"	f	signature:(t_listd *lstd)
-ft_lstdel	libft/srcs/_bonus/lstdel.c	/^void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))$/;"	f	signature:(t_list **alst, void (*del)(void *, size_t))
-ft_lstdelone	libft/srcs/_bonus/lstdelone.c	/^void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t))$/;"	f	signature:(t_list **alst, void (*del)(void*, size_t))
-ft_lstiter	libft/srcs/_bonus/lstiter.c	/^void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))$/;"	f	signature:(t_list *lst, void (*f)(t_list *elem))
-ft_lstmap	libft/srcs/_bonus/lstmap.c	/^t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))$/;"	f	signature:(t_list *lst, t_list *(*f)(t_list *elem))
-ft_lstnew	libft/srcs/_bonus/lstnew.c	/^t_list	*ft_lstnew(void const *content, size_t content_size)$/;"	f	signature:(void const *content, size_t content_size)
-ft_ltoa	libft/srcs/string/ltoa.c	/^char			*ft_ltoa(long n)$/;"	f	signature:(long n)
-ft_max	libft/srcs/math/max.c	/^int		ft_max(int a, int b)$/;"	f	signature:(int a, int b)
-ft_memalloc	libft/srcs/_part2/memalloc.c	/^void	*ft_memalloc(size_t size)$/;"	f	signature:(size_t size)
-ft_memccpy	libft/srcs/_part1/memccpy.c	/^void	*ft_memccpy(void *s1, const void *s2, int c, size_t n)$/;"	f	signature:(void *s1, const void *s2, int c, size_t n)
-ft_memchr	libft/srcs/_part1/memchr.c	/^void	*ft_memchr(const void *s, int c, size_t n)$/;"	f	signature:(const void *s, int c, size_t n)
-ft_memcmp	libft/srcs/_part1/memcmp.c	/^int		ft_memcmp(const void *s1, const void *s2, size_t n)$/;"	f	signature:(const void *s1, const void *s2, size_t n)
-ft_memcpy	libft/srcs/_part1/memcpy.c	/^void	*ft_memcpy(void *s1, const void *s2, size_t n)$/;"	f	signature:(void *s1, const void *s2, size_t n)
-ft_memdel	libft/srcs/_part2/memdel.c	/^void	ft_memdel(void **ap)$/;"	f	signature:(void **ap)
-ft_memmove	libft/srcs/_part1/memmove.c	/^void	*ft_memmove(void *s1, const void *s2, size_t n)$/;"	f	signature:(void *s1, const void *s2, size_t n)
-ft_memset	libft/srcs/_part1/memset.c	/^void	*ft_memset(void *b, int c, size_t len)$/;"	f	signature:(void *b, int c, size_t len)
-ft_min	libft/srcs/math/min.c	/^int		ft_min(int a, int b)$/;"	f	signature:(int a, int b)
-ft_mlx_new_window	minilibx_macos/mlx_new_window.m	/^void *ft_mlx_new_window(mlx_ptr_t *mlx_ptr, int pos_x, int pos_y, int size_x, int size_y, char *title)$/;"	f	signature:(mlx_ptr_t *mlx_ptr, int pos_x, int pos_y, int size_x, int size_y, char *title)
-ft_pow	libft/srcs/math/pow.c	/^int		ft_pow(int base, int pow)$/;"	f	signature:(int base, int pow)
-ft_printf	libft/srcs/printf/printf.c	/^int				ft_printf(const char *format, ...)$/;"	f	signature:(const char *format, ...)
-ft_putchar	libft/srcs/_part2/putchar.c	/^int		ft_putchar(int c)$/;"	f	signature:(int c)
-ft_putchar_fd	libft/srcs/_part2/putchar_fd.c	/^int		ft_putchar_fd(char c, int fd)$/;"	f	signature:(char c, int fd)
-ft_putendl	libft/srcs/_part2/putendl.c	/^void	ft_putendl(char const *s)$/;"	f	signature:(char const *s)
-ft_putendl_fd	libft/srcs/_part2/putendl_fd.c	/^void	ft_putendl_fd(char const *s, int fd)$/;"	f	signature:(char const *s, int fd)
-ft_putiendl	libft/srcs/infinite/putiendl.c	/^void		ft_putiendl(char *s, ...)$/;"	f	signature:(char *s, ...)
-ft_putiendl_fd	libft/srcs/infinite/putiendl_fd.c	/^void		ft_putiendl_fd(int fd, char *s, ...)$/;"	f	signature:(int fd, char *s, ...)
-ft_putistr	libft/srcs/infinite/putistr.c	/^void		ft_putistr(char *s, ...)$/;"	f	signature:(char *s, ...)
-ft_putistr_fd	libft/srcs/infinite/putistr_fd.c	/^void		ft_putistr_fd(int fd, char *s, ...)$/;"	f	signature:(int fd, char *s, ...)
-ft_putnbr	libft/srcs/_part2/putnbr.c	/^void	ft_putnbr(int n)$/;"	f	signature:(int n)
-ft_putnbr_fd	libft/srcs/_part2/putnbr_fd.c	/^void	ft_putnbr_fd(int n, int fd)$/;"	f	signature:(int n, int fd)
-ft_putstr	libft/srcs/_part2/putstr.c	/^void	ft_putstr(char const *s)$/;"	f	signature:(char const *s)
-ft_putstr_fd	libft/srcs/_part2/putstr_fd.c	/^void	ft_putstr_fd(char const *s, int fd)$/;"	f	signature:(char const *s, int fd)
-ft_sprintf	libft/srcs/printf/printf.c	/^int				ft_sprintf(char *ret, const char *format, ...)$/;"	f	signature:(char *ret, const char *format, ...)
-ft_sqrt	libft/srcs/math/sqrt.c	/^float	ft_sqrt(float x)$/;"	f	signature:(float x)
-ft_straddchar	libft/srcs/string/straddchar.c	/^void	ft_straddchar(char **s, const char c)$/;"	f	signature:(char **s, const char c)
-ft_strcat	libft/srcs/_part1/strcat.c	/^char	*ft_strcat(char *s1, const char *s2)$/;"	f	signature:(char *s1, const char *s2)
-ft_strchr	libft/srcs/_part1/strchr.c	/^char	*ft_strchr(const char *s, int c)$/;"	f	signature:(const char *s, int c)
-ft_strclr	libft/srcs/_part2/strclr.c	/^void	ft_strclr(char *s)$/;"	f	signature:(char *s)
-ft_strcmp	libft/srcs/_part1/strcmp.c	/^int		ft_strcmp(const char *s1, const char *s2)$/;"	f	signature:(const char *s1, const char *s2)
-ft_strcpy	libft/srcs/_part1/strcpy.c	/^char	*ft_strcpy(char *s1, const char *s2)$/;"	f	signature:(char *s1, const char *s2)
-ft_strdel	libft/srcs/_part2/strdel.c	/^void	ft_strdel(char **as)$/;"	f	signature:(char **as)
-ft_strdup	libft/srcs/_part1/strdup.c	/^char	*ft_strdup(const char *s1)$/;"	f	signature:(const char *s1)
-ft_strequ	libft/srcs/_part2/strequ.c	/^int		ft_strequ(char const *s1, char const *s2)$/;"	f	signature:(char const *s1, char const *s2)
-ft_strerr	libft/srcs/errno/strerror.c	/^char	*ft_strerr(int err)$/;"	f	signature:(int err)
-ft_strerror	libft/srcs/errno/strerror.c	/^char	*ft_strerror(void)$/;"	f	signature:(void)
-ft_stridel	libft/srcs/infinite/stridel.c	/^void	ft_stridel(char **s, ...)$/;"	f	signature:(char **s, ...)
-ft_strijoin	libft/srcs/infinite/strijoin.c	/^char	*ft_strijoin(char *s, ...)$/;"	f	signature:(char *s, ...)
-ft_strijoind	libft/srcs/infinite/strijoind.c	/^char	*ft_strijoind(char *s, ...)$/;"	f	signature:(char *s, ...)
-ft_striter	libft/srcs/_part2/striter.c	/^void	ft_striter(char *s, void (*f)(char *))$/;"	f	signature:(char *s, void (*f)(char *))
-ft_striteri	libft/srcs/_part2/striteri.c	/^void	ft_striteri(char *s, void (*f)(unsigned int, char *))$/;"	f	signature:(char *s, void (*f)(unsigned int, char *))
-ft_strjoin	libft/srcs/_part2/strjoin.c	/^char	*ft_strjoin(char const *s1, char const *s2)$/;"	f	signature:(char const *s1, char const *s2)
-ft_strlcat	libft/srcs/_part1/strlcat.c	/^size_t	ft_strlcat(char *dst, const char *src, size_t size)$/;"	f	signature:(char *dst, const char *src, size_t size)
-ft_strlen	libft/srcs/_part1/strlen.c	/^size_t	ft_strlen(const char *s)$/;"	f	signature:(const char *s)
-ft_strmap	libft/srcs/_part2/strmap.c	/^char	*ft_strmap(char const *s, char (*f)(char))$/;"	f	signature:(char const *s, char (*f)(char))
-ft_strmapi	libft/srcs/_part2/strmapi.c	/^char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))$/;"	f	signature:(char const *s, char (*f)(unsigned int, char))
-ft_strncat	libft/srcs/_part1/strncat.c	/^char	*ft_strncat(char *s1, char *s2, size_t n)$/;"	f	signature:(char *s1, char *s2, size_t n)
-ft_strncmp	libft/srcs/_part1/strncmp.c	/^int		ft_strncmp(const char *s1, const char *s2, size_t n)$/;"	f	signature:(const char *s1, const char *s2, size_t n)
-ft_strncpy	libft/srcs/_part1/strncpy.c	/^char	*ft_strncpy(char *s1, const char *s2, size_t n)$/;"	f	signature:(char *s1, const char *s2, size_t n)
-ft_strnequ	libft/srcs/_part2/strnequ.c	/^int		ft_strnequ(char const *s1, char const *s2, size_t n)$/;"	f	signature:(char const *s1, char const *s2, size_t n)
-ft_strnew	libft/srcs/_part2/strnew.c	/^char	*ft_strnew(size_t size)$/;"	f	signature:(size_t size)
-ft_strnstr	libft/srcs/_part1/strnstr.c	/^char			*ft_strnstr(const char *s1, const char *s2, size_t n)$/;"	f	signature:(const char *s1, const char *s2, size_t n)
-ft_strrchr	libft/srcs/_part1/strrchr.c	/^char	*ft_strrchr(const char *s, int c)$/;"	f	signature:(const char *s, int c)
-ft_strreplace	libft/srcs/string/strreplace.c	/^char	*ft_strreplace(char *src, char *key, char *rep, size_t start)$/;"	f	signature:(char *src, char *key, char *rep, size_t start)
-ft_strsplit	libft/srcs/_part2/strsplit.c	/^char			**ft_strsplit(char const *s, char c)$/;"	f	signature:(char const *s, char c)
-ft_strsplit_tolist	libft/srcs/string/strsplit_tolist.c	/^t_listd			*ft_strsplit_tolist(char const *s, char c)$/;"	f	signature:(char const *s, char c)
-ft_strstr	libft/srcs/_part1/strstr.c	/^char	*ft_strstr(const char *s1, const char *s2)$/;"	f	signature:(const char *s1, const char *s2)
-ft_strsub	libft/srcs/_part2/strsub.c	/^char	*ft_strsub(char const *s, unsigned int start, size_t len)$/;"	f	signature:(char const *s, unsigned int start, size_t len)
-ft_strtable_clear	libft/srcs/strtable/strtable_clear.c	/^void	ft_strtable_clear(char ***atbl)$/;"	f	signature:(char ***atbl)
-ft_strtable_del_at_index	libft/srcs/strtable/strtable_del_at_index.c	/^void	ft_strtable_del_at_index(char ***atbl, size_t index)$/;"	f	signature:(char ***atbl, size_t index)
-ft_strtable_del_at_ptr	libft/srcs/strtable/strtable_del_at_ptr.c	/^void	ft_strtable_del_at_ptr(char ***atbl, void *ptr)$/;"	f	signature:(char ***atbl, void *ptr)
-ft_strtable_map	libft/srcs/strtable/strtable_map.c	/^void	ft_strtable_map(char **tbl, void (*map)())$/;"	f	signature:(char **tbl, void (*map)())
-ft_strtable_pop_back	libft/srcs/strtable/strtable_pop_back.c	/^void	ft_strtable_pop_back(char ***atbl)$/;"	f	signature:(char ***atbl)
-ft_strtable_pop_front	libft/srcs/strtable/strtable_pop_front.c	/^void	ft_strtable_pop_front(char ***atbl)$/;"	f	signature:(char ***atbl)
-ft_strtable_push_at_index	libft/srcs/strtable/strtable_push_at_index.c	/^void	ft_strtable_push_at_index(char ***atbl, void *new,$/;"	f	signature:(char ***atbl, void *new, size_t index)
-ft_strtable_push_back	libft/srcs/strtable/strtable_push_back.c	/^void	ft_strtable_push_back(char ***atbl, void *new)$/;"	f	signature:(char ***atbl, void *new)
-ft_strtable_push_cond	libft/srcs/strtable/strtable_push_cond.c	/^void	ft_strtable_push_cond(char ***atbl, void *new,$/;"	f	signature:(char ***atbl, void *new, int (*cond)())
-ft_strtable_push_front	libft/srcs/strtable/strtable_push_front.c	/^void	ft_strtable_push_front(char ***atbl, void *new)$/;"	f	signature:(char ***atbl, void *new)
-ft_strtable_rmap	libft/srcs/strtable/strtable_rmap.c	/^void	ft_strtable_rmap(char **tbl, void (*map)())$/;"	f	signature:(char **tbl, void (*map)())
-ft_strtable_size	libft/srcs/strtable/strtable_size.c	/^size_t	ft_strtable_size(char **strtable)$/;"	f	signature:(char **strtable)
-ft_strtrim	libft/srcs/_part2/strtrim.c	/^char		*ft_strtrim(char const *s)$/;"	f	signature:(char const *s)
-ft_table_clear	libft/srcs/table/table_clear.c	/^void	ft_table_clear(void ***atbl, void (*del)())$/;"	f	signature:(void ***atbl, void (*del)())
-ft_table_del_at_index	libft/srcs/table/table_del_at_index.c	/^void	ft_table_del_at_index(void ***atbl, size_t index,$/;"	f	signature:(void ***atbl, size_t index, void (*del)())
-ft_table_del_at_ptr	libft/srcs/table/table_del_at_ptr.c	/^void	ft_table_del_at_ptr(void ***atbl, void *ptr,$/;"	f	signature:(void ***atbl, void *ptr, void (*del)())
-ft_table_map	libft/srcs/table/table_map.c	/^void	ft_table_map(void **tbl, void (*map)())$/;"	f	signature:(void **tbl, void (*map)())
-ft_table_new	libft/srcs/table/table_new.c	/^void	ft_table_new(void ***atbl, void *new)$/;"	f	signature:(void ***atbl, void *new)
-ft_table_pop_back	libft/srcs/table/table_pop_back.c	/^void	ft_table_pop_back(void ***atbl, void (*del)())$/;"	f	signature:(void ***atbl, void (*del)())
-ft_table_pop_front	libft/srcs/table/table_pop_front.c	/^void	ft_table_pop_front(void ***atbl, void (*del)())$/;"	f	signature:(void ***atbl, void (*del)())
-ft_table_push_at_index	libft/srcs/table/table_push_at_index.c	/^void	ft_table_push_at_index(void ***atbl, void *new, size_t index)$/;"	f	signature:(void ***atbl, void *new, size_t index)
-ft_table_push_back	libft/srcs/table/table_push_back.c	/^void	ft_table_push_back(void ***atbl, void *new)$/;"	f	signature:(void ***atbl, void *new)
-ft_table_push_cond	libft/srcs/table/table_push_cond.c	/^void	ft_table_push_cond(void ***atbl, void *new,$/;"	f	signature:(void ***atbl, void *new, int (*cond)())
-ft_table_push_front	libft/srcs/table/table_push_front.c	/^void	ft_table_push_front(void ***atbl, void *new)$/;"	f	signature:(void ***atbl, void *new)
-ft_table_rmap	libft/srcs/table/table_rmap.c	/^void	ft_table_rmap(void **tbl, void (*map)())$/;"	f	signature:(void **tbl, void (*map)())
-ft_table_size	libft/srcs/table/table_size.c	/^size_t	ft_table_size(void **tbl)$/;"	f	signature:(void **tbl)
-ft_tolower	libft/srcs/_part1/tolower.c	/^int		ft_tolower(int c)$/;"	f	signature:(int c)
-ft_toupper	libft/srcs/_part1/toupper.c	/^int		ft_toupper(int c)$/;"	f	signature:(int c)
-ft_ubasetoa	libft/srcs/string/ubasetoa.c	/^char			*ft_ubasetoa(unsigned long int n, char *base)$/;"	f	signature:(unsigned long int n, char *base)
-func_t	minilibx_macos/mlx_int.h	/^typedef int (*func_t)();$/;"	t
+files	includes/corewar.h	/^	t_listd				*files;$/;"	m	struct:s_corewar	access:public
 g	libxft/includes/libxft.h	/^	double		g;$/;"	m	struct:s_libx_color	access:public
-get_mouse_button	minilibx_macos/mlx_new_window.m	/^int get_mouse_button(NSEventType eventtype)$/;"	f	signature:(NSEventType eventtype)
-glsl_info_s	minilibx_macos/mlx_int.h	/^typedef struct	glsl_info_s$/;"	s
-glsl_info_s::font_fshader	minilibx_macos/mlx_int.h	/^  GLuint	font_fshader;$/;"	m	struct:glsl_info_s	access:public
-glsl_info_s::font_program	minilibx_macos/mlx_int.h	/^  GLuint	font_program;$/;"	m	struct:glsl_info_s	access:public
-glsl_info_s::font_vshader	minilibx_macos/mlx_int.h	/^  GLuint	font_vshader;$/;"	m	struct:glsl_info_s	access:public
-glsl_info_s::image_fshader	minilibx_macos/mlx_int.h	/^  GLuint	image_fshader;$/;"	m	struct:glsl_info_s	access:public
-glsl_info_s::image_program	minilibx_macos/mlx_int.h	/^  GLuint	image_program;$/;"	m	struct:glsl_info_s	access:public
-glsl_info_s::image_vshader	minilibx_macos/mlx_int.h	/^  GLuint	image_vshader;$/;"	m	struct:glsl_info_s	access:public
-glsl_info_s::loc_font_atlassize	minilibx_macos/mlx_int.h	/^  GLint		loc_font_atlassize;$/;"	m	struct:glsl_info_s	access:public
-glsl_info_s::loc_font_color	minilibx_macos/mlx_int.h	/^  GLint		loc_font_color;$/;"	m	struct:glsl_info_s	access:public
-glsl_info_s::loc_font_posinatlas	minilibx_macos/mlx_int.h	/^  GLint		loc_font_posinatlas;$/;"	m	struct:glsl_info_s	access:public
-glsl_info_s::loc_font_posinwin	minilibx_macos/mlx_int.h	/^  GLint		loc_font_posinwin;$/;"	m	struct:glsl_info_s	access:public
-glsl_info_s::loc_font_position	minilibx_macos/mlx_int.h	/^  GLint		loc_font_position;$/;"	m	struct:glsl_info_s	access:public
-glsl_info_s::loc_font_texture	minilibx_macos/mlx_int.h	/^  GLint		loc_font_texture;$/;"	m	struct:glsl_info_s	access:public
-glsl_info_s::loc_font_winhalfsize	minilibx_macos/mlx_int.h	/^  GLint		loc_font_winhalfsize;$/;"	m	struct:glsl_info_s	access:public
-glsl_info_s::loc_image_pos	minilibx_macos/mlx_int.h	/^  GLint		loc_image_pos;$/;"	m	struct:glsl_info_s	access:public
-glsl_info_s::loc_image_position	minilibx_macos/mlx_int.h	/^  GLint		loc_image_position;$/;"	m	struct:glsl_info_s	access:public
-glsl_info_s::loc_image_size	minilibx_macos/mlx_int.h	/^  GLint		loc_image_size;$/;"	m	struct:glsl_info_s	access:public
-glsl_info_s::loc_image_texture	minilibx_macos/mlx_int.h	/^  GLint		loc_image_texture;$/;"	m	struct:glsl_info_s	access:public
-glsl_info_s::loc_image_winhalfsize	minilibx_macos/mlx_int.h	/^  GLint		loc_image_winhalfsize;$/;"	m	struct:glsl_info_s	access:public
-glsl_info_s::loc_pixel_position	minilibx_macos/mlx_int.h	/^  GLint		loc_pixel_position;$/;"	m	struct:glsl_info_s	access:public
-glsl_info_s::loc_pixel_texture	minilibx_macos/mlx_int.h	/^  GLint		loc_pixel_texture;$/;"	m	struct:glsl_info_s	access:public
-glsl_info_s::loc_pixel_winhalfsize	minilibx_macos/mlx_int.h	/^  GLint		loc_pixel_winhalfsize;$/;"	m	struct:glsl_info_s	access:public
-glsl_info_s::pixel_fshader	minilibx_macos/mlx_int.h	/^  GLuint	pixel_fshader;$/;"	m	struct:glsl_info_s	access:public
-glsl_info_s::pixel_program	minilibx_macos/mlx_int.h	/^  GLuint	pixel_program;$/;"	m	struct:glsl_info_s	access:public
-glsl_info_s::pixel_vshader	minilibx_macos/mlx_int.h	/^  GLuint	pixel_vshader;$/;"	m	struct:glsl_info_s	access:public
-glsl_info_t	minilibx_macos/mlx_int.h	/^} glsl_info_t;$/;"	t	typeref:struct:glsl_info_s
-group	libft/includes/printf.h	/^	t_bool					group;$/;"	m	struct:s_printf_flag	access:public
-h$	libft/objs/_part1/strdup.o	/^Οϊνώ/;"	v
-h$	libft/objs/_part2/strmapi.o	/^Οϊνώ/;"	v
-h$	libft/objs/lists/lstd_pop_front.o	/^Οϊνώ/;"	v
-h$	libft/objs/lists/lstd_push_after.o	/^Οϊνώ/;"	v
-h$	libft/objs/lists/lstd_push_before.o	/^Οϊνώ/;"	v
-h$	libft/objs/printf/conversion/big_d.o	/^Οϊνώ/;"	v
-h$	libft/objs/strtable/strtable_clear.o	/^Οϊνώ/;"	v
+graphic	includes/corewar.h	/^	t_bool				graphic;$/;"	m	struct:s_option	access:public
+header	includes/corewar.h	/^	t_header			*header;$/;"	m	struct:s_file	access:public
 height	libxft/includes/libxft.h	/^	int			height;$/;"	m	struct:s_libx_img	access:public
-height	minilibx_macos/font.c	/^	unsigned int	height;$/;"	m	struct:__anon1	file:	access:public
-height	minilibx_macos/mlx_int.h	/^  int			height;$/;"	m	struct:mlx_img_list_s	access:public
-i	libft/includes/printf.h	/^	int						*i;$/;"	m	struct:s_replace_color	access:public
-image_fshader	minilibx_macos/mlx_int.h	/^  GLuint	image_fshader;$/;"	m	struct:glsl_info_s	access:public
-image_program	minilibx_macos/mlx_int.h	/^  GLuint	image_program;$/;"	m	struct:glsl_info_s	access:public
-image_vshader	minilibx_macos/mlx_int.h	/^  GLuint	image_vshader;$/;"	m	struct:glsl_info_s	access:public
-images	minilibx_macos/man/man1/mlx_loop.1	/^the screen to display pixels, images, and so on. On the other hand,$/;"	v
-images	minilibx_macos/man/man3/mlx_loop.1	/^the screen to display pixels, images, and so on. On the other hand,$/;"	v
-img	includes/fdf.h	/^	t_libx_img	*img;$/;"	m	struct:s_fdf	access:public
-img	minilibx_macos/mlx_int.h	/^  mlx_img_list_t	*img;$/;"	m	struct:mlx_img_ctx_s	access:public
-img_list	minilibx_macos/mlx_int.h	/^  mlx_img_ctx_t		*img_list;$/;"	m	struct:mlx_win_list_s	access:public
-img_list	minilibx_macos/mlx_int.h	/^  mlx_img_list_t	*img_list;$/;"	m	struct:mlx_ptr_s	access:public
+id	includes/corewar.h	/^	int					id;$/;"	m	struct:s_file	access:public
+id	includes/corewar.h	/^	int					id;$/;"	m	struct:s_player	access:public
+id	includes/corewar.h	/^	int					id;$/;"	m	struct:s_process	access:public
+id_last_live	includes/corewar.h	/^	int					id_last_live;$/;"	m	struct:s_corewar	access:public
+img_font	includes/corewar.h	/^	t_libx_img			*img_font;$/;"	m	struct:s_vm_mlx	access:public
+img_info	includes/corewar.h	/^	t_libx_img			*img_info;$/;"	m	struct:s_vm_mlx	access:public
+img_memory	includes/corewar.h	/^	t_libx_img			*img_memory;$/;"	m	struct:s_vm_mlx	access:public
 img_ptr	libxft/includes/libxft.h	/^	void		*img_ptr;$/;"	m	struct:s_libx_img	access:public
-ini_strerror	libft/srcs/errno/ini_strerror.c	/^void			ini_strerror(char ***at)$/;"	f	signature:(char ***at)
-is_char	libft/includes/printf.h	/^	t_bool					is_char;$/;"	m	struct:s_printf_flag	access:public
-is_long	libft/includes/printf.h	/^	t_bool					is_long;$/;"	m	struct:s_printf_flag	access:public
-is_long_double	libft/includes/printf.h	/^	t_bool					is_long_double;$/;"	m	struct:s_printf_flag	access:public
-is_negative	libft/includes/printf.h	/^	t_bool					is_negative;$/;"	m	struct:s_printf_flag	access:public
-is_short	libft/includes/printf.h	/^	t_bool					is_short;$/;"	m	struct:s_printf_flag	access:public
-k	includes/ft_fdf.h	/^	int			k;$/;"	m	struct:s_draw_point	access:public
-key	libft/includes/libft.h	/^	char			*key;$/;"	m	struct:s_hashtable_data	access:public
-key_hook	srcs/ft_fdf.c	/^int				key_hook(int keycode, t_env *e)$/;"	f	signature:(int keycode, t_env *e)
-l	minilibx_macos/font.xcf	/^ÿ/;"	v
-l_line	includes/fdf.h	/^	t_listd		*l_line;$/;"	m	struct:s_fdf	access:public
-l_line_int	includes/fdf.h	/^	t_listd		*l_line_int;$/;"	m	struct:s_fdf	access:public
-left	libft/includes/printf.h	/^	t_bool					left;$/;"	m	struct:s_printf_flag	access:public
-len	includes/fdf.h	/^	int			len;$/;"	m	struct:s_line_int	access:public
-len	libft/includes/printf.h	/^	int						*len;$/;"	m	struct:s_replace_color	access:public
-len	libft/includes/printf.h	/^	unsigned int			len;$/;"	m	struct:s_printf	access:public
-libx_color_to_int	libxft/srcs/color_to_int.c	/^int		libx_color_to_int(t_libx_color color)$/;"	f	signature:(t_libx_color color)
-libx_destroy_image	libxft/srcs/destroy_image.c	/^void	libx_destroy_image(void *mlx, t_libx_img *img)$/;"	f	signature:(void *mlx, t_libx_img *img)
-libx_draw_circle_to_image	libxft/srcs/draw_circle_to_image.c	/^void			libx_draw_circle_to_image(t_libx_img *img, ...)$/;"	f	signature:(t_libx_img *img, ...)
-libx_draw_line_to_image	libxft/srcs/draw_line_to_image.c	/^void			libx_draw_line_to_image(t_libx_img *img, ...)$/;"	f	signature:(t_libx_img *img, ...)
-libx_draw_square_to_image	libxft/srcs/draw_square_to_image.c	/^void			libx_draw_square_to_image(t_libx_img *img, ...)$/;"	f	signature:(t_libx_img *img, ...)
-libx_func_key	libxft/srcs/func_key.c	/^void					libx_func_key(int key, int flag, t_libx_key_func f)$/;"	f	signature:(int key, int flag, t_libx_key_func f)
-libx_get_color_in_image	libxft/srcs/get_color_in_image.c	/^int		libx_get_color_in_image(t_libx_img *img, int x, int y)$/;"	f	signature:(t_libx_img *img, int x, int y)
-libx_hook_key_press	libxft/srcs/func_key.c	/^int						libx_hook_key_press(int key, void *e)$/;"	f	signature:(int key, void *e)
-libx_hook_key_release	libxft/srcs/func_key.c	/^int						libx_hook_key_release(int key, void *e)$/;"	f	signature:(int key, void *e)
-libx_image_fill	libxft/srcs/image_fill.c	/^void	libx_image_fill(t_libx_img *img, int c)$/;"	f	signature:(t_libx_img *img, int c)
-libx_image_to_image	libxft/srcs/image_to_image.c	/^void			libx_image_to_image(t_libx_img *dst, t_libx_img *src, ...)$/;"	f	signature:(t_libx_img *dst, t_libx_img *src, ...)
-libx_image_to_image_png	libxft/srcs/image_to_image_png.c	/^void			libx_image_to_image_png(t_libx_img *dst, t_libx_img *src,$/;"	f	signature:(t_libx_img *dst, t_libx_img *src, ...)
-libx_int_to_color	libxft/srcs/int_to_color.c	/^t_libx_color	libx_int_to_color(int color)$/;"	f	signature:(int color)
-libx_new_image	libxft/srcs/new_image.c	/^t_libx_img	*libx_new_image(void *mlx, int width, int height)$/;"	f	signature:(void *mlx, int width, int height)
-libx_put_pixel_to_image	libxft/srcs/put_pixel_to_image.c	/^void	libx_put_pixel_to_image(t_libx_img *img, int x, int y, int c)$/;"	f	signature:(t_libx_img *img, int x, int y, int c)
-libx_string_to_image	libxft/srcs/string_to_image.c	/^void			libx_string_to_image(t_libx_img *img, t_libx_img *font,$/;"	f	signature:(t_libx_img *img, t_libx_img *font, const char *str, ...)
-libx_xpm_file_to_image	libxft/srcs/xpm_file_to_image.c	/^t_libx_img	*libx_xpm_file_to_image(void *mlx, char *path_file)$/;"	f	signature:(void *mlx, char *path_file)
-loc_font_atlassize	minilibx_macos/mlx_int.h	/^  GLint		loc_font_atlassize;$/;"	m	struct:glsl_info_s	access:public
-loc_font_color	minilibx_macos/mlx_int.h	/^  GLint		loc_font_color;$/;"	m	struct:glsl_info_s	access:public
-loc_font_posinatlas	minilibx_macos/mlx_int.h	/^  GLint		loc_font_posinatlas;$/;"	m	struct:glsl_info_s	access:public
-loc_font_posinwin	minilibx_macos/mlx_int.h	/^  GLint		loc_font_posinwin;$/;"	m	struct:glsl_info_s	access:public
-loc_font_position	minilibx_macos/mlx_int.h	/^  GLint		loc_font_position;$/;"	m	struct:glsl_info_s	access:public
-loc_font_texture	minilibx_macos/mlx_int.h	/^  GLint		loc_font_texture;$/;"	m	struct:glsl_info_s	access:public
-loc_font_winhalfsize	minilibx_macos/mlx_int.h	/^  GLint		loc_font_winhalfsize;$/;"	m	struct:glsl_info_s	access:public
-loc_image_pos	minilibx_macos/mlx_int.h	/^  GLint		loc_image_pos;$/;"	m	struct:glsl_info_s	access:public
-loc_image_position	minilibx_macos/mlx_int.h	/^  GLint		loc_image_position;$/;"	m	struct:glsl_info_s	access:public
-loc_image_size	minilibx_macos/mlx_int.h	/^  GLint		loc_image_size;$/;"	m	struct:glsl_info_s	access:public
-loc_image_texture	minilibx_macos/mlx_int.h	/^  GLint		loc_image_texture;$/;"	m	struct:glsl_info_s	access:public
-loc_image_winhalfsize	minilibx_macos/mlx_int.h	/^  GLint		loc_image_winhalfsize;$/;"	m	struct:glsl_info_s	access:public
-loc_pixel_position	minilibx_macos/mlx_int.h	/^  GLint		loc_pixel_position;$/;"	m	struct:glsl_info_s	access:public
-loc_pixel_texture	minilibx_macos/mlx_int.h	/^  GLint		loc_pixel_texture;$/;"	m	struct:glsl_info_s	access:public
-loc_pixel_winhalfsize	minilibx_macos/mlx_int.h	/^  GLint		loc_pixel_winhalfsize;$/;"	m	struct:glsl_info_s	access:public
-longdouble	libft/includes/printf.h	/^	double					longdouble;$/;"	m	union:u_number	access:public
-longlong	libft/includes/printf.h	/^	unsigned long long int	longlong;$/;"	m	union:u_number	access:public
-loop_hook	minilibx_macos/mlx_int.h	/^  void			(*loop_hook)(void *);$/;"	m	struct:mlx_ptr_s	access:public
-loop_hook_data	minilibx_macos/mlx_int.h	/^  void			*loop_hook_data;$/;"	m	struct:mlx_ptr_s	access:public
-loop_timer	minilibx_macos/mlx_int.h	/^  void			*loop_timer;$/;"	m	struct:mlx_ptr_s	access:public
-main	srcs/ft_fdf.c	/^int				main(int ac, char **av)$/;"	f	signature:(int ac, char **av)
-main	srcs/main.c	/^int		main(int argc, char **argv)$/;"	f	signature:(int argc, char **argv)
-main_loop_active	minilibx_macos/mlx_int.h	/^  int			main_loop_active;$/;"	m	struct:mlx_ptr_s	access:public
-mlx	includes/fdf.h	/^	void		*mlx;$/;"	m	struct:s_fdf	access:public
-mlx	includes/ft_fdf.h	/^	void		*mlx;$/;"	m	struct:s_env	access:public
-mlx_clear_window	minilibx_macos/mlx_new_window.m	/^void mlx_clear_window(mlx_ptr_t *mlx_ptr, mlx_win_list_t *win_ptr)$/;"	f	signature:(mlx_ptr_t *mlx_ptr, mlx_win_list_t *win_ptr)
-mlx_col_name	minilibx_macos/mlx_rgb.c	/^struct s_col_name mlx_col_name[] =$/;"	v	typeref:struct:s_col_name
-mlx_destroy_image	minilibx_macos/mlx_new_image.m	/^int     mlx_destroy_image(mlx_ptr_t *mlx_ptr, mlx_img_list_t *img_todel)$/;"	f	signature:(mlx_ptr_t *mlx_ptr, mlx_img_list_t *img_todel)
-mlx_destroy_window	minilibx_macos/mlx_new_window.m	/^int     mlx_destroy_window(mlx_ptr_t *mlx_ptr, mlx_win_list_t *win_to_del)$/;"	f	signature:(mlx_ptr_t *mlx_ptr, mlx_win_list_t *win_to_del)
-mlx_do_key_autorepeatoff	minilibx_macos/mlx_new_window.m	/^int     mlx_do_key_autorepeatoff(mlx_ptr_t *mlx_ptr)$/;"	f	signature:(mlx_ptr_t *mlx_ptr)
-mlx_do_key_autorepeaton	minilibx_macos/mlx_new_window.m	/^int     mlx_do_key_autorepeaton(mlx_ptr_t *mlx_ptr)$/;"	f	signature:(mlx_ptr_t *mlx_ptr)
-mlx_do_sync	minilibx_macos/mlx_init_loop.m	/^int     mlx_do_sync(mlx_ptr_t *mlx_ptr)$/;"	f	signature:(mlx_ptr_t *mlx_ptr)
-mlx_expose_hook	minilibx_macos/mlx_new_window.m	/^void mlx_expose_hook(mlx_win_list_t *win_ptr, int (*funct_ptr)(), void *param)$/;"	f	signature:(mlx_win_list_t *win_ptr, int (*funct_ptr)(), void *param)
-mlx_get_color_value	minilibx_macos/mlx_new_image.m	/^unsigned int    mlx_get_color_value(mlx_ptr_t *mlx_ptr, int color)$/;"	f	signature:(mlx_ptr_t *mlx_ptr, int color)
-mlx_get_data_addr	minilibx_macos/mlx_new_image.m	/^char    *mlx_get_data_addr(mlx_img_list_t *img_ptr, int *bits_per_pixel, int *size_line, int *endian)$/;"	f	signature:(mlx_img_list_t *img_ptr, int *bits_per_pixel, int *size_line, int *endian)
-mlx_hook	minilibx_macos/mlx_new_window.m	/^void mlx_hook(mlx_win_list_t *win_ptr, int x_event, int x_mask, int (*funct_ptr)(), void *param)$/;"	f	signature:(mlx_win_list_t *win_ptr, int x_event, int x_mask, int (*funct_ptr)(), void *param)
-mlx_img_ctx_s	minilibx_macos/mlx_int.h	/^typedef struct	mlx_img_ctx_s$/;"	s
-mlx_img_ctx_s::img	minilibx_macos/mlx_int.h	/^  mlx_img_list_t	*img;$/;"	m	struct:mlx_img_ctx_s	access:public
-mlx_img_ctx_s::next	minilibx_macos/mlx_int.h	/^  struct mlx_img_ctx_s	*next;$/;"	m	struct:mlx_img_ctx_s	typeref:struct:mlx_img_ctx_s::mlx_img_ctx_s	access:public
-mlx_img_ctx_s::texture	minilibx_macos/mlx_int.h	/^  GLuint		texture;$/;"	m	struct:mlx_img_ctx_s	access:public
-mlx_img_ctx_s::vbuffer	minilibx_macos/mlx_int.h	/^  GLuint		vbuffer;$/;"	m	struct:mlx_img_ctx_s	access:public
-mlx_img_ctx_t	minilibx_macos/mlx_int.h	/^} mlx_img_ctx_t;$/;"	t	typeref:struct:mlx_img_ctx_s
-mlx_img_list_s	minilibx_macos/mlx_int.h	/^typedef struct	mlx_img_list_s$/;"	s
-mlx_img_list_s::buffer	minilibx_macos/mlx_int.h	/^  char			*buffer;$/;"	m	struct:mlx_img_list_s	access:public
-mlx_img_list_s::height	minilibx_macos/mlx_int.h	/^  int			height;$/;"	m	struct:mlx_img_list_s	access:public
-mlx_img_list_s::next	minilibx_macos/mlx_int.h	/^  struct mlx_img_list_s	*next;$/;"	m	struct:mlx_img_list_s	typeref:struct:mlx_img_list_s::mlx_img_list_s	access:public
-mlx_img_list_s::vertexes	minilibx_macos/mlx_int.h	/^  GLfloat		vertexes[8];$/;"	m	struct:mlx_img_list_s	access:public
-mlx_img_list_s::width	minilibx_macos/mlx_int.h	/^  int			width;$/;"	m	struct:mlx_img_list_s	access:public
-mlx_img_list_t	minilibx_macos/mlx_int.h	/^} mlx_img_list_t;$/;"	t	typeref:struct:mlx_img_list_s
-mlx_init	minilibx_macos/mlx_init_loop.m	/^void *mlx_init()$/;"	f	signature:()
-mlx_int_file_get_rid_comment	minilibx_macos/mlx_xpm.c	/^void	mlx_int_file_get_rid_comment(char *ptr, int size)$/;"	f	signature:(char *ptr, int size)
-mlx_int_get_col_name	minilibx_macos/mlx_xpm.c	/^int	mlx_int_get_col_name(char *str,int size)$/;"	f	signature:(char *str,int size)
-mlx_int_get_line	minilibx_macos/mlx_xpm.c	/^char	*mlx_int_get_line(char *ptr,int *pos,int size)$/;"	f	signature:(char *ptr,int *pos,int size)
-mlx_int_get_text_rgb	minilibx_macos/mlx_xpm.c	/^int	mlx_int_get_text_rgb(char *name, char *end)$/;"	f	signature:(char *name, char *end)
-mlx_int_loop_once	minilibx_macos/mlx_init_loop.m	/^void	mlx_int_loop_once()$/;"	f	signature:()
-mlx_int_parse_xpm	minilibx_macos/mlx_xpm.c	/^void	*mlx_int_parse_xpm(mlx_ptr_t *xvar,void *info,int info_size,char *(*f)())$/;"	f	signature:(mlx_ptr_t *xvar,void *info,int info_size,char *(*f)())
-mlx_int_static_line	minilibx_macos/mlx_xpm.c	/^char	*mlx_int_static_line(char **xpm_data,int *pos,int size)$/;"	f	signature:(char **xpm_data,int *pos,int size)
-mlx_int_str_str	minilibx_macos/mlx_int_str_to_wordtab.c	/^int	mlx_int_str_str(char *str,char *find,int len)$/;"	f	signature:(char *str,char *find,int len)
-mlx_int_str_str_cote	minilibx_macos/mlx_int_str_to_wordtab.c	/^int	mlx_int_str_str_cote(char *str,char *find,int len)$/;"	f	signature:(char *str,char *find,int len)
-mlx_int_str_to_wordtab	minilibx_macos/mlx_int_str_to_wordtab.c	/^char	**mlx_int_str_to_wordtab(char *str)$/;"	f	signature:(char *str)
-mlx_int_xpm_set_pixel	minilibx_macos/mlx_xpm.c	/^void	mlx_int_xpm_set_pixel(mlx_img_list_t *img, char *data, int opp, int col, int x)$/;"	f	signature:(mlx_img_list_t *img, char *data, int opp, int col, int x)
-mlx_key_hook	minilibx_macos/mlx_new_window.m	/^void mlx_key_hook(mlx_win_list_t *win_ptr, int (*funct_ptr)(), void *param)$/;"	f	signature:(mlx_win_list_t *win_ptr, int (*funct_ptr)(), void *param)
-mlx_loop	minilibx_macos/mlx_init_loop.m	/^void mlx_loop(mlx_ptr_t *mlx_ptr)$/;"	f	signature:(mlx_ptr_t *mlx_ptr)
-mlx_loop_hook	minilibx_macos/mlx_init_loop.m	/^int mlx_loop_hook(mlx_ptr_t *mlx_ptr, void (*fct)(void *), void *param)$/;"	f	signature:(mlx_ptr_t *mlx_ptr, void (*fct)(void *), void *param)
-mlx_mouse_hook	minilibx_macos/mlx_new_window.m	/^void mlx_mouse_hook(mlx_win_list_t *win_ptr, int (*funct_ptr)(), void *param)$/;"	f	signature:(mlx_win_list_t *win_ptr, int (*funct_ptr)(), void *param)
-mlx_new_image	minilibx_macos/mlx_new_image.m	/^void    *mlx_new_image(mlx_ptr_t *mlx_ptr, int width, int height)$/;"	f	signature:(mlx_ptr_t *mlx_ptr, int width, int height)
-mlx_new_window	minilibx_macos/mlx_new_window.m	/^void *mlx_new_window(mlx_ptr_t *mlx_ptr, int size_x, int size_y, char *title)$/;"	f	signature:(mlx_ptr_t *mlx_ptr, int size_x, int size_y, char *title)
-mlx_pixel_put	minilibx_macos/mlx_init_loop.m	/^void mlx_pixel_put(mlx_ptr_t *mlx_ptr, mlx_win_list_t *win_ptr, int x, int y, int color)$/;"	f	signature:(mlx_ptr_t *mlx_ptr, mlx_win_list_t *win_ptr, int x, int y, int color)
-mlx_ptr_s	minilibx_macos/mlx_int.h	/^typedef struct		mlx_ptr_s$/;"	s
-mlx_ptr_s::appid	minilibx_macos/mlx_int.h	/^  void			*appid;$/;"	m	struct:mlx_ptr_s	access:public
-mlx_ptr_s::font	minilibx_macos/mlx_int.h	/^  mlx_img_list_t	*font;$/;"	m	struct:mlx_ptr_s	access:public
-mlx_ptr_s::img_list	minilibx_macos/mlx_int.h	/^  mlx_img_list_t	*img_list;$/;"	m	struct:mlx_ptr_s	access:public
-mlx_ptr_s::loop_hook	minilibx_macos/mlx_int.h	/^  void			(*loop_hook)(void *);$/;"	m	struct:mlx_ptr_s	access:public
-mlx_ptr_s::loop_hook_data	minilibx_macos/mlx_int.h	/^  void			*loop_hook_data;$/;"	m	struct:mlx_ptr_s	access:public
-mlx_ptr_s::loop_timer	minilibx_macos/mlx_int.h	/^  void			*loop_timer;$/;"	m	struct:mlx_ptr_s	access:public
-mlx_ptr_s::main_loop_active	minilibx_macos/mlx_int.h	/^  int			main_loop_active;$/;"	m	struct:mlx_ptr_s	access:public
-mlx_ptr_s::win_list	minilibx_macos/mlx_int.h	/^  mlx_win_list_t	*win_list;$/;"	m	struct:mlx_ptr_s	access:public
-mlx_ptr_t	minilibx_macos/mlx_int.h	/^} mlx_ptr_t;$/;"	t	typeref:struct:mlx_ptr_s
-mlx_put_image_to_window	minilibx_macos/mlx_new_image.m	/^void    mlx_put_image_to_window(mlx_ptr_t *mlx_ptr, mlx_win_list_t *win_ptr, mlx_img_list_t *img_ptr, int x, int y)$/;"	f	signature:(mlx_ptr_t *mlx_ptr, mlx_win_list_t *win_ptr, mlx_img_list_t *img_ptr, int x, int y)
-mlx_shaders	minilibx_macos/mlx_shaders.c	/^int mlx_shaders(glsl_info_t *glsl)$/;"	f	signature:(glsl_info_t *glsl)
-mlx_shaders_font	minilibx_macos/mlx_shaders.c	/^int mlx_shaders_font(glsl_info_t *glsl)$/;"	f	signature:(glsl_info_t *glsl)
-mlx_shaders_image	minilibx_macos/mlx_shaders.c	/^int mlx_shaders_image(glsl_info_t *glsl)$/;"	f	signature:(glsl_info_t *glsl)
-mlx_shaders_pixel	minilibx_macos/mlx_shaders.c	/^int mlx_shaders_pixel(glsl_info_t *glsl)$/;"	f	signature:(glsl_info_t *glsl)
-mlx_string_put	minilibx_macos/mlx_new_image.m	/^int mlx_string_put(mlx_ptr_t *mlx_ptr, mlx_win_list_t *win_ptr, int x, int y, int color, unsigned char *string)$/;"	f	signature:(mlx_ptr_t *mlx_ptr, mlx_win_list_t *win_ptr, int x, int y, int color, unsigned char *string)
-mlx_win_list_s	minilibx_macos/mlx_int.h	/^typedef struct	mlx_win_list_s$/;"	s
-mlx_win_list_s::img_list	minilibx_macos/mlx_int.h	/^  mlx_img_ctx_t		*img_list;$/;"	m	struct:mlx_win_list_s	access:public
-mlx_win_list_s::nb_flush	minilibx_macos/mlx_int.h	/^  int			nb_flush;$/;"	m	struct:mlx_win_list_s	access:public
-mlx_win_list_s::next	minilibx_macos/mlx_int.h	/^  struct mlx_win_list_s	*next;$/;"	m	struct:mlx_win_list_s	typeref:struct:mlx_win_list_s::mlx_win_list_s	access:public
-mlx_win_list_s::pixmgt	minilibx_macos/mlx_int.h	/^  int			pixmgt;$/;"	m	struct:mlx_win_list_s	access:public
-mlx_win_list_s::winid	minilibx_macos/mlx_int.h	/^  void			*winid;$/;"	m	struct:mlx_win_list_s	access:public
-mlx_win_list_t	minilibx_macos/mlx_int.h	/^} mlx_win_list_t;$/;"	t	typeref:struct:mlx_win_list_s
-mlx_xpm_file_to_image	minilibx_macos/mlx_xpm.c	/^void	*mlx_xpm_file_to_image(mlx_ptr_t *xvar,char *file,int *width,int *height)$/;"	f	signature:(mlx_ptr_t *xvar,char *file,int *width,int *height)
-mlx_xpm_to_image	minilibx_macos/mlx_xpm.c	/^void	*mlx_xpm_to_image(mlx_ptr_t *xvar,char **xpm_data,int *width,int *height)$/;"	f	signature:(mlx_ptr_t *xvar,char **xpm_data,int *width,int *height)
-name	minilibx_macos/mlx_xpm.c	/^  char  *name;$/;"	m	struct:s_col_name	file:	access:public
-name	minilibx_macos/mlx_xpm.c	/^  int           name;$/;"	m	struct:s_xpm_col	file:	access:public
-nb_flush	minilibx_macos/mlx_int.h	/^  int			nb_flush;$/;"	m	struct:mlx_win_list_s	access:public
-next	libft/includes/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list::s_list	access:public
-next	libft/includes/libft.h	/^	struct s_listd	*next;$/;"	m	struct:s_listd	typeref:struct:s_listd::s_listd	access:public
-next	minilibx_macos/mlx_int.h	/^  struct mlx_img_ctx_s	*next;$/;"	m	struct:mlx_img_ctx_s	typeref:struct:mlx_img_ctx_s::mlx_img_ctx_s	access:public
-next	minilibx_macos/mlx_int.h	/^  struct mlx_img_list_s	*next;$/;"	m	struct:mlx_img_list_s	typeref:struct:mlx_img_list_s::mlx_img_list_s	access:public
-next	minilibx_macos/mlx_int.h	/^  struct mlx_win_list_s	*next;$/;"	m	struct:mlx_win_list_s	typeref:struct:mlx_win_list_s::mlx_win_list_s	access:public
-number	libft/includes/printf.h	/^	t_number				number;$/;"	m	struct:s_printf_flag	access:public
-orders	minilibx_macos/man/man1/mlx.1	/^use other MiniLibX functions to send the graphical orders,$/;"	v
-orders	minilibx_macos/man/man3/mlx.1	/^use other MiniLibX functions to send the graphical orders,$/;"	v
-p	libft/objs/strtable/strtable_push_back.o	/^/;"	v
-p	libft/objs/strtable/strtable_push_cond.o	/^/;"	v
-pad	libft/includes/printf.h	/^	char					pad;$/;"	m	struct:s_printf_flag	access:public
-pfa_attrs	minilibx_macos/mlx_new_window.m	/^NSOpenGLPixelFormatAttribute pfa_attrs[] =$/;"	v
-pixel_data	minilibx_macos/font.c	/^	unsigned char	pixel_data[1140 * 20 * 4 + 1];$/;"	m	struct:__anon1	file:	access:public
-pixel_fshader	minilibx_macos/mlx_int.h	/^  GLuint	pixel_fshader;$/;"	m	struct:glsl_info_s	access:public
-pixel_program	minilibx_macos/mlx_int.h	/^  GLuint	pixel_program;$/;"	m	struct:glsl_info_s	access:public
-pixel_vertexes	minilibx_macos/mlx_new_window.m	/^static const GLfloat pixel_vertexes[8] =$/;"	v	file:
-pixel_vshader	minilibx_macos/mlx_int.h	/^  GLuint	pixel_vshader;$/;"	m	struct:glsl_info_s	access:public
-pixels	minilibx_macos/man/man1/mlx_loop.1	/^the screen to display pixels, images, and so on. On the other hand,$/;"	v
-pixels	minilibx_macos/man/man3/mlx_loop.1	/^the screen to display pixels, images, and so on. On the other hand,$/;"	v
-pixmgt	minilibx_macos/mlx_int.h	/^  int			pixmgt;$/;"	m	struct:mlx_win_list_s	access:public
-prec	libft/includes/printf.h	/^	int						prec;$/;"	m	struct:s_printf_flag	access:public
-prev	libft/includes/libft.h	/^	struct s_listd	*prev;$/;"	m	struct:s_listd	typeref:struct:s_listd::s_listd	access:public
-printf_add_char	libft/srcs/printf/add/add_char.c	/^void			printf_add_char(t_printf *t, unsigned char c)$/;"	f	signature:(t_printf *t, unsigned char c)
-printf_add_string	libft/srcs/printf/add/add_string.c	/^void			printf_add_string(t_printf *t, char *s, unsigned int len)$/;"	f	signature:(t_printf *t, char *s, unsigned int len)
-printf_add_wchar	libft/srcs/printf/add/add_wchar.c	/^void	printf_add_wchar(t_printf *t, wchar_t c)$/;"	f	signature:(t_printf *t, wchar_t c)
-printf_char	libft/srcs/printf/label/string.c	/^void					printf_char(t_printf *t, char c)$/;"	f	signature:(t_printf *t, char c)
-printf_color_basic	libft/srcs/printf/color/color_basic.c	/^void			printf_color_basic(t_replace_color co)$/;"	f	signature:(t_replace_color co)
-printf_color_fg_bg	libft/srcs/printf/color/color_fg_bg.c	/^void		printf_color_fg_bg(t_replace_color co)$/;"	f	signature:(t_replace_color co)
-printf_color_format	libft/srcs/printf/color/color_format.c	/^void			printf_color_format(t_replace_color co)$/;"	f	signature:(t_replace_color co)
-printf_concat	libft/srcs/printf/color/concat.c	/^char	*printf_concat(char *s1, int *len1, char *s2, int len2)$/;"	f	signature:(char *s1, int *len1, char *s2, int len2)
-printf_concat2	libft/srcs/printf/color/concat.c	/^char	*printf_concat2(char *s1, int len1, char *s2, int len2)$/;"	f	signature:(char *s1, int len1, char *s2, int len2)
-printf_conversion_b	libft/srcs/printf/conversion/b.c	/^void	printf_conversion_b(t_printf *t)$/;"	f	signature:(t_printf *t)
-printf_conversion_big_b	libft/srcs/printf/conversion/b.c	/^void	printf_conversion_big_b(t_printf *t)$/;"	f	signature:(t_printf *t)
-printf_conversion_big_c	libft/srcs/printf/conversion/c.c	/^void	printf_conversion_big_c(t_printf *t)$/;"	f	signature:(t_printf *t)
-printf_conversion_big_d	libft/srcs/printf/conversion/big_d.c	/^void	printf_conversion_big_d(t_printf *t)$/;"	f	signature:(t_printf *t)
-printf_conversion_big_f	libft/srcs/printf/conversion/f.c	/^void	printf_conversion_big_f(t_printf *t)$/;"	f	signature:(t_printf *t)
-printf_conversion_big_o	libft/srcs/printf/conversion/o.c	/^void	printf_conversion_big_o(t_printf *t)$/;"	f	signature:(t_printf *t)
-printf_conversion_big_s	libft/srcs/printf/conversion/s.c	/^void	printf_conversion_big_s(t_printf *t)$/;"	f	signature:(t_printf *t)
-printf_conversion_big_u	libft/srcs/printf/conversion/u.c	/^void	printf_conversion_big_u(t_printf *t)$/;"	f	signature:(t_printf *t)
-printf_conversion_big_x	libft/srcs/printf/conversion/x.c	/^void	printf_conversion_big_x(t_printf *t)$/;"	f	signature:(t_printf *t)
-printf_conversion_c	libft/srcs/printf/conversion/c.c	/^void	printf_conversion_c(t_printf *t)$/;"	f	signature:(t_printf *t)
-printf_conversion_f	libft/srcs/printf/conversion/f.c	/^void	printf_conversion_f(t_printf *t)$/;"	f	signature:(t_printf *t)
-printf_conversion_i	libft/srcs/printf/conversion/i.c	/^void	printf_conversion_i(t_printf *t)$/;"	f	signature:(t_printf *t)
-printf_conversion_o	libft/srcs/printf/conversion/o.c	/^void	printf_conversion_o(t_printf *t)$/;"	f	signature:(t_printf *t)
-printf_conversion_p	libft/srcs/printf/conversion/p.c	/^void	printf_conversion_p(t_printf *t)$/;"	f	signature:(t_printf *t)
-printf_conversion_s	libft/srcs/printf/conversion/s.c	/^void	printf_conversion_s(t_printf *t)$/;"	f	signature:(t_printf *t)
-printf_conversion_u	libft/srcs/printf/conversion/u.c	/^void	printf_conversion_u(t_printf *t)$/;"	f	signature:(t_printf *t)
-printf_conversion_x	libft/srcs/printf/conversion/x.c	/^void	printf_conversion_x(t_printf *t)$/;"	f	signature:(t_printf *t)
-printf_fill_character	libft/srcs/printf/add/fill_character.c	/^void			printf_fill_character(t_printf *t, char c)$/;"	f	signature:(t_printf *t, char c)
-printf_flags	libft/srcs/printf/flags/flags.c	/^t_bool			printf_flags(t_printf *t, char **s)$/;"	f	signature:(t_printf *t, char **s)
-printf_format	libft/srcs/printf/format.c	/^void			printf_format(t_printf *t, char *s)$/;"	f	signature:(t_printf *t, char *s)
-printf_function_conversion	libft/srcs/printf/function_conversion.c	/^t_bool				printf_function_conversion(t_printf *t, int index)$/;"	f	signature:(t_printf *t, int index)
-printf_ini	libft/srcs/printf/init/ini_printf.c	/^void	printf_ini(t_printf *t)$/;"	f	signature:(t_printf *t)
-printf_ini_flags	libft/srcs/printf/init/ini_printf.c	/^void	printf_ini_flags(t_printf *t)$/;"	f	signature:(t_printf *t)
-printf_modifiers	libft/srcs/printf/flags/modifiers.c	/^t_bool			printf_modifiers(t_printf *t, char **s)$/;"	f	signature:(t_printf *t, char **s)
-printf_number	libft/srcs/printf/label/number.c	/^void			printf_number(t_printf *t)$/;"	f	signature:(t_printf *t)
-printf_number_left	libft/srcs/printf/label/number_left.c	/^void			printf_number_left(t_printf *t, unsigned int len)$/;"	f	signature:(t_printf *t, unsigned int len)
-printf_number_type	libft/srcs/printf/label/number2.c	/^void			printf_number_type(t_printf *t)$/;"	f	signature:(t_printf *t)
-printf_replace_color	libft/srcs/printf/color/replace_color.c	/^void			printf_replace_color(t_printf *t, char *s, int len)$/;"	f	signature:(t_printf *t, char *s, int len)
-printf_string	libft/srcs/printf/label/string.c	/^void					printf_string(t_printf *t, char *s)$/;"	f	signature:(t_printf *t, char *s)
-printf_wchar	libft/srcs/printf/label/string.c	/^void					printf_wchar(t_printf *t, wchar_t c)$/;"	f	signature:(t_printf *t, wchar_t c)
-printf_wstr_to_str	libft/srcs/printf/label/wstr_to_str.c	/^char			*printf_wstr_to_str(t_printf *t, wchar_t *s)$/;"	f	signature:(t_printf *t, wchar_t *s)
+in_action	includes/corewar.h	/^	t_bool				in_action;$/;"	m	struct:s_process	access:public
+last_cycle_check	includes/corewar.h	/^	long				last_cycle_check;$/;"	m	struct:s_corewar	access:public
+last_live	includes/corewar.h	/^	long				last_live;$/;"	m	struct:s_player	access:public
+live	includes/corewar.h	/^	int					live;$/;"	m	struct:s_byte	access:public
+live	includes/corewar.h	/^	int					live;$/;"	m	struct:s_process	access:public
+live	includes/corewar.h	/^	size_t				live;$/;"	m	struct:s_player	access:public
+live	includes/corewar.h	/^	t_bool				live;$/;"	m	struct:s_verbose	access:public
+mlx	includes/corewar.h	/^	void				*mlx;$/;"	m	struct:s_vm_mlx	access:public
+modified_cycle	includes/corewar.h	/^	int					modified_cycle;$/;"	m	struct:s_byte	access:public
+mouse	includes/corewar.h	/^	t_mouse				mouse;$/;"	m	struct:s_vm_mlx	access:public
+move	includes/corewar.h	/^	t_bool				move;$/;"	m	struct:s_verbose	access:public
+mutex	includes/corewar.h	/^	pthread_mutex_t		mutex;$/;"	m	struct:s_corewar	access:public
+mutex_info	includes/corewar.h	/^	pthread_mutex_t		mutex_info;$/;"	m	struct:s_vm_mlx	access:public
+mutex_key	includes/corewar.h	/^	pthread_mutex_t		mutex_key;$/;"	m	struct:s_vm_mlx	access:public
+mutex_memory	includes/corewar.h	/^	pthread_mutex_t		mutex_memory;$/;"	m	struct:s_vm_mlx	access:public
+mutex_process	includes/corewar.h	/^	pthread_mutex_t		mutex_process;$/;"	m	struct:s_corewar	access:public
+name	includes/corewar.h	/^	char				*name;$/;"	m	struct:s_player	access:public
+nb_cycle_per_second	includes/corewar.h	/^	size_t				nb_cycle_per_second;$/;"	m	struct:s_corewar	access:public
+nb_process	includes/corewar.h	/^	size_t				nb_process;$/;"	m	struct:s_corewar	access:public
+op	includes/corewar.h	/^	t_bool				op;$/;"	m	struct:s_verbose	access:public
+op	includes/corewar.h	/^	t_op				op;$/;"	m	struct:s_process	access:public
+op_cycle	includes/corewar.h	/^	int					op_cycle;$/;"	m	struct:s_process	access:public
+option	includes/corewar.h	/^	t_option			option;$/;"	m	struct:s_corewar	access:public
+pause	includes/corewar.h	/^	t_bool				pause;$/;"	m	struct:s_vm_mlx	access:public
+pc	includes/corewar.h	/^	size_t				pc;$/;"	m	struct:s_process	access:public
+players	includes/corewar.h	/^	t_listd				*players;$/;"	m	struct:s_corewar	access:public
+process	includes/corewar.h	/^	t_listd				*process;$/;"	m	struct:s_corewar	access:public
 r	libxft/includes/libxft.h	/^	double		r;$/;"	m	struct:s_libx_color	access:public
-s_add_i	libft/srcs/math/do_op.c	/^static size_t	*s_add_i(const char *s, size_t *i)$/;"	f	file:	signature:(const char *s, size_t *i)
-s_add_wchar_in_str	libft/srcs/printf/label/wstr_to_str.c	/^static size_t	s_add_wchar_in_str(char **s, wchar_t wc, size_t j)$/;"	f	file:	signature:(char **s, wchar_t wc, size_t j)
-s_alt	libft/srcs/printf/label/number.c	/^static void		s_alt(t_printf *t)$/;"	f	file:	signature:(t_printf *t)
-s_alt	libft/srcs/printf/label/number_left.c	/^static void		s_alt(t_printf *t)$/;"	f	file:	signature:(t_printf *t)
-s_calcul	libft/srcs/math/do_op.c	/^static double	s_calcul(const char *s, size_t *i)$/;"	f	file:	signature:(const char *s, size_t *i)
-s_check_action	libft/srcs/printf/format.c	/^static void		s_check_action(t_printf *t, char **s)$/;"	f	file:	signature:(t_printf *t, char **s)
-s_clean	libft/srcs/get_next_line.c	/^static t_get_next_line	*s_clean(t_get_next_line *n)$/;"	f	file:	signature:(t_get_next_line *n)
-s_col_name	minilibx_macos/mlx_xpm.c	/^struct  s_col_name$/;"	s	file:
-s_col_name::color	minilibx_macos/mlx_xpm.c	/^  int   color;$/;"	m	struct:s_col_name	file:	access:public
-s_col_name::name	minilibx_macos/mlx_xpm.c	/^  char  *name;$/;"	m	struct:s_col_name	file:	access:public
-s_count_word	libft/srcs/_part2/strsplit.c	/^static size_t	s_count_word(char const *s, char c)$/;"	f	file:	signature:(char const *s, char c)
-s_doublestrchr	libft/srcs/get_next_line.c	/^static char				*s_doublestrchr(char *str, char c1, char c2)$/;"	f	file:	signature:(char *str, char c1, char c2)
-s_draw_circle	libxft/srcs/draw_circle_to_image.c	/^static void		s_draw_circle(t_libx_img *img, int data[5])$/;"	f	file:	signature:(t_libx_img *img, int data[5])
-s_draw_line	libxft/srcs/draw_line_to_image.c	/^static void		s_draw_line(t_libx_img *img, int data[5])$/;"	f	file:	signature:(t_libx_img *img, int data[5])
-s_draw_point	includes/ft_fdf.h	/^typedef struct	s_draw_point$/;"	s
-s_draw_point::cumul	includes/ft_fdf.h	/^	int			cumul;$/;"	m	struct:s_draw_point	access:public
-s_draw_point::dx	includes/ft_fdf.h	/^	int			dx;$/;"	m	struct:s_draw_point	access:public
-s_draw_point::dy	includes/ft_fdf.h	/^	int			dy;$/;"	m	struct:s_draw_point	access:public
-s_draw_point::k	includes/ft_fdf.h	/^	int			k;$/;"	m	struct:s_draw_point	access:public
-s_draw_point::x	includes/ft_fdf.h	/^	int			x;$/;"	m	struct:s_draw_point	access:public
-s_draw_point::xinc	includes/ft_fdf.h	/^	int			xinc;$/;"	m	struct:s_draw_point	access:public
-s_draw_point::y	includes/ft_fdf.h	/^	int			y;$/;"	m	struct:s_draw_point	access:public
-s_draw_point::yinc	includes/ft_fdf.h	/^	int			yinc;$/;"	m	struct:s_draw_point	access:public
-s_draw_square	libxft/srcs/draw_square_to_image.c	/^static void		s_draw_square(t_libx_img *img, int data[5])$/;"	f	file:	signature:(t_libx_img *img, int data[5])
-s_env	includes/ft_fdf.h	/^typedef struct	s_env$/;"	s
-s_env::fd	includes/ft_fdf.h	/^	int			fd;$/;"	m	struct:s_env	access:public
-s_env::mlx	includes/ft_fdf.h	/^	void		*mlx;$/;"	m	struct:s_env	access:public
-s_env::win	includes/ft_fdf.h	/^	void		*win;$/;"	m	struct:s_env	access:public
-s_fd_in_list	libft/srcs/get_next_line.c	/^static t_get_next_line	*s_fd_in_list(t_listd **alist, int fd)$/;"	f	file:	signature:(t_listd **alist, int fd)
-s_fdf	includes/fdf.h	/^typedef struct	s_fdf$/;"	s
-s_fdf::img	includes/fdf.h	/^	t_libx_img	*img;$/;"	m	struct:s_fdf	access:public
-s_fdf::l_line	includes/fdf.h	/^	t_listd		*l_line;$/;"	m	struct:s_fdf	access:public
-s_fdf::l_line_int	includes/fdf.h	/^	t_listd		*l_line_int;$/;"	m	struct:s_fdf	access:public
-s_fdf::mlx	includes/fdf.h	/^	void		*mlx;$/;"	m	struct:s_fdf	access:public
-s_fdf::win	includes/fdf.h	/^	void		*win;$/;"	m	struct:s_fdf	access:public
-s_flags	libft/srcs/printf/label/number.c	/^static void		s_flags(t_printf *t)$/;"	f	file:	signature:(t_printf *t)
-s_flags	libft/srcs/printf/label/number_left.c	/^static void		s_flags(t_printf *t)$/;"	f	file:	signature:(t_printf *t)
-s_flags_1	libft/srcs/printf/flags/flags.c	/^static t_bool	s_flags_1(t_printf *t, char **s)$/;"	f	file:	signature:(t_printf *t, char **s)
-s_flags_2	libft/srcs/printf/flags/flags.c	/^static t_bool	s_flags_2(t_printf *t, char **s)$/;"	f	file:	signature:(t_printf *t, char **s)
-s_flags_3	libft/srcs/printf/flags/flags.c	/^static t_bool	s_flags_3(t_printf *t, char **s)$/;"	f	file:	signature:(t_printf *t, char **s)
-s_flags_4	libft/srcs/printf/flags/flags.c	/^static t_bool	s_flags_4(t_printf *t, char **s)$/;"	f	file:	signature:(t_printf *t, char **s)
-s_float_check	libft/srcs/printf/label/number2.c	/^static void		s_float_check(t_printf *t)$/;"	f	file:	signature:(t_printf *t)
-s_get_next_line	libft/includes/get_next_line.h	/^typedef struct	s_get_next_line$/;"	s
-s_get_next_line::eof	libft/includes/get_next_line.h	/^	int			eof;$/;"	m	struct:s_get_next_line	access:public
-s_get_next_line::fd	libft/includes/get_next_line.h	/^	int			fd;$/;"	m	struct:s_get_next_line	access:public
-s_get_next_line::str	libft/includes/get_next_line.h	/^	char		*str;$/;"	m	struct:s_get_next_line	access:public
-s_get_pprec	libft/srcs/string/ftoa.c	/^long int		s_get_pprec(long prec)$/;"	f	signature:(long prec)
-s_hashtable	libft/includes/libft.h	/^typedef struct		s_hashtable$/;"	s
-s_hashtable::size	libft/includes/libft.h	/^	size_t			size;$/;"	m	struct:s_hashtable	access:public
-s_hashtable::table	libft/includes/libft.h	/^	t_listd			**table;$/;"	m	struct:s_hashtable	access:public
-s_hashtable_data	libft/includes/libft.h	/^typedef struct		s_hashtable_data$/;"	s
-s_hashtable_data::data	libft/includes/libft.h	/^	void			*data;$/;"	m	struct:s_hashtable_data	access:public
-s_hashtable_data::key	libft/includes/libft.h	/^	char			*key;$/;"	m	struct:s_hashtable_data	access:public
-s_if_flags	libft/srcs/printf/label/number.c	/^static void		s_if_flags(t_printf *t, unsigned int len)$/;"	f	file:	signature:(t_printf *t, unsigned int len)
-s_if_key_exist	libft/srcs/hashtable/set.c	/^static t_bool	s_if_key_exist(t_listd *l, char *key)$/;"	f	file:	signature:(t_listd *l, char *key)
-s_image_to_image	libxft/srcs/image_to_image.c	/^static void		s_image_to_image(t_libx_img *dst, t_libx_img *src, int data[4])$/;"	f	file:	signature:(t_libx_img *dst, t_libx_img *src, int data[4])
-s_image_to_image	libxft/srcs/image_to_image_png.c	/^static void		s_image_to_image(t_libx_img *dst, t_libx_img *src, int data[4])$/;"	f	file:	signature:(t_libx_img *dst, t_libx_img *src, int data[4])
-s_ini_functions	libft/srcs/printf/function_conversion.c	/^static void			s_ini_functions(t_ptr_func *f)$/;"	f	file:	signature:(t_ptr_func *f)
-s_ini_singleton	srcs/sgt_mlx.c	/^static void		s_ini_singleton(t_fdf *t)$/;"	f	file:	signature:(t_fdf *t)
-s_ini_strerror1	libft/srcs/errno/ini_strerror.c	/^static void		s_ini_strerror1(char ***at)$/;"	f	file:	signature:(char ***at)
-s_ini_strerror2	libft/srcs/errno/ini_strerror.c	/^static void		s_ini_strerror2(char ***at)$/;"	f	file:	signature:(char ***at)
-s_ini_strerror3	libft/srcs/errno/ini_strerror.c	/^static void		s_ini_strerror3(char ***at)$/;"	f	file:	signature:(char ***at)
-s_ini_strerror4	libft/srcs/errno/ini_strerror.c	/^static void		s_ini_strerror4(char ***at)$/;"	f	file:	signature:(char ***at)
-s_is_alpha	libft/srcs/string/ahtoi.c	/^static int	s_is_alpha(int c)$/;"	f	file:	signature:(int c)
-s_is_specialchar	libft/srcs/string/ahtoi.c	/^static int	s_is_specialchar(int c)$/;"	f	file:	signature:(int c)
-s_is_specialchar	libft/srcs/string/atol.c	/^static int	s_is_specialchar(int c)$/;"	f	file:	signature:(int c)
-s_len_word	libft/srcs/_part2/strsplit.c	/^static size_t	s_len_word(char const *s, char c)$/;"	f	file:	signature:(char const *s, char c)
-s_len_word	libft/srcs/string/strsplit_tolist.c	/^static size_t	s_len_word(char const *s, char c)$/;"	f	file:	signature:(char const *s, char c)
+ram	includes/corewar.h	/^	t_byte				ram[MEM_SIZE];$/;"	m	struct:s_corewar	access:public
+reg	includes/corewar.h	/^	int					reg[REG_NUMBER];$/;"	m	struct:s_process	access:public
+run	includes/corewar.h	/^	t_bool				run;$/;"	m	struct:s_corewar	access:public
+s_byte	includes/corewar.h	/^typedef struct			s_byte$/;"	s
+s_byte::color_id	includes/corewar.h	/^	int					color_id;$/;"	m	struct:s_byte	access:public
+s_byte::data	includes/corewar.h	/^	unsigned char		data;$/;"	m	struct:s_byte	access:public
+s_byte::live	includes/corewar.h	/^	int					live;$/;"	m	struct:s_byte	access:public
+s_byte::modified_cycle	includes/corewar.h	/^	int					modified_cycle;$/;"	m	struct:s_byte	access:public
+s_corewar	includes/corewar.h	/^typedef struct			s_corewar$/;"	s
+s_corewar::cycle	includes/corewar.h	/^	long				cycle;$/;"	m	struct:s_corewar	access:public
+s_corewar::cycle_check	includes/corewar.h	/^	size_t				cycle_check;$/;"	m	struct:s_corewar	access:public
+s_corewar::cycle_to_die	includes/corewar.h	/^	long				cycle_to_die;$/;"	m	struct:s_corewar	access:public
+s_corewar::files	includes/corewar.h	/^	t_listd				*files;$/;"	m	struct:s_corewar	access:public
+s_corewar::id_last_live	includes/corewar.h	/^	int					id_last_live;$/;"	m	struct:s_corewar	access:public
+s_corewar::last_cycle_check	includes/corewar.h	/^	long				last_cycle_check;$/;"	m	struct:s_corewar	access:public
+s_corewar::mutex	includes/corewar.h	/^	pthread_mutex_t		mutex;$/;"	m	struct:s_corewar	access:public
+s_corewar::mutex_process	includes/corewar.h	/^	pthread_mutex_t		mutex_process;$/;"	m	struct:s_corewar	access:public
+s_corewar::nb_cycle_per_second	includes/corewar.h	/^	size_t				nb_cycle_per_second;$/;"	m	struct:s_corewar	access:public
+s_corewar::nb_process	includes/corewar.h	/^	size_t				nb_process;$/;"	m	struct:s_corewar	access:public
+s_corewar::option	includes/corewar.h	/^	t_option			option;$/;"	m	struct:s_corewar	access:public
+s_corewar::players	includes/corewar.h	/^	t_listd				*players;$/;"	m	struct:s_corewar	access:public
+s_corewar::process	includes/corewar.h	/^	t_listd				*process;$/;"	m	struct:s_corewar	access:public
+s_corewar::ram	includes/corewar.h	/^	t_byte				ram[MEM_SIZE];$/;"	m	struct:s_corewar	access:public
+s_corewar::run	includes/corewar.h	/^	t_bool				run;$/;"	m	struct:s_corewar	access:public
+s_corewar::thread	includes/corewar.h	/^	pthread_t			thread;$/;"	m	struct:s_corewar	access:public
+s_file	includes/corewar.h	/^typedef struct			s_file$/;"	s
+s_file::data	includes/corewar.h	/^	char				data[CHAMP_MAX_SIZE + sizeof(t_header)];$/;"	m	struct:s_file	access:public
+s_file::header	includes/corewar.h	/^	t_header			*header;$/;"	m	struct:s_file	access:public
+s_file::id	includes/corewar.h	/^	int					id;$/;"	m	struct:s_file	access:public
 s_libx_color	libxft/includes/libxft.h	/^typedef struct	s_libx_color$/;"	s
 s_libx_color::b	libxft/includes/libxft.h	/^	double		b;$/;"	m	struct:s_libx_color	access:public
 s_libx_color::g	libxft/includes/libxft.h	/^	double		g;$/;"	m	struct:s_libx_color	access:public
@@ -814,187 +256,74 @@ s_libx_img::height	libxft/includes/libxft.h	/^	int			height;$/;"	m	struct:s_libx
 s_libx_img::img_ptr	libxft/includes/libxft.h	/^	void		*img_ptr;$/;"	m	struct:s_libx_img	access:public
 s_libx_img::size_line	libxft/includes/libxft.h	/^	int			size_line;$/;"	m	struct:s_libx_img	access:public
 s_libx_img::width	libxft/includes/libxft.h	/^	int			width;$/;"	m	struct:s_libx_img	access:public
-s_line_int	includes/fdf.h	/^typedef struct	s_line_int$/;"	s
-s_line_int::len	includes/fdf.h	/^	int			len;$/;"	m	struct:s_line_int	access:public
-s_line_int::tab	includes/fdf.h	/^	int			*tab;$/;"	m	struct:s_line_int	access:public
-s_list	libft/includes/libft.h	/^typedef struct		s_list$/;"	s
-s_list::content	libft/includes/libft.h	/^	void			*content;$/;"	m	struct:s_list	access:public
-s_list::content_size	libft/includes/libft.h	/^	size_t			content_size;$/;"	m	struct:s_list	access:public
-s_list::next	libft/includes/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list::s_list	access:public
-s_listd	libft/includes/libft.h	/^typedef struct		s_listd$/;"	s
-s_listd::data	libft/includes/libft.h	/^	void			*data;$/;"	m	struct:s_listd	access:public
-s_listd::next	libft/includes/libft.h	/^	struct s_listd	*next;$/;"	m	struct:s_listd	typeref:struct:s_listd::s_listd	access:public
-s_listd::prev	libft/includes/libft.h	/^	struct s_listd	*prev;$/;"	m	struct:s_listd	typeref:struct:s_listd::s_listd	access:public
-s_load_map	srcs/fdf.c	/^static void		s_load_map(char *file_name)$/;"	f	file:	signature:(char *file_name)
-s_malloc_int	srcs/fdf.c	/^static int		*s_malloc_int(int value)$/;"	f	file:	signature:(int value)
-s_modifiers_1	libft/srcs/printf/flags/modifiers.c	/^static t_bool	s_modifiers_1(t_printf *t, char **s)$/;"	f	file:	signature:(t_printf *t, char **s)
-s_modifiers_2	libft/srcs/printf/flags/modifiers.c	/^static t_bool	s_modifiers_2(t_printf *t, char **s)$/;"	f	file:	signature:(t_printf *t, char **s)
-s_mul_div	libft/srcs/math/do_op.c	/^static double	s_mul_div(const char *s, size_t *i)$/;"	f	file:	signature:(const char *s, size_t *i)
-s_mult_repeat	libft/srcs/string/atof.c	/^size_t	s_mult_repeat(size_t base, int number)$/;"	f	signature:(size_t base, int number)
-s_new_buffer	libft/srcs/printf/add/add_char.c	/^static void		s_new_buffer(t_printf *t, unsigned char c)$/;"	f	file:	signature:(t_printf *t, unsigned char c)
-s_new_buffer	libft/srcs/printf/add/add_string.c	/^static void		s_new_buffer(t_printf *t, char *s, unsigned int len)$/;"	f	file:	signature:(t_printf *t, char *s, unsigned int len)
-s_new_buffer	libft/srcs/printf/add/fill_character.c	/^static void		s_new_buffer(t_printf *t, long c)$/;"	f	file:	signature:(t_printf *t, long c)
-s_not_left	libft/srcs/printf/label/number.c	/^static void		s_not_left(t_printf *t, unsigned int len)$/;"	f	file:	signature:(t_printf *t, unsigned int len)
-s_point	libft/srcs/string/ftoa.c	/^static void		s_point(long t, long int pprec, long prec, char **str)$/;"	f	file:	signature:(long t, long int pprec, long prec, char **str)
-s_print_line	libxft/srcs/draw_line_to_image.c	/^static void		s_print_line(t_libx_img *img,$/;"	f	file:	signature:(t_libx_img *img, int dir[4], int ls[2], int data[5])
-s_printf	libft/includes/printf.h	/^typedef struct				s_printf$/;"	s
-s_printf::args	libft/includes/printf.h	/^	va_list					args;$/;"	m	struct:s_printf	access:public
-s_printf::buffer	libft/includes/printf.h	/^	char					*buffer;$/;"	m	struct:s_printf	access:public
-s_printf::buffer_size	libft/includes/printf.h	/^	unsigned int			buffer_size;$/;"	m	struct:s_printf	access:public
-s_printf::flags	libft/includes/printf.h	/^	t_printf_flag			flags;$/;"	m	struct:s_printf	access:public
-s_printf::len	libft/includes/printf.h	/^	unsigned int			len;$/;"	m	struct:s_printf	access:public
-s_printf::search_color	libft/includes/printf.h	/^	t_bool					search_color;$/;"	m	struct:s_printf	access:public
-s_printf::work_buffer	libft/includes/printf.h	/^	char					*work_buffer;$/;"	m	struct:s_printf	access:public
-s_printf_fill_speed	libft/srcs/printf/add/fill_character.c	/^static void		s_printf_fill_speed(t_printf *t, long c)$/;"	f	file:	signature:(t_printf *t, long c)
-s_printf_flag	libft/includes/printf.h	/^typedef struct				s_printf_flag$/;"	s
-s_printf_flag::alt	libft/includes/printf.h	/^	t_bool					alt;$/;"	m	struct:s_printf_flag	access:public
-s_printf_flag::base	libft/includes/printf.h	/^	int						base;$/;"	m	struct:s_printf_flag	access:public
-s_printf_flag::group	libft/includes/printf.h	/^	t_bool					group;$/;"	m	struct:s_printf_flag	access:public
-s_printf_flag::is_char	libft/includes/printf.h	/^	t_bool					is_char;$/;"	m	struct:s_printf_flag	access:public
-s_printf_flag::is_long	libft/includes/printf.h	/^	t_bool					is_long;$/;"	m	struct:s_printf_flag	access:public
-s_printf_flag::is_long_double	libft/includes/printf.h	/^	t_bool					is_long_double;$/;"	m	struct:s_printf_flag	access:public
-s_printf_flag::is_negative	libft/includes/printf.h	/^	t_bool					is_negative;$/;"	m	struct:s_printf_flag	access:public
-s_printf_flag::is_short	libft/includes/printf.h	/^	t_bool					is_short;$/;"	m	struct:s_printf_flag	access:public
-s_printf_flag::left	libft/includes/printf.h	/^	t_bool					left;$/;"	m	struct:s_printf_flag	access:public
-s_printf_flag::number	libft/includes/printf.h	/^	t_number				number;$/;"	m	struct:s_printf_flag	access:public
-s_printf_flag::pad	libft/includes/printf.h	/^	char					pad;$/;"	m	struct:s_printf_flag	access:public
-s_printf_flag::prec	libft/includes/printf.h	/^	int						prec;$/;"	m	struct:s_printf_flag	access:public
-s_printf_flag::showsign	libft/includes/printf.h	/^	t_bool					showsign;$/;"	m	struct:s_printf_flag	access:public
-s_printf_flag::space	libft/includes/printf.h	/^	t_bool					space;$/;"	m	struct:s_printf_flag	access:public
-s_printf_flag::spec	libft/includes/printf.h	/^	char					spec;$/;"	m	struct:s_printf_flag	access:public
-s_printf_flag::width	libft/includes/printf.h	/^	int						width;$/;"	m	struct:s_printf_flag	access:public
-s_pt_to_pt	includes/ft_fdf.h	/^typedef struct	s_pt_to_pt$/;"	s
-s_pt_to_pt::x1	includes/ft_fdf.h	/^	int			x1;$/;"	m	struct:s_pt_to_pt	access:public
-s_pt_to_pt::x2	includes/ft_fdf.h	/^	int			x2;$/;"	m	struct:s_pt_to_pt	access:public
-s_pt_to_pt::y1	includes/ft_fdf.h	/^	int			y1;$/;"	m	struct:s_pt_to_pt	access:public
-s_pt_to_pt::y2	includes/ft_fdf.h	/^	int			y2;$/;"	m	struct:s_pt_to_pt	access:public
-s_pt_to_pt::z1	includes/ft_fdf.h	/^	int			z1;$/;"	m	struct:s_pt_to_pt	access:public
-s_pt_to_pt::z2	includes/ft_fdf.h	/^	int			z2;$/;"	m	struct:s_pt_to_pt	access:public
-s_put_pixel	libxft/srcs/string_to_image.c	/^static void		s_put_pixel(t_libx_img *img, t_libx_img *font,$/;"	f	file:	signature:(t_libx_img *img, t_libx_img *font, int data[4], int color)
-s_putchar	libxft/srcs/string_to_image.c	/^static void		s_putchar(t_libx_img *img, t_libx_img *font,$/;"	f	file:	signature:(t_libx_img *img, t_libx_img *font, char c, int data[3])
-s_putstr	libxft/srcs/string_to_image.c	/^static void		s_putstr(t_libx_img *img, t_libx_img *font,$/;"	f	file:	signature:(t_libx_img *img, t_libx_img *font, const char *str, int data[3])
-s_read_fd	libft/srcs/get_next_line.c	/^static int				s_read_fd(t_get_next_line **old, char **line)$/;"	f	file:	signature:(t_get_next_line **old, char **line)
-s_replace	libft/srcs/printf/color/replace_color.c	/^static void		s_replace(t_replace_color co)$/;"	f	file:	signature:(t_replace_color co)
-s_replace1	libft/srcs/printf/color/color_basic.c	/^static void		s_replace1(t_replace_color co)$/;"	f	file:	signature:(t_replace_color co)
-s_replace1	libft/srcs/printf/color/color_format.c	/^static void		s_replace1(t_replace_color co)$/;"	f	file:	signature:(t_replace_color co)
-s_replace2	libft/srcs/printf/color/color_basic.c	/^static void		s_replace2(t_replace_color co)$/;"	f	file:	signature:(t_replace_color co)
-s_replace2	libft/srcs/printf/color/color_format.c	/^static void		s_replace2(t_replace_color co)$/;"	f	file:	signature:(t_replace_color co)
-s_replace3	libft/srcs/printf/color/color_basic.c	/^static void		s_replace3(t_replace_color co)$/;"	f	file:	signature:(t_replace_color co)
-s_replace4	libft/srcs/printf/color/color_basic.c	/^static void		s_replace4(t_replace_color co)$/;"	f	file:	signature:(t_replace_color co)
-s_replace_color	libft/includes/printf.h	/^typedef struct				s_replace_color$/;"	s
-s_replace_color::i	libft/includes/printf.h	/^	int						*i;$/;"	m	struct:s_replace_color	access:public
-s_replace_color::len	libft/includes/printf.h	/^	int						*len;$/;"	m	struct:s_replace_color	access:public
-s_replace_color::save	libft/includes/printf.h	/^	int						*save;$/;"	m	struct:s_replace_color	access:public
-s_replace_color::t	libft/includes/printf.h	/^	t_printf				*t;$/;"	m	struct:s_replace_color	access:public
-s_replace_color::tmp	libft/includes/printf.h	/^	char					**tmp;$/;"	m	struct:s_replace_color	access:public
-s_searchchr	libft/srcs/_part1/atoi.c	/^static int	s_searchchr(int c)$/;"	f	file:	signature:(int c)
-s_set_direction	libxft/srcs/draw_line_to_image.c	/^static void		s_set_direction(int dir[4], int w, int h)$/;"	f	file:	signature:(int dir[4], int w, int h)
-s_set_long_short	libxft/srcs/draw_line_to_image.c	/^static int		*s_set_long_short(int ls[2], int dir[4], int w, int h)$/;"	f	file:	signature:(int ls[2], int dir[4], int w, int h)
-s_singleton	libft/srcs/printf/function_conversion.c	/^static t_ptr_func	*s_singleton(void)$/;"	f	file:	signature:(void)
-s_singleton	libxft/srcs/func_key.c	/^static t_libx_key_func	*s_singleton(int flag)$/;"	f	file:	signature:(int flag)
-s_singleton	srcs/sgt_mlx.c	/^static t_fdf	**s_singleton(void)$/;"	f	file:	signature:(void)
-s_split	srcs/fdf.c	/^static void		s_split(char *line)$/;"	f	file:	signature:(char *line)
-s_strcal	libft/srcs/_part2/itoa.c	/^static void		s_strcal(char **s, long long int n, char *base, size_t len)$/;"	f	file:	signature:(char **s, long long int n, char *base, size_t len)
-s_strcal	libft/srcs/string/basetoa.c	/^static void		s_strcal(char **s, long long int n, char *base, size_t len)$/;"	f	file:	signature:(char **s, long long int n, char *base, size_t len)
-s_strcal	libft/srcs/string/ftoa.c	/^static void		s_strcal(char **s, long int n)$/;"	f	file:	signature:(char **s, long int n)
-s_strcal	libft/srcs/string/ltoa.c	/^static void		s_strcal(char **s, long long int n, char *base, size_t len)$/;"	f	file:	signature:(char **s, long long int n, char *base, size_t len)
-s_strcal	libft/srcs/string/ubasetoa.c	/^static void		s_strcal(char **s, unsigned long int n, char *base, size_t len)$/;"	f	file:	signature:(char **s, unsigned long int n, char *base, size_t len)
-s_strcal_p	libft/srcs/string/ftoa.c	/^static void		s_strcal_p(char **s, long n, long *prec)$/;"	f	file:	signature:(char **s, long n, long *prec)
-s_strjoin	libft/srcs/printf/add/add_string.c	/^static void		s_strjoin(t_printf *t, char *s1, char *s2, unsigned int len)$/;"	f	file:	signature:(t_printf *t, char *s1, char *s2, unsigned int len)
-s_strwlen	libft/srcs/printf/label/wstr_to_str.c	/^static size_t	s_strwlen(const wchar_t *s)$/;"	f	file:	signature:(const wchar_t *s)
-s_to_int	libft/srcs/string/ahtoi.c	/^static int	s_to_int(const char *s, int is_neg)$/;"	f	file:	signature:(const char *s, int is_neg)
-s_toupper	libft/srcs/printf/label/number2.c	/^static char		s_toupper(char c)$/;"	f	file:	signature:(char c)
-s_trunc	libft/srcs/printf/label/string.c	/^static unsigned int		s_trunc(char **s, int length)$/;"	f	file:	signature:(char **s, int length)
-s_ubasetoa	libft/srcs/printf/label/number2.c	/^static char		*s_ubasetoa(unsigned long int n, char *base, int base_nb)$/;"	f	file:	signature:(unsigned long int n, char *base, int base_nb)
-s_ubasetoa_strcal	libft/srcs/printf/label/number2.c	/^static void		s_ubasetoa_strcal(char **s, unsigned long int n,$/;"	f	file:	signature:(char **s, unsigned long int n, char *base, size_t len)
-s_va	libft/srcs/printf/printf.c	/^static void		s_va(t_printf *t, char *format)$/;"	f	file:	signature:(t_printf *t, char *format)
-s_valid_option	libft/srcs/printf/color/color_fg_bg.c	/^static int	s_valid_option(char *s)$/;"	f	file:	signature:(char *s)
-s_wlen	libft/srcs/printf/label/wstr_to_str.c	/^static size_t	s_wlen(const wchar_t c)$/;"	f	file:	signature:(const wchar_t c)
-s_xpm_col	minilibx_macos/mlx_xpm.c	/^typedef struct  s_xpm_col$/;"	s	file:
-s_xpm_col::col	minilibx_macos/mlx_xpm.c	/^  int           col;$/;"	m	struct:s_xpm_col	file:	access:public
-s_xpm_col::name	minilibx_macos/mlx_xpm.c	/^  int           name;$/;"	m	struct:s_xpm_col	file:	access:public
-save	libft/includes/printf.h	/^	int						*save;$/;"	m	struct:s_replace_color	access:public
-screen	minilibx_macos/man/man1/mlx.1	/^the screen, the windowing system, keyboard and mouse.$/;"	v
-screen	minilibx_macos/man/man1/mlx_new_window.1	/^() function creates a new window on the screen, using the$/;"	v
-screen	minilibx_macos/man/man3/mlx.1	/^the screen, the windowing system, keyboard and mouse.$/;"	v
-screen	minilibx_macos/man/man3/mlx_new_window.1	/^() function creates a new window on the screen, using the$/;"	v
-search_color	libft/includes/printf.h	/^	t_bool					search_color;$/;"	m	struct:s_printf	access:public
-sgt_addr_fdf	srcs/sgt_mlx.c	/^t_fdf			**sgt_addr_fdf(void)$/;"	f	signature:(void)
-sgt_fdf	srcs/sgt_mlx.c	/^t_fdf			*sgt_fdf(void)$/;"	f	signature:(void)
-showsign	libft/includes/printf.h	/^	t_bool					showsign;$/;"	m	struct:s_printf_flag	access:public
-size	libft/includes/libft.h	/^	size_t			size;$/;"	m	struct:s_hashtable	access:public
+s_mouse	includes/corewar.h	/^typedef struct			s_mouse$/;"	s
+s_mouse::x	includes/corewar.h	/^	int					x;$/;"	m	struct:s_mouse	access:public
+s_mouse::y	includes/corewar.h	/^	int					y;$/;"	m	struct:s_mouse	access:public
+s_option	includes/corewar.h	/^typedef struct			s_option$/;"	s
+s_option::dump	includes/corewar.h	/^	int					dump;$/;"	m	struct:s_option	access:public
+s_option::graphic	includes/corewar.h	/^	t_bool				graphic;$/;"	m	struct:s_option	access:public
+s_option::verbose	includes/corewar.h	/^	t_verbose			verbose;$/;"	m	struct:s_option	access:public
+s_player	includes/corewar.h	/^typedef struct			s_player$/;"	s
+s_player::color_id	includes/corewar.h	/^	int					color_id;$/;"	m	struct:s_player	access:public
+s_player::description	includes/corewar.h	/^	char				*description;$/;"	m	struct:s_player	access:public
+s_player::id	includes/corewar.h	/^	int					id;$/;"	m	struct:s_player	access:public
+s_player::last_live	includes/corewar.h	/^	long				last_live;$/;"	m	struct:s_player	access:public
+s_player::live	includes/corewar.h	/^	size_t				live;$/;"	m	struct:s_player	access:public
+s_player::name	includes/corewar.h	/^	char				*name;$/;"	m	struct:s_player	access:public
+s_process	includes/corewar.h	/^typedef struct			s_process$/;"	s
+s_process::carry	includes/corewar.h	/^	int					carry;$/;"	m	struct:s_process	access:public
+s_process::color_id	includes/corewar.h	/^	int					color_id;$/;"	m	struct:s_process	access:public
+s_process::id	includes/corewar.h	/^	int					id;$/;"	m	struct:s_process	access:public
+s_process::in_action	includes/corewar.h	/^	t_bool				in_action;$/;"	m	struct:s_process	access:public
+s_process::live	includes/corewar.h	/^	int					live;$/;"	m	struct:s_process	access:public
+s_process::op	includes/corewar.h	/^	t_op				op;$/;"	m	struct:s_process	access:public
+s_process::op_cycle	includes/corewar.h	/^	int					op_cycle;$/;"	m	struct:s_process	access:public
+s_process::pc	includes/corewar.h	/^	size_t				pc;$/;"	m	struct:s_process	access:public
+s_process::reg	includes/corewar.h	/^	int					reg[REG_NUMBER];$/;"	m	struct:s_process	access:public
+s_process::uid	includes/corewar.h	/^	size_t				uid;$/;"	m	struct:s_process	access:public
+s_verbose	includes/corewar.h	/^typedef struct			s_verbose$/;"	s
+s_verbose::aff	includes/corewar.h	/^	t_bool				aff;$/;"	m	struct:s_verbose	access:public
+s_verbose::cycle	includes/corewar.h	/^	t_bool				cycle;$/;"	m	struct:s_verbose	access:public
+s_verbose::death	includes/corewar.h	/^	t_bool				death;$/;"	m	struct:s_verbose	access:public
+s_verbose::live	includes/corewar.h	/^	t_bool				live;$/;"	m	struct:s_verbose	access:public
+s_verbose::move	includes/corewar.h	/^	t_bool				move;$/;"	m	struct:s_verbose	access:public
+s_verbose::op	includes/corewar.h	/^	t_bool				op;$/;"	m	struct:s_verbose	access:public
+s_vm_mlx	includes/corewar.h	/^typedef struct			s_vm_mlx$/;"	s
+s_vm_mlx::background_info	includes/corewar.h	/^	unsigned char		*background_info;$/;"	m	struct:s_vm_mlx	access:public
+s_vm_mlx::background_memory	includes/corewar.h	/^	unsigned char		*background_memory;$/;"	m	struct:s_vm_mlx	access:public
+s_vm_mlx::color	includes/corewar.h	/^	int					color[19];$/;"	m	struct:s_vm_mlx	access:public
+s_vm_mlx::img_font	includes/corewar.h	/^	t_libx_img			*img_font;$/;"	m	struct:s_vm_mlx	access:public
+s_vm_mlx::img_info	includes/corewar.h	/^	t_libx_img			*img_info;$/;"	m	struct:s_vm_mlx	access:public
+s_vm_mlx::img_memory	includes/corewar.h	/^	t_libx_img			*img_memory;$/;"	m	struct:s_vm_mlx	access:public
+s_vm_mlx::mlx	includes/corewar.h	/^	void				*mlx;$/;"	m	struct:s_vm_mlx	access:public
+s_vm_mlx::mouse	includes/corewar.h	/^	t_mouse				mouse;$/;"	m	struct:s_vm_mlx	access:public
+s_vm_mlx::mutex_info	includes/corewar.h	/^	pthread_mutex_t		mutex_info;$/;"	m	struct:s_vm_mlx	access:public
+s_vm_mlx::mutex_key	includes/corewar.h	/^	pthread_mutex_t		mutex_key;$/;"	m	struct:s_vm_mlx	access:public
+s_vm_mlx::mutex_memory	includes/corewar.h	/^	pthread_mutex_t		mutex_memory;$/;"	m	struct:s_vm_mlx	access:public
+s_vm_mlx::pause	includes/corewar.h	/^	t_bool				pause;$/;"	m	struct:s_vm_mlx	access:public
+s_vm_mlx::thread_info	includes/corewar.h	/^	pthread_t			thread_info;$/;"	m	struct:s_vm_mlx	access:public
+s_vm_mlx::thread_memory	includes/corewar.h	/^	pthread_t			thread_memory;$/;"	m	struct:s_vm_mlx	access:public
+s_vm_mlx::win	includes/corewar.h	/^	void				*win;$/;"	m	struct:s_vm_mlx	access:public
 size_line	libxft/includes/libxft.h	/^	int			size_line;$/;"	m	struct:s_libx_img	access:public
-space	libft/includes/printf.h	/^	t_bool					space;$/;"	m	struct:s_printf_flag	access:public
-spec	libft/includes/printf.h	/^	char					spec;$/;"	m	struct:s_printf_flag	access:public
-str	libft/includes/get_next_line.h	/^	char		*str;$/;"	m	struct:s_get_next_line	access:public
-sub_add_mod	libft/srcs/math/do_op.c	/^double			sub_add_mod(const char *s, size_t *i)$/;"	f	signature:(const char *s, size_t *i)
-system	minilibx_macos/man/man1/mlx.1	/^the screen, the windowing system, keyboard and mouse.$/;"	v
-system	minilibx_macos/man/man3/mlx.1	/^the screen, the windowing system, keyboard and mouse.$/;"	v
-t	libft/includes/printf.h	/^	t_printf				*t;$/;"	m	struct:s_replace_color	access:public
-t	libft/objs/_part1/strchr.o	/^/;"	v
-t	libft/objs/table/table_push_at_index.o	/^/;"	v
-t	minilibx_macos/font.xcf	/^/;"	v
-tBH	libft/objs/lists/lstd_clear.o	/^/;"	v
-tHL	libft/objs/lists/lstd_push_before.o	/^/;"	v
-tQH	libft/objs/lists/lstd_pop_front.o	/^/;"	v
-t_bool	libft/includes/libft.h	/^}					t_bool;$/;"	t	typeref:enum:e_bool
-t_draw_point	includes/ft_fdf.h	/^}				t_draw_point;$/;"	t	typeref:struct:s_draw_point
-t_env	includes/ft_fdf.h	/^}				t_env;$/;"	t	typeref:struct:s_env
-t_fdf	includes/fdf.h	/^}				t_fdf;$/;"	t	typeref:struct:s_fdf
-t_get_next_line	libft/includes/get_next_line.h	/^}				t_get_next_line;$/;"	t	typeref:struct:s_get_next_line
-t_hashtable	libft/includes/libft.h	/^}					t_hashtable;$/;"	t	typeref:struct:s_hashtable
-t_hashtable_data	libft/includes/libft.h	/^}					t_hashtable_data;$/;"	t	typeref:struct:s_hashtable_data
+t_byte	includes/corewar.h	/^}						t_byte;$/;"	t	typeref:struct:s_byte
+t_corewar	includes/corewar.h	/^}						t_corewar;$/;"	t	typeref:struct:s_corewar
+t_file	includes/corewar.h	/^}						t_file;$/;"	t	typeref:struct:s_file
+t_func_op	includes/corewar.h	/^typedef void			(*t_func_op)(t_process *process, int type[4],$/;"	t
 t_libx_color	libxft/includes/libxft.h	/^}				t_libx_color;$/;"	t	typeref:struct:s_libx_color
 t_libx_img	libxft/includes/libxft.h	/^}				t_libx_img;$/;"	t	typeref:struct:s_libx_img
 t_libx_key_func	libxft/includes/libxft.h	/^typedef void	(*t_libx_key_func)();$/;"	t
-t_line_int	includes/fdf.h	/^}				t_line_int;$/;"	t	typeref:struct:s_line_int
-t_list	libft/includes/libft.h	/^}					t_list;$/;"	t	typeref:struct:s_list
-t_listd	libft/includes/libft.h	/^}					t_listd;$/;"	t	typeref:struct:s_listd
-t_number	libft/includes/printf.h	/^}							t_number;$/;"	t	typeref:union:u_number
-t_printf	libft/includes/printf.h	/^}							t_printf;$/;"	t	typeref:struct:s_printf
-t_printf_flag	libft/includes/printf.h	/^}							t_printf_flag;$/;"	t	typeref:struct:s_printf_flag
-t_pt_to_pt	includes/ft_fdf.h	/^}				t_pt_to_pt;$/;"	t	typeref:struct:s_pt_to_pt
-t_ptr_func	libft/includes/printf.h	/^typedef void				(*t_ptr_func)(t_printf *);$/;"	t
-t_replace_color	libft/includes/printf.h	/^}							t_replace_color;$/;"	t	typeref:struct:s_replace_color
-t_xpm_col	minilibx_macos/mlx_xpm.c	/^} t_xpm_col;$/;"	t	typeref:struct:s_xpm_col	file:
-tab	includes/fdf.h	/^	int			*tab;$/;"	m	struct:s_line_int	access:public
-table	libft/includes/libft.h	/^	t_listd			**table;$/;"	m	struct:s_hashtable	access:public
-te	libft/objs/printf/add/add_string.o	/^/;"	v
-texture	minilibx_macos/mlx_int.h	/^  GLuint		texture;$/;"	m	struct:mlx_img_ctx_s	access:public
-tmp	libft/includes/printf.h	/^	char					**tmp;$/;"	m	struct:s_replace_color	access:public
-tool	minilibx_macos/man/man1/mlx.1	/^simple window creation, a drawing tool, image and basic events$/;"	v
-tool	minilibx_macos/man/man3/mlx.1	/^simple window creation, a drawing tool, image and basic events$/;"	v
-true	libft/includes/libft.h	/^	true$/;"	e	enum:e_bool
-u_number	libft/includes/printf.h	/^typedef union				u_number$/;"	u
-u_number::longdouble	libft/includes/printf.h	/^	double					longdouble;$/;"	m	union:u_number	access:public
-u_number::longlong	libft/includes/printf.h	/^	unsigned long long int	longlong;$/;"	m	union:u_number	access:public
-u_number::word	libft/includes/printf.h	/^	unsigned long int		word;$/;"	m	union:u_number	access:public
-v	minilibx_macos/font.xcf	/^ÿ/;"	v
-vbuffer	minilibx_macos/mlx_int.h	/^  GLuint		vbuffer;$/;"	m	struct:mlx_img_ctx_s	access:public
-vertexes	minilibx_macos/mlx_int.h	/^  GLfloat		vertexes[8];$/;"	m	struct:mlx_img_list_s	access:public
-width	libft/includes/printf.h	/^	int						width;$/;"	m	struct:s_printf_flag	access:public
+t_mouse	includes/corewar.h	/^}						t_mouse;$/;"	t	typeref:struct:s_mouse
+t_option	includes/corewar.h	/^}						t_option;$/;"	t	typeref:struct:s_option
+t_player	includes/corewar.h	/^}						t_player;$/;"	t	typeref:struct:s_player
+t_process	includes/corewar.h	/^}						t_process;$/;"	t	typeref:struct:s_process
+t_verbose	includes/corewar.h	/^}						t_verbose;$/;"	t	typeref:struct:s_verbose
+t_vm_mlx	includes/corewar.h	/^}						t_vm_mlx;$/;"	t	typeref:struct:s_vm_mlx
+thread	includes/corewar.h	/^	pthread_t			thread;$/;"	m	struct:s_corewar	access:public
+thread_info	includes/corewar.h	/^	pthread_t			thread_info;$/;"	m	struct:s_vm_mlx	access:public
+thread_memory	includes/corewar.h	/^	pthread_t			thread_memory;$/;"	m	struct:s_vm_mlx	access:public
+uid	includes/corewar.h	/^	size_t				uid;$/;"	m	struct:s_process	access:public
+verbose	includes/corewar.h	/^	t_verbose			verbose;$/;"	m	struct:s_option	access:public
 width	libxft/includes/libxft.h	/^	int			width;$/;"	m	struct:s_libx_img	access:public
-width	minilibx_macos/font.c	/^	unsigned int	width;$/;"	m	struct:__anon1	file:	access:public
-width	minilibx_macos/mlx_int.h	/^  int			width;$/;"	m	struct:mlx_img_list_s	access:public
-win	includes/fdf.h	/^	void		*win;$/;"	m	struct:s_fdf	access:public
-win	includes/ft_fdf.h	/^	void		*win;$/;"	m	struct:s_env	access:public
-win_list	minilibx_macos/mlx_int.h	/^  mlx_win_list_t	*win_list;$/;"	m	struct:mlx_ptr_s	access:public
-winid	minilibx_macos/mlx_int.h	/^  void			*winid;$/;"	m	struct:mlx_win_list_s	access:public
-word	libft/includes/printf.h	/^	unsigned long int		word;$/;"	m	union:u_number	access:public
-work_buffer	libft/includes/printf.h	/^	char					*work_buffer;$/;"	m	struct:s_printf	access:public
-x	includes/ft_fdf.h	/^	int			x;$/;"	m	struct:s_draw_point	access:public
-x	libft/objs/_part1/memmove.o	/^/;"	v
-x	libft/objs/_part1/strstr.o	/^/;"	v
-x	libft/objs/_part2/strmapi.o	/^/;"	v
-x	libft/objs/printf/color/replace_color.o	/^/;"	v
-x	libft/objs/table/table_del_at_ptr.o	/^/;"	v
-x1	includes/ft_fdf.h	/^	int			x1;$/;"	m	struct:s_pt_to_pt	access:public
-x2	includes/ft_fdf.h	/^	int			x2;$/;"	m	struct:s_pt_to_pt	access:public
-xinc	includes/ft_fdf.h	/^	int			xinc;$/;"	m	struct:s_draw_point	access:public
-y	includes/ft_fdf.h	/^	int			y;$/;"	m	struct:s_draw_point	access:public
-y1	includes/ft_fdf.h	/^	int			y1;$/;"	m	struct:s_pt_to_pt	access:public
-y2	includes/ft_fdf.h	/^	int			y2;$/;"	m	struct:s_pt_to_pt	access:public
-yinc	includes/ft_fdf.h	/^	int			yinc;$/;"	m	struct:s_draw_point	access:public
-z1	includes/ft_fdf.h	/^	int			z1;$/;"	m	struct:s_pt_to_pt	access:public
-z2	includes/ft_fdf.h	/^	int			z2;$/;"	m	struct:s_pt_to_pt	access:public
->>>>>>> 5d4ec8af7791de7e37c89995b1d6e4e7a798cefd
+win	includes/corewar.h	/^	void				*win;$/;"	m	struct:s_vm_mlx	access:public
+x	includes/corewar.h	/^	int					x;$/;"	m	struct:s_mouse	access:public
+y	includes/corewar.h	/^	int					y;$/;"	m	struct:s_mouse	access:public

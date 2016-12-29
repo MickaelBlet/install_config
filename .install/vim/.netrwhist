@@ -1,6 +1,5 @@
 let g:netrw_dirhistmax  =10
-<<<<<<< HEAD
-let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Users/mblet/Downloads/printf1 2/src/ft_printf'
 let g:netrw_dirhist_2='/Users/mblet/Downloads/printf1 2/src'
 let g:netrw_dirhist_3='/Users/mblet/Downloads/printf1 2'
@@ -9,12 +8,4 @@ let g:netrw_dirhist_5='/Users/mblet/Downloads/printf1'
 let g:netrw_dirhist_6='/Users/mblet/Downloads/printf1/src'
 let g:netrw_dirhist_7='/Users/mblet/Downloads/printf1/src/ft_printf'
 let g:netrw_dirhist_8='/Users/mblet/Downloads/printf2/src/ft_printf'
-=======
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/mblet/42_CoreWar.git/vm_dir/srcs'
-let g:netrw_dirhist_2='/Users/mblet/42_Fdf.git/fdf'
-let g:netrw_dirhist_3='/Users/mblet/42_CoreWar.git/vm_dir/libxft/srcs'
-let g:netrw_dirhist_4='/Users/mblet/42_Fdf.git/fdf/includes'
-let g:netrw_dirhist_5='/Users/mblet/42_Fdf.git/fdf'
-let g:netrw_dirhist_6='/Users/mblet/42_Fdf.git/fdf/srcs'
->>>>>>> 5d4ec8af7791de7e37c89995b1d6e4e7a798cefd
+let g:netrw_dirhist_9='/Users/mblet/.vim/plugin/42'
